@@ -194,7 +194,7 @@ class MarkdownDefinitionList(MarkdownBlock):
 
     def __init__(self, definitionList=None, level=3, options=None):
         if definitionList is None:
-            definitionList = []
+            definitionList = {}
         text = ''
         for key, value in definitionList.items():
             text += '{}\n\n- {}\n\n'.format(key, value)
@@ -293,5 +293,9 @@ class MarkdownWriter(object):
     def addSymbol(self, symbol, text=''):
         self.markdown.addComponent(MarkdownSymbol(symbol, text))
 
+    def preRender(self):
+        pass
+
     def render(self):
+        self.preRender()
         return self.markdown.render()
