@@ -25,7 +25,7 @@ class CommandBuilder(MarkdownWriter):
             'owner',
             'internal'
         ]
-        self.addHeading('/{}'.format(self.command["name"]), 1)
+        self.addHeading('`/{}`'.format(self.command["name"]), 1)
         self.addBlockquote('文档版本：{}'.format(version))
         self.addText('`/{}`命令{}'.format(self.command["name"], self.command["description"]))
         self.addAdmonition('执行条件', '该命令需要权限等级：`{}`|`{}`。{}'.format(permissionLevel[self.command["permission_level"]], self.command["permission_level"], '该命令需要开启作弊。' if self.command["requires_cheats"] else ''))
@@ -55,7 +55,7 @@ class CommandBuilder(MarkdownWriter):
                 defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, '枚举值如下：\n\n' + enumTable.render() if enumList else '')  # todo: add param description
             writer.addCodeBlock(description, 'mcfunction')
             writer.addHtmlBlock('div.result', MarkdownDefinitionList(defList, 5).render(), 4)
-            self.addTab('`重载{}`'.format(overload["name"]), writer.render())
+            self.addTab('重载{}'.format(overload["name"]), writer.render())
 
     def render(self):
         return super().render()
