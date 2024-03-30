@@ -45,14 +45,17 @@ class CommandBuilder(MarkdownWriter):
                     description += ' {}{}:{}{}{}'.format('[' if param["is_optional"] else '<', param["name"], descriptor, ']' if param["is_optional"] else '>', 'L' if param["type"]["name"] == 'postfix_l' else '')
 
                 dataType = '基本类型'
+                enumTable = MarkdownComponent()
+                enumTableText = ''
                 if enumList and len(enumList) >= 1:
                     enumTable = MarkdownTable(['值', '描述'], [['`{}`'.format(e['value']), ''] for e in enumList])  # todo: add enum description
+                    enumTableText = '枚举值如下：\n\n' + enumTable.render() if len(enumList) > 1 else '单值枚举，请直接使用`{}`。'.format(enumList[0]['value'])
                     dataType = '枚举类型'
                 elif enumList and len(enumList) == 0:
                     dataType = '软枚举类型'
                 elif param["type"]["name"] == 'postfix_l':
                     dataType = '后固定类型'
-                defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, '枚举值如下：\n\n' + enumTable.render() if enumList else '')  # todo: add param description
+                defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, enumTableText)  # todo: add param description
             writer.addCodeBlock(description, 'mcfunction')
             writer.addHtmlBlock('div.result', MarkdownDefinitionList(defList, 5).render(), 4)
             self.addTab('重载{}'.format(overload["name"]), writer.render())
