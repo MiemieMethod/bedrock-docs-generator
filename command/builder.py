@@ -20,7 +20,7 @@ class CommandBuilder(MarkdownWriter):
         permissionLevel = [
             'any',
             'gamedirectors',
-            'admin,'
+            'admin',
             'host',
             'owner',
             'internal'
@@ -28,7 +28,9 @@ class CommandBuilder(MarkdownWriter):
         self.addHeading('`/{}`'.format(self.command["name"]), 1)
         self.addBlockquote('文档版本：{}'.format(version))
         self.addText('`/{}`命令{}'.format(self.command["name"], self.command["description"]))
-        self.addAdmonition('执行条件', '该命令需要权限等级：`{}`|`{}`。{}'.format(permissionLevel[self.command["permission_level"]], self.command["permission_level"], '该命令需要开启作弊。' if self.command["requires_cheats"] else ''))
+        self.addAdmonition('执行条件', '该命令需要权限等级：`{}`|`{}`。{}'.format(permissionLevel[self.command["permission_level"]], self.command["permission_level"], '该命令需要开启作弊。' if self.command["requires_cheats"] else ''), 'settings')
+        if self.command["aliases"]:
+            self.addAdmonition('别名', '该命令还可以使用以下别名：`{}`。'.format('`、`'.join(['/' + a["name"] for a in self.command["aliases"]])), 'info')
         self.addHeading('用法', 2)
         for overload in self.command["overloads"]:
             writer = MarkdownWriter()
