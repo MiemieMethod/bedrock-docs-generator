@@ -1,0 +1,815 @@
+{
+   "command_enums" : [
+      {
+         "name" : "Status",
+         "values" : [
+            {
+               "value" : "enable"
+            },
+            {
+               "value" : "disable"
+            },
+            {
+               "value" : "e"
+            },
+            {
+               "value" : "d"
+            }
+         ]
+      },
+      {
+         "name" : "ExecuteModeDetect",
+         "values" : [
+            {
+               "value" : "detect"
+            }
+         ]
+      },
+      {
+         "name": "CommandName",
+         "values": [
+            {
+               "value": "closechat"
+            },
+            {
+               "value": "geteduclientinfo"
+            },
+            {
+               "value": "getlocalplayername"
+            },
+            {
+               "value": "gametips"
+            }
+         ]
+      }
+   ],
+   "commands" : [
+      {
+         "aliases" : [],
+         "description" : "commands.closechat.description",
+         "name" : "closechat",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : []
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
+         "description" : "commands.geteduclientinfo.description",
+         "name" : "geteduclientinfo",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : []
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
+         "description" : "commands.getlocalplayername.description",
+         "name" : "getlocalplayername",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : []
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
+         "description" : "Enable or disable the game tips on this device",
+         "name" : "gametips",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "status",
+                     "type" : {
+                        "name" : "STATUS"
+                     }
+                  }
+               ]
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "name": "clone",
+         "overloads": [
+            {
+               "name": "2",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "begin",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "end",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "destination",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "maskMode",
+                     "type": {
+                        "name": "MASKMODE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "cloneMode",
+                     "type": {
+                        "name": "CLONEMODE"
+                     }
+                  }
+               ],
+               "version" : [1, 28]
+            }
+         ]
+      },
+      {
+         "name" : "execute",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "origin",
+                     "type" : {
+                        "name" : "SELECTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "position",
+                     "type" : {
+                        "name" : "POSITION_FLOAT"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "command",
+                     "type" : {
+                        "name" : "SLASHCOMMAND"
+                     }
+                  }
+               ],
+               "version" : [1, 24]
+            },
+            {
+               "name" : "2",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "origin",
+                     "type" : {
+                        "name" : "SELECTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "position",
+                     "type" : {
+                        "name" : "POSITION_FLOAT"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "detect",
+                     "type" : {
+                        "name" : "EXECUTEMODEDETECT"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "detectPos",
+                     "type" : {
+                        "name" : "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "block",
+                     "type" : {
+                        "name" : "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "data",
+                     "type" : {
+                        "name" : "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "command",
+                     "type" : {
+                        "name" : "SLASHCOMMAND"
+                     }
+                  }
+               ],
+               "version" : [1, 24]
+            },
+            {
+               "name": "3",
+               "version" : [25, -1]
+            },
+            {
+               "name": "4",
+               "version" : [25, -1]
+            },
+            {
+               "name": "5",
+               "version" : [25, -1]
+            },
+            {
+               "name": "6",
+               "version" : [25, -1]
+            },
+            {
+               "name": "7",
+               "version" : [25, -1]
+            },
+            {
+               "name": "8",
+               "version" : [25, -1]
+            },
+            {
+               "name": "9",
+               "version" : [25, -1]
+            },
+            {
+               "name": "10",
+               "version" : [25, -1]
+            },
+            {
+               "name": "11",
+               "version" : [25, -1]
+            },
+            {
+               "name": "12",
+               "version" : [25, -1]
+            },
+            {
+               "name": "13",
+               "version" : [25, -1]
+            },
+            {
+               "name": "14",
+               "version" : [25, -1]
+            },
+            {
+               "name": "15",
+               "version" : [25, -1]
+            },
+            {
+               "name" : "16",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "subcommand",
+                     "type" : {
+                        "name" : "OPTION_IF_UNLESS"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "secondary subcommand",
+                     "type" : {
+                        "name" : "OPTION_CONDITION_BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "position",
+                     "type" : {
+                        "name" : "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "block",
+                     "type" : {
+                        "name" : "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "data",
+                     "type" : {
+                        "name" : "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "chainedCommand",
+                     "type" : {
+                        "name" : "EXECUTECHAINEDOPTION_0"
+                     }
+                  }
+               ],
+               "version" : [25, 28]
+            },
+            {
+               "name": "17",
+               "version" : [25, -1]
+            },
+            {
+               "name": "18",
+               "version" : [25, -1]
+            },
+            {
+               "name": "19",
+               "version" : [25, -1]
+            },
+            {
+               "name": "20",
+               "version" : [25, -1]
+            },
+            {
+               "name": "21",
+               "version" : [25, -1]
+            }
+         ]
+      },
+      {
+         "name": "fill",
+         "overloads": [
+            {
+               "name": "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "from",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "to",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "tileName",
+                     "type": {
+                        "name": "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "tileData",
+                     "type": {
+                        "name": "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "oldBlockHandling",
+                     "type": {
+                        "name": "FILLMODE"
+                     }
+                  }
+               ],
+               "version" : [1, 28]
+            },
+            {
+               "name": "2",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "from",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "to",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "tileName",
+                     "type": {
+                        "name": "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "tileData",
+                     "type": {
+                        "name": "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "oldBlockHandling",
+                     "type": {
+                        "name": "REPLACE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "replaceTileName",
+                     "type": {
+                        "name": "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "replaceDataValue",
+                     "type": {
+                        "name": "INT"
+                     }
+                  }
+               ],
+               "version" : [1, 28]
+            }
+         ]
+      },
+      {
+         "name": "locate",
+         "overloads": [
+            {
+               "name": "1",
+               "params": [
+                  {
+                     "is_optional" : false,
+                     "name" : "feature",
+                     "type": {
+                        "name": "STRUCTURE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "useNewChunksOnly",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  }
+               ],
+               "version" : [1, 21]
+            },
+            {
+               "name": "2",
+               "version" : [21, -1]
+            },
+            {
+               "name": "3",
+               "version" : [21, -1]
+            }
+         ]
+      },
+      {
+         "name": "structure",
+         "overloads": [
+            {
+               "name": "4",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "action",
+                     "type": {
+                        "name": "STRUCTURELOADACTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "name",
+                     "type": {
+                        "name": "ID"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "to",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "rotation",
+                     "type": {
+                        "name": "ROTATION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "mirror",
+                     "type": {
+                        "name": "MIRROR"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "includeEntities",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "includeBlocks",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "integrity",
+                     "type": {
+                        "name": "VAL"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "seed",
+                     "type": {
+                        "name": "ID"
+                     }
+                  }
+               ],
+               "version" : [1, 21]
+            },
+            {
+               "name": "5",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "action",
+                     "type": {
+                        "name": "STRUCTURELOADACTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "name",
+                     "type": {
+                        "name": "ID"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "to",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "rotation",
+                     "type": {
+                        "name": "ROTATION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "mirror",
+                     "type": {
+                        "name": "MIRROR"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "animationMode",
+                     "type": {
+                        "name": "STRUCTUREANIMATIONMODE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "animationSeconds",
+                     "type": {
+                        "name": "VAL"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "includeEntities",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "includeBlocks",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "integrity",
+                     "type": {
+                        "name": "VAL"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "seed",
+                     "type": {
+                        "name": "ID"
+                     }
+                  }
+               ],
+               "version" : [1, 21]
+            },
+            {
+               "name": "6",
+               "version" : [22, -1]
+            },
+            {
+               "name": "7",
+               "version" : [22, -1]
+            }
+         ]
+      },
+      {
+         "name": "locate",
+         "overloads": [
+            {
+               "name": "1",
+               "params": [
+                  {
+                     "is_optional" : false,
+                     "name" : "feature",
+                     "type": {
+                        "name": "STRUCTURE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "useNewChunksOnly",
+                     "type": {
+                        "name": "BOOLEAN"
+                     }
+                  }
+               ],
+               "version" : [1, 21]
+            },
+            {
+               "name": "2",
+               "version" : [21, -1]
+            },
+            {
+               "name": "3",
+               "version" : [21, -1]
+            }
+         ]
+      },
+      {
+         "name": "setblock",
+         "overloads": [
+            {
+               "name": "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "position",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "tileName",
+                     "type": {
+                        "name": "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "tileData",
+                     "type": {
+                        "name": "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "oldBlockHandling",
+                     "type": {
+                        "name": "SETBLOCKMODE"
+                     }
+                  }
+               ],
+               "version" : [1, 28]
+            }
+         ]
+      },
+      {
+         "name": "summon",
+         "overloads": [
+            {
+               "name": "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "entityType",
+                     "type": {
+                        "name": "ENTITYTYPE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "spawnPos",
+                     "type": {
+                        "name": "POSITION_FLOAT"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "spawnEvent",
+                     "type": {
+                        "name": "ENTITYEVENTS"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "nameTag",
+                     "type": {
+                        "name": "ID"
+                     }
+                  }
+               ],
+               "version" : [1, 30]
+            },
+            {
+               "name": "2",
+               "version" : [31, -1]
+            },
+            {
+               "name": "4",
+               "version" : [31, -1]
+            },
+            {
+               "name": "5",
+               "version" : [31, -1]
+            }
+         ]
+      },
+      {
+         "name": "testforblock",
+         "overloads": [
+            {
+               "name": "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "position",
+                     "type": {
+                        "name": "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "tileName",
+                     "type": {
+                        "name": "BLOCK"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "dataValue",
+                     "type": {
+                        "name": "INT"
+                     }
+                  }
+               ],
+               "version" : [1, 28]
+            }
+         ]
+      }
+   ]
+}
