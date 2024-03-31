@@ -37,7 +37,6 @@ class CommandBuilder(MarkdownWriter):
             paramsWriter = MarkdownWriter()
             defList = {}
             description = '/{}'.format(self.command["name"])
-            print(self.command["name"], overload)
             for param in overload["params"]:
                 descriptorDict = self.enumsMap.get(param["type"]["name"], self.enums.get(param["type"]["name"], {}))
                 descriptor = descriptorDict.get('description', descriptorDict.get('name', param["type"]["name"]))
@@ -61,7 +60,10 @@ class CommandBuilder(MarkdownWriter):
                     dataType = '后缀类型'
                 defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, enumTableText)  # todo: add param description
             writer.addCodeBlock(description, 'mcfunction')
-            writer.addHtmlBlock('div.result', MarkdownDefinitionList(defList, 5).render(), 4)
+            if overload.get("version", [1, -1]) != [1, -1]:
+                paramsWriter.addSymbol('versionrange', '{} {} true true'.format(overload["version"][0] if overload["version"][0] != 1 else '*', overload["version"][1] if overload["version"][1] != -1 else '*'))
+            paramsWriter.addDefinitionList(defList, 5)
+            writer.addHtmlBlock('div.result', paramsWriter.render(), 4)
             self.addTab('重载{}'.format(overload["name"]), writer.render())
 
     def render(self):

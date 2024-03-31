@@ -58,4 +58,5 @@ class CommandGenerator(object):
                 for o in overloadsDict:
                     overloads.append(overloadsDict[o])
                 overloads.sort(key=lambda x: int(x["name"]))
+                self.commandList[c["name"]].update(c)
                 self.commandList[c["name"]]["overloads"] = overloads
