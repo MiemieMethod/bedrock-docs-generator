@@ -68,7 +68,7 @@ class CommandBuilder(MarkdownWriter):
                 defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, enumTableText)  # todo: add param description
             writer.addCodeBlock(description, 'mcfunction')
             if overload.get("version", [1, -1]) != [1, -1]:
-                paramsWriter.addSymbol('versionrange', '{} {} true true'.format(overload["version"][0] if overload["version"][0] != 1 else '*', overload["version"][1] if overload["version"][1] != -1 else '*'))
+                paramsWriter.addSymbol('version command', '{} {} true true'.format(overload["version"][0] if overload["version"][0] != 1 else '*', overload["version"][1] if overload["version"][1] != -1 else '*'))
             paramsWriter.addDefinitionList(defList, 5)
             writer.addHtmlBlock('div.result', paramsWriter.render(), 4)
             self.addTab('重载{}'.format(overload["name"]), writer.render())

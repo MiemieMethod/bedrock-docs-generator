@@ -25,7 +25,7 @@ class CommandGenerator(object):
 
 
     def generate(self):
-        pageListText = ''
+        pageList = []
         for c in self.commandList:
             command = self.commandList[c]
             builder = CommandBuilder(command, self.enums, self.enumMaps)
@@ -33,7 +33,9 @@ class CommandGenerator(object):
                 os.mkdir(r'build/commands')
             with open(r'build/commands/{}.md'.format(command["name"]), 'w', encoding="utf-8") as f:
                 f.write(builder.render())
-            pageListText += '- <code>{}</code>: refs/commands/{}.md\n'.format(command["name"], command["name"])
+            pageList.append({'name': command["name"], 'path': 'refs/commands/{}.md'.format(command["name"])})
+        pageList.sort(key=lambda x: x['name'])
+        pageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in pageList])
         return pageListText
 
     def mergeCommands(self):
