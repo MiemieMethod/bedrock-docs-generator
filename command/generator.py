@@ -31,9 +31,11 @@ class CommandGenerator(object):
             builder = CommandBuilder(command, self.enums, self.enumMaps)
             if not os.path.exists(r'build/commands'):
                 os.mkdir(r'build/commands')
-            with open(r'build/commands/{}.md'.format(command["name"]), 'w', encoding="utf-8") as f:
+            if not os.path.exists(r'build/commands/list'):
+                os.mkdir(r'build/commands/list')
+            with open(r'build/commands/list/{}.md'.format(command["name"]), 'w', encoding="utf-8") as f:
                 f.write(builder.render())
-            pageList.append({'name': command["name"], 'path': 'refs/commands/{}.md'.format(command["name"])})
+            pageList.append({'name': command["name"], 'path': 'refs/commands/list/{}.md'.format(command["name"])})
         pageList.sort(key=lambda x: x['name'])
         pageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in pageList])
         return pageListText
