@@ -664,7 +664,7 @@ subcommand@ 0   commandW   fillcommands.fill.description€ ÿÿÿÿ  from@ 
 componentsJ   hudcommands.hud.description€ ÿÿÿÿ  target    visible³ 0   hud_element² 0  immutableworld#commands.immutableworld.description€ ÿÿÿÿ  value 0  inputpermission$commands.inputpermission.description€ ÿÿÿÿ  optionT 0   targets    
 permissionV 0   stateW 0    optionU 0   targets    
 permissionV 0   stateW 0  kickcommands.kick.description€ ÿÿÿÿ  name    reasonD    killcommands.kill.description€ ÿÿÿÿ  target   
-levilaminaLeviLamina's main command€ Þ    ~loadß 0  plugin8     	operationà 0  plugin8    ~	operationá 0  plugin8     listâ 0  listcommands.list.description€  ÿÿÿÿ   locatecommands.locate.description€ ÿÿÿÿ  
+levilaminaLeviLamina's main command€ Þ    eloadß 0  plugin8    v	operationà 0  plugin8    o	operationá 0  plugin8     listâ 0  listcommands.list.description€  ÿÿÿÿ   locatecommands.locate.description€ ÿÿÿÿ  
 subcommandY 0   	structure 0  useNewChunksOnly 0   
 subcommandZ 0   biome 0   lootcommands.loot.description€ ÿÿÿÿ  target[ 0   positionA    sourcea 0   
 loot_table8    <tool>|mainhand|offhand	   target[ 0   positionA    sourceb 0   entity    <tool>|mainhand|offhand	   target\ 0   players    sourcea 0   
