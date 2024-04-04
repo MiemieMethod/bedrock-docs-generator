@@ -33,8 +33,7 @@ class ProtocolBuilder(MarkdownWriter):
         self.addText('```dot\n{}\n```'.format(self.protocol.to_string()))
         self.addHeading('字段', 2)
         defList = {}
-        edges = self.protocol.edges()
-        buildDefList(defList, edges, self.protocol.nodes()[0])
+        buildDefList(defList, self.protocol, self.protocol.nodes()[0])
         self.addDefinitionList(defList)
 
     def render(self):
@@ -47,23 +46,25 @@ def parseComment(protocolNode: str) -> dict:
     return ast.literal_eval(f'{{{comment}}}')
 
 
-def buildDefList(defList, edges, node):
+def buildDefList(defList, protocol, node, level=3):
+
     comment = parseComment(node)
     outs = []
     description = ''
+    edges = protocol.edges(node)
+    if node.attr["label"] == 'ActorEventPacket':
+        print(protocol.edges(node))
     for edge in edges:
         if edge[0] == node:
-            if edge[1] not in defList:
-                outs.append(edge[1])
-                edges.remove(edge)
+            outs.append(edge[1])
     if comment["attributes"] == 2:
         defList['{}'.format(node.attr["label"])] = ''
         writer = MarkdownWriter()
         for out in outs:
             if parseComment(out)["attributes"] == 4:
                 subDefList = {}
-                buildDefList(subDefList, edges, out)
-                writer.addTab('{}'.format(out.attr["label"]), MarkdownDefinitionList(subDefList).render())
+                buildDefList(subDefList, protocol, out, level + 2)
+                writer.addTab('{}'.format(out.attr["label"]), MarkdownDefinitionList(subDefList, level + 2).render(), level + 1)
         defList[writer.render()] = ''
     elif comment["attributes"] == 8:
         defList['{}'.format(node.attr["label"])] = ''
@@ -71,23 +72,26 @@ def buildDefList(defList, edges, node):
             if parseComment(out)["attributes"] == 16:
                 if out.attr["label"] == 'example element':
                     out.attr["label"] = '{}的示例元素'.format(node.attr["label"])
-                buildDefList(defList, edges, out)
+                buildDefList(defList, protocol, out, level)
             else:
                 if out.attr["label"] == 'Array Size':
                     out.attr["label"] = '{}数组的大小'.format(node.attr["label"])
-                buildDefList(defList, edges, out)
+                buildDefList(defList, protocol, out, level)
     elif len(outs) == 1:
         if parseComment(outs[0])["attributes"] == 512:
             type = outs[0].attr["label"]
             if comment["attributes"] == 256:
-                typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), 'refs/protocols/types/{}.md'.format(type))
+                typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), 'refs/protocols/types/{}.md'.format(type)).render()
             else:
                 typeLink = MarkdownSymbol('samp', type).render()
+            description = '类型：{}。{}'.format(type, comment["notes"])
             defList['{}：{}'.format(node.attr["label"], typeLink)] = description
         else:
             defList['{}'.format(node.attr["label"])] = ''
-            buildDefList(defList, edges, outs[0])
+            buildDefList(defList, protocol, outs[0], level)
     elif len(outs) > 1:
+        defList['{}'.format(node.attr["label"])] = ''
         for out in outs:
-            defList['{}'.format(node.attr["label"])] = ''
-            buildDefList(defList, edges, out)
+            if node.attr["label"] == 'ActorEventPacket':
+                print(out.attr["label"])
+            buildDefList(defList, protocol, out, level)

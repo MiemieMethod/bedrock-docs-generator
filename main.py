@@ -8,4 +8,6 @@ from protocol.generator import *
 if __name__ == '__main__':
     print(CommandGenerator().generate())
     print(TableGenerator().generate())
-    print(ProtocolGenerator().generate())
+    protocolPageList = ProtocolGenerator().generate()
+    print(protocolPageList[0])
+    print(protocolPageList[1])
