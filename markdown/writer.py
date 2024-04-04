@@ -20,11 +20,11 @@ class MarkdownComponent(object):
 
 class MarkdownText(MarkdownComponent):
 
-        def __init__(self, text):
+        def __init__(self, text : str):
             self.text = text
 
-        def render(self):
-            return self.text + '\n'
+        def render(self, indent=0):
+            return indent*'  ' + self.text.replace('\n', '\n' + indent*'  ') + '\n'
 
 
 class MarkdownCodeBlock(MarkdownComponent):
@@ -52,11 +52,11 @@ class MarkdownTable(MarkdownComponent):
         self.headers = headers
         self.rows = rows
 
-    def render(self):
-        table = '|' + '|'.join(self.headers) + '|\n'
-        table += '|' + '|'.join(['---' for _ in self.headers]) + '|\n'
+    def render(self, indent=0):
+        table = indent*'  ' + '|' + '|'.join(self.headers) + '|\n'
+        table += indent*'  ' + '|' + '|'.join(['---' for _ in self.headers]) + '|\n'
         for row in self.rows:
-            table += '|' + '|'.join(row) + '|\n'
+            table += indent*'  ' + '|' + '|'.join(row) + '|\n'
         return table
 
 
@@ -65,8 +65,8 @@ class MarkdownList(MarkdownComponent):
     def __init__(self, items):
         self.items = items
 
-    def render(self):
-        return '\n'.join(['- {}'.format(i) for i in self.items]) + '\n'
+    def render(self, indent=0):
+        return indent*'  ' + (indent*'  ' + '\n').join(['- {}'.format(i) for i in self.items]) + '\n'
 
 
 class MarkdownOrderedList(MarkdownComponent):
@@ -74,8 +74,8 @@ class MarkdownOrderedList(MarkdownComponent):
     def __init__(self, items):
         self.items = items
 
-    def render(self):
-        return '\n'.join(['{}. {}'.format(i + 1, item) for i, item in enumerate(self.items)]) + '\n'
+    def render(self, indent=0):
+        return indent*'  ' + (indent*'  ' + '\n').join(['{}. {}'.format(i + 1, item) for i, item in enumerate(self.items)]) + '\n'
 
 
 class MarkdownLink(MarkdownComponent):
@@ -197,7 +197,10 @@ class MarkdownDefinitionList(MarkdownBlock):
             definitionList = {}
         text = ''
         for key, value in definitionList.items():
-            text += '{}\n\n- {}\n\n'.format(key, value)
+            if value:
+                text += '{}\n\n- {}\n\n'.format(key, value)
+            else:
+                text += '{}\n\n'.format(key)
         super().__init__('define', '', text, level, options)
 
     def render(self):

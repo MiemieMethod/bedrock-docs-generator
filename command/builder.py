@@ -62,10 +62,10 @@ class CommandBuilder(MarkdownWriter):
 
                 if isinstance(enumList, list) and len(enumList) >= 1:
                     enumTable = MarkdownTable(['值', '描述'], [['`{}`'.format(e['value']), ''] for e in enumList])  # todo: add enum description
-                    enumTableText = '枚举值如下：\n\n' + enumTable.render() if len(enumList) > 1 else '单值枚举，请直接使用`{}`。'.format(enumList[0]['value'])
+                    enumTableText = '枚举值如下：\n\n' + enumTable.render(1) if len(enumList) > 1 else '单值枚举，请直接使用`{}`。'.format(enumList[0]['value'])
                     dataType = '枚举类型'
 
-                defList['`{}`: {}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, enumTableText)  # todo: add param description
+                defList['`{}`：{}'.format(param["name"], MarkdownSymbol('samp', descriptor).render())] = '{}。{}'.format(dataType, enumTableText)  # todo: add param description
             writer.addCodeBlock(description, 'mcfunction')
             if overload.get("version", [1, -1]) != [1, -1]:
                 paramsWriter.addSymbol('version command', '{} {} true true'.format(overload["version"][0] if overload["version"][0] != 1 else '*', overload["version"][1] if overload["version"][1] != -1 else '*'))
