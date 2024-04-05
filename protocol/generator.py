@@ -2,6 +2,7 @@ import json
 import os
 import re
 
+import pygraphviz as pgv
 
 from protocol.builder import ProtocolBuilder
 
@@ -31,14 +32,19 @@ class ProtocolGenerator(object):
             os.mkdir(r'build/protocols/types')
         for dot in self.dots:
             dotName = dot.replace('.dot', '')
+            dotPath = dotName.replace(' ', '_').lower()
             if dotName.endswith('Packet'):
-                with open(r'build/protocols/packets/{}.md'.format(dotName), 'w', encoding="utf-8") as f:
-                    f.write(ProtocolBuilder(dot, self.dots[dot]).render())
-                packetPageList.append({'name': dotName, 'path': 'refs/protocols/packets/{}.md'.format(dotName)})
+                with open(r'build/protocols/packets/{}.md'.format(dotPath), 'w', encoding="utf-8") as f:
+                    builder = ProtocolBuilder(dot, self.dots[dot])
+                    f.write(builder.render())
+                    dotName = builder.protocol.name.replace('<', '&lt;').replace('>', '&gt;')
+                packetPageList.append({'name': dotName, 'path': 'refs/protocols/packets/{}.md'.format(dotPath)})
             else:
-                with open(r'build/protocols/types/{}.md'.format(dotName), 'w', encoding="utf-8") as f:
-                    f.write(ProtocolBuilder(dot, self.dots[dot]).render())
-                typePageList.append({'name': dotName, 'path': 'refs/protocols/types/{}.md'.format(dotName)})
+                with open(r'build/protocols/types/{}.md'.format(dotPath), 'w', encoding="utf-8") as f:
+                    builder = ProtocolBuilder(dot, self.dots[dot])
+                    f.write(builder.render())
+                    dotName = builder.protocol.name.replace('<', '&lt;').replace('>', '&gt;')
+                typePageList.append({'name': dotName, 'path': 'refs/protocols/types/{}.md'.format(dotPath)})
         packetPageListText = '\n'.join(['- <samp>{}</samp>: {}'.format(p['name'], p['path']) for p in packetPageList])
         typePageListText = '\n'.join(['- <samp>{}</samp>: {}'.format(p['name'], p['path']) for p in typePageList])
         return packetPageListText, typePageListText
