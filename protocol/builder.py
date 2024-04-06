@@ -116,7 +116,7 @@ def buildCodeAndResult(protocol, node, level=3):
         defList = {}
         type = outs[0].attr["label"]
         if comment["attributes"] == 256:
-            typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), '../types/{}.md'.format(re.sub(r"[ :<>]", r"_", type).lower())).render()
+            typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), '../types/{}.md'.format(re.sub(r"[ :<>]", r"_", type)[0:127].lower())).render()
         else:
             typeLink = MarkdownSymbol('samp', type).render()
         description = '{}。{}'.format('类型：' + MarkdownSymbol('samp', type).render() if type != '[No Data]' else '无数据', comment["notes"])
