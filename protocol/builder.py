@@ -22,7 +22,7 @@ class ProtocolBuilder(MarkdownWriter):
     def preRender(self):
         version = 'r/20_u7'
         protocolVersion = 662
-        protocolName = MarkdownSymbol('samp', self.protocol.name.replace('<', '&lt;').replace('>', '&gt;')).render()
+        protocolName = MarkdownSymbol('samp', specialTypeReplace(self.protocol.name).replace('<', '&lt;').replace('>', '&gt;')).render()
         self.addHeading(protocolName, 1)
         self.addBlockquote('文档版本：{}<br/>协议版本：{}'.format(version, protocolVersion))
         if self.protocol.name.endswith('Packet'):
@@ -34,10 +34,7 @@ class ProtocolBuilder(MarkdownWriter):
         self.addHeading('结构', 2)
         self.addText('```viz\n{}\n```'.format(self.protocolFile))
         self.addHeading('字段', 2)
-        # defList = {}
-        # buildDefList(defList, self.protocol, self.protocol.nodes()[0])
-        # self.addDefinitionList(defList)
-        self.addText(buildCodeAndResult(self.protocol, self.protocol.nodes()[0]))
+        self.addText(buildCodeAndResult(self.protocol, self.enums, self.protocol.nodes()[0]))
 
     def render(self):
         return super().render()
@@ -48,63 +45,20 @@ def parseComment(protocolNode: str) -> dict:
     comment = protocolNode.attr["comment"].replace("name", "'name'").replace("typeName", "'typeName'").replace("id", "'id'").replace("branchId", "'branchId'").replace("recurseId", "'recurseId'").replace("attributes", "'attributes'").replace("notes", "'notes'")
     return ast.literal_eval(f'{{{comment}}}')
 
-
-def buildDefList(defList, protocol, node, level=3):
-
-    comment = parseComment(node)
-    outs = []
-    description = ''
-    edges = protocol.edges(node)
-    if node.attr["label"] == 'ActorEventPacket':
-        print(protocol.edges(node))
-    for edge in edges:
-        if edge[0] == node:
-            outs.append(edge[1])
-    if comment["attributes"] == 2:
-        defList['{}'.format(node.attr["label"])] = ''
-        writer = MarkdownWriter()
-        for out in outs:
-            if parseComment(out)["attributes"] == 4:
-                subDefList = {}
-                buildDefList(subDefList, protocol, out, level + 2)
-                writer.addTab('{}'.format(out.attr["label"]), MarkdownDefinitionList(subDefList, level + 2).render(), level + 1)
-        defList[writer.render()] = ''
-    elif comment["attributes"] == 8:
-        defList['{}'.format(node.attr["label"])] = ''
-        for out in outs:
-            if parseComment(out)["attributes"] == 16:
-                if out.attr["label"] == 'example element':
-                    out.attr["label"] = '{}的示例元素'.format(node.attr["label"])
-                subDefList = {}
-                buildDefList(subDefList, protocol, out, level + 1)
-                defList['{}'.format(MarkdownDefinitionList(subDefList, level + 1).render())] = ''
-            else:
-                if out.attr["label"] == 'Array Size':
-                    out.attr["label"] = '{}数组的大小'.format(node.attr["label"])
-                subDefList = {}
-                buildDefList(subDefList, protocol, out, level + 1)
-                defList['{}'.format(MarkdownDefinitionList(subDefList, level + 1).render())] = ''
-    elif len(outs) == 1:
-        if parseComment(outs[0])["attributes"] == 512:
-            type = outs[0].attr["label"]
-            if comment["attributes"] == 256:
-                typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), '../types/{}.md'.format(type.replace(' ', '_').lower())).render()
-            else:
-                typeLink = MarkdownSymbol('samp', type).render()
-            description = '类型：{}。{}'.format(type, comment["notes"])
-            defList['{}：{}'.format(node.attr["label"], typeLink)] = description
-        else:
-            defList['{}'.format(node.attr["label"])] = ''
-            buildDefList(defList, protocol, outs[0], level)
-    elif len(outs) > 1:
-        defList['{}'.format(node.attr["label"])] = ''
-        for out in outs:
-            if node.attr["label"] == 'ActorEventPacket':
-                print(out.attr["label"])
-            buildDefList(defList, protocol, out, level)
+def specialTypeReplace(type):
+    if type == 'std::vector<class std::unique_ptr<class DataItem,struct std::default_delete<class DataItem> >,class std::allocator<class std::unique_ptr<class DataItem,struct std::default_delete<class DataItem> > > >':
+        return 'std::vector<std::unique_ptr<DataItem>>'
+    elif type == 'std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >':
+        return 'std::optional<std::string>'
+    elif type == 'String':
+        return 'string'
+    elif type == 'Fixed Float':
+        return 'fixed float'
+    else:
+        return type
 
 
-def buildCodeAndResult(protocol, node, level=3):
+def buildCodeAndResult(protocol, enums, node, level=3):
     comment = parseComment(node)
     outs = []
     edges = protocol.edges(node)
@@ -115,11 +69,26 @@ def buildCodeAndResult(protocol, node, level=3):
     if len(outs) == 1 and parseComment(outs[0])["attributes"] == 512:
         defList = {}
         type = outs[0].attr["label"]
-        if comment["attributes"] == 256:
-            typeLink = MarkdownLink(MarkdownSymbol('samp', type).render(), '../types/{}.md'.format(re.sub(r"[ :<>]", r"_", type)[0:127].lower())).render()
+        path = type
+        type = specialTypeReplace(type)
+        typeToShow = type.replace('<', '&lt;').replace('>', '&gt;')
+        typeName = '基本类型'
+        if comment["attributes"] == 256 or type == 'string' or type == 'fixed float':
+            typeLink = MarkdownLink(MarkdownSymbol('samp', typeToShow).render(), '../types/{}.md'.format(re.sub(r"[ :<>]", r"_", path)[0:127].lower())).render()
+            typeName = '特殊类型'
         else:
-            typeLink = MarkdownSymbol('samp', type).render()
-        description = '{}。{}'.format('类型：' + MarkdownSymbol('samp', type).render() if type != '[No Data]' else '无数据', comment["notes"])
+            typeLink = MarkdownSymbol('samp', typeToShow).render()
+        enumTables = ''
+        enumList = re.findall(r"^enumeration: (.*)", comment["notes"])
+        for enum in enumList:
+            enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', ''] for k, v in enums[enum].items()]).render(1)  # todo: add enum description
+        enumList = re.findall(r"^Available ones: (.*)", comment["notes"])
+        for enum in enumList:
+            values = enum.split(', ')
+            enumTables += MarkdownTable(['值', '描述'], [[f'`{v}`', ''] for v in values]).render(1)
+        comment["notes"] = re.sub(r"^enumeration: (.*)", r"", comment["notes"])
+        comment["notes"] = re.sub(r"^Available ones: (.*)", r"", comment["notes"])
+        description = '{}。{}{}'.format(typeName + ('枚举' if enumTables else '') if type != '[No Data]' else '无数据', comment["notes"], '枚举值如下：\n\n' + enumTables if enumTables else '')
         defList['{}：{}'.format(node.attr["label"], typeLink)] = description
         writer.addDefinitionList(defList, level)
     elif comment["attributes"] == 2:
@@ -127,12 +96,12 @@ def buildCodeAndResult(protocol, node, level=3):
         for out in outs:
             tabLabel = re.sub(r"if \((.*)\)", r"{}如果为`\1`".format(re.sub(r"Dependency on '(.*)'", r"`\1`", node.attr["label"])), out.attr["label"])
             if parseComment(out)["attributes"] == 4:
-                content = buildCodeAndResult(protocol, out, level + 2)
+                content = buildCodeAndResult(protocol, enums, out, level + 2)
                 writer.addTab('{}'.format(tabLabel), content, level + 1)
     else:
         binArray = ''
         for out in outs:
-            binArray += '[{}]'.format(out.attr["label"].replace(' ', '_').lower().replace('example_element', '[example_element]..'))
+            binArray += '[{}]'.format(re.sub(r" \((.*)\)", r"", out.attr["label"]).replace(' - ', ' ').replace(' ', '_').lower().replace('example_element', '[example_element]..'))
         if comment["attributes"] == 8:
             for out in outs:
                 if parseComment(out)["attributes"] == 16:
@@ -141,9 +110,9 @@ def buildCodeAndResult(protocol, node, level=3):
                 else:
                     if out.attr["label"] == 'Array Size':
                         out.attr["label"] = '数组大小'
-        writer.addCodeBlock(binArray, "title='{}'".format(node.attr["label"]))
+        writer.addCodeBlock(binArray, "title='{}'".format(specialTypeReplace(node.attr["label"]).replace('<', '&lt;').replace('>', '&gt;')))
         content = ''
         for out in outs:
-            content += buildCodeAndResult(protocol, out, level + 1)
+            content += buildCodeAndResult(protocol, enums, out, level + 1)
         writer.addHtmlBlock('div.result', content, level)
     return writer.render()

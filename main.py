@@ -11,3 +11,4 @@ if __name__ == '__main__':
     protocolPageList = ProtocolGenerator().generate()
     print(protocolPageList[0])
     print(protocolPageList[1])
+
