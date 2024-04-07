@@ -101,7 +101,7 @@ def buildCodeAndResult(protocol, enums, node, level=3):
     else:
         binArray = ''
         for out in outs:
-            binArray += '[{}]'.format(re.sub(r" \((.*)\)", r"", out.attr["label"]).replace(' - ', ' ').replace(' ', '_').lower().replace('example_element', '[example_element]..'))
+            binArray += '[{}]'.format(re.sub(r" \((.*?)\)", r"", out.attr["label"]).replace(' - ', ' ').replace("'", '').replace(' ?', '').replace('?', '').replace(',', '').replace('==', 'is').replace('<=', 'le').replace('>=', 'ge').replace(' < ', ' l ').replace(' > ', ' g ').replace('||', 'or').replace(' ', '_').lower().replace('example_element', '[example_element]..'))
         if comment["attributes"] == 8:
             for out in outs:
                 if parseComment(out)["attributes"] == 16:
