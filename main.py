@@ -3,6 +3,7 @@ import json
 from command.generator import *
 from table.generator import *
 from protocol.generator import *
+from script.generator import *
 
 
 if __name__ == '__main__':
@@ -11,4 +12,5 @@ if __name__ == '__main__':
     protocolPageList = ProtocolGenerator().generate()
     print(protocolPageList[0])
     print(protocolPageList[1])
+    print(ScriptAPIGenerator().generate())
 

@@ -3,8 +3,6 @@ import os
 import re
 from bs4 import BeautifulSoup
 
-import pygraphviz as pgv
-
 from protocol.builder import ProtocolBuilder, specialTypeReplace
 
 
