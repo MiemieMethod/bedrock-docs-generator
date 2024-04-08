@@ -2,48 +2,105 @@ import json
 import os
 import re
 
-from script.builder import ClassBuilder, InterfaceBuilder, EnumBuilder
+from script.builder import ModuleBuilder, ClassBuilder, InterfaceBuilder, EnumBuilder, TypeAliasBuilder, ErrorBuilder
 
 
 class ScriptAPIGenerator(object):
     def __init__(self):
         self.module = {}
-        with open(r'assets/docs/script_modules/@minecraft/server_1.12.0-beta.json', 'r') as f:
-            self.module = json.loads(f.read())
+        with open(r'assets/docs/script_modules/mojang-minecraft_0.1.0.json', 'r') as f:
+            self.module["server"] = {}
+            self.module["server"]["0.1.0"] = json.loads(f.read())
+        with open(r'assets/docs/script_modules/mojang-minecraft-ui_0.1.0.json', 'r') as f:
+            self.module["server-ui"] = {}
+            self.module["server-ui"]["0.1.0"] = json.loads(f.read())
+        for root, dirs, files in os.walk(r'assets/docs/script_modules/@minecraft'):
+            for file in files:
+                with open(os.path.join(root, file), 'r') as f:
+                    name, version = re.match(r'(.*)_(.*).json', file).groups()
+                    if re.match(r'.*?-beta', version):
+                        version = 'beta'
+                    if re.match(r'.*?-internal', version):
+                        version = 'internal'
+                    if name not in self.module:
+                        self.module[name] = {}
+                    self.module[name][version] = json.loads(f.read())
+        for name in self.module:
+            keys = list(self.module[name].keys())
+            keys.sort(key=lambda x: (x == 'internal', x == 'beta', x.split('.')))
+            self.module[name] = {k: self.module[name][k] for k in keys}
 
     def generate(self):
         if not os.path.exists(r'build/script-api'):
             os.mkdir(r'build/script-api')
-        if not os.path.exists(r'build/script-api/server'):
-            os.mkdir(r'build/script-api/server')
-        if not os.path.exists(r'build/script-api/server/beta'):
-            os.mkdir(r'build/script-api/server/beta')
-        classPageList = []
-        for class_ in self.module['classes']:
-            className = class_['name']
-            classPath = className.replace(' ', '_').lower()
-            with open(r'build/script-api/server/beta/{}.md'.format(classPath), 'w', encoding="utf-8") as f:
-                builder = ClassBuilder(class_)
-                f.write(builder.render())
-                classPageList.append({'name': className, 'path': 'refs/script-api/server/beta/{}.md'.format(classPath)})
-        classPageListText = '\n'.join(['- <samp>{}</samp>: {}'.format(p['name'], p['path']) for p in classPageList])
-        interfacePageList = []
-        for interface in self.module['interfaces']:
-            interfaceName = interface['name']
-            interfacePath = interfaceName.replace(' ', '_').lower()
-            with open(r'build/script-api/server/beta/{}.md'.format(interfacePath), 'w', encoding="utf-8") as f:
-                builder = InterfaceBuilder(interface)
-                f.write(builder.render())
-                interfacePageList.append({'name': interfaceName, 'path': 'refs/script-api/server/beta/{}.md'.format(interfacePath)})
-        interfacePageListText = '\n'.join(['- <samp>{}</samp>: {}'.format(p['name'], p['path']) for p in interfacePageList])
-        enumPageList = []
-        for enum in self.module['enums']:
-            enumName = enum['name']
-            enumPath = enumName.replace(' ', '_').lower()
-            with open(r'build/script-api/server/beta/{}.md'.format(enumPath), 'w', encoding="utf-8") as f:
-                builder = EnumBuilder(enum)
-                f.write(builder.render())
-                enumPageList.append({'name': enumName, 'path': 'refs/script-api/server/beta/{}.md'.format(enumPath)})
-        enumPageListText = '\n'.join(['- <samp>{}</samp>: {}'.format(p['name'], p['path']) for p in enumPageList])
-        pageListText = '- 类: \n  {}\n- 接口: \n  {}\n- 枚举: \n  {}'.format(classPageListText.replace('\n', '\n  '), interfacePageListText.replace('\n', '\n  '), enumPageListText.replace('\n', '\n  '))
+        pageListText = ''
+        for name in self.module:
+            if not os.path.exists(r'build/script-api/{}'.format(name)):
+                os.mkdir(r'build/script-api/{}'.format(name))
+            modulePageListText = ''
+            for version in self.module[name]:
+                if not os.path.exists(r'build/script-api/{}/{}'.format(name, version)):
+                    os.mkdir(r'build/script-api/{}/{}'.format(name, version))
+                versionPageListText = ''
+                with open(r'build/script-api/{}/{}/index.md'.format(name, version), 'w', encoding="utf-8") as f:
+                    builder = ModuleBuilder(self.module[name][version])
+                    f.write(builder.render())
+                    versionPageListText += '- {}'.format('refs/script-api/{}/{}/index.md'.format(name, version))
+                classPageList = []
+                if self.module[name][version]['classes']:
+                    for class_ in self.module[name][version]['classes']:
+                        className = class_['name']
+                        classPath = className.replace(' ', '_').lower()
+                        with open(r'build/script-api/{}/{}/{}.md'.format(name, version, classPath), 'w', encoding="utf-8") as f:
+                            builder = ClassBuilder(class_)
+                            f.write(builder.render())
+                            classPageList.append({'name': className, 'path': 'refs/script-api/{}/{}/{}.md'.format(name, version, classPath)})
+                    classPageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in classPageList])
+                    versionPageListText += '\n- 类: \n  {}'.format(classPageListText.replace('\n', '\n  '))
+                if self.module[name][version]['interfaces']:
+                    interfacePageList = []
+                    for interface in self.module[name][version]['interfaces']:
+                        interfaceName = interface['name']
+                        interfacePath = interfaceName.replace(' ', '_').lower()
+                        with open(r'build/script-api/{}/{}/{}.md'.format(name, version, interfacePath), 'w', encoding="utf-8") as f:
+                            builder = InterfaceBuilder(interface)
+                            f.write(builder.render())
+                            interfacePageList.append({'name': interfaceName, 'path': 'refs/script-api/{}/{}/{}.md'.format(name, version, interfacePath)})
+                    interfacePageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in interfacePageList])
+                    versionPageListText += '\n- 接口: \n  {}'.format(interfacePageListText.replace('\n', '\n  '))
+                if self.module[name][version]['enums']:
+                    enumPageList = []
+                    for enum in self.module[name][version]['enums']:
+                        enumName = enum['name']
+                        enumPath = enumName.replace(' ', '_').lower()
+                        with open(r'build/script-api/{}/{}/{}.md'.format(name, version, enumPath), 'w', encoding="utf-8") as f:
+                            builder = EnumBuilder(enum)
+                            f.write(builder.render())
+                            enumPageList.append({'name': enumName, 'path': 'refs/script-api/{}/{}/{}.md'.format(name, version, enumPath)})
+                    enumPageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in enumPageList])
+                    versionPageListText += '\n- 枚举: \n  {}'.format(enumPageListText.replace('\n', '\n  '))
+                if self.module[name][version]['type_aliases']:
+                    typeAliasPageList = []
+                    for typeAlias in self.module[name][version]['type_aliases']:
+                        typeAliasName = typeAlias['name']
+                        typeAliasPath = typeAliasName.replace(' ', '_').lower()
+                        with open(r'build/script-api/{}/{}/{}.md'.format(name, version, typeAliasPath), 'w', encoding="utf-8") as f:
+                            builder = TypeAliasBuilder(typeAlias)
+                            f.write(builder.render())
+                            typeAliasPageList.append({'name': typeAliasName, 'path': 'refs/script-api/{}/{}/{}.md'.format(name, version, typeAliasPath)})
+                    typeAliasPageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in typeAliasPageList])
+                    versionPageListText += '\n- 类型别名: \n  {}'.format(typeAliasPageListText.replace('\n', '\n  '))
+                if self.module[name][version]['errors']:
+                    errorPageList = []
+                    for error in self.module[name][version]['errors']:
+                        errorName = error['name']
+                        errorPath = errorName.replace(' ', '_').lower()
+                        with open(r'build/script-api/{}/{}/{}.md'.format(name, version, errorPath), 'w', encoding="utf-8") as f:
+                            builder = ErrorBuilder(error)
+                            f.write(builder.render())
+                            errorPageList.append({'name': errorName, 'path': 'refs/script-api/{}/{}/{}.md'.format(name, version, errorPath)})
+                    errorPageListText = '\n'.join(['- <code>{}</code>: {}'.format(p['name'], p['path']) for p in errorPageList])
+                    versionPageListText += '\n- 错误: \n  {}'.format(errorPageListText.replace('\n', '\n  '))
+                modulePageListText += '\n- <code>{}</code>: \n  {}'.format(version, versionPageListText.replace('\n', '\n  '))
+            pageListText += '\n- <code>@minecraft/{}</code>:   {}'.format(name, modulePageListText.replace('\n', '\n  '))
         return pageListText

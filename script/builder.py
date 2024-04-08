@@ -6,11 +6,12 @@ from markdown.writer import *
 
 class FunctionBuilder(MarkdownWriter):
 
-    def __init__(self, function=None):
+    def __init__(self, function=None, fromRoot=False):
         super().__init__()
         if function is None:
             function = {}
         self.function = function
+        self.fromRoot = fromRoot
 
     def preRender(self):
         defList = {}
@@ -26,9 +27,9 @@ class FunctionBuilder(MarkdownWriter):
                 defList = {}
                 description = f'参数{i}。'
                 i += 1
-                defList[f'`{argument["name"]}`：{typeString(argument["type"], True, True)}'] = description
+                defList[f'`{argument["name"]}`：{typeString(argument["type"], True, True, self.fromRoot)}'] = description
                 writer.addDefinitionList(defList, 4)
-        writer.addDefinitionList({f'返回值：{typeString(self.function["return_type"], True, True)}': '返回值。'}, 4)
+        writer.addDefinitionList({f'返回值：{typeString(self.function["return_type"], True, True, self.fromRoot)}': '返回值。'}, 4)
         self.addHtmlBlock('div.result', writer.render())
 
     def render(self):
@@ -38,11 +39,12 @@ class FunctionBuilder(MarkdownWriter):
 
 class PropertyBuilder(MarkdownWriter):
 
-    def __init__(self, property_=None):
+    def __init__(self, property_=None, fromRoot=False):
         super().__init__()
         if property_ is None:
             property_ = {}
         self.property_ = property_
+        self.fromRoot = fromRoot
 
     def preRender(self):
         defList = {}
@@ -53,7 +55,7 @@ class PropertyBuilder(MarkdownWriter):
         self.addCodeBlock(f'{prefix}{self.property_["name"]}: {typeString(self.property_["type"], True)};', 'js')
         writer = MarkdownWriter()
         defList = {}
-        defList[f'`{self.property_["name"]}`：{typeString(self.property_["type"], True, True)}'] = '属性。'
+        defList[f'`{self.property_["name"]}`：{typeString(self.property_["type"], True, True, self.fromRoot)}'] = '属性。'
         writer.addDefinitionList(defList, 4)
         self.addHtmlBlock('div.result', writer.render())
 
@@ -62,11 +64,12 @@ class PropertyBuilder(MarkdownWriter):
 
 class ConstantBuilder(MarkdownWriter):
 
-    def __init__(self, constant=None):
+    def __init__(self, constant=None, fromRoot=False):
         super().__init__()
         if constant is None:
             constant = {}
         self.constant = constant
+        self.fromRoot = fromRoot
 
     def preRender(self):
         defList = {}
@@ -74,33 +77,41 @@ class ConstantBuilder(MarkdownWriter):
         self.addDefinitionList(defList)
         prefix = 'static ' if self.constant.get('is_static', '') else ''
         prefix += 'read-only ' if self.constant["is_read_only"] else ''
-        self.addCodeBlock(f'{prefix}{self.constant["name"]} = {f'"{self.constant["value"]}"' if self.constant["type"]["name"] == 'string' else self.constant["value"]};', 'js')
+        suffix = f' = {f'"{self.constant["value"]}"' if self.constant["type"]["name"] == 'string' else self.constant["value"]}' if 'value' in self.constant else f': {typeString(self.constant["type"], True)}'
+        self.addCodeBlock(f'{prefix}{self.constant["name"]}{suffix};', 'js')
+        if 'value' not in self.constant:
+            writer = MarkdownWriter()
+            defList = {}
+            defList[f'`{self.constant["name"]}`：{typeString(self.constant["type"], True, True, self.fromRoot)}'] = '常量。'
+            writer.addDefinitionList(defList, 4)
+            self.addHtmlBlock('div.result', writer.render())
 
     def render(self):
         return super().render()
 
 class ClassBuilder(MarkdownWriter):
 
-        def __init__(self, class_=None):
+        def __init__(self, class_=None, fromRoot=False):
             super().__init__()
             if class_ is None:
                 class_ = {}
             self.class_ = class_
+            self.fromRoot = fromRoot
 
         def preRender(self):
             version = '1.21.0.20'
             self.addHeading(f'`{self.class_["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自{'、'.join([typeString(base, rich=True) for base in self.class_['base_types']])}' if len(self.class_['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"]["optional_type"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.class_['base_types']])}' if len(self.class_['base_types']) > 0 else ''}。')
             if len(self.class_["constants"]) > 0:
                 self.addHeading('常量', 2)
                 for constant in self.class_["constants"]:
-                    builder = ConstantBuilder(constant)
+                    builder = ConstantBuilder(constant, self.fromRoot)
                     self.addText(builder.render())
             if len(self.class_["properties"]) > 0:
                 self.addHeading('属性', 2)
                 for property_ in self.class_["properties"]:
-                    builder = PropertyBuilder(property_)
+                    builder = PropertyBuilder(property_, self.fromRoot)
                     self.addText(builder.render())
             if 'iterator' in self.class_:
                 functions = [
@@ -131,7 +142,7 @@ class ClassBuilder(MarkdownWriter):
             if len(self.class_["functions"]) > 0:
                 self.addHeading('方法', 2)
                 for function in self.class_["functions"]:
-                    builder = FunctionBuilder(function)
+                    builder = FunctionBuilder(function, self.fromRoot)
                     self.addText(builder.render())
 
         def render(self):
@@ -140,21 +151,22 @@ class ClassBuilder(MarkdownWriter):
 
 class InterfaceBuilder(MarkdownWriter):
 
-        def __init__(self, interface=None):
+        def __init__(self, interface=None, fromRoot=False):
             super().__init__()
             if interface is None:
                 interface = {}
             self.interface = interface
+            self.fromRoot = fromRoot
 
         def preRender(self):
             version = '1.21.0.20'
             self.addHeading(f'`{self.interface["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自{'、'.join([typeString(base, rich=True) for base in self.interface['base_types']])}' if len(self.interface['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.interface['base_types']])}' if len(self.interface['base_types']) > 0 else ''}。')
             if len(self.interface["properties"]) > 0:
                 self.addHeading('属性', 2)
                 for property_ in self.interface["properties"]:
-                    builder = PropertyBuilder(property_)
+                    builder = PropertyBuilder(property_, self.fromRoot)
                     self.addText(builder.render())
 
         def render(self):
@@ -162,11 +174,12 @@ class InterfaceBuilder(MarkdownWriter):
 
 class EnumBuilder(MarkdownWriter):
 
-        def __init__(self, enum=None):
+        def __init__(self, enum=None, fromRoot=False):
             super().__init__()
             if enum is None:
                 enum = {}
             self.enum = enum
+            self.fromRoot = fromRoot
 
         def preRender(self):
             version = '1.21.0.20'
@@ -176,28 +189,131 @@ class EnumBuilder(MarkdownWriter):
             if len(self.enum["constants"]) > 0:
                 self.addHeading('常量', 2)
                 for constant in self.enum["constants"]:
-                    builder = ConstantBuilder(constant)
+                    builder = ConstantBuilder(constant, self.fromRoot)
                     self.addText(builder.render())
 
         def render(self):
             return super().render()
 
 
+class TypeAliasBuilder(MarkdownWriter):
+
+        def __init__(self, typeAlias=None, fromRoot=False):
+            super().__init__()
+            if typeAlias is None:
+                typeAlias = {}
+            self.typeAlias = typeAlias
+            self.fromRoot = fromRoot
+
+        def preRender(self):
+            version = '1.21.0.20'
+            self.addHeading(f'`{self.typeAlias["name"]}`', 1)
+            self.addBlockquote('文档版本：{}'.format(version))
+            self.addText(f'`{self.typeAlias["name"]}`类型别名。')
+            if self.typeAlias["alias_type"] == 'type_map':
+                self.addHeading('类型映射', 2)
+                defList = {}
+                for map in self.typeAlias["mappings"]:
+                    defList[f'`{map["name"]}`：[`{map["value"]}`](./{map["value"].lower()}.md)'] = '映射。'
+                self.addDefinitionList(defList)
+
+
+        def render(self):
+            return super().render()
+
+
+class ErrorBuilder(MarkdownWriter):
+
+        def __init__(self, error=None, fromRoot=False):
+            super().__init__()
+            if error is None:
+                error = {}
+            self.error = error
+            self.fromRoot = fromRoot
+
+        def preRender(self):
+            version = '1.21.0.20'
+            self.addHeading(f'`{self.error["name"]}`', 1)
+            self.addBlockquote('文档版本：{}'.format(version))
+            self.addText(f'`{self.error["name"]}`错误，扩展自`Error`。')
+            if len(self.error["properties"]) > 0:
+                self.addHeading('属性', 2)
+                for property_ in self.error["properties"]:
+                    builder = PropertyBuilder(property_, self.fromRoot)
+                    self.addText(builder.render())
+
+        def render(self):
+            return super().render()
+
+class ModuleBuilder(MarkdownWriter):
+
+        def __init__(self, module=None):
+            super().__init__()
+            if module is None:
+                module = {}
+            self.module = module
+
+        def preRender(self):
+            version = '1.21.0.20'
+            self.addHeading(f'`{self.module["name"]}`', 1)
+            self.addBlockquote('文档版本：{}'.format(version))
+            self.addText(f'`{self.module["name"]}`模块的`{self.module["version"]}`版本，UUID为`{self.module["uuid"]}`。')
+            if self.module["dependencies"]:
+                self.addAdmonition('依赖', '该模块依赖于以下模块：\n\n- {}'.format('\n- '.join([f'`{dependency["name"]}`|`{dependency["version"]}`|`{dependency["uuid"]}`' for dependency in self.module["dependencies"]])), 'info')
+            if self.module["constants"]:
+                self.addHeading('常量', 2)
+                for constant in self.module["constants"]:
+                    builder = ConstantBuilder(constant, True)
+                    self.addText(builder.render())
+            if self.module["objects"]:
+                self.addHeading('对象', 2)
+                for object in self.module["objects"]:
+                    builder = PropertyBuilder(object, True)
+                    self.addText(builder.render())
+            if self.module["functions"]:
+                self.addHeading('函数', 2)
+                for function in self.module["functions"]:
+                    builder = FunctionBuilder(function, True)
+                    self.addText(builder.render())
+            if self.module["classes"]:
+                self.addHeading('类', 2)
+                self.addTable(['类', '描述'], [[f'[`{class_["name"]}`](./{class_["name"].lower()}.md)', ''] for class_ in self.module["classes"]])
+            if self.module["interfaces"]:
+                self.addHeading('接口', 2)
+                self.addTable(['接口', '描述'], [[f'[`{interface["name"]}`](./{interface["name"].lower()}.md)', ''] for interface in self.module["interfaces"]])
+            if self.module["enums"]:
+                self.addHeading('枚举', 2)
+                self.addTable(['枚举', '描述'], [[f'[`{enum["name"]}`](./{enum["name"].lower()}.md)', ''] for enum in self.module["enums"]])
+            if self.module["type_aliases"]:
+                self.addHeading('类型别名', 2)
+                self.addTable(['类型别名', '描述'], [[f'[`{typeAlias["name"]}`](./{typeAlias["name"].lower()}.md)', ''] for typeAlias in self.module["type_aliases"]])
+            if self.module["errors"]:
+                self.addHeading('错误', 2)
+                self.addTable(['错误', '描述'], [[f'[`{error["name"]}`](./{error["name"].lower()}.md)', ''] for error in self.module["errors"]])
+
+        def render(self):
+            return super().render()
+
+
+
 def argumentSignature(arguments):
     return ', '.join([f'{arg["name"]}{'?' if arg["type"]["name"] == 'optional' else ''}: {typeString(arg["type"])}' for arg in arguments])
 
-def typeString(type, parseOptional=False, rich=False):
+def typeString(type, parseOptional=False, rich=False, fromRoot=False):
+    prefix = '../'
+    if fromRoot:
+        prefix = ''
     if type["name"] == 'optional':
         if parseOptional:
             if rich:
-                return f'{typeString(type["optional_type"], rich=True)}|`undefined`'
+                return f'{typeString(type["optional_type"], rich=True, fromRoot=fromRoot)}|`undefined`'
             else:
                 return f'{typeString(type["optional_type"])} | undefined'
         else:
             return f'{typeString(type["optional_type"])}'
     elif type["name"] == 'variant':
         if rich:
-            return '|'.join([typeString(t, rich=True) for t in type["variant_types"]])
+            return '|'.join([typeString(t, rich=True, fromRoot=fromRoot) for t in type["variant_types"]])
         else:
             return ' | '.join([typeString(t) for t in type["variant_types"]])
     elif type["name"] == 'closure':
@@ -207,28 +323,28 @@ def typeString(type, parseOptional=False, rich=False):
             arguments.append({'name': 'arg' + (str(i) if i > 1 else ''), 'type': arg})
         if rich:
             signatures = []
-            for arg in arguments:
+            for arg in arguments      :
                 if arg["type"]["is_bind_type"]:
-                    signatures.append(f'<a href="{generatePath(arg["type"])}">{typeString(arg["type"])}</a>')
+                    signatures.append(f'<a href="{generatePath(arg["type"], prefix=prefix)}">{typeString(arg["type"])}</a>')
                 else:
                     signatures.append(typeString(arg["type"]))
-            returnLink = f'<a href="{generatePath(type["closure_type"]["return_type"])}">{typeString(type["closure_type"]["return_type"])}</a>' if type["closure_type"]["return_type"]["is_bind_type"] else typeString(type["closure_type"]["return_type"])
+            returnLink = f'<a href="{generatePath(type["closure_type"]["return_type"], prefix=prefix)}">{typeString(type["closure_type"]["return_type"])}</a>' if type["closure_type"]["return_type"]["is_bind_type"] else typeString(type["closure_type"]["return_type"])
             return f'<code>({", ".join(signatures)}) =&gt; {returnLink}</code>'
         return f'({argumentSignature(arguments)}) => {typeString(type["closure_type"]["return_type"])}'
     elif type["name"] == 'array':
         if rich:
             if type["element_type"]["is_bind_type"]:
-                return f'<code><a href="{generatePath(type["element_type"])}">{typeString(type["element_type"])}</a>[]</code>'
+                return f'<code><a href="{generatePath(type["element_type"], prefix=prefix)}">{typeString(type["element_type"])}</a>[]</code>'
             else:
-                return f'`{typeString(type["element_type"])}[]`'
+                return f'`{'(' if type["element_type"]["name"] == 'variant' else ''}{typeString(type["element_type"])}{')' if type["element_type"]["name"] == 'variant' else ''}[]`'
         else:
-            return f'{typeString(type["element_type"])}[]'
+            return f'{'(' if type["element_type"]["name"] == 'variant' else ''}{typeString(type["element_type"])}{')' if type["element_type"]["name"] == 'variant' else ''}[]'
     elif type["name"] == 'generator':
         if rich:
             if type["generator_type"]["yield_type"]["is_bind_type"] or type["generator_type"]["next_type"]["is_bind_type"] or type["generator_type"]["return_type"]["is_bind_type"]:
-                yieldLink = f'<a href="{generatePath(type["generator_type"]["yield_type"])}">{typeString(type["generator_type"]["yield_type"])}</a>' if type["generator_type"]["yield_type"]["is_bind_type"] else typeString(type["generator_type"]["yield_type"])
-                nextLink = f'<a href="{generatePath(type["generator_type"]["next_type"])}">{typeString(type["generator_type"]["next_type"])}</a>' if type["generator_type"]["next_type"]["is_bind_type"] else typeString(type["generator_type"]["next_type"])
-                returnLink = f'<a href="{generatePath(type["generator_type"]["return_type"])}">{typeString(type["generator_type"]["return_type"])}</a>' if type["generator_type"]["return_type"]["is_bind_type"] else typeString(type["generator_type"]["return_type"])
+                yieldLink = f'<a href="{generatePath(type["generator_type"]["yield_type"], prefix=prefix)}">{typeString(type["generator_type"]["yield_type"])}</a>' if type["generator_type"]["yield_type"]["is_bind_type"] else typeString(type["generator_type"]["yield_type"])
+                nextLink = f'<a href="{generatePath(type["generator_type"]["next_type"], prefix=prefix)}">{typeString(type["generator_type"]["next_type"])}</a>' if type["generator_type"]["next_type"]["is_bind_type"] else typeString(type["generator_type"]["next_type"])
+                returnLink = f'<a href="{generatePath(type["generator_type"]["return_type"], prefix=prefix)}">{typeString(type["generator_type"]["return_type"])}</a>' if type["generator_type"]["return_type"]["is_bind_type"] else typeString(type["generator_type"]["return_type"])
                 return f'<code>Generator&lt;{yieldLink}, {nextLink}, {returnLink}&gt;</code>'
             else:
                 return f'`Generator<{typeString(type["generator_type"]["yield_type"])}, {typeString(type["generator_type"]["next_type"])}, {typeString(type["generator_type"]["return_type"])}>`'
@@ -237,8 +353,8 @@ def typeString(type, parseOptional=False, rich=False):
     elif type["name"] == 'map':
         if rich:
             if type["key_type"]["is_bind_type"] or type["value_type"]["is_bind_type"]:
-                keyLink = f'<a href="{generatePath(type["key_type"])}">{typeString(type["key_type"])}</a>' if type["key_type"]["is_bind_type"] else typeString(type["key_type"])
-                valueLink = f'<a href="{generatePath(type["value_type"])}">{typeString(type["value_type"])}</a>' if type["value_type"]["is_bind_type"] else typeString(type["value_type"])
+                keyLink = f'<a href="{generatePath(type["key_type"], prefix=prefix)}">{typeString(type["key_type"])}</a>' if type["key_type"]["is_bind_type"] else typeString(type["key_type"])
+                valueLink = f'<a href="{generatePath(type["value_type"], prefix=prefix)}">{typeString(type["value_type"])}</a>' if type["value_type"]["is_bind_type"] else typeString(type["value_type"])
                 return f'<code>Record&lt;{keyLink}, {valueLink}&gt;</code>'
             else:
                 return f'`Record<{typeString(type["key_type"])}, {typeString(type["value_type"])}>`'
@@ -247,23 +363,23 @@ def typeString(type, parseOptional=False, rich=False):
     elif type["name"] == 'promise':
         if rich:
             if type["promise_type"]["is_bind_type"]:
-                return f'<code>Promise&lt;<a href="{generatePath(type["promise_type"])}">{typeString(type["promise_type"])}</a>&gt;</code>'
+                return f'<code>Promise&lt;<a href="{generatePath(type["promise_type"], prefix=prefix)}">{typeString(type["promise_type"])}</a>&gt;</code>'
             else:
                 return f'`Promise<{typeString(type["promise_type"])}>`'
         else:
             return f'Promise<{typeString(type["promise_type"])}>'
     elif type["name"] == 'iterator':
         if rich:
-            if type["iterator_type"]["is_bind_type"]:
-                return f'<code>Iterator&lt;<a href="{generatePath(type["iterator_type"])}">{typeString(type["iterator_type"])}</a>&gt;</code>'
+            if type["iterator_type"]["optional_type"]["is_bind_type"]:
+                return f'<code>Iterator&lt;<a href="{generatePath(type["iterator_type"]["optional_type"], prefix=prefix)}">{typeString(type["iterator_type"])}</a>&gt;</code>'
             else:
                 return f'`Iterator<{typeString(type["iterator_type"])}>`'
         else:
             return f'Iterator<{typeString(type["iterator_type"])}>'
     elif type["name"] == 'iterator_result':
         if rich:
-            if type["iterator_type"]["is_bind_type"]:
-                return f'<code>IteratorResult&lt;<a href="{generatePath(type["iterator_type"])}">{typeString(type["iterator_type"])}</a>&gt;</code>'
+            if type["iterator_type"]["optional_type"]["is_bind_type"]:
+                return f'<code>IteratorResult&lt;<a href="{generatePath(type["iterator_type"]["optional_type"], prefix=prefix)}">{typeString(type["iterator_type"])}</a>&gt;</code>'
             else:
                 return f'`IteratorResult<{typeString(type["iterator_type"])}>`'
         else:
@@ -299,16 +415,12 @@ def parseFromModule(obj):
     return f'{name}/{version}'
 
 
-def generateMDPath(type, prefix='.md'):
-    if 'from_module' in type:
-        module = parseFromModule(type["from_module"])
-        return f'../../{module}/{type["name"].lower()}{prefix}'
-    else:
-        return f'./{type["name"].lower()}{prefix}'
+def generateMDPath(type, suffix='.md'):
+    return generatePath(type, suffix, '')
 
-def generatePath(type, prefix='/'):
+def generatePath(type, suffix='/', prefix='../'):
     if 'from_module' in type:
         module = parseFromModule(type["from_module"])
-        return f'../../../{module}/{type["name"].lower()}{prefix}'
+        return f'{prefix}../../{module}/{type["name"].lower()}{suffix}'
     else:
-        return f'../{type["name"].lower()}{prefix}'
+        return f'{prefix if prefix else './'}{type["name"].lower()}{suffix}'
