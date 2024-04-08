@@ -91,7 +91,7 @@ class ClassBuilder(MarkdownWriter):
             version = '1.21.0.20'
             self.addHeading(f'`{self.class_["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自`{'`、`'.join([typeString(base, rich=True) for base in self.class_['base_types']])}`' if len(self.class_['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自{'、'.join([typeString(base, rich=True) for base in self.class_['base_types']])}' if len(self.class_['base_types']) > 0 else ''}。')
             if len(self.class_["constants"]) > 0:
                 self.addHeading('常量', 2)
                 for constant in self.class_["constants"]:
@@ -150,7 +150,7 @@ class InterfaceBuilder(MarkdownWriter):
             version = '1.21.0.20'
             self.addHeading(f'`{self.interface["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自`{'`、`'.join([typeString(base, rich=True) for base in self.interface['base_types']])}`' if len(self.interface['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自{'、'.join([typeString(base, rich=True) for base in self.interface['base_types']])}' if len(self.interface['base_types']) > 0 else ''}。')
             if len(self.interface["properties"]) > 0:
                 self.addHeading('属性', 2)
                 for property_ in self.interface["properties"]:
