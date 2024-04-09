@@ -1,0 +1,42 @@
+# 命令键名格式：`command.命令名.重载名.参数名.description=翻译`
+# 对于参数而言，如果不指定重载名，则该命令内所有同名参数均会被设置为该值；指定了重载名的参数只会对该重载生效。
+# 对单独一个重载描述时，可以使用`command.命令名.重载名.description=翻译`
+# 对于枚举类型的参数，可以使用`command.enum.枚举名.description=翻译`
+# 如果该枚举类型的参数使用“命令名”的样式翻译，那么该键会优先生效。
+# 枚举的值可以使用`command.enum.枚举名.枚举值=翻译`
+
+# 命令
+command.ability.description=可以设置一个玩家的能力。    # 命令描述
+command.ability.player.description=目标玩家的目标选择器。  # 全局的指定参数描述
+command.ability.1.description=授予或撤回目标玩家的某一项能力。  # 第一个重载描述
+command.ability.1.value.description=授予能力（是）还是撤回能力（否）。   # 第一个重载指定参数描述，会覆盖`command.enum.boolean.description`和`command.ability.value.description`
+command.ability.2.description=查询目标玩家的能力。    # 第二个重载描述
+
+# 命令枚举
+command.enum.ability.description=一项能力。  # 枚举描述
+command.enum.ability.mayfly=能够飞行    # 枚举值描述
+command.enum.ability.mute=禁言
+command.enum.ability.worldbuilder=世界建造者
+
+command.enum.boolean.true=是
+command.enum.boolean.false=否
+
+# 数据包描述格式：`protocol.packet.数据包名.description=翻译`
+# 数据包参数描述格式：`protocol.packet.数据包名.参数名.description=翻译`
+# 数据包枚举描述格式：`protocol.enum.枚举名=翻译`
+# 如果是数据包类型，可以使用`protocol.type.数据包名.description=翻译`，其余同理
+
+# 数据包
+protocol.packet.actoreventpacket.description=通信活动对象事件。  # 数据包描述
+protocol.packet.actoreventpacket.target_runtime_id.description=目标活动对象的运行时标识符。  # 数据包指定参数描述
+protocol.packet.actoreventpacket.event_id.description=事件标识符。  # 数据包另一指定参数描述
+
+# 类型
+protocol.type.actorlink.description=活动对象链接。  # 数据包类型描述
+
+# 枚举
+protocol.enum.none=无
+
+
+script_api.mojang-minecraft.description=服务端的基础模块，在最新模块版本中已改名为`@minecraft/server`。  # 旧版模块描述
+script_api.@minecraft/server.description=服务端的基础模块。  # 模块描述

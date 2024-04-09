@@ -1,7 +1,11 @@
 import re
 
 from markdown.writer import *
+from translation.i18n import i18n
 
+
+def localizationKey(name, arg=''):
+    return i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description')
 
 
 class FunctionBuilder(MarkdownWriter):
@@ -17,6 +21,7 @@ class FunctionBuilder(MarkdownWriter):
         defList = {}
         defList[f'`{self.function["name"]}`'] = ''
         self.addDefinitionList(defList)
+        self.addText(localizationKey(self.function["name"]))
         prefix = 'new ' if self.function["is_constructor"] else ('static ' if self.function["is_static"] else '')
         arguments = argumentSignature(self.function["arguments"])
         self.addCodeBlock(f'{prefix}{self.function["name"]}({arguments}): {typeString(self.function["return_type"], True)}', 'js')
@@ -25,11 +30,11 @@ class FunctionBuilder(MarkdownWriter):
             i = 1
             for argument in self.function["arguments"]:
                 defList = {}
-                description = f'参数{i}。'
+                description = localizationKey(self.function["name"].lower(), argument["name"])
                 i += 1
                 defList[f'`{argument["name"]}`：{typeString(argument["type"], True, True, self.fromRoot)}'] = description
                 writer.addDefinitionList(defList, 4)
-        writer.addDefinitionList({f'返回值：{typeString(self.function["return_type"], True, True, self.fromRoot)}': '返回值。'}, 4)
+        writer.addDefinitionList({f'返回值：{typeString(self.function["return_type"], True, True, self.fromRoot)}': i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{ModuleBuilder.currentClassName.lower()}.{self.function["name"].lower()}.return') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{ModuleBuilder.currentClassName.lower()}.{self.function["name"].lower()}.return') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentClassName.lower()}.{self.function["name"].lower()}.return')}, 4)
         self.addHtmlBlock('div.result', writer.render())
 
     def render(self):
@@ -55,7 +60,7 @@ class PropertyBuilder(MarkdownWriter):
         self.addCodeBlock(f'{prefix}{self.property_["name"]}: {typeString(self.property_["type"], True)};', 'js')
         writer = MarkdownWriter()
         defList = {}
-        defList[f'`{self.property_["name"]}`：{typeString(self.property_["type"], True, True, self.fromRoot)}'] = '属性。'
+        defList[f'`{self.property_["name"]}`：{typeString(self.property_["type"], True, True, self.fromRoot)}'] = localizationKey(self.property_["name"])
         writer.addDefinitionList(defList, 4)
         self.addHtmlBlock('div.result', writer.render())
 
@@ -82,7 +87,7 @@ class ConstantBuilder(MarkdownWriter):
         if 'value' not in self.constant:
             writer = MarkdownWriter()
             defList = {}
-            defList[f'`{self.constant["name"]}`：{typeString(self.constant["type"], True, True, self.fromRoot)}'] = '常量。'
+            defList[f'`{self.constant["name"]}`：{typeString(self.constant["type"], True, True, self.fromRoot)}'] = localizationKey(self.constant["name"])
             writer.addDefinitionList(defList, 4)
             self.addHtmlBlock('div.result', writer.render())
 
@@ -100,9 +105,10 @@ class ClassBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentClassName = self.class_["name"]
             self.addHeading(f'`{self.class_["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"]["optional_type"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.class_['base_types']])}' if len(self.class_['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.class_["name"]}`类{f'，实现了<code>Iterator&lt;<a href="{generatePath(self.class_["iterator"]["optional_type"])}">{typeString(self.class_["iterator"])}</a>&gt;</code>' if 'iterator' in self.class_ else ''}{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.class_['base_types']])}' if len(self.class_['base_types']) > 0 else ''}。{i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.class_["name"].lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.class_["name"].lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{self.class_["name"].lower()}.description')}')
             if len(self.class_["constants"]) > 0:
                 self.addHeading('常量', 2)
                 for constant in self.class_["constants"]:
@@ -160,9 +166,10 @@ class InterfaceBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentClassName = self.interface["name"]
             self.addHeading(f'`{self.interface["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.interface['base_types']])}' if len(self.interface['base_types']) > 0 else ''}。')
+            self.addText(f'`{self.interface["name"]}`接口{f'，扩展自{'、'.join([typeString(base, rich=True, fromRoot=self.fromRoot) for base in self.interface['base_types']])}' if len(self.interface['base_types']) > 0 else ''}。{i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.interface["name"].lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.interface["name"].lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{self.interface["name"].lower()}.description')}')
             if len(self.interface["properties"]) > 0:
                 self.addHeading('属性', 2)
                 for property_ in self.interface["properties"]:
@@ -183,9 +190,10 @@ class EnumBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentClassName = self.enum["name"]
             self.addHeading(f'`{self.enum["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.enum["name"]}`枚举。')
+            self.addText(f'`{self.enum["name"]}`枚举。{i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.enum["name"].lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.enum["name"].lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{self.enum["name"].lower()}.description')}')
             if len(self.enum["constants"]) > 0:
                 self.addHeading('常量', 2)
                 for constant in self.enum["constants"]:
@@ -207,9 +215,10 @@ class TypeAliasBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentClassName = self.typeAlias["name"]
             self.addHeading(f'`{self.typeAlias["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.typeAlias["name"]}`类型别名。')
+            self.addText(f'`{self.typeAlias["name"]}`类型别名。{i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.typeAlias["name"].lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.typeAlias["name"].lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{self.typeAlias["name"].lower()}.description')}')
             if self.typeAlias["alias_type"] == 'type_map':
                 self.addHeading('类型映射', 2)
                 defList = {}
@@ -233,9 +242,10 @@ class ErrorBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentClassName = self.error["name"]
             self.addHeading(f'`{self.error["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.error["name"]}`错误，扩展自`Error`。')
+            self.addText(f'`{self.error["name"]}`错误，扩展自`Error`。{i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.error["name"].lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}.{self.error["name"].lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{self.error["name"].lower()}.description')}')
             if len(self.error["properties"]) > 0:
                 self.addHeading('属性', 2)
                 for property_ in self.error["properties"]:
@@ -246,6 +256,9 @@ class ErrorBuilder(MarkdownWriter):
             return super().render()
 
 class ModuleBuilder(MarkdownWriter):
+        currentModuleName = ''
+        currentModuleVersion = ''
+        currentClassName = ''
 
         def __init__(self, module=None):
             super().__init__()
@@ -255,9 +268,15 @@ class ModuleBuilder(MarkdownWriter):
 
         def preRender(self):
             version = '1.21.0.20'
+            ModuleBuilder.currentModuleName = self.module["name"]
+            ModuleBuilder.currentModuleVersion = self.module["version"]
+            if re.match(r'.*?-beta', ModuleBuilder.currentModuleVersion):
+                ModuleBuilder.currentModuleVersion = 'beta'
+            if re.match(r'.*?-internal', ModuleBuilder.currentModuleVersion):
+                ModuleBuilder.currentModuleVersion = 'internal'
             self.addHeading(f'`{self.module["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
-            self.addText(f'`{self.module["name"]}`模块的`{self.module["version"]}`版本，UUID为`{self.module["uuid"]}`。')
+            self.addText(f'`{self.module["name"]}`模块的`{self.module["version"]}`版本，UUID为`{self.module["uuid"]}`。该模块是{i18n.get(f'script_api.{self.module["name"].lower()}.description')}')
             if self.module["dependencies"]:
                 self.addAdmonition('依赖', '该模块依赖于以下模块：\n\n- {}'.format('\n- '.join([f'`{dependency["name"]}`|`{dependency["version"]}`|`{dependency["uuid"]}`' for dependency in self.module["dependencies"]])), 'info')
             if self.module["constants"]:
@@ -323,7 +342,7 @@ def typeString(type, parseOptional=False, rich=False, fromRoot=False):
             arguments.append({'name': 'arg' + (str(i) if i > 1 else ''), 'type': arg})
         if rich:
             signatures = []
-            for arg in arguments      :
+            for arg in arguments:
                 if arg["type"]["is_bind_type"]:
                     signatures.append(f'<a href="{generatePath(arg["type"], prefix=prefix)}">{typeString(arg["type"])}</a>')
                 else:

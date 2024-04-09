@@ -6,6 +6,8 @@ from markdown.writer import *
 
 import ast
 
+from translation.i18n import i18n
+
 
 class ProtocolBuilder(MarkdownWriter):
 
@@ -30,7 +32,7 @@ class ProtocolBuilder(MarkdownWriter):
         else:
             fileType = '类型'
         packetId = parseComment(self.protocol.nodes()[0])["branchId"]
-        self.addText('{}{}{}{}。'.format(protocolName, fileType, '', f'，数字ID是`{packetId}`' if packetId else ''))  #todo add packet description
+        self.addText('{}{}{}{}。该{}用于{}'.format(protocolName, fileType, '', f'，数字ID是`{packetId}`' if packetId else '', fileType, i18n.get(f'protocol.{'packet' if packetId else 'type'}.{specialTypeReplace(self.protocol.name).replace(' ', '_').lower()}.description')))
         self.addHeading('结构', 2)
         self.addText('```viz\n{}\n```'.format(self.protocolFile))
         self.addHeading('字段', 2)
@@ -81,14 +83,14 @@ def buildCodeAndResult(protocol, enums, node, level=3):
         enumTables = ''
         enumList = re.findall(r"^enumeration: (.*)", comment["notes"])
         for enum in enumList:
-            enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', ''] for k, v in enums[enum].items()]).render(1)  # todo: add enum description
+            enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', i18n.get(f'protocol.enum.{k.lower()}')] for k, v in enums[enum].items()]).render(1)
         enumList = re.findall(r"^Available ones: (.*)", comment["notes"])
         for enum in enumList:
             values = enum.split(', ')
-            enumTables += MarkdownTable(['值', '描述'], [[f'`{v}`', ''] for v in values]).render(1)
+            enumTables += MarkdownTable(['值', '描述'], [[f'`{v}`', i18n.get(f'protocol.enum.{v.lower()}')] for v in values]).render(1)
         comment["notes"] = re.sub(r"^enumeration: (.*)", r"", comment["notes"])
         comment["notes"] = re.sub(r"^Available ones: (.*)", r"", comment["notes"])
-        description = '{}。{}{}'.format(typeName + ('枚举' if enumTables else '') if type != '[No Data]' else '无数据', comment["notes"], '枚举值如下：\n\n' + enumTables if enumTables else '')
+        description = '{}{}{}'.format(typeName + ('枚举' if enumTables else '') + '。' + i18n.get(f'protocol.{'packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type'}.{specialTypeReplace(protocol.name).replace(' ', '_').lower()}.{formatBinArrayItem(node.attr["label"])}.description') if type != '[No Data]' else '无数据', comment["notes"], '枚举值如下：\n\n' + enumTables if enumTables else '')
         defList['{}：{}'.format(node.attr["label"], typeLink)] = description
         writer.addDefinitionList(defList, level)
     elif comment["attributes"] == 2:
@@ -101,7 +103,7 @@ def buildCodeAndResult(protocol, enums, node, level=3):
     else:
         binArray = ''
         for out in outs:
-            binArray += '[{}]'.format(re.sub(r" \((.*?)\)", r"", out.attr["label"]).replace(' - ', ' ').replace("'", '').replace(' ?', '').replace('?', '').replace(',', '').replace('==', 'is').replace('<=', 'le').replace('>=', 'ge').replace(' < ', ' l ').replace(' > ', ' g ').replace('||', 'or').replace(' ', '_').lower().replace('example_element', '[example_element]..'))
+            binArray += '[{}]'.format(formatBinArrayItem(out.attr["label"]))
         if comment["attributes"] == 8:
             for out in outs:
                 if parseComment(out)["attributes"] == 16:
@@ -116,3 +118,6 @@ def buildCodeAndResult(protocol, enums, node, level=3):
             content += buildCodeAndResult(protocol, enums, out, level + 1)
         writer.addHtmlBlock('div.result', content, level)
     return writer.render()
+
+def formatBinArrayItem(item):
+    return re.sub(r" \((.*?)\)", r"", item).replace(' - ', ' ').replace("'", '').replace(' ?', '').replace('?', '').replace(',', '').replace('==', 'is').replace('<=', 'le').replace('>=', 'ge').replace(' < ', ' l ').replace(' > ', ' g ').replace('||', 'or').replace(' ', '_').lower().replace('example_element', '[example_element]..')
