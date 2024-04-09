@@ -18,6 +18,7 @@ command.enum.ability.mayfly=能够飞行    # 枚举值描述
 command.enum.ability.mute=禁言
 command.enum.ability.worldbuilder=世界建造者
 
+# command.enum.boolean.description=布尔值    # 像这种太宽泛的、需要结合上下文的枚举就不要填写全局描述，留到每一个用到该枚举的地方单独写描述
 command.enum.boolean.true=是
 command.enum.boolean.false=否
 
