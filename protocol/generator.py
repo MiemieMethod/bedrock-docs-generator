@@ -23,6 +23,8 @@ class ProtocolGenerator(object):
     def generate(self):
         packetPageList = []
         typePageList = []
+        if not os.path.exists(r'build'):
+            os.mkdir(r'build')
         if not os.path.exists(r'build/protocols'):
             os.mkdir(r'build/protocols')
         if not os.path.exists(r'build/protocols/packets'):

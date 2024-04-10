@@ -31,6 +31,8 @@ class ScriptAPIGenerator(object):
             self.module[name] = {k: self.module[name][k] for k in keys}
 
     def generate(self):
+        if not os.path.exists(r'build'):
+            os.mkdir(r'build')
         if not os.path.exists(r'build/script-api'):
             os.mkdir(r'build/script-api')
         pageListText = ''

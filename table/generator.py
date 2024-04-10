@@ -17,6 +17,8 @@ class TableGenerator(object):
 
 
     def generate(self):
+        if not os.path.exists(r'build'):
+            os.mkdir(r'build')
         if not os.path.exists(r'build/tables'):
             os.mkdir(r'build/tables')
         if not os.path.exists(r'build/tables/blocks'):
