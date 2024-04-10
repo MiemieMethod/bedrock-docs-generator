@@ -5,7 +5,7 @@ from translation.i18n import i18n
 
 
 def localizationKey(name, arg=''):
-    return i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}{f'.{arg.lower()}' if arg else ''}.{name.lower()}.description')
+    return i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{name.lower()}{f'.{arg.lower()}' if arg else ''}.description') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{name.lower()}{f'.{arg.lower()}' if arg else ''}.description') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{name.lower()}{f'.{arg.lower()}' if arg else ''}.description')
 
 
 class FunctionBuilder(MarkdownWriter):
@@ -150,6 +150,7 @@ class ClassBuilder(MarkdownWriter):
                 for function in self.class_["functions"]:
                     builder = FunctionBuilder(function, self.fromRoot)
                     self.addText(builder.render())
+            ModuleBuilder.currentClassName = ''
 
         def render(self):
             return super().render()
@@ -175,6 +176,7 @@ class InterfaceBuilder(MarkdownWriter):
                 for property_ in self.interface["properties"]:
                     builder = PropertyBuilder(property_, self.fromRoot)
                     self.addText(builder.render())
+            ModuleBuilder.currentClassName = ''
 
         def render(self):
             return super().render()
@@ -199,6 +201,7 @@ class EnumBuilder(MarkdownWriter):
                 for constant in self.enum["constants"]:
                     builder = ConstantBuilder(constant, self.fromRoot)
                     self.addText(builder.render())
+            ModuleBuilder.currentClassName = ''
 
         def render(self):
             return super().render()
@@ -225,6 +228,7 @@ class TypeAliasBuilder(MarkdownWriter):
                 for map in self.typeAlias["mappings"]:
                     defList[f'`{map["name"]}`：[`{map["value"]}`](./{map["value"].lower()}.md)'] = '映射。'
                 self.addDefinitionList(defList)
+            ModuleBuilder.currentClassName = ''
 
 
         def render(self):
@@ -251,6 +255,7 @@ class ErrorBuilder(MarkdownWriter):
                 for property_ in self.error["properties"]:
                     builder = PropertyBuilder(property_, self.fromRoot)
                     self.addText(builder.render())
+            ModuleBuilder.currentClassName = ''
 
         def render(self):
             return super().render()
