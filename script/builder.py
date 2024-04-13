@@ -104,7 +104,7 @@ class ClassBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentClassName = self.class_["name"]
             self.addHeading(f'`{self.class_["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -166,7 +166,7 @@ class InterfaceBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentClassName = self.interface["name"]
             self.addHeading(f'`{self.interface["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -191,7 +191,7 @@ class EnumBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentClassName = self.enum["name"]
             self.addHeading(f'`{self.enum["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -217,7 +217,7 @@ class TypeAliasBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentClassName = self.typeAlias["name"]
             self.addHeading(f'`{self.typeAlias["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -245,7 +245,7 @@ class ErrorBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentClassName = self.error["name"]
             self.addHeading(f'`{self.error["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -272,7 +272,7 @@ class ModuleBuilder(MarkdownWriter):
             self.module = module
 
         def preRender(self):
-            version = '1.21.0.20'
+            version = '1.21.0.21'
             ModuleBuilder.currentModuleName = self.module["name"]
             ModuleBuilder.currentModuleVersion = self.module["version"]
             if re.match(r'.*?-beta', ModuleBuilder.currentModuleVersion):
