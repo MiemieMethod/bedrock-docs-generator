@@ -55,6 +55,9 @@
          "name" : "minecraft:activator_rail"
       },
       {
+         "name" : "minecraft:air"
+      },
+      {
          "name" : "minecraft:allay_spawn_egg"
       },
       {
@@ -128,6 +131,9 @@
       },
       {
          "name" : "minecraft:baked_potato"
+      },
+      {
+         "name" : "minecraft:balloon"
       },
       {
          "name" : "minecraft:bamboo"
@@ -349,6 +355,9 @@
          "name" : "minecraft:blaze_spawn_egg"
       },
       {
+         "name" : "minecraft:bleach"
+      },
+      {
          "name" : "minecraft:blue_candle"
       },
       {
@@ -427,6 +436,9 @@
          "name" : "minecraft:brain_coral"
       },
       {
+         "name" : "minecraft:brain_coral_block"
+      },
+      {
          "name" : "minecraft:brain_coral_fan"
       },
       {
@@ -497,6 +509,9 @@
       },
       {
          "name" : "minecraft:bubble_coral"
+      },
+      {
+         "name" : "minecraft:bubble_coral_block"
       },
       {
          "name" : "minecraft:bubble_coral_fan"
@@ -575,6 +590,9 @@
       },
       {
          "name" : "minecraft:charcoal"
+      },
+      {
+         "name" : "minecraft:chemical_heat"
       },
       {
          "name" : "minecraft:chemistry_table"
@@ -727,6 +745,12 @@
          "name" : "minecraft:cod_spawn_egg"
       },
       {
+         "name" : "minecraft:colored_torch_bp"
+      },
+      {
+         "name" : "minecraft:colored_torch_rg"
+      },
+      {
          "name" : "minecraft:command_block"
       },
       {
@@ -740,6 +764,9 @@
       },
       {
          "name" : "minecraft:composter"
+      },
+      {
+         "name" : "minecraft:compound"
       },
       {
          "name" : "minecraft:concrete"
@@ -997,10 +1024,16 @@
          "name" : "minecraft:dead_brain_coral"
       },
       {
+         "name" : "minecraft:dead_brain_coral_block"
+      },
+      {
          "name" : "minecraft:dead_brain_coral_fan"
       },
       {
          "name" : "minecraft:dead_bubble_coral"
+      },
+      {
+         "name" : "minecraft:dead_bubble_coral_block"
       },
       {
          "name" : "minecraft:dead_bubble_coral_fan"
@@ -1009,16 +1042,25 @@
          "name" : "minecraft:dead_fire_coral"
       },
       {
+         "name" : "minecraft:dead_fire_coral_block"
+      },
+      {
          "name" : "minecraft:dead_fire_coral_fan"
       },
       {
          "name" : "minecraft:dead_horn_coral"
       },
       {
+         "name" : "minecraft:dead_horn_coral_block"
+      },
+      {
          "name" : "minecraft:dead_horn_coral_fan"
       },
       {
          "name" : "minecraft:dead_tube_coral"
+      },
+      {
+         "name" : "minecraft:dead_tube_coral_block"
       },
       {
          "name" : "minecraft:dead_tube_coral_fan"
@@ -1675,6 +1717,9 @@
          "name" : "minecraft:fire_coral"
       },
       {
+         "name" : "minecraft:fire_coral_block"
+      },
+      {
          "name" : "minecraft:fire_coral_fan"
       },
       {
@@ -1772,6 +1817,9 @@
       },
       {
          "name" : "minecraft:glow_squid_spawn_egg"
+      },
+      {
+         "name" : "minecraft:glow_stick"
       },
       {
          "name" : "minecraft:glowstone"
@@ -1936,10 +1984,112 @@
          "name" : "minecraft:hanging_roots"
       },
       {
+         "name" : "minecraft:hard_black_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_black_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_blue_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_blue_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_brown_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_brown_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_cyan_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_cyan_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_glass"
+      },
+      {
+         "name" : "minecraft:hard_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_gray_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_gray_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_green_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_green_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_light_blue_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_light_blue_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_light_gray_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_light_gray_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_lime_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_lime_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_magenta_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_magenta_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_orange_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_orange_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_pink_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_pink_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_purple_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_purple_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_red_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_red_stained_glass_pane"
+      },
+      {
          "name" : "minecraft:hard_stained_glass"
       },
       {
          "name" : "minecraft:hard_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_white_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_white_stained_glass_pane"
+      },
+      {
+         "name" : "minecraft:hard_yellow_stained_glass"
+      },
+      {
+         "name" : "minecraft:hard_yellow_stained_glass_pane"
       },
       {
          "name" : "minecraft:hardened_clay"
@@ -1987,6 +2137,9 @@
          "name" : "minecraft:horn_coral"
       },
       {
+         "name" : "minecraft:horn_coral_block"
+      },
+      {
          "name" : "minecraft:horn_coral_fan"
       },
       {
@@ -2003,6 +2156,9 @@
       },
       {
          "name" : "minecraft:ice"
+      },
+      {
+         "name" : "minecraft:ice_bomb"
       },
       {
          "name" : "minecraft:infested_deepslate"
@@ -2408,6 +2564,9 @@
       },
       {
          "name" : "minecraft:mangrove_wood"
+      },
+      {
+         "name" : "minecraft:medicine"
       },
       {
          "name" : "minecraft:medium_amethyst_bud"
@@ -3052,6 +3211,9 @@
          "name" : "minecraft:raiser_armor_trim_smithing_template"
       },
       {
+         "name" : "minecraft:rapid_fertilizer"
+      },
+      {
          "name" : "minecraft:ravager_spawn_egg"
       },
       {
@@ -3353,6 +3515,9 @@
       },
       {
          "name" : "minecraft:soul_torch"
+      },
+      {
+         "name" : "minecraft:sparkler"
       },
       {
          "name" : "minecraft:spawn_egg"
@@ -3661,6 +3826,9 @@
          "name" : "minecraft:tube_coral"
       },
       {
+         "name" : "minecraft:tube_coral_block"
+      },
+      {
          "name" : "minecraft:tube_coral_fan"
       },
       {
@@ -3701,6 +3869,9 @@
       },
       {
          "name" : "minecraft:twisting_vines"
+      },
+      {
+         "name" : "minecraft:underwater_torch"
       },
       {
          "name" : "minecraft:undyed_shulker_box"
@@ -4093,7 +4264,7 @@
          "name" : "minecraft:zombie_villager_spawn_egg"
       }
    ],
-   "minecraft_version" : "1.21.0-beta.20",
+   "minecraft_version" : "1.21.0-beta.21",
    "module_type" : "vanilla_data",
    "name" : "mojang-item",
    "vanilla_data_type" : "item"
