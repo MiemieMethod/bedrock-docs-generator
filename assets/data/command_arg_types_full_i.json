@@ -414,7 +414,7 @@
         "index": "20",
         "value": "1048596"
     },
-    "OPTIONAL_STATE": {
+    "OPTIONAL_HUDELEMENT": {
         "description": "unknown",
         "index": "21",
         "value": "5242901"
@@ -444,7 +444,7 @@
         "index": "22",
         "value": "3145750"
     },
-    "OPTIONAL_TOOL": {
+    "OPTIONAL_STATE": {
         "description": "unknown",
         "index": "22",
         "value": "5242902"
@@ -464,7 +464,7 @@
         "index": "23",
         "value": "9437207"
     },
-    "OPTIONAL_MUSICREPEATMODE": {
+    "OPTIONAL_TOOL": {
         "description": "unknown",
         "index": "23",
         "value": "5242903"
@@ -484,7 +484,7 @@
         "index": "24",
         "value": "9437208"
     },
-    "OPTIONAL_VAL_MUSICREPEATMODE": {
+    "OPTIONAL_MUSICREPEATMODE": {
         "description": "unknown",
         "index": "24",
         "value": "5242904"
@@ -499,7 +499,7 @@
         "index": "25",
         "value": "9437209"
     },
-    "OPTIONAL_VAL_VAL_MUSICREPEATMODE": {
+    "OPTIONAL_VAL_MUSICREPEATMODE": {
         "description": "unknown",
         "index": "25",
         "value": "5242905"
@@ -529,12 +529,12 @@
         "index": "26",
         "value": "1048602"
     },
-    "OPTIONAL_VAL": {
+    "OPTIONAL_VAL_VAL_MUSICREPEATMODE": {
         "description": "unknown",
         "index": "26",
         "value": "5242906"
     },
-    "OPTIONAL_POSITION_FLOAT": {
+    "OPTIONAL_VAL": {
         "description": "unknown",
         "index": "27",
         "value": "5242907"
@@ -554,7 +554,7 @@
         "index": "27",
         "value": "9437211"
     },
-    "OPTIONAL_ID_ID": {
+    "OPTIONAL_POSITION_FLOAT": {
         "description": "unknown",
         "index": "28",
         "value": "5242908"
@@ -574,7 +574,7 @@
         "index": "28",
         "value": "1048604"
     },
-    "OPTIONAL_VAL_ID_ID": {
+    "OPTIONAL_ID_ID": {
         "description": "unknown",
         "index": "29",
         "value": "5242909"
@@ -609,7 +609,7 @@
         "index": "30",
         "value": "1048606"
     },
-    "OPTIONAL_ID_VAL_ID_ID": {
+    "OPTIONAL_VAL_ID_ID": {
         "description": "unknown",
         "index": "30",
         "value": "5242910"
@@ -624,7 +624,7 @@
         "index": "31",
         "value": "3145759"
     },
-    "OPTIONAL_VAL_VAL": {
+    "OPTIONAL_ID_VAL_ID_ID": {
         "description": "unknown",
         "index": "31",
         "value": "5242911"
@@ -639,7 +639,7 @@
         "index": "32",
         "value": "9437216"
     },
-    "OPTIONAL_VAL_VAL_VAL": {
+    "OPTIONAL_VAL_VAL": {
         "description": "unknown",
         "index": "32",
         "value": "5242912"
@@ -659,7 +659,7 @@
         "index": "33",
         "value": "3145761"
     },
-    "OPTIONAL_POSITION_FLOAT_VAL_VAL_VAL": {
+    "OPTIONAL_VAL_VAL_VAL": {
         "description": "unknown",
         "index": "33",
         "value": "5242913"
@@ -684,7 +684,7 @@
         "index": "34",
         "value": "3145762"
     },
-    "OPTIONAL_SELECTION_POSITION_FLOAT_VAL_VAL_VAL": {
+    "OPTIONAL_POSITION_FLOAT_VAL_VAL_VAL": {
         "description": "unknown",
         "index": "34",
         "value": "5242914"
@@ -704,7 +704,7 @@
         "index": "35",
         "value": "3145763"
     },
-    "OPTIONAL_FILLTYPE": {
+    "OPTIONAL_SELECTION_POSITION_FLOAT_VAL_VAL_VAL": {
         "description": "unknown",
         "index": "35",
         "value": "5242915"
@@ -724,7 +724,7 @@
         "index": "36",
         "value": "3145764"
     },
-    "OPTIONAL_TELEPORTRULES_FILLTYPE": {
+    "OPTIONAL_FILLTYPE": {
         "description": "unknown",
         "index": "36",
         "value": "5242916"
@@ -739,7 +739,7 @@
         "index": "37",
         "value": "9437221"
     },
-    "OPTIONAL_RIDERULES_ID_ID": {
+    "OPTIONAL_TELEPORTRULES_FILLTYPE": {
         "description": "unknown",
         "index": "37",
         "value": "5242917"
@@ -764,7 +764,7 @@
         "index": "38",
         "value": "1048614"
     },
-    "OPTIONAL_SCOREBOARDSORTORDER": {
+    "OPTIONAL_RIDERULES_ID_ID": {
         "description": "unknown",
         "index": "38",
         "value": "5242918"
@@ -774,7 +774,7 @@
         "index": "38",
         "value": "9437222"
     },
-    "OPTIONAL_SCOREBOARDOBJECTIVES_SCOREBOARDSORTORDER": {
+    "OPTIONAL_SCOREBOARDSORTORDER": {
         "description": "unknown",
         "index": "39",
         "value": "5242919"
@@ -794,7 +794,7 @@
         "index": "39",
         "value": "9437223"
     },
-    "OPTIONAL_SCOREBOARDOBJECTIVES": {
+    "OPTIONAL_SCOREBOARDOBJECTIVES_SCOREBOARDSORTORDER": {
         "description": "unknown",
         "index": "40",
         "value": "5242920"
@@ -814,7 +814,7 @@
         "index": "40",
         "value": "9437224"
     },
-    "OPTIONAL_WILDCARDSELECTION": {
+    "OPTIONAL_SCOREBOARDOBJECTIVES": {
         "description": "unknown",
         "index": "41",
         "value": "5242921"
@@ -834,7 +834,7 @@
         "index": "41",
         "value": "1048617"
     },
-    "OPTIONAL_WILDCARDINT": {
+    "OPTIONAL_WILDCARDSELECTION": {
         "description": "unknown",
         "index": "42",
         "value": "5242922"
@@ -854,7 +854,7 @@
         "index": "42",
         "value": "9437226"
     },
-    "OPTIONAL_SETBLOCKMODE": {
+    "OPTIONAL_WILDCARDINT": {
         "description": "unknown",
         "index": "43",
         "value": "5242923"
@@ -874,7 +874,7 @@
         "index": "43",
         "value": "9437227"
     },
-    "OPTIONAL_STRUCTURESAVEMODE_BOOLEAN": {
+    "OPTIONAL_SETBLOCKMODE": {
         "description": "unknown",
         "index": "44",
         "value": "5242924"
@@ -899,7 +899,7 @@
         "index": "45",
         "value": "1048621"
     },
-    "OPTIONAL_VAL_ID": {
+    "OPTIONAL_STRUCTURESAVEMODE_BOOLEAN": {
         "description": "unknown",
         "index": "45",
         "value": "5242925"
@@ -924,7 +924,7 @@
         "index": "46",
         "value": "1048622"
     },
-    "OPTIONAL_BOOLEAN_VAL_ID": {
+    "OPTIONAL_VAL_ID": {
         "description": "unknown",
         "index": "46",
         "value": "5242926"
@@ -944,7 +944,7 @@
         "index": "47",
         "value": "9437231"
     },
-    "OPTIONAL_BOOLEAN_BOOLEAN_VAL_ID": {
+    "OPTIONAL_BOOLEAN_VAL_ID": {
         "description": "unknown",
         "index": "47",
         "value": "5242927"
@@ -954,7 +954,7 @@
         "index": "47",
         "value": "3145775"
     },
-    "OPTIONAL_VAL_BOOLEAN_BOOLEAN_VAL_ID": {
+    "OPTIONAL_BOOLEAN_BOOLEAN_VAL_ID": {
         "description": "unknown",
         "index": "48",
         "value": "5242928"
@@ -974,7 +974,7 @@
         "index": "48",
         "value": "3145776"
     },
-    "OPTIONAL_BOOLEAN_BOOLEAN_BOOLEAN_VAL_ID": {
+    "OPTIONAL_VAL_BOOLEAN_BOOLEAN_VAL_ID": {
         "description": "unknown",
         "index": "49",
         "value": "5242929"
@@ -1009,7 +1009,7 @@
         "index": "50",
         "value": "1048626"
     },
-    "OPTIONAL_VAL_BOOLEAN_BOOLEAN_BOOLEAN_VAL_ID": {
+    "OPTIONAL_BOOLEAN_BOOLEAN_BOOLEAN_VAL_ID": {
         "description": "unknown",
         "index": "50",
         "value": "5242930"
@@ -1019,7 +1019,7 @@
         "index": "51",
         "value": "9437235"
     },
-    "OPTIONAL_ENTITYEVENTS_ID": {
+    "OPTIONAL_VAL_BOOLEAN_BOOLEAN_BOOLEAN_VAL_ID": {
         "description": "unknown",
         "index": "51",
         "value": "5242931"
@@ -1034,7 +1034,7 @@
         "index": "51",
         "value": "3145779"
     },
-    "OPTIONAL_RVAL_ENTITYEVENTS_ID": {
+    "OPTIONAL_ENTITYEVENTS_ID": {
         "description": "unknown",
         "index": "52",
         "value": "5242932"
@@ -1059,12 +1059,12 @@
         "index": "53",
         "value": "3145781"
     },
-    "INPUTPERMISSION_F0": {
+    "HUD_F0": {
         "description": "unknown",
         "index": "53",
         "value": "9437237"
     },
-    "OPTIONAL_RVAL_BOOLEAN": {
+    "OPTIONAL_RVAL_ENTITYEVENTS_ID": {
         "description": "unknown",
         "index": "53",
         "value": "5242933"
@@ -1074,7 +1074,7 @@
         "index": "53",
         "value": "1048629"
     },
-    "KICK_F0": {
+    "INPUTPERMISSION_F0": {
         "description": "unknown",
         "index": "54",
         "value": "9437238"
@@ -1084,7 +1084,7 @@
         "index": "54",
         "value": "3145782"
     },
-    "OPTIONAL_TESTFORBLOCKSMODE": {
+    "OPTIONAL_RVAL_BOOLEAN": {
         "description": "unknown",
         "index": "54",
         "value": "5242934"
@@ -1094,7 +1094,7 @@
         "index": "54",
         "value": "1048630"
     },
-    "KILL_F0": {
+    "KICK_F0": {
         "description": "unknown",
         "index": "55",
         "value": "9437239"
@@ -1109,7 +1109,7 @@
         "index": "55",
         "value": "1048631"
     },
-    "OPTIONAL_ID_BOOLEAN": {
+    "OPTIONAL_TESTFORBLOCKSMODE": {
         "description": "unknown",
         "index": "55",
         "value": "5242935"
@@ -1124,12 +1124,12 @@
         "index": "56",
         "value": "1048632"
     },
-    "OPTIONAL_ALLDIMENSIONS": {
+    "OPTIONAL_ID_BOOLEAN": {
         "description": "unknown",
         "index": "56",
         "value": "5242936"
     },
-    "LISTD_F0": {
+    "KILL_F0": {
         "description": "unknown",
         "index": "56",
         "value": "9437240"
@@ -1139,7 +1139,7 @@
         "index": "57",
         "value": "3145785"
     },
-    "OPTIONAL_HUDELEMENT": {
+    "OPTIONAL_ALLDIMENSIONS": {
         "description": "unknown",
         "index": "57",
         "value": "5242937"
@@ -1149,7 +1149,7 @@
         "index": "57",
         "value": "1048633"
     },
-    "LOCATE_F0": {
+    "LISTD_F0": {
         "description": "unknown",
         "index": "57",
         "value": "9437241"
@@ -1169,7 +1169,7 @@
         "index": "58",
         "value": "1048634"
     },
-    "LOOT_F0": {
+    "LOCATE_F0": {
         "description": "unknown",
         "index": "58",
         "value": "9437242"
@@ -1189,7 +1189,7 @@
         "index": "59",
         "value": "1048635"
     },
-    "LOOT_F1": {
+    "LOOT_F0": {
         "description": "unknown",
         "index": "59",
         "value": "9437243"
@@ -1209,7 +1209,7 @@
         "index": "60",
         "value": "1048636"
     },
-    "LOOT_F2": {
+    "LOOT_F1": {
         "description": "unknown",
         "index": "60",
         "value": "9437244"
@@ -1224,7 +1224,7 @@
         "index": "61",
         "value": "1048637"
     },
-    "LOOT_F3": {
+    "LOOT_F2": {
         "description": "unknown",
         "index": "61",
         "value": "9437245"
@@ -1239,7 +1239,7 @@
         "index": "62",
         "value": "1048638"
     },
-    "LOOT_F4": {
+    "LOOT_F3": {
         "description": "unknown",
         "index": "62",
         "value": "9437246"
@@ -1254,7 +1254,7 @@
         "index": "63",
         "value": "1048639"
     },
-    "LOOT_F5": {
+    "LOOT_F4": {
         "description": "unknown",
         "index": "63",
         "value": "9437247"
@@ -1269,7 +1269,7 @@
         "index": "64",
         "value": "1048640"
     },
-    "LOOT_F6": {
+    "LOOT_F5": {
         "description": "unknown",
         "index": "64",
         "value": "9437248"
@@ -1284,7 +1284,7 @@
         "index": "65",
         "value": "1048641"
     },
-    "LOOT_F7": {
+    "LOOT_F6": {
         "description": "unknown",
         "index": "65",
         "value": "9437249"
@@ -1299,7 +1299,7 @@
         "index": "66",
         "value": "1048642"
     },
-    "LOOT_F8": {
+    "LOOT_F7": {
         "description": "unknown",
         "index": "66",
         "value": "9437250"
@@ -1314,7 +1314,7 @@
         "index": "67",
         "value": "1048643"
     },
-    "ME_F0": {
+    "LOOT_F8": {
         "description": "unknown",
         "index": "67",
         "value": "9437251"
@@ -1329,7 +1329,7 @@
         "index": "68",
         "value": "1048644"
     },
-    "MOBEVENT_F0": {
+    "ME_F0": {
         "description": "unknown",
         "index": "68",
         "value": "9437252"
@@ -1344,7 +1344,7 @@
         "index": "69",
         "value": "3145797"
     },
-    "MUSIC_F0": {
+    "MOBEVENT_F0": {
         "description": "unknown",
         "index": "69",
         "value": "9437253"
@@ -1359,7 +1359,7 @@
         "index": "70",
         "value": "1048646"
     },
-    "OP_F0": {
+    "MUSIC_F0": {
         "description": "unknown",
         "index": "70",
         "value": "9437254"
@@ -1374,7 +1374,7 @@
         "index": "71",
         "value": "3145799"
     },
-    "PARTICLE_F0": {
+    "OP_F0": {
         "description": "unknown",
         "index": "71",
         "value": "9437255"
@@ -1389,7 +1389,7 @@
         "index": "72",
         "value": "3145800"
     },
-    "PERMISSION_F0": {
+    "PARTICLE_F0": {
         "description": "unknown",
         "index": "72",
         "value": "9437256"
@@ -1404,12 +1404,12 @@
         "index": "73",
         "value": "1048649"
     },
-    "PLAYANIMATION_F0": {
+    "PERMISSION_F0": {
         "description": "unknown",
         "index": "73",
         "value": "9437257"
     },
-    "PLAYSOUND_F0": {
+    "PLAYANIMATION_F0": {
         "description": "unknown",
         "index": "74",
         "value": "9437258"
@@ -1429,7 +1429,7 @@
         "index": "75",
         "value": "3145803"
     },
-    "QUERYTARGET_F0": {
+    "PLAYSOUND_F0": {
         "description": "unknown",
         "index": "75",
         "value": "9437259"
@@ -1449,7 +1449,7 @@
         "index": "76",
         "value": "1048652"
     },
-    "REPLACEITEM_F0": {
+    "QUERYTARGET_F0": {
         "description": "unknown",
         "index": "76",
         "value": "9437260"
@@ -1464,7 +1464,7 @@
         "index": "77",
         "value": "1048653"
     },
-    "REPLACEITEM_F1": {
+    "REPLACEITEM_F0": {
         "description": "unknown",
         "index": "77",
         "value": "9437261"
@@ -1474,7 +1474,7 @@
         "index": "78",
         "value": "3145806"
     },
-    "REPLACEITEM_F2": {
+    "REPLACEITEM_F1": {
         "description": "unknown",
         "index": "78",
         "value": "9437262"
@@ -1494,7 +1494,7 @@
         "index": "79",
         "value": "1048655"
     },
-    "RIDE_F0": {
+    "REPLACEITEM_F2": {
         "description": "unknown",
         "index": "79",
         "value": "9437263"
@@ -1509,7 +1509,7 @@
         "index": "80",
         "value": "1048656"
     },
-    "RIDE_F1": {
+    "RIDE_F0": {
         "description": "unknown",
         "index": "80",
         "value": "9437264"
@@ -1524,7 +1524,7 @@
         "index": "81",
         "value": "1048657"
     },
-    "SAY_F0": {
+    "RIDE_F1": {
         "description": "unknown",
         "index": "81",
         "value": "9437265"
@@ -1539,7 +1539,7 @@
         "index": "82",
         "value": "1048658"
     },
-    "SCHEDULE_F0": {
+    "SAY_F0": {
         "description": "unknown",
         "index": "82",
         "value": "9437266"
@@ -1554,13 +1554,13 @@
         "index": "83",
         "value": "1048659"
     },
-    "SCHEDULE_F1": {
+    "SCHEDULE_F0": {
         "description": "unknown",
         "index": "83",
         "value": "9437267"
     },
-    "OPTION_SET": {
-        "description": "Option_Set",
+    "HUDELEMENT": {
+        "description": "HudElement",
         "index": "84",
         "value": "3145812"
     },
@@ -1569,13 +1569,13 @@
         "index": "84",
         "value": "1048660"
     },
-    "SCOREBOARD_F0": {
+    "SCHEDULE_F1": {
         "description": "unknown",
         "index": "84",
         "value": "9437268"
     },
-    "OPTION_QUERY": {
-        "description": "Option_Query",
+    "HUDVISIBILITY": {
+        "description": "HudVisibility",
         "index": "85",
         "value": "3145813"
     },
@@ -1584,13 +1584,13 @@
         "index": "85",
         "value": "1048661"
     },
-    "SCOREBOARD_F1": {
+    "SCOREBOARD_F0": {
         "description": "unknown",
         "index": "85",
         "value": "9437269"
     },
-    "PERMISSION": {
-        "description": "permission",
+    "OPTION_SET": {
+        "description": "Option_Set",
         "index": "86",
         "value": "3145814"
     },
@@ -1599,13 +1599,13 @@
         "index": "86",
         "value": "1048662"
     },
-    "SCOREBOARD_F2": {
+    "SCOREBOARD_F1": {
         "description": "unknown",
         "index": "86",
         "value": "9437270"
     },
-    "STATE": {
-        "description": "state",
+    "OPTION_QUERY": {
+        "description": "Option_Query",
         "index": "87",
         "value": "3145815"
     },
@@ -1614,498 +1614,498 @@
         "index": "87",
         "value": "1048663"
     },
-    "SCOREBOARD_F3": {
+    "SCOREBOARD_F2": {
         "description": "unknown",
         "index": "87",
         "value": "9437271"
     },
-    "LISTDETAILS": {
-        "description": "ListDetails",
+    "PERMISSION": {
+        "description": "permission",
         "index": "88",
         "value": "3145816"
     },
-    "SCRIPTEVENT_F0": {
+    "SCOREBOARD_F3": {
         "description": "unknown",
         "index": "88",
         "value": "9437272"
     },
-    "LOCATESUBCOMMANDSTRUCTURE": {
-        "description": "LocateSubcommandStructure",
+    "STATE": {
+        "description": "state",
         "index": "89",
         "value": "3145817"
     },
-    "SETBLOCK_F0": {
+    "SCRIPTEVENT_F0": {
         "description": "unknown",
         "index": "89",
         "value": "9437273"
     },
-    "LOCATESUBCOMMANDBIOME": {
-        "description": "LocateSubcommandBiome",
+    "LISTDETAILS": {
+        "description": "ListDetails",
         "index": "90",
         "value": "3145818"
     },
-    "SETBLOCK_F1": {
+    "SETBLOCK_F0": {
         "description": "unknown",
         "index": "90",
         "value": "9437274"
     },
-    "TARGETSPAWN": {
-        "description": "TargetSpawn",
+    "LOCATESUBCOMMANDSTRUCTURE": {
+        "description": "LocateSubcommandStructure",
         "index": "91",
         "value": "3145819"
     },
-    "SETMAXPLAYERS_F0": {
+    "SETBLOCK_F1": {
         "description": "unknown",
         "index": "91",
         "value": "9437275"
     },
-    "TARGETGIVE": {
-        "description": "TargetGive",
+    "LOCATESUBCOMMANDBIOME": {
+        "description": "LocateSubcommandBiome",
         "index": "92",
         "value": "3145820"
     },
-    "SETWORLDSPAWN_F0": {
+    "SETMAXPLAYERS_F0": {
         "description": "unknown",
         "index": "92",
         "value": "9437276"
     },
-    "TARGETINSERT": {
-        "description": "TargetInsert",
+    "TARGETSPAWN": {
+        "description": "TargetSpawn",
         "index": "93",
         "value": "3145821"
     },
-    "SPAWNPOINT_F0": {
+    "SETWORLDSPAWN_F0": {
         "description": "unknown",
         "index": "93",
         "value": "9437277"
     },
-    "TARGETREPLACE": {
-        "description": "TargetReplace",
+    "TARGETGIVE": {
+        "description": "TargetGive",
         "index": "94",
         "value": "3145822"
     },
-    "SPREADPLAYERS_F0": {
+    "SPAWNPOINT_F0": {
         "description": "unknown",
         "index": "94",
         "value": "9437278"
     },
-    "TARGETENTITY": {
-        "description": "TargetEntity",
+    "TARGETINSERT": {
+        "description": "TargetInsert",
         "index": "95",
         "value": "3145823"
     },
-    "STOPSOUND_F0": {
+    "SPREADPLAYERS_F0": {
         "description": "unknown",
         "index": "95",
         "value": "9437279"
     },
-    "TARGETBLOCK": {
-        "description": "TargetBlock",
+    "TARGETREPLACE": {
+        "description": "TargetReplace",
         "index": "96",
         "value": "3145824"
     },
-    "STRUCTURE_F0": {
+    "STOPSOUND_F0": {
         "description": "unknown",
         "index": "96",
         "value": "9437280"
     },
-    "SOURCELOOT": {
-        "description": "SourceLoot",
+    "TARGETENTITY": {
+        "description": "TargetEntity",
         "index": "97",
         "value": "3145825"
     },
-    "STRUCTURE_F1": {
+    "STRUCTURE_F0": {
         "description": "unknown",
         "index": "97",
         "value": "9437281"
     },
-    "SOURCEKILL": {
-        "description": "SourceKill",
+    "TARGETBLOCK": {
+        "description": "TargetBlock",
         "index": "98",
         "value": "3145826"
     },
-    "STRUCTURE_F2": {
+    "STRUCTURE_F1": {
         "description": "unknown",
         "index": "98",
         "value": "9437282"
     },
-    "BLOCKEQUIPMENTSLOT": {
-        "description": "BlockEquipmentSlot",
+    "SOURCELOOT": {
+        "description": "SourceLoot",
         "index": "99",
         "value": "3145827"
     },
-    "STRUCTURE_F3": {
+    "STRUCTURE_F2": {
         "description": "unknown",
         "index": "99",
         "value": "9437283"
     },
-    "STRUCTURE_F4": {
+    "STRUCTURE_F3": {
         "description": "unknown",
         "index": "100",
         "value": "9437284"
     },
-    "MOBEVENT": {
-        "description": "MobEvent",
+    "SOURCEKILL": {
+        "description": "SourceKill",
         "index": "100",
         "value": "3145828"
     },
-    "STRUCTURE_F5": {
+    "STRUCTURE_F4": {
         "description": "unknown",
         "index": "101",
         "value": "9437285"
     },
-    "MUSICQUEUEACTION": {
-        "description": "MusicQueueAction",
+    "BLOCKEQUIPMENTSLOT": {
+        "description": "BlockEquipmentSlot",
         "index": "101",
         "value": "3145829"
     },
-    "STRUCTURE_F6": {
+    "STRUCTURE_F5": {
         "description": "unknown",
         "index": "102",
         "value": "9437286"
     },
-    "MUSICPLAYACTION": {
-        "description": "MusicPlayAction",
+    "MOBEVENT": {
+        "description": "MobEvent",
         "index": "102",
         "value": "3145830"
     },
-    "STRUCTURE_F7": {
+    "STRUCTURE_F6": {
         "description": "unknown",
         "index": "103",
         "value": "9437287"
     },
-    "MUSICSTOPACTION": {
-        "description": "MusicStopAction",
+    "MUSICQUEUEACTION": {
+        "description": "MusicQueueAction",
         "index": "103",
         "value": "3145831"
     },
-    "SUMMON_F0": {
+    "STRUCTURE_F7": {
         "description": "unknown",
         "index": "104",
         "value": "9437288"
     },
-    "MUSICVOLUMEACTION": {
-        "description": "MusicVolumeAction",
+    "MUSICPLAYACTION": {
+        "description": "MusicPlayAction",
         "index": "104",
         "value": "3145832"
     },
-    "SUMMON_F1": {
+    "SUMMON_F0": {
         "description": "unknown",
         "index": "105",
         "value": "9437289"
     },
-    "MUSICREPEATMODE": {
-        "description": "MusicRepeatMode",
+    "MUSICSTOPACTION": {
+        "description": "MusicStopAction",
         "index": "105",
         "value": "3145833"
     },
-    "SUMMON_F2": {
+    "SUMMON_F1": {
         "description": "unknown",
         "index": "106",
         "value": "9437290"
     },
-    "PERMISSIONSACTION": {
-        "description": "PermissionsAction",
+    "MUSICVOLUMEACTION": {
+        "description": "MusicVolumeAction",
         "index": "106",
         "value": "3145834"
     },
-    "SUMMON_F3": {
+    "SUMMON_F2": {
         "description": "unknown",
         "index": "107",
         "value": "9437291"
     },
-    "PERMISSIONLEVEL": {
-        "description": "PermissionLevel",
+    "MUSICREPEATMODE": {
+        "description": "MusicRepeatMode",
         "index": "107",
         "value": "3145835"
     },
-    "PERMISSIONCOMMANDALIASES": {
-        "description": "permissionCommandAliases",
+    "PERMISSIONSACTION": {
+        "description": "PermissionsAction",
         "index": "108",
         "value": "3145836"
     },
-    "TAG_F0": {
+    "SUMMON_F3": {
         "description": "unknown",
         "index": "108",
         "value": "9437292"
     },
-    "RELOAD_SCRIPTS": {
-        "description": "reload_scripts",
+    "PERMISSIONLEVEL": {
+        "description": "PermissionLevel",
         "index": "109",
         "value": "3145837"
     },
-    "TAG_F1": {
+    "TAG_F0": {
         "description": "unknown",
         "index": "109",
         "value": "9437293"
     },
-    "RELOAD_ALL": {
-        "description": "reload_all",
+    "PERMISSIONCOMMANDALIASES": {
+        "description": "permissionCommandAliases",
         "index": "110",
         "value": "3145838"
     },
-    "TELEPORT_F0": {
+    "TAG_F1": {
         "description": "unknown",
         "index": "110",
         "value": "9437294"
     },
-    "REPLACEITEMBLOCK": {
-        "description": "ReplaceItemBlock",
+    "RELOAD_SCRIPTS": {
+        "description": "reload_scripts",
         "index": "111",
         "value": "3145839"
     },
-    "TELEPORT_F1": {
+    "TELEPORT_F0": {
         "description": "unknown",
         "index": "111",
         "value": "9437295"
     },
-    "REPLACEITEMENTITY": {
-        "description": "ReplaceItemEntity",
+    "RELOAD_ALL": {
+        "description": "reload_all",
         "index": "112",
         "value": "3145840"
     },
-    "TELEPORT_F2": {
+    "TELEPORT_F1": {
         "description": "unknown",
         "index": "112",
         "value": "9437296"
     },
-    "TELEPORT_F3": {
+    "TELEPORT_F2": {
         "description": "unknown",
         "index": "113",
         "value": "9437297"
     },
-    "REPLACEMODE": {
-        "description": "ReplaceMode",
+    "REPLACEITEMBLOCK": {
+        "description": "ReplaceItemBlock",
         "index": "113",
         "value": "3145841"
     },
-    "TELEPORT_F4": {
+    "TELEPORT_F3": {
         "description": "unknown",
         "index": "114",
         "value": "9437298"
     },
-    "RIDEMODESTART": {
-        "description": "RideModeStart",
+    "REPLACEITEMENTITY": {
+        "description": "ReplaceItemEntity",
         "index": "114",
         "value": "3145842"
     },
-    "TELEPORT_F5": {
+    "TELEPORT_F4": {
         "description": "unknown",
         "index": "115",
         "value": "9437299"
     },
-    "RIDEMODESTOP": {
-        "description": "RideModeStop",
+    "REPLACEMODE": {
+        "description": "ReplaceMode",
         "index": "115",
         "value": "3145843"
     },
-    "TELL_F0": {
+    "TELEPORT_F5": {
         "description": "unknown",
         "index": "116",
         "value": "9437300"
     },
-    "RIDEMODEEVICT": {
-        "description": "RideModeEvict",
+    "RIDEMODESTART": {
+        "description": "RideModeStart",
         "index": "116",
         "value": "3145844"
     },
-    "RIDEMODESUMMONRIDER": {
-        "description": "RideModeSummonRider",
+    "RIDEMODESTOP": {
+        "description": "RideModeStop",
         "index": "117",
         "value": "3145845"
     },
-    "TELLRAW_F0": {
+    "TELL_F0": {
         "description": "unknown",
         "index": "117",
         "value": "9437301"
     },
-    "RIDEMODESUMMONRIDE": {
-        "description": "RideModeSummonRide",
+    "RIDEMODEEVICT": {
+        "description": "RideModeEvict",
         "index": "118",
         "value": "3145846"
     },
-    "TESTFORBLOCK_F0": {
+    "TELLRAW_F0": {
         "description": "unknown",
         "index": "118",
         "value": "9437302"
     },
-    "TESTFORBLOCK_F1": {
+    "TESTFORBLOCK_F0": {
         "description": "unknown",
         "index": "119",
         "value": "9437303"
     },
-    "FILLTYPE": {
-        "description": "FillType",
+    "RIDEMODESUMMONRIDER": {
+        "description": "RideModeSummonRider",
         "index": "119",
         "value": "3145847"
     },
-    "TELEPORTRULES": {
-        "description": "TeleportRules",
+    "RIDEMODESUMMONRIDE": {
+        "description": "RideModeSummonRide",
         "index": "120",
         "value": "3145848"
     },
-    "TESTFORBLOCKS_F0": {
+    "TESTFORBLOCK_F1": {
         "description": "unknown",
         "index": "120",
         "value": "9437304"
     },
-    "TESTFOR_F0": {
+    "TESTFORBLOCKS_F0": {
         "description": "unknown",
         "index": "121",
         "value": "9437305"
     },
-    "RIDERULES": {
-        "description": "RideRules",
+    "FILLTYPE": {
+        "description": "FillType",
         "index": "121",
         "value": "3145849"
     },
-    "SCHEDULEACTIONONAREALOADED": {
-        "description": "ScheduleActionOnAreaLoaded",
+    "TELEPORTRULES": {
+        "description": "TeleportRules",
         "index": "122",
         "value": "3145850"
     },
-    "TICKINGAREA_F0": {
+    "TESTFOR_F0": {
         "description": "unknown",
         "index": "122",
         "value": "9437306"
     },
-    "REQUESTACTION": {
-        "description": "RequestAction",
+    "RIDERULES": {
+        "description": "RideRules",
         "index": "123",
         "value": "3145851"
     },
-    "TICKINGAREA_F1": {
+    "TICKINGAREA_F0": {
         "description": "unknown",
         "index": "123",
         "value": "9437307"
     },
-    "TICKINGAREA_F2": {
+    "TICKINGAREA_F1": {
         "description": "unknown",
         "index": "124",
         "value": "9437308"
     },
-    "CIRCLEAREA": {
-        "description": "CircleArea",
+    "SCHEDULEACTIONONAREALOADED": {
+        "description": "ScheduleActionOnAreaLoaded",
         "index": "124",
         "value": "3145852"
     },
-    "TICKINGAREA_F3": {
+    "TICKINGAREA_F2": {
         "description": "unknown",
         "index": "125",
         "value": "9437309"
     },
-    "TICKINGAREA": {
-        "description": "TickingArea",
+    "REQUESTACTION": {
+        "description": "RequestAction",
         "index": "125",
         "value": "3145853"
     },
-    "TIME_F0": {
+    "TICKINGAREA_F3": {
         "description": "unknown",
         "index": "126",
         "value": "9437310"
     },
-    "SCOREBOARDOBJECTIVESCATEGORY": {
-        "description": "ScoreboardObjectivesCategory",
+    "CIRCLEAREA": {
+        "description": "CircleArea",
         "index": "126",
         "value": "3145854"
     },
-    "TIME_F1": {
+    "TIME_F0": {
         "description": "unknown",
         "index": "127",
         "value": "9437311"
     },
-    "SCOREBOARDPLAYERSCATEGORY": {
-        "description": "ScoreboardPlayersCategory",
+    "TICKINGAREA": {
+        "description": "TickingArea",
         "index": "127",
         "value": "3145855"
     },
-    "TITLE_F0": {
+    "TIME_F1": {
         "description": "unknown",
         "index": "128",
         "value": "9437312"
     },
-    "SCOREBOARDADDACTION": {
-        "description": "ScoreboardAddAction",
+    "SCOREBOARDOBJECTIVESCATEGORY": {
+        "description": "ScoreboardObjectivesCategory",
         "index": "128",
         "value": "3145856"
     },
-    "SCOREBOARDREMOVEACTION": {
-        "description": "ScoreboardRemoveAction",
+    "SCOREBOARDPLAYERSCATEGORY": {
+        "description": "ScoreboardPlayersCategory",
         "index": "129",
         "value": "3145857"
     },
-    "TITLE_F1": {
+    "TITLE_F0": {
         "description": "unknown",
         "index": "129",
         "value": "9437313"
     },
-    "TITLERAW_F0": {
+    "TITLE_F1": {
         "description": "unknown",
         "index": "130",
         "value": "9437314"
     },
-    "SCOREBOARDRANDOMACTION": {
-        "description": "ScoreboardRandomAction",
+    "SCOREBOARDADDACTION": {
+        "description": "ScoreboardAddAction",
         "index": "130",
         "value": "3145858"
     },
-    "TITLERAW_F1": {
+    "TITLERAW_F0": {
         "description": "unknown",
         "index": "131",
         "value": "9437315"
     },
-    "SCOREBOARDSETDISPLAYACTION": {
-        "description": "ScoreboardSetDisplayAction",
+    "SCOREBOARDREMOVEACTION": {
+        "description": "ScoreboardRemoveAction",
         "index": "131",
         "value": "3145859"
     },
-    "WEATHER_F0": {
+    "TITLERAW_F1": {
         "description": "unknown",
         "index": "132",
         "value": "9437316"
     },
-    "SCOREBOARDLISTACTION": {
-        "description": "ScoreboardListAction",
+    "SCOREBOARDRANDOMACTION": {
+        "description": "ScoreboardRandomAction",
         "index": "132",
         "value": "3145860"
     },
-    "WSSERVER_F0": {
+    "WEATHER_F0": {
         "description": "unknown",
         "index": "133",
         "value": "9437317"
     },
-    "SCOREBOARDRESETACTION": {
-        "description": "ScoreboardResetAction",
+    "SCOREBOARDSETDISPLAYACTION": {
+        "description": "ScoreboardSetDisplayAction",
         "index": "133",
         "value": "3145861"
     },
-    "XP_F0": {
+    "WSSERVER_F0": {
         "description": "unknown",
         "index": "134",
         "value": "9437318"
     },
-    "SCOREBOARDTESTACTION": {
-        "description": "ScoreboardTestAction",
+    "SCOREBOARDLISTACTION": {
+        "description": "ScoreboardListAction",
         "index": "134",
         "value": "3145862"
     },
-    "SCOREBOARDPLAYERSNUMACTION": {
-        "description": "ScoreboardPlayersNumAction",
+    "SCOREBOARDRESETACTION": {
+        "description": "ScoreboardResetAction",
         "index": "135",
         "value": "3145863"
     },
-    "RECIPE_F0": {
+    "XP_F0": {
         "description": "unknown",
         "index": "135",
         "value": "9437319"
     },
-    "HUD_F0": {
+    "RECIPE_F0": {
         "description": "unknown",
         "index": "136",
         "value": "9437320"
     },
-    "SCOREBOARDOPERATIONACTION": {
-        "description": "ScoreboardOperationAction",
+    "SCOREBOARDTESTACTION": {
+        "description": "ScoreboardTestAction",
         "index": "136",
         "value": "3145864"
     },
@@ -2114,13 +2114,13 @@
         "index": "137",
         "value": "9437321"
     },
-    "SCOREBOARDSORTORDER": {
-        "description": "ScoreboardSortOrder",
+    "SCOREBOARDPLAYERSNUMACTION": {
+        "description": "ScoreboardPlayersNumAction",
         "index": "137",
         "value": "3145865"
     },
-    "SCOREBOARDDISPLAYSLOTSORTABLE": {
-        "description": "ScoreboardDisplaySlotSortable",
+    "SCOREBOARDOPERATIONACTION": {
+        "description": "ScoreboardOperationAction",
         "index": "138",
         "value": "3145866"
     },
@@ -2134,8 +2134,8 @@
         "index": "139",
         "value": "9437323"
     },
-    "SCOREBOARDDISPLAYSLOTNONSORTABLE": {
-        "description": "ScoreboardDisplaySlotNonSortable",
+    "SCOREBOARDSORTORDER": {
+        "description": "ScoreboardSortOrder",
         "index": "139",
         "value": "3145867"
     },
@@ -2144,8 +2144,8 @@
         "index": "140",
         "value": "9437324"
     },
-    "SCOREBOARDCRITERIA": {
-        "description": "ScoreboardCriteria",
+    "SCOREBOARDDISPLAYSLOTSORTABLE": {
+        "description": "ScoreboardDisplaySlotSortable",
         "index": "140",
         "value": "3145868"
     },
@@ -2154,8 +2154,8 @@
         "index": "141",
         "value": "9437325"
     },
-    "SETBLOCKMODE": {
-        "description": "SetBlockMode",
+    "SCOREBOARDDISPLAYSLOTNONSORTABLE": {
+        "description": "ScoreboardDisplaySlotNonSortable",
         "index": "141",
         "value": "3145869"
     },
@@ -2164,8 +2164,8 @@
         "index": "142",
         "value": "9437326"
     },
-    "STRUCTURESAVEACTION": {
-        "description": "StructureSaveAction",
+    "SCOREBOARDCRITERIA": {
+        "description": "ScoreboardCriteria",
         "index": "142",
         "value": "3145870"
     },
@@ -2174,13 +2174,13 @@
         "index": "143",
         "value": "9437327"
     },
-    "STRUCTURELOADACTION": {
-        "description": "StructureLoadAction",
+    "SETBLOCKMODE": {
+        "description": "SetBlockMode",
         "index": "143",
         "value": "3145871"
     },
-    "STRUCTUREDELETEACTION": {
-        "description": "StructureDeleteAction",
+    "STRUCTURESAVEACTION": {
+        "description": "StructureSaveAction",
         "index": "144",
         "value": "3145872"
     },
@@ -2194,13 +2194,13 @@
         "index": "145",
         "value": "9437329"
     },
-    "STRUCTURESAVEMODE": {
-        "description": "StructureSaveMode",
+    "STRUCTURELOADACTION": {
+        "description": "StructureLoadAction",
         "index": "145",
         "value": "3145873"
     },
-    "STRUCTUREANIMATIONMODE": {
-        "description": "StructureAnimationMode",
+    "STRUCTUREDELETEACTION": {
+        "description": "StructureDeleteAction",
         "index": "146",
         "value": "3145874"
     },
@@ -2209,8 +2209,8 @@
         "index": "146",
         "value": "9437330"
     },
-    "TELEPORTFACING": {
-        "description": "TeleportFacing",
+    "STRUCTURESAVEMODE": {
+        "description": "StructureSaveMode",
         "index": "147",
         "value": "3145875"
     },
@@ -2219,8 +2219,8 @@
         "index": "147",
         "value": "9437331"
     },
-    "TAGCHANGEACTION": {
-        "description": "TagChangeAction",
+    "STRUCTUREANIMATIONMODE": {
+        "description": "StructureAnimationMode",
         "index": "148",
         "value": "3145876"
     },
@@ -2229,8 +2229,8 @@
         "index": "148",
         "value": "9437332"
     },
-    "TAGLISTACTION": {
-        "description": "TagListAction",
+    "TELEPORTFACING": {
+        "description": "TeleportFacing",
         "index": "149",
         "value": "3145877"
     },
@@ -2239,8 +2239,8 @@
         "index": "149",
         "value": "9437333"
     },
-    "TELEPORTCOMMANDALIASES": {
-        "description": "teleportCommandAliases",
+    "TAGCHANGEACTION": {
+        "description": "TagChangeAction",
         "index": "150",
         "value": "3145878"
     },
@@ -2254,13 +2254,13 @@
         "index": "151",
         "value": "9437335"
     },
-    "TELLCOMMANDALIASES": {
-        "description": "tellCommandAliases",
+    "TAGLISTACTION": {
+        "description": "TagListAction",
         "index": "151",
         "value": "3145879"
     },
-    "TESTFORBLOCKSMODE": {
-        "description": "TestForBlocksMode",
+    "TELEPORTCOMMANDALIASES": {
+        "description": "teleportCommandAliases",
         "index": "152",
         "value": "3145880"
     },
@@ -2274,8 +2274,8 @@
         "index": "153",
         "value": "9437337"
     },
-    "TICKINGAREAMODEADD": {
-        "description": "TickingAreaModeAdd",
+    "TELLCOMMANDALIASES": {
+        "description": "tellCommandAliases",
         "index": "153",
         "value": "3145881"
     },
@@ -2284,13 +2284,13 @@
         "index": "154",
         "value": "9437338"
     },
-    "TICKINGAREAMODEREMOVE": {
-        "description": "TickingAreaModeRemove",
+    "TESTFORBLOCKSMODE": {
+        "description": "TestForBlocksMode",
         "index": "154",
         "value": "3145882"
     },
-    "TICKINGAREAMODEREMOVEALL": {
-        "description": "TickingAreaModeRemoveAll",
+    "TICKINGAREAMODEADD": {
+        "description": "TickingAreaModeAdd",
         "index": "155",
         "value": "3145883"
     },
@@ -2304,8 +2304,8 @@
         "index": "156",
         "value": "9437340"
     },
-    "TICKINGAREAMODELIST": {
-        "description": "TickingAreaModeList",
+    "TICKINGAREAMODEREMOVE": {
+        "description": "TickingAreaModeRemove",
         "index": "156",
         "value": "3145884"
     },
@@ -2314,8 +2314,8 @@
         "index": "157",
         "value": "9437341"
     },
-    "TICKINGAREAMODEPRELOAD": {
-        "description": "TickingAreaModePreload",
+    "TICKINGAREAMODEREMOVEALL": {
+        "description": "TickingAreaModeRemoveAll",
         "index": "157",
         "value": "3145885"
     },
@@ -2324,13 +2324,13 @@
         "index": "158",
         "value": "9437342"
     },
-    "ADDTICKINGAREATYPE": {
-        "description": "AddTickingAreaType",
+    "TICKINGAREAMODELIST": {
+        "description": "TickingAreaModeList",
         "index": "158",
         "value": "3145886"
     },
-    "ALLDIMENSIONS": {
-        "description": "AllDimensions",
+    "TICKINGAREAMODEPRELOAD": {
+        "description": "TickingAreaModePreload",
         "index": "159",
         "value": "3145887"
     },
@@ -2339,8 +2339,8 @@
         "index": "159",
         "value": "9437343"
     },
-    "TIMEMODESET": {
-        "description": "TimeModeSet",
+    "ADDTICKINGAREATYPE": {
+        "description": "AddTickingAreaType",
         "index": "160",
         "value": "3145888"
     },
@@ -2349,8 +2349,8 @@
         "index": "160",
         "value": "9437344"
     },
-    "TIMEMODEADD": {
-        "description": "TimeModeAdd",
+    "ALLDIMENSIONS": {
+        "description": "AllDimensions",
         "index": "161",
         "value": "3145889"
     },
@@ -2359,8 +2359,8 @@
         "index": "161",
         "value": "9437345"
     },
-    "TIMEMODEQUERY": {
-        "description": "TimeModeQuery",
+    "TIMEMODESET": {
+        "description": "TimeModeSet",
         "index": "162",
         "value": "3145890"
     },
@@ -2369,8 +2369,8 @@
         "index": "162",
         "value": "9437346"
     },
-    "TIMEQUERY": {
-        "description": "TimeQuery",
+    "TIMEMODEADD": {
+        "description": "TimeModeAdd",
         "index": "163",
         "value": "3145891"
     },
@@ -2379,8 +2379,8 @@
         "index": "163",
         "value": "9437347"
     },
-    "TIMESPEC": {
-        "description": "TimeSpec",
+    "TIMEMODEQUERY": {
+        "description": "TimeModeQuery",
         "index": "164",
         "value": "3145892"
     },
@@ -2394,8 +2394,8 @@
         "index": "165",
         "value": "9437349"
     },
-    "TITLECLEAR": {
-        "description": "TitleClear",
+    "TIMEQUERY": {
+        "description": "TimeQuery",
         "index": "165",
         "value": "3145893"
     },
@@ -2404,8 +2404,8 @@
         "index": "166",
         "value": "9437350"
     },
-    "TITLERESET": {
-        "description": "TitleReset",
+    "TIMESPEC": {
+        "description": "TimeSpec",
         "index": "166",
         "value": "3145894"
     },
@@ -2414,8 +2414,8 @@
         "index": "167",
         "value": "9437351"
     },
-    "TITLESET": {
-        "description": "TitleSet",
+    "TITLECLEAR": {
+        "description": "TitleClear",
         "index": "167",
         "value": "3145895"
     },
@@ -2424,13 +2424,13 @@
         "index": "168",
         "value": "9437352"
     },
-    "TITLETIMES": {
-        "description": "TitleTimes",
+    "TITLERESET": {
+        "description": "TitleReset",
         "index": "168",
         "value": "3145896"
     },
-    "TITLERAWCLEAR": {
-        "description": "TitleRawClear",
+    "TITLESET": {
+        "description": "TitleSet",
         "index": "169",
         "value": "3145897"
     },
@@ -2439,8 +2439,8 @@
         "index": "169",
         "value": "9437353"
     },
-    "TITLERAWRESET": {
-        "description": "TitleRawReset",
+    "TITLETIMES": {
+        "description": "TitleTimes",
         "index": "170",
         "value": "3145898"
     },
@@ -2449,48 +2449,48 @@
         "index": "170",
         "value": "9437354"
     },
-    "TITLERAWSET": {
-        "description": "TitleRawSet",
+    "TITLERAWCLEAR": {
+        "description": "TitleRawClear",
         "index": "171",
         "value": "3145899"
     },
-    "TITLERAWTIMES": {
-        "description": "TitleRawTimes",
+    "TITLERAWRESET": {
+        "description": "TitleRawReset",
         "index": "172",
         "value": "3145900"
     },
-    "WEATHERTYPE": {
-        "description": "WeatherType",
+    "TITLERAWSET": {
+        "description": "TitleRawSet",
         "index": "173",
         "value": "3145901"
     },
-    "WEATHERQUERY": {
-        "description": "WeatherQuery",
+    "TITLERAWTIMES": {
+        "description": "TitleRawTimes",
         "index": "174",
         "value": "3145902"
     },
-    "WSSERVERCOMMANDALIASES": {
-        "description": "wsserverCommandAliases",
+    "WEATHERTYPE": {
+        "description": "WeatherType",
         "index": "175",
         "value": "3145903"
     },
-    "TAKE": {
-        "description": "Take",
+    "WEATHERQUERY": {
+        "description": "WeatherQuery",
         "index": "176",
         "value": "3145904"
     },
-    "GIVE": {
-        "description": "Give",
+    "WSSERVERCOMMANDALIASES": {
+        "description": "wsserverCommandAliases",
         "index": "177",
         "value": "3145905"
     },
-    "HUDELEMENT": {
-        "description": "HudElement",
+    "TAKE": {
+        "description": "Take",
         "index": "178",
         "value": "3145906"
     },
-    "HUDVISIBILITY": {
-        "description": "HudVisibility",
+    "GIVE": {
+        "description": "Give",
         "index": "179",
         "value": "3145907"
     },

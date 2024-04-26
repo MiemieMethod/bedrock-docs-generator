@@ -40,12 +40,22 @@
         "mud"
     ],
     "fertilize_area": [
+        "azure_bluet",
+        "lily_of_the_valley",
         "yellow_flower",
-        "red_flower",
+        "allium",
+        "poppy",
+        "blue_orchid",
         "crimson_nylium",
+        "pink_tulip",
+        "white_tulip",
+        "cornflower",
         "grass_block",
         "warped_nylium",
-        "moss_block"
+        "moss_block",
+        "orange_tulip",
+        "oxeye_daisy",
+        "red_tulip"
     ],
     "gold_pick_diggable": [],
     "grass": [
@@ -120,9 +130,14 @@
     ],
     "plant": [
         "pitcher_crop",
-        "sapling",
+        "dark_oak_sapling",
+        "oak_sapling",
         "pitcher_plant",
-        "double_plant"
+        "spruce_sapling",
+        "double_plant",
+        "jungle_sapling",
+        "acacia_sapling",
+        "birch_sapling"
     ],
     "pumpkin": [
         "pumpkin",
