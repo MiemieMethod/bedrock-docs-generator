@@ -61,7 +61,7 @@ def specialTypeReplace(type):
         return type
 
 
-def buildCodeAndResult(protocol, enums, node, level=3):
+def buildCodeAndResult(protocol, enums, node, level=3, prefix=''):
     comment = parseComment(node)
     outs = []
     edges = protocol.edges(node)
@@ -89,13 +89,26 @@ def buildCodeAndResult(protocol, enums, node, level=3):
             enumMapping = enumMapping['packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type']
             if specialTypeReplace(protocol.name).replace(' ', '_').lower() in enumMapping:
                 enumMapping = enumMapping[specialTypeReplace(protocol.name).replace(' ', '_').lower()]
-                if formatBinArrayItem(node.attr["label"]) in enumMapping:
-                    enum = enumMapping[formatBinArrayItem(node.attr["label"])]
+                if prefix.replace(specialTypeReplace(protocol.name).replace(' ', '_').lower() + '.', '', 1) + formatBinArrayItem(node.attr["label"]) in enumMapping:
+                    enum = enumMapping[prefix.replace(specialTypeReplace(protocol.name).replace(' ', '_').lower() + '.', '', 1) + formatBinArrayItem(node.attr["label"])]
         if enum:
             enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', i18n.get(f'protocol.enum.{k.lower()}')] for k, v in enums[enum].items()]).render(1)
         else:
             enumList = re.findall(r"^enumeration: (.*)", comment["notes"])
             for enum in enumList:
+                with open(r'assets/extra/protocol/protocol_enum_mapping.json', 'r') as f:
+                    enumMapping = json.loads(f.read())
+                oriEnumMapping = enumMapping
+                if ('packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type') not in enumMapping:
+                    enumMapping['packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type'] = {}
+                enumMapping = enumMapping['packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type']
+                if specialTypeReplace(protocol.name).replace(' ', '_').lower() not in enumMapping:
+                    enumMapping[specialTypeReplace(protocol.name).replace(' ', '_').lower()] = {}
+                enumMapping = enumMapping[specialTypeReplace(protocol.name).replace(' ', '_').lower()]
+                if prefix.replace(specialTypeReplace(protocol.name).replace(' ', '_').lower() + '.', '', 1) + formatBinArrayItem(node.attr["label"]) not in enumMapping:
+                    enumMapping[prefix.replace(specialTypeReplace(protocol.name).replace(' ', '_').lower() + '.', '', 1) + formatBinArrayItem(node.attr["label"])] = enum
+                with open(r'assets/extra/protocol/protocol_enum_mapping.json', 'w') as f:
+                    f.write(json.dumps(oriEnumMapping, indent=4))
                 enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', i18n.get(f'protocol.enum.{k.lower()}')] for k, v in enums[enum].items()]).render(1)
         enumList = re.findall(r"^Available ones: (.*)", comment["notes"])
         for enum in enumList:
@@ -103,7 +116,7 @@ def buildCodeAndResult(protocol, enums, node, level=3):
             enumTables += MarkdownTable(['值', '描述'], [[f'`{v}`', i18n.get(f'protocol.enum.{v.lower()}')] for v in values]).render(1)
         comment["notes"] = re.sub(r"^enumeration: (.*)", r"", comment["notes"])
         comment["notes"] = re.sub(r"^Available ones: (.*)", r"", comment["notes"])
-        description = '{}{}{}'.format(typeName + ('枚举' if enumTables else '') + '。' + i18n.get(f'protocol.{'packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type'}.{specialTypeReplace(protocol.name).replace(' ', '_').lower()}.{formatBinArrayItem(node.attr["label"])}.description') if type != '[No Data]' else '无数据', comment["notes"], '枚举值如下：\n\n' + enumTables if enumTables else '')
+        description = '{}{}{}'.format(typeName + ('枚举' if enumTables else '') + '。' + i18n.get(f'protocol.{'packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type'}.{prefix}{'array_size' if str(node.attr["label"]) == '数组大小' else formatBinArrayItem(node.attr["label"])}.description') if type != '[No Data]' else '无数据', comment["notes"], '枚举值如下：\n\n' + enumTables if enumTables else '')
         defList['{}：{}'.format(node.attr["label"], typeLink)] = description
         writer.addDefinitionList(defList, level)
     elif comment["attributes"] == 2:
@@ -111,7 +124,7 @@ def buildCodeAndResult(protocol, enums, node, level=3):
         for out in outs:
             tabLabel = re.sub(r"if \((.*)\)", r"{}如果为`\1`".format(re.sub(r"Dependency on '(.*)'", r"`\1`", node.attr["label"])), out.attr["label"])
             if parseComment(out)["attributes"] == 4:
-                content = buildCodeAndResult(protocol, enums, out, level + 2)
+                content = buildCodeAndResult(protocol, enums, out, level + 2, prefix + formatBinArrayItem(node.attr["label"]) + '.')
                 writer.addTab('{}'.format(tabLabel), content, level + 1)
     else:
         binArray = ''
@@ -128,7 +141,7 @@ def buildCodeAndResult(protocol, enums, node, level=3):
         writer.addCodeBlock(binArray, "title='{}'".format(specialTypeReplace(node.attr["label"]).replace('<', '&lt;').replace('>', '&gt;')))
         content = ''
         for out in outs:
-            content += buildCodeAndResult(protocol, enums, out, level + 1)
+            content += buildCodeAndResult(protocol, enums, out, level + 1, prefix + ('example_element' if str(node.attr["label"]) == '示例元素' else ('array_size' if str(node.attr["label"]) == '数组大小' else (formatBinArrayItem(node.attr["label"].replace('(', '').replace(')', '')) if node.attr["label"].startswith('if') else formatBinArrayItem(node.attr["label"])))) + '.')
         writer.addHtmlBlock('div.result', content, level)
     return writer.render()
 

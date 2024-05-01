@@ -8,7 +8,7 @@
             "build_platform": "BuildPlatform"
         },
         "agentactioneventpacket": {
-            "request_id": "AgentActionType"
+            "action": "AgentActionType"
         },
         "animateentitypacket": {
             "stop_expression_molang_version": "MolangVersion"
@@ -17,7 +17,7 @@
             "action": "AnimatePacket::Action"
         },
         "availablecommandspacket": {
-            "permission_level": "CommandPermissionLevel"
+            "commands.example_element.permission_level": "CommandPermissionLevel"
         },
         "bookeditpacket": {
             "action": "BookEditAction"
@@ -40,7 +40,7 @@
             "category": "CodeBuilderStorageQueryOptions::Category"
         },
         "commandblockupdatepacket": {
-            "command_block_mode": "CommandBlockMode"
+            "dependency_on_is_block.if_1.command_block_mode": "CommandBlockMode"
         },
         "commandoutputpacket": {
             "output_type": "CommandOutputType"
@@ -77,8 +77,8 @@
             "transaction_type": "ComplexInventoryTransaction::Type"
         },
         "itemstackrequestpacket": {
-            "action_type": "ItemStackRequestActionType",
-            "stringstofilterorigin": "TextProcessingEventOrigin"
+            "requests.example_element.actions.example_element.action_type": "ItemStackRequestActionType",
+            "requests.example_element.stringstofilterorigin": "TextProcessingEventOrigin"
         },
         "labtablepacket": {
             "type": "LabTablePacket::Type",
@@ -86,13 +86,15 @@
         },
         "legacytelemetryeventpacket": {
             "event_type": "LegacyTelemetryEventPacket::Type",
-            "interaction_type": "MinecraftEventing::InteractionType",
-            "interaction_actor_type": "ActorType",
-            "instigators_child_actor_type": "ActorType",
-            "damage_source": "ActorDamageCause",
-            "boss_type": "ActorType",
-            "result": "LegacyTelemetryEventPacket::AgentResult",
-            "block_interaction_type": "MinecraftEventing::POIBlockInteractionType"
+            "dependency_on_event_type.if_1.interaction_type": "MinecraftEventing::InteractionType",
+            "dependency_on_event_type.if_1.interaction_actor_type": "ActorType",
+            "dependency_on_event_type.if_4.instigators_child_actor_type": "ActorType",
+            "dependency_on_event_type.if_4.damage_source": "ActorDamageCause",
+            "dependency_on_event_type.if_6.damage_source": "ActorDamageCause",
+            "dependency_on_event_type.if_7.boss_type": "ActorType",
+            "dependency_on_event_type.if_8.result": "LegacyTelemetryEventPacket::AgentResult",
+            "dependency_on_event_type.if_15.block_interaction_type": "MinecraftEventing::POIBlockInteractionType",
+            "dependency_on_event_type.if_16.block_interaction_type": "MinecraftEventing::POIBlockInteractionType"
         },
         "lessonprogresspacket": {
             "lesson_action": "LessonAction"
@@ -150,15 +152,15 @@
             "input_mode": "InputMode",
             "play_mode": "ClientPlayMode",
             "new_interaction_model": "NewInteractionModel",
-            "action_type": "ItemStackRequestActionType",
-            "stringstofilterorigin": "TextProcessingEventOrigin"
+            "dependency_on_itemstackrequest_and_performitemstackrequest_bit_set.if_1.actions.example_element.action_type": "ItemStackRequestActionType",
+            "dependency_on_itemstackrequest_and_performitemstackrequest_bit_set.if_1.stringstofilterorigin": "TextProcessingEventOrigin"
         },
         "playerhotbarpacket": {
             "container_id": "ContainerID"
         },
         "playerlistpacket": {
             "action": "PlayerListPacketType",
-            "build_platform": "BuildPlatform"
+            "dependency_on_action.if_0.add_player_list.example_element.build_platform": "BuildPlatform"
         },
         "playstatuspacket": {
             "status": "PlayStatus"
@@ -195,7 +197,7 @@
             "sort_order": "ObjectiveSortOrder"
         },
         "sethudpacket": {
-            "hud_element": "HudElement",
+            "hud_element_list.example_element.hud_element": "HudElement",
             "ishudvisible": "HudVisibility"
         },
         "setlasthurtbypacket": {
@@ -215,7 +217,9 @@
         },
         "setscorepacket": {
             "score_packet_type": "ScorePacketType",
-            "identity_definition_type": "IdentityDefinition::Type"
+            "score_packet_info.example_element.dependency_on_is_change_type.if_1.dependency_on_identity_definition_type.if_1.identity_definition_type": "IdentityDefinition::Type",
+            "score_packet_info.example_element.dependency_on_is_change_type.if_1.dependency_on_identity_definition_type.if_2.identity_definition_type": "IdentityDefinition::Type",
+            "score_packet_info.example_element.dependency_on_is_change_type.if_1.dependency_on_identity_definition_type.if_3.identity_definition_type": "IdentityDefinition::Type"
         },
         "setspawnpositionpacket": {
             "spawn_position_type": "SpawnPositionType"
@@ -242,18 +246,19 @@
             "requested_operation": "StructureTemplateRequestOperation"
         },
         "structuretemplatedataresponsepacket": {
-            "response_type": "StructureTemplateResponseType"
+            "dependency_on_requested_structure_exists.if_0.response_type": "StructureTemplateResponseType",
+            "dependency_on_requested_structure_exists.if_1.response_type": "StructureTemplateResponseType"
         },
         "subchunkpacket": {
-            "subchunk_request_result": "SubChunkPacket::SubChunkRequestResult",
-            "height_map_data_type": "SubChunkPacket::HeightMapDataType"
+            "subchunk_data_list.example_element.subchunk_request_result": "SubChunkPacket::SubChunkRequestResult",
+            "subchunk_data_list.example_element.height_map_data_type": "SubChunkPacket::HeightMapDataType"
         },
         "textpacket": {
             "message_type": "TextPacketType"
         },
         "updateattributespacket": {
-            "operation": "AttributeModifierOperation",
-            "operand": "AttributeOperands"
+            "attribute_list.example_element.attribute_modifier.example_element.operation": "AttributeModifierOperation",
+            "attribute_list.example_element.attribute_modifier.example_element.operand": "AttributeOperands"
         },
         "updateblocksyncedpacket": {
             "actor_sync_message": "ActorBlockSyncMessage::MessageId"
@@ -269,7 +274,8 @@
             "update_type": "SoftEnumUpdateType"
         },
         "updatesubchunkblockspacket": {
-            "sync_message_message": "ActorBlockSyncMessage::MessageId"
+            "blocks_changed_standards.example_element.sync_message_message": "ActorBlockSyncMessage::MessageId",
+            "blocks_changed_extras.example_element.sync_message_message": "ActorBlockSyncMessage::MessageId"
         },
         "updatetradepacket": {
             "container_id": "ContainerID",
@@ -281,14 +287,15 @@
             "link_type": "ActorLinkType"
         },
         "basedescription": {
-            "molang_version": "MolangVersion"
+            "molang_descriptor.molang_version": "MolangVersion"
         },
         "commandorigindata": {
             "command_type": "CommandOriginType"
         },
         "compoundtag": {
             "tag_type": "Tag::Type",
-            "tag_type_for_list": "Tag::Type"
+            "dependency_on_if_tag_type_is_0.if_0.dependency_on_tag_type.if_9.dependency_on_if_empty_list.if_0.tag_type_for_list": "Tag::Type",
+            "dependency_on_if_tag_type_is_0.if_0.dependency_on_tag_type.if_9.dependency_on_if_empty_list.if_1.tag_type": "Tag::Type"
         },
         "craftingdataentry": {
             "crafting_type": "CraftingDataEntryType"
@@ -298,11 +305,11 @@
         },
         "inventorysource": {
             "source_type": "InventorySourceType",
-            "container_id": "ContainerID",
-            "bit_flags": "InventorySource::InventorySourceFlags"
+            "dependency_on_source_type.if_0.container_id": "ContainerID",
+            "dependency_on_source_type.if_2.bit_flags": "InventorySource::InventorySourceFlags"
         },
         "itemenchants": {
-            "enchant_type": "Enchant::Type"
+            "item_enchants_for_given_activation.example_element.enchant_type": "Enchant::Type"
         },
         "itemstackrequestslotinfo": {
             "open_container_net_id": "ContainerEnumName"
@@ -328,7 +335,7 @@
             "type": "MapItemTrackedActor::Type"
         },
         "packeditemuselegacyinventorytransaction": {
-            "container_enum_name": "ContainerEnumName",
+            "dependency_on_valid_id.if_1.container_slots.example_element.container_enum_name": "ContainerEnumName",
             "action_type": "ItemUseInventoryTransaction::ActionType"
         },
         "recipeingredient": {
@@ -342,8 +349,8 @@
             "serializedlayer": "SerializedAbilitiesData::SerializedAbilitiesLayer"
         },
         "serializedskin": {
-            "animation_type": "persona::AnimatedTextureType",
-            "animation_expression": "persona::AnimationExpression"
+            "animations.example_element.animation_type": "persona::AnimatedTextureType",
+            "animations.example_element.animation_expression": "persona::AnimationExpression"
         },
         "spawnsettings": {
             "type": "SpawnBiomeType"
