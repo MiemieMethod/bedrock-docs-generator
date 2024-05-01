@@ -1,3 +1,4 @@
+import json
 import os
 import re
 
@@ -81,9 +82,21 @@ def buildCodeAndResult(protocol, enums, node, level=3):
         else:
             typeLink = MarkdownSymbol('samp', typeToShow).render()
         enumTables = ''
-        enumList = re.findall(r"^enumeration: (.*)", comment["notes"])
-        for enum in enumList:
+        enum = ''
+        with open(r'assets/extra/protocol/protocol_enum_mapping.json', 'r') as f:
+            enumMapping = json.loads(f.read())
+        if ('packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type') in enumMapping:
+            enumMapping = enumMapping['packet' if parseComment(protocol.nodes()[0])["branchId"] else 'type']
+            if specialTypeReplace(protocol.name).replace(' ', '_').lower() in enumMapping:
+                enumMapping = enumMapping[specialTypeReplace(protocol.name).replace(' ', '_').lower()]
+                if formatBinArrayItem(node.attr["label"]) in enumMapping:
+                    enum = enumMapping[formatBinArrayItem(node.attr["label"])]
+        if enum:
             enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', i18n.get(f'protocol.enum.{k.lower()}')] for k, v in enums[enum].items()]).render(1)
+        else:
+            enumList = re.findall(r"^enumeration: (.*)", comment["notes"])
+            for enum in enumList:
+                enumTables += MarkdownTable(['键', '值', '描述'], [[f'`{k}`', f'`{v}`', i18n.get(f'protocol.enum.{k.lower()}')] for k, v in enums[enum].items()]).render(1)
         enumList = re.findall(r"^Available ones: (.*)", comment["notes"])
         for enum in enumList:
             values = enum.split(', ')

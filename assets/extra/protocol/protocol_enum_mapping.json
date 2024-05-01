@@ -1,0 +1,364 @@
+{
+    "packet": {
+        "actoreventpacket": {
+            "event_id": "ActorEvent"
+        },
+        "addplayerpacket": {
+            "player_game_type": "GameType",
+            "build_platform": "BuildPlatform"
+        },
+        "agentactioneventpacket": {
+            "request_id": "AgentActionType"
+        },
+        "animateentitypacket": {
+            "stop_expression_molang_version": "MolangVersion"
+        },
+        "animatepacket": {
+            "action": "AnimatePacket::Action"
+        },
+        "availablecommandspacket": {
+            "permission_level": "CommandPermissionLevel"
+        },
+        "bookeditpacket": {
+            "action": "BookEditAction"
+        },
+        "bosseventpacket": {
+            "event_type": "BossEventUpdateType"
+        },
+        "camerashakepacket": {
+            "shake_type": "CameraShakeType",
+            "shake_action": "CameraShakeAction"
+        },
+        "clientbounddebugrendererpacket": {
+            "debug_marker_type": "ClientboundDebugRendererPacket::Type"
+        },
+        "clientboundmapitemdatapacket": {
+            "type_flags": "ClientboundMapItemDataPacket::Type"
+        },
+        "codebuildersourcepacket": {
+            "operation": "CodeBuilderStorageQueryOptions::Operation",
+            "category": "CodeBuilderStorageQueryOptions::Category"
+        },
+        "commandblockupdatepacket": {
+            "command_block_mode": "CommandBlockMode"
+        },
+        "commandoutputpacket": {
+            "output_type": "CommandOutputType"
+        },
+        "completedusingitempacket": {
+            "item_use_method": "ItemUseMethod"
+        },
+        "containerclosepacket": {
+            "container_id": "ContainerID"
+        },
+        "containeropenpacket": {
+            "container_id": "ContainerID",
+            "container_type": "ContainerType"
+        },
+        "containersetdatapacket": {
+            "container_id": "ContainerID"
+        },
+        "disconnectpacket": {
+            "reason": "Connection::DisconnectFailReason"
+        },
+        "emotepacket": {
+            "flags": "EmotePacket::Flags"
+        },
+        "gametestrequestpacket": {
+            "rotation": "Rotation"
+        },
+        "interactpacket": {
+            "action": "InteractPacket::Action"
+        },
+        "inventoryslotpacket": {
+            "container_id": "ContainerID"
+        },
+        "inventorytransactionpacket": {
+            "transaction_type": "ComplexInventoryTransaction::Type"
+        },
+        "itemstackrequestpacket": {
+            "action_type": "ItemStackRequestActionType",
+            "stringstofilterorigin": "TextProcessingEventOrigin"
+        },
+        "labtablepacket": {
+            "type": "LabTablePacket::Type",
+            "reaction": "LabTableReactionType"
+        },
+        "legacytelemetryeventpacket": {
+            "event_type": "LegacyTelemetryEventPacket::Type",
+            "interaction_type": "MinecraftEventing::InteractionType",
+            "interaction_actor_type": "ActorType",
+            "instigators_child_actor_type": "ActorType",
+            "damage_source": "ActorDamageCause",
+            "boss_type": "ActorType",
+            "result": "LegacyTelemetryEventPacket::AgentResult",
+            "block_interaction_type": "MinecraftEventing::POIBlockInteractionType"
+        },
+        "lessonprogresspacket": {
+            "lesson_action": "LessonAction"
+        },
+        "leveleventgenericpacket": {
+            "event_id": "LevelEvent"
+        },
+        "leveleventpacket": {
+            "event_id": "LevelEvent"
+        },
+        "levelsoundeventpacket": {
+            "event_id": "Puv::Legacy::LevelSoundEvent"
+        },
+        "levelsoundeventpacketv1": {
+            "event_id": "Puv::Legacy::LevelSoundEvent",
+            "actor_type": "ActorType"
+        },
+        "levelsoundeventpacketv2": {
+            "event_id": "Puv::Legacy::LevelSoundEvent"
+        },
+        "mobeffectpacket": {
+            "event_id": "MobEffectPacket::Event"
+        },
+        "mobequipmentpacket": {
+            "container_id": "ContainerID"
+        },
+        "moveplayerpacket": {
+            "position_mode": "PlayerPositionModeComponent::PositionMode"
+        },
+        "multiplayersettingspacket": {
+            "type": "MultiplayerSettingsPacketType"
+        },
+        "networksettingspacket": {
+            "compressionalgorithm": "PacketCompressionAlgorithm"
+        },
+        "npcdialoguepacket": {
+            "npc_dialogue_action_type": "NpcDialoguePacket::NpcDialogueActionType"
+        },
+        "npcrequestpacket": {
+            "request_type": "NpcRequestPacket::RequestType"
+        },
+        "packetviolationwarningpacket": {
+            "violation_type": "PacketViolationType",
+            "violation_severity": "PacketViolationSeverity",
+            "violating_packet_id": "MinecraftPacketIds"
+        },
+        "phototransferpacket": {
+            "type": "PhotoType",
+            "source_type": "PhotoType"
+        },
+        "playeractionpacket": {
+            "action": "PlayerActionType"
+        },
+        "playerauthinputpacket": {
+            "input_mode": "InputMode",
+            "play_mode": "ClientPlayMode",
+            "new_interaction_model": "NewInteractionModel",
+            "action_type": "ItemStackRequestActionType",
+            "stringstofilterorigin": "TextProcessingEventOrigin"
+        },
+        "playerhotbarpacket": {
+            "container_id": "ContainerID"
+        },
+        "playerlistpacket": {
+            "action": "PlayerListPacketType",
+            "build_platform": "BuildPlatform"
+        },
+        "playstatuspacket": {
+            "status": "PlayStatus"
+        },
+        "positiontrackingdbclientrequestpacket": {
+            "action": "PositionTrackingDBClientRequestPacket::Action"
+        },
+        "positiontrackingdbserverbroadcastpacket": {
+            "action": "PositionTrackingDBServerBroadcastPacket::Action"
+        },
+        "requestabilitypacket": {
+            "ability": "AbilitiesIndex",
+            "value_type": "RequestAbilityPacket::Type"
+        },
+        "requestpermissionspacket": {
+            "player_permission_level": "PlayerPermissionLevel"
+        },
+        "resourcepackclientresponsepacket": {
+            "response": "ResourcePackResponse"
+        },
+        "resourcepackdatainfopacket": {
+            "pack_type": "PackType"
+        },
+        "respawnpacket": {
+            "state": "PlayerRespawnState"
+        },
+        "setdefaultgametypepacket": {
+            "default_game_type": "GameType"
+        },
+        "setdifficultypacket": {
+            "difficulty": "Difficulty"
+        },
+        "setdisplayobjectivepacket": {
+            "sort_order": "ObjectiveSortOrder"
+        },
+        "sethudpacket": {
+            "hud_element": "HudElement",
+            "ishudvisible": "HudVisibility"
+        },
+        "setlasthurtbypacket": {
+            "last_hurt_by": "ActorType"
+        },
+        "setplayergametypepacket": {
+            "player_game_type": "GameType"
+        },
+        "setplayerinventoryoptionspacket": {
+            "left_inventory_tab": "InventoryLeftTabIndex",
+            "right_inventory_tab": "InventoryRightTabIndex",
+            "layout_inv": "InventoryLayout",
+            "layout_craft": "InventoryLayout"
+        },
+        "setscoreboardidentitypacket": {
+            "scoreboard_identity_packet_type": "ScoreboardIdentityPacketType"
+        },
+        "setscorepacket": {
+            "score_packet_type": "ScorePacketType",
+            "identity_definition_type": "IdentityDefinition::Type"
+        },
+        "setspawnpositionpacket": {
+            "spawn_position_type": "SpawnPositionType"
+        },
+        "settitlepacket": {
+            "title_type": "SetTitlePacket::TitleType"
+        },
+        "showcreditspacket": {
+            "credits_state": "ShowCreditsPacket::CreditsState"
+        },
+        "showstoreofferpacket": {
+            "redirect_type": "ShowStoreOfferRedirectType"
+        },
+        "simpleeventpacket": {
+            "type": "SimpleEventPacket::Subtype"
+        },
+        "simulationtypepacket": {
+            "sim_type": "SimulationType"
+        },
+        "startgamepacket": {
+            "actor_game_type": "GameType"
+        },
+        "structuretemplatedatarequestpacket": {
+            "requested_operation": "StructureTemplateRequestOperation"
+        },
+        "structuretemplatedataresponsepacket": {
+            "response_type": "StructureTemplateResponseType"
+        },
+        "subchunkpacket": {
+            "subchunk_request_result": "SubChunkPacket::SubChunkRequestResult",
+            "height_map_data_type": "SubChunkPacket::HeightMapDataType"
+        },
+        "textpacket": {
+            "message_type": "TextPacketType"
+        },
+        "updateattributespacket": {
+            "operation": "AttributeModifierOperation",
+            "operand": "AttributeOperands"
+        },
+        "updateblocksyncedpacket": {
+            "actor_sync_message": "ActorBlockSyncMessage::MessageId"
+        },
+        "updateequippacket": {
+            "container_id": "ContainerID",
+            "container_type": "ContainerType"
+        },
+        "updateplayergametypepacket": {
+            "player_game_type": "GameType"
+        },
+        "updatesoftenumpacket": {
+            "update_type": "SoftEnumUpdateType"
+        },
+        "updatesubchunkblockspacket": {
+            "sync_message_message": "ActorBlockSyncMessage::MessageId"
+        },
+        "updatetradepacket": {
+            "container_id": "ContainerID",
+            "container_type": "ContainerType"
+        }
+    },
+    "type": {
+        "actorlink": {
+            "link_type": "ActorLinkType"
+        },
+        "basedescription": {
+            "molang_version": "MolangVersion"
+        },
+        "commandorigindata": {
+            "command_type": "CommandOriginType"
+        },
+        "compoundtag": {
+            "tag_type": "Tag::Type",
+            "tag_type_for_list": "Tag::Type"
+        },
+        "craftingdataentry": {
+            "crafting_type": "CraftingDataEntryType"
+        },
+        "dataitem": {
+            "type": "DataItemType"
+        },
+        "inventorysource": {
+            "source_type": "InventorySourceType",
+            "container_id": "ContainerID",
+            "bit_flags": "InventorySource::InventorySourceFlags"
+        },
+        "itemenchants": {
+            "enchant_type": "Enchant::Type"
+        },
+        "itemstackrequestslotinfo": {
+            "open_container_net_id": "ContainerEnumName"
+        },
+        "itemstackresponseinfo": {
+            "result": "ItemStackNetResult"
+        },
+        "levelsettings": {
+            "generator_type": "GeneratorType",
+            "game_type": "GameType",
+            "game_difficulty": "Difficulty",
+            "editor_world_type": "Editor::WorldType",
+            "education_edition_offer": "EducationEditionOffer",
+            "xbox_live_broadcast_setting": "Social::GamePublishSetting",
+            "platform_broadcast_setting": "Social::GamePublishSetting",
+            "player_permissions": "PlayerPermissionLevel",
+            "chatrestriction_level": "ChatRestrictionLevel"
+        },
+        "mapdecoration": {
+            "map_decoration_type": "MapDecoration::Type"
+        },
+        "mapitemtrackedactor::uniqueid": {
+            "type": "MapItemTrackedActor::Type"
+        },
+        "packeditemuselegacyinventorytransaction": {
+            "container_enum_name": "ContainerEnumName",
+            "action_type": "ItemUseInventoryTransaction::ActionType"
+        },
+        "recipeingredient": {
+            "internaltype": "ItemDescriptor::InternalType"
+        },
+        "serializedabilitiesdata": {
+            "mplayerpermissions": "PlayerPermissionLevel",
+            "mcommandpermissions": "CommandPermissionLevel"
+        },
+        "serializedabilitiesdata::serializedlayer": {
+            "serializedlayer": "SerializedAbilitiesData::SerializedAbilitiesLayer"
+        },
+        "serializedskin": {
+            "animation_type": "persona::AnimatedTextureType",
+            "animation_expression": "persona::AnimationExpression"
+        },
+        "spawnsettings": {
+            "type": "SpawnBiomeType"
+        },
+        "structureeditordata": {
+            "structure_block_type": "StructureBlockType",
+            "redstone_save_mode": "StructureRedstoneSaveMode"
+        },
+        "structuresettings": {
+            "rotation": "Rotation",
+            "mirror": "Mirror",
+            "animation_mode": "AnimationMode"
+        },
+        "syncedplayermovementsettings": {
+            "authority_mode": "ServerAuthMovementMode"
+        }
+    }
+}
