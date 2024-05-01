@@ -32,7 +32,18 @@ class FunctionBuilder(MarkdownWriter):
                 defList = {}
                 description = localizationKey(self.function["name"].lower(), argument["name"])
                 i += 1
-                defList[f'`{argument["name"]}`：{typeString(argument["type"], True, True, self.fromRoot)}'] = description
+                default = ''
+                if argument["details"] and 'default_value' in argument["details"]:
+                    default = f'＝`{argument["details"]["default_value"]}`'
+                ranges = ''
+                if argument["details"] and ('max_value' in argument["details"] or 'min_value' in argument["details"]):
+                    min = '-∞' if 'min_value' not in argument["details"] or argument["details"]["min_value"] <= -2147483648 else f'`{argument["details"]["min_value"]}`'
+                    max = '+∞' if 'max_value' not in argument["details"] or argument["details"]["max_value"] >= 2147483647 else f'`{argument["details"]["max_value"]}`'
+                    if min == '-∞' and max == '+∞':
+                        ranges = ''
+                    else:
+                        ranges = f'∈[{min}, {max}]'
+                defList[f'`{argument["name"]}`{'?' if argument["type"]["name"] == 'optional' else ''}：{typeString(argument["type"], False, True, self.fromRoot)}{default}{ranges}'] = description
                 writer.addDefinitionList(defList, 4)
         writer.addDefinitionList({f'返回值：{typeString(self.function["return_type"], True, True, self.fromRoot)}': i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{self.function["name"].lower()}.return') if i18n.contain(f'script_api.{ModuleBuilder.currentModuleName.lower()}.{ModuleBuilder.currentModuleVersion.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{self.function["name"].lower()}.return') else i18n.get(f'script_api.{ModuleBuilder.currentModuleName.lower()}{f'.{ModuleBuilder.currentClassName.lower()}' if ModuleBuilder.currentClassName.lower() else ''}.{self.function["name"].lower()}.return')}, 4)
         self.addHtmlBlock('div.result', writer.render())
@@ -334,7 +345,10 @@ def typeString(type, parseOptional=False, rich=False, fromRoot=False):
             else:
                 return f'{typeString(type["optional_type"])} | undefined'
         else:
-            return f'{typeString(type["optional_type"])}'
+            if rich:
+                return f'{typeString(type["optional_type"], rich=True, fromRoot=fromRoot)}'
+            else:
+                return f'{typeString(type["optional_type"])}'
     elif type["name"] == 'variant':
         if rich:
             return '|'.join([typeString(t, rich=True, fromRoot=fromRoot) for t in type["variant_types"]])
