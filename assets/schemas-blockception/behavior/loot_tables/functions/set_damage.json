@@ -1,0 +1,37 @@
+{
+  "$id": "blockception.minecraft.behavior.loot_tables.set_damage",
+  "additionalProperties": false,
+  "description": "The function set_damage.",
+  "title": "Set Damage",
+  "type": "object",
+  "properties": {
+    "add": {
+      "title": "Add",
+      "description": "UNDOCUMENTED.",
+      "$comment": "UNDOCUMENTED",
+      "type": "boolean"
+    },
+    "function": {
+      "type": "string",
+      "const": "set_damage",
+      "description": "UNDOCUMENTED.",
+      "$comment": "UNDOCUMENTED",
+      "title": "Function"
+    },
+    "damage": {
+      "description": "UNDOCUMENTED.",
+      "$comment": "UNDOCUMENTED",
+      "title": "Damage",
+      "oneOf": [
+        { "type": "number", "minimum": 0, "maximum": 1 },
+        {
+          "type": "object",
+          "properties": {
+            "min": { "type": "number", "description": "UNDOCUMENTED.", "$comment": "UNDOCUMENTED", "title": "Minimum", "minimum": 0, "maximum": 1 },
+            "max": { "type": "number", "description": "UNDOCUMENTED.", "$comment": "UNDOCUMENTED", "title": "Maximum", "minimum": 0, "maximum": 1 }
+          }
+        }
+      ]
+    }
+  }
+}

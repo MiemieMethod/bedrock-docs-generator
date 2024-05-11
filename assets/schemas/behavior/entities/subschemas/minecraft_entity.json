@@ -1,0 +1,149 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "bedrock_schemas.behavior.entities.entity",
+    "type": "object",
+    "title": "`minecraft:entity` Object",
+    "description": "The main area to define an entity.",
+    "properties": {
+        "description": {
+            "type": "object",
+            "title": "Entity Description",
+            "description": "The entity description.",
+            "properties": {
+                "identifier": {
+                    "type": "string",
+                    "title": "Entity Identifier",
+                    "description": "The entity identifier."
+                },
+                "is_spawnable": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Specifies whether the entity can be spawned using the spawn egg."
+                },
+                "is_summonable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specifies whether the entity can be spawned using the summon command."
+                },
+                "is_experimental": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Specifies whether the experimental gameplay needs to be turned on in order to spawn the entity."
+                }
+            }
+        },
+        "components": {
+            "type": "object",
+            "properties": {
+                "minecraft:attack": {
+                    "$ref": "./components/minecraft_attack.json"
+                },
+                "minecraft:spell_effects": {
+                    "$ref": "./components/minecraft_spell_effects.json"
+                },
+                "minecraft:strength": {
+                    "$ref": "./components/minecraft_strength.json"
+                },
+                "minecraft:addrider": {
+                    "$ref": "./components/minecraft_addrider.json"
+                },
+                "minecraft:admire_item": {
+                    "$ref": "./components/minecraft_admire_item.json",
+                    "$comment": "version:[1.16.0,*)"
+                },
+                "minecraft:ageable": {
+                    "$ref": "./components/minecraft_ageable.json"
+                },
+                "minecraft:anger_level": {
+                    "$ref": "./components/minecraft_anger_level.json"
+                },
+                "minecraft:angry": {
+                    "$ref": "./components/minecraft_angry.json"
+                },
+                "minecraft:annotation.break_door": {
+                    "$ref": "./components/minecraft_annotation_break_door.json"
+                },
+                "minecraft:annotation.open_door": {
+                    "$ref": "./components/minecraft_annotation_open_door.json"
+                },
+                "minecraft:area_attack": {
+                    "$ref": "./components/minecraft_area_attack.json"
+                },
+                "minecraft:attack_cooldown": {
+                    "$ref": "./components/minecraft_attack_cooldown.json"
+                },
+                "minecraft:barter": {
+                    "$ref": "./components/minecraft_barter.json"
+                },
+                "minecraft:block_climber": {
+                    "$ref": "./components/minecraft_block_climber.json"
+                },
+                "minecraft:block_sensor": {
+                    "$ref": "./components/minecraft_block_sensor.json"
+                },
+                "minecraft:boostable": {
+                    "$ref": "./components/minecraft_boostable.json"
+                },
+                "minecraft:boss": {
+                    "$ref": "./components/minecraft_boss.json"
+                },
+                "minecraft:break_blocks": {
+                    "$ref": "./components/minecraft_break_blocks.json"
+                },
+                "minecraft:breathable": {
+                    "$ref": "./components/minecraft_breathable.json"
+                },
+                "minecraft:breedable": {
+                    "$ref": "./components/minecraft_breedable.json"
+                },
+                "minecraft:bribeable": {
+                    "$ref": "./components/minecraft_bribeable.json"
+                },
+                "minecraft:buoyant": {
+                    "$ref": "./components/minecraft_buoyant.json"
+                },
+                "minecraft:burns_in_daylight": {
+                    "$ref": "./components/minecraft_burns_in_daylight.json"
+                },
+                "minecraft:can_join_raid": {
+                    "$ref": "./components/minecraft_can_join_raid.json"
+                },
+                "minecraft:behavior.python_custom:": {
+                    "not": {}
+                }
+            },
+            "patternProperties": {
+                "^minecraft:behavior\\.python_custom:[a-zA-Z0-9_]*$": {
+                    "$ref": "./components/minecraft_behavior_python_custom.json"
+                }
+            },
+            "additionalProperties": false,
+            "required": []
+        },
+        "events": {
+            "type": "object",
+            "properties": {
+                "minecraft:entity_born": {
+                    "$ref": "../../../common/definition/definition_event.json"
+                },
+                "minecraft:entity_spawned": {
+                    "$ref": "../../../common/definition/definition_event.json"
+                },
+                "minecraft:entity_transformed": {
+                    "$ref": "../../../common/definition/definition_event.json"
+                },
+                "minecraft:on_prime": {
+                    "$ref": "../../../common/definition/definition_event.json"
+                }
+            },
+            "additionalProperties": {
+                "$ref": "../../../common/definition/definition_event.json"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "description",
+        "components"
+    ]
+}

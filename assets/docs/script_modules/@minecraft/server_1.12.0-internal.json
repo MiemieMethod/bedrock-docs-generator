@@ -3194,7 +3194,7 @@
                "arguments" : [
                   {
                      "details" : null,
-                     "name" : "pos",
+                     "name" : "location",
                      "type" : {
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5955,20 +5955,23 @@
                "arguments" : [
                   {
                      "details" : null,
-                     "name" : "begin",
+                     "name" : "volume",
                      "type" : {
-                        "is_bind_type" : true,
+                        "is_bind_type" : false,
                         "is_errorable" : false,
-                        "name" : "Vector3"
-                     }
-                  },
-                  {
-                     "details" : null,
-                     "name" : "end",
-                     "type" : {
-                        "is_bind_type" : true,
-                        "is_errorable" : false,
-                        "name" : "Vector3"
+                        "name" : "variant",
+                        "variant_types" : [
+                           {
+                              "is_bind_type" : true,
+                              "is_errorable" : false,
+                              "name" : "BlockVolumeBase"
+                           },
+                           {
+                              "is_bind_type" : true,
+                              "is_errorable" : false,
+                              "name" : "CompoundBlockVolume"
+                           }
+                        ]
                      }
                   },
                   {
@@ -6019,13 +6022,31 @@
                "name" : "fillBlocks",
                "privilege" : "none",
                "return_type" : {
-                  "is_bind_type" : false,
+                  "error_types" : [
+                     {
+                        "from_module" : {
+                           "name" : "@minecraft/common",
+                           "uuid" : "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
+                           "version" : "1.1.0"
+                        },
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "EngineError"
+                     },
+                     {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "Error"
+                     },
+                     {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "UnloadedChunksError"
+                     }
+                  ],
+                  "is_bind_type" : true,
                   "is_errorable" : true,
-                  "name" : "uint32",
-                  "valid_range" : {
-                     "max" : 2147483647,
-                     "min" : -2147483648
-                  }
+                  "name" : "ListBlockVolume"
                }
             },
             {
@@ -6138,6 +6159,92 @@
                         "name" : "LocationOutOfWorldBoundariesError"
                      }
                   ],
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "Block"
+                  }
+               }
+            },
+            {
+               "arguments" : [
+                  {
+                     "details" : null,
+                     "name" : "location",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "Vector3"
+                     }
+                  },
+                  {
+                     "details" : {
+                        "default_value" : "null"
+                     },
+                     "name" : "options",
+                     "type" : {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "optional",
+                        "optional_type" : {
+                           "is_bind_type" : true,
+                           "is_errorable" : false,
+                           "name" : "BlockRaycastOptions"
+                        }
+                     }
+                  }
+               ],
+               "is_constructor" : false,
+               "is_static" : false,
+               "name" : "getBlockAbove",
+               "privilege" : "none",
+               "return_type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "Block"
+                  }
+               }
+            },
+            {
+               "arguments" : [
+                  {
+                     "details" : null,
+                     "name" : "location",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "Vector3"
+                     }
+                  },
+                  {
+                     "details" : {
+                        "default_value" : "null"
+                     },
+                     "name" : "options",
+                     "type" : {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "optional",
+                        "optional_type" : {
+                           "is_bind_type" : true,
+                           "is_errorable" : false,
+                           "name" : "BlockRaycastOptions"
+                        }
+                     }
+                  }
+               ],
+               "is_constructor" : false,
+               "is_static" : false,
+               "name" : "getBlockBelow",
+               "privilege" : "none",
+               "return_type" : {
                   "is_bind_type" : false,
                   "is_errorable" : true,
                   "name" : "optional",
@@ -6399,6 +6506,53 @@
                   "is_bind_type" : false,
                   "is_errorable" : true,
                   "name" : "array"
+               }
+            },
+            {
+               "arguments" : [
+                  {
+                     "details" : null,
+                     "name" : "locationXZ",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "VectorXZ"
+                     }
+                  },
+                  {
+                     "details" : {
+                        "default_value" : "null"
+                     },
+                     "name" : "minHeight",
+                     "type" : {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "optional",
+                        "optional_type" : {
+                           "is_bind_type" : false,
+                           "is_errorable" : false,
+                           "name" : "float",
+                           "valid_range" : {
+                              "max" : 2147483647,
+                              "min" : -2147483648
+                           }
+                        }
+                     }
+                  }
+               ],
+               "is_constructor" : false,
+               "is_static" : false,
+               "name" : "getTopmostBlock",
+               "privilege" : "none",
+               "return_type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "Block"
+                  }
                }
             },
             {
@@ -13649,24 +13803,17 @@
          ],
          "functions" : [
             {
-               "arguments" : [],
-               "is_constructor" : false,
-               "is_static" : false,
-               "name" : "getTameItems",
-               "privilege" : "read_only",
-               "return_type" : {
-                  "element_type" : {
-                     "is_bind_type" : false,
-                     "is_errorable" : false,
-                     "name" : "string"
-                  },
-                  "is_bind_type" : false,
-                  "is_errorable" : true,
-                  "name" : "array"
-               }
-            },
-            {
-               "arguments" : [],
+               "arguments" : [
+                  {
+                     "details" : null,
+                     "name" : "player",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "Player"
+                     }
+                  }
+               ],
                "is_constructor" : false,
                "is_static" : false,
                "name" : "tame",
@@ -13682,6 +13829,29 @@
          "properties" : [
             {
                "is_read_only" : true,
+               "name" : "getTameItems",
+               "type" : {
+                  "element_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "ItemStack"
+                  },
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "array"
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "isTamed",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "boolean"
+               }
+            },
+            {
+               "is_read_only" : true,
                "name" : "probability",
                "type" : {
                   "is_bind_type" : false,
@@ -13690,6 +13860,34 @@
                   "valid_range" : {
                      "max" : 2147483647,
                      "min" : -2147483648
+                  }
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "tamedToPlayer",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "Player"
+                  }
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "tamedToPlayerId",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "string"
                   }
                }
             }
@@ -13743,10 +13941,88 @@
                   "is_errorable" : true,
                   "name" : "undefined"
                }
+            },
+            {
+               "arguments" : [
+                  {
+                     "details" : null,
+                     "name" : "showParticles",
+                     "type" : {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "boolean"
+                     }
+                  },
+                  {
+                     "details" : null,
+                     "name" : "player",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "Player"
+                     }
+                  }
+               ],
+               "is_constructor" : false,
+               "is_static" : false,
+               "name" : "tameToPlayer",
+               "privilege" : "none",
+               "return_type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "boolean"
+               }
             }
          ],
          "name" : "EntityTameMountComponent",
-         "properties" : [],
+         "properties" : [
+            {
+               "is_read_only" : true,
+               "name" : "isTamed",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "boolean"
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "isTamedToPlayer",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "boolean"
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "tamedToPlayer",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : true,
+                     "is_errorable" : false,
+                     "name" : "Player"
+                  }
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "tamedToPlayerId",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "string"
+                  }
+               }
+            }
+         ],
          "type" : {
             "is_bind_type" : true,
             "is_errorable" : false,
@@ -14976,6 +15252,16 @@
             },
             {
                "is_read_only" : false,
+               "name" : "showDaysPlayed",
+               "privilege" : "none",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "boolean"
+               }
+            },
+            {
+               "is_read_only" : false,
                "name" : "showDeathMessages",
                "privilege" : "none",
                "type" : {
@@ -15684,6 +15970,37 @@
          }
       },
       {
+         "base_types" : [],
+         "constants" : [],
+         "functions" : [],
+         "name" : "ItemCompleteUseEvent",
+         "properties" : [
+            {
+               "is_read_only" : true,
+               "name" : "itemStack",
+               "type" : {
+                  "is_bind_type" : true,
+                  "is_errorable" : false,
+                  "name" : "ItemStack"
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "source",
+               "type" : {
+                  "is_bind_type" : true,
+                  "is_errorable" : false,
+                  "name" : "Player"
+               }
+            }
+         ],
+         "type" : {
+            "is_bind_type" : true,
+            "is_errorable" : false,
+            "name" : "ItemCompleteUseEvent"
+         }
+      },
+      {
          "base_types" : [
             {
                "is_bind_type" : true,
@@ -15759,6 +16076,55 @@
             "is_bind_type" : true,
             "is_errorable" : false,
             "name" : "ItemComponentBeforeDurabilityDamageEvent"
+         }
+      },
+      {
+         "base_types" : [
+            {
+               "is_bind_type" : true,
+               "is_errorable" : false,
+               "name" : "ItemCompleteUseEvent"
+            }
+         ],
+         "constants" : [],
+         "functions" : [],
+         "name" : "ItemComponentCompleteUseEvent",
+         "properties" : [],
+         "type" : {
+            "is_bind_type" : true,
+            "is_errorable" : false,
+            "name" : "ItemComponentCompleteUseEvent"
+         }
+      },
+      {
+         "base_types" : [],
+         "constants" : [],
+         "functions" : [],
+         "name" : "ItemComponentConsumeEvent",
+         "properties" : [
+            {
+               "is_read_only" : true,
+               "name" : "itemStack",
+               "type" : {
+                  "is_bind_type" : true,
+                  "is_errorable" : false,
+                  "name" : "ItemStack"
+               }
+            },
+            {
+               "is_read_only" : true,
+               "name" : "source",
+               "type" : {
+                  "is_bind_type" : true,
+                  "is_errorable" : false,
+                  "name" : "Entity"
+               }
+            }
+         ],
+         "type" : {
+            "is_bind_type" : true,
+            "is_errorable" : false,
+            "name" : "ItemComponentConsumeEvent"
          }
       },
       {
@@ -20027,7 +20393,7 @@
             },
             {
                "is_read_only" : false,
-               "name" : "selectedSlot",
+               "name" : "selectedSlotIndex",
                "privilege" : "none",
                "type" : {
                   "is_bind_type" : false,
@@ -24506,17 +24872,6 @@
                            "name" : "BlockPermutation"
                         }
                      }
-                  },
-                  {
-                     "details" : {
-                        "default_value" : false
-                     },
-                     "name" : "waterlogged",
-                     "type" : {
-                        "is_bind_type" : false,
-                        "is_errorable" : false,
-                        "name" : "boolean"
-                     }
                   }
                ],
                "is_constructor" : false,
@@ -24671,11 +25026,20 @@
                   },
                   {
                      "details" : null,
-                     "name" : "blockVolume",
+                     "name" : "from",
                      "type" : {
                         "is_bind_type" : true,
                         "is_errorable" : false,
-                        "name" : "BlockVolume"
+                        "name" : "Vector3"
+                     }
+                  },
+                  {
+                     "details" : null,
+                     "name" : "to",
+                     "type" : {
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "Vector3"
                      }
                   },
                   {
@@ -24794,7 +25158,7 @@
                "arguments" : [],
                "is_constructor" : false,
                "is_static" : false,
-               "name" : "getIds",
+               "name" : "getWorldStructureIds",
                "privilege" : "none",
                "return_type" : {
                   "element_type" : {
@@ -25155,6 +25519,52 @@
                   "valid_range" : {
                      "max" : 2147483647,
                      "min" : -2147483648
+                  }
+               }
+            },
+            {
+               "arguments" : [
+                  {
+                     "details" : {
+                        "max_value" : 4294967295,
+                        "min_value" : 1
+                     },
+                     "name" : "ticks",
+                     "type" : {
+                        "is_bind_type" : false,
+                        "is_errorable" : false,
+                        "name" : "uint32",
+                        "valid_range" : {
+                           "max" : 2147483647,
+                           "min" : -2147483648
+                        }
+                     }
+                  }
+               ],
+               "is_constructor" : false,
+               "is_static" : false,
+               "name" : "waitTicks",
+               "privilege" : "read_only",
+               "return_type" : {
+                  "error_types" : [
+                     {
+                        "from_module" : {
+                           "name" : "@minecraft/common",
+                           "uuid" : "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
+                           "version" : "1.1.0"
+                        },
+                        "is_bind_type" : true,
+                        "is_errorable" : false,
+                        "name" : "EngineError"
+                     }
+                  ],
+                  "is_bind_type" : false,
+                  "is_errorable" : true,
+                  "name" : "promise",
+                  "promise_type" : {
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "undefined"
                   }
                }
             }
@@ -30525,6 +30935,17 @@
             {
                "is_read_only" : true,
                "is_static" : true,
+               "name" : "ShowDaysPlayed",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "string"
+               },
+               "value" : "showDaysPlayed"
+            },
+            {
+               "is_read_only" : true,
+               "is_static" : true,
                "name" : "ShowDeathMessages",
                "type" : {
                   "is_bind_type" : false,
@@ -32068,7 +32489,7 @@
          "properties" : [
             {
                "is_read_only" : false,
-               "name" : "matchingBlock",
+               "name" : "blockFilter",
                "type" : {
                   "is_bind_type" : false,
                   "is_errorable" : false,
@@ -32076,7 +32497,21 @@
                   "optional_type" : {
                      "is_bind_type" : true,
                      "is_errorable" : false,
-                     "name" : "BlockPermutation"
+                     "name" : "BlockFilter"
+                  }
+               }
+            },
+            {
+               "is_read_only" : false,
+               "name" : "ignoreChunkBoundErrors",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "boolean"
                   }
                }
             }
@@ -34130,6 +34565,62 @@
             },
             {
                "is_read_only" : false,
+               "name" : "onCompleteUse",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "closure_type" : {
+                        "argument_types" : [
+                           {
+                              "is_bind_type" : true,
+                              "is_errorable" : false,
+                              "name" : "ItemComponentCompleteUseEvent"
+                           }
+                        ],
+                        "return_type" : {
+                           "is_bind_type" : false,
+                           "is_errorable" : true,
+                           "name" : "undefined"
+                        }
+                     },
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "closure"
+                  }
+               }
+            },
+            {
+               "is_read_only" : false,
+               "name" : "onConsume",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "optional",
+                  "optional_type" : {
+                     "closure_type" : {
+                        "argument_types" : [
+                           {
+                              "is_bind_type" : true,
+                              "is_errorable" : false,
+                              "name" : "ItemComponentConsumeEvent"
+                           }
+                        ],
+                        "return_type" : {
+                           "is_bind_type" : false,
+                           "is_errorable" : true,
+                           "name" : "undefined"
+                        }
+                     },
+                     "is_bind_type" : false,
+                     "is_errorable" : false,
+                     "name" : "closure"
+                  }
+               }
+            },
+            {
+               "is_read_only" : false,
                "name" : "onHitEntity",
                "type" : {
                   "is_bind_type" : false,
@@ -35416,6 +35907,43 @@
       },
       {
          "base_types" : [],
+         "name" : "VectorXZ",
+         "properties" : [
+            {
+               "is_read_only" : false,
+               "name" : "x",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "float",
+                  "valid_range" : {
+                     "max" : 2147483647,
+                     "min" : -2147483648
+                  }
+               }
+            },
+            {
+               "is_read_only" : false,
+               "name" : "z",
+               "type" : {
+                  "is_bind_type" : false,
+                  "is_errorable" : false,
+                  "name" : "float",
+                  "valid_range" : {
+                     "max" : 2147483647,
+                     "min" : -2147483648
+                  }
+               }
+            }
+         ],
+         "type" : {
+            "is_bind_type" : true,
+            "is_errorable" : false,
+            "name" : "VectorXZ"
+         }
+      },
+      {
+         "base_types" : [],
          "name" : "WorldSoundOptions",
          "properties" : [
             {
@@ -35462,7 +35990,7 @@
          }
       }
    ],
-   "minecraft_version" : "1.21.0-beta.21",
+   "minecraft_version" : "1.21.0-beta.24",
    "module_type" : "script",
    "name" : "@minecraft/server",
    "objects" : [

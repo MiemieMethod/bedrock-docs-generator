@@ -463,6 +463,9 @@
          "name" : "minecraft:brick_block"
       },
       {
+         "name" : "minecraft:brick_slab"
+      },
+      {
          "name" : "minecraft:brick_stairs"
       },
       {
@@ -728,6 +731,9 @@
       },
       {
          "name" : "minecraft:cobblestone"
+      },
+      {
+         "name" : "minecraft:cobblestone_slab"
       },
       {
          "name" : "minecraft:cobblestone_wall"
@@ -2299,6 +2305,9 @@
          "name" : "minecraft:large_amethyst_bud"
       },
       {
+         "name" : "minecraft:large_fern"
+      },
+      {
          "name" : "minecraft:lava_bucket"
       },
       {
@@ -2405,6 +2414,9 @@
       },
       {
          "name" : "minecraft:lightning_rod"
+      },
+      {
+         "name" : "minecraft:lilac"
       },
       {
          "name" : "minecraft:lily_of_the_valley"
@@ -2662,6 +2674,12 @@
          "name" : "minecraft:music_disc_chirp"
       },
       {
+         "name" : "minecraft:music_disc_creator"
+      },
+      {
+         "name" : "minecraft:music_disc_creator_music_box"
+      },
+      {
          "name" : "minecraft:music_disc_far"
       },
       {
@@ -2675,6 +2693,9 @@
       },
       {
          "name" : "minecraft:music_disc_pigstep"
+      },
+      {
+         "name" : "minecraft:music_disc_precipice"
       },
       {
          "name" : "minecraft:music_disc_relic"
@@ -2708,6 +2729,9 @@
       },
       {
          "name" : "minecraft:nether_brick_fence"
+      },
+      {
+         "name" : "minecraft:nether_brick_slab"
       },
       {
          "name" : "minecraft:nether_brick_stairs"
@@ -2918,6 +2942,9 @@
       },
       {
          "name" : "minecraft:pearlescent_froglight"
+      },
+      {
+         "name" : "minecraft:peony"
       },
       {
          "name" : "minecraft:phantom_membrane"
@@ -3187,6 +3214,9 @@
          "name" : "minecraft:quartz_ore"
       },
       {
+         "name" : "minecraft:quartz_slab"
+      },
+      {
          "name" : "minecraft:quartz_stairs"
       },
       {
@@ -3325,6 +3355,9 @@
          "name" : "minecraft:rib_armor_trim_smithing_template"
       },
       {
+         "name" : "minecraft:rose_bush"
+      },
+      {
          "name" : "minecraft:rotten_flesh"
       },
       {
@@ -3344,6 +3377,9 @@
       },
       {
          "name" : "minecraft:sandstone"
+      },
+      {
+         "name" : "minecraft:sandstone_slab"
       },
       {
          "name" : "minecraft:sandstone_stairs"
@@ -3476,6 +3512,9 @@
       },
       {
          "name" : "minecraft:smooth_stone"
+      },
+      {
+         "name" : "minecraft:smooth_stone_slab"
       },
       {
          "name" : "minecraft:sniffer_egg"
@@ -3631,6 +3670,9 @@
          "name" : "minecraft:stone_block_slab4"
       },
       {
+         "name" : "minecraft:stone_brick_slab"
+      },
+      {
          "name" : "minecraft:stone_brick_stairs"
       },
       {
@@ -3745,6 +3787,9 @@
          "name" : "minecraft:sugar_cane"
       },
       {
+         "name" : "minecraft:sunflower"
+      },
+      {
          "name" : "minecraft:suspicious_gravel"
       },
       {
@@ -3761,6 +3806,9 @@
       },
       {
          "name" : "minecraft:tadpole_spawn_egg"
+      },
+      {
+         "name" : "minecraft:tall_grass"
       },
       {
          "name" : "minecraft:tallgrass"
@@ -4264,7 +4312,7 @@
          "name" : "minecraft:zombie_villager_spawn_egg"
       }
    ],
-   "minecraft_version" : "1.21.0-beta.21",
+   "minecraft_version" : "1.21.0-beta.24",
    "module_type" : "vanilla_data",
    "name" : "mojang-item",
    "vanilla_data_type" : "item"

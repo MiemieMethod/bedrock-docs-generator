@@ -1,0 +1,19 @@
+{
+  "$id": "blockception.minecraft.behavior.entities.minecraft.behavior.float",
+  "type": "object",
+  "title": "Float",
+  "description": "Allows the mob to stay afloat while swimming.",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {
+    "priority": {
+      "$ref": "./types/priority.json"
+    },
+    "sink_with_passengers": {
+      "title": "Sink With Passengers",
+      "description": "If true, the mob will keep sinking as long as it has passengers.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

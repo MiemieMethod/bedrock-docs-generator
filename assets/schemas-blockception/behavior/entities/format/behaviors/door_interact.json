@@ -1,0 +1,12 @@
+{
+  "$id": "blockception.minecraft.behavior.entities.minecraft.behavior.door_interact",
+  "additionalProperties": false,
+  "type": "object",
+  "title": "Door Interact",
+  "description": "Allows the mob to open and close doors.",
+  "properties": {
+    "priority": {
+      "$ref": "./types/priority.json"
+    }
+  }
+}

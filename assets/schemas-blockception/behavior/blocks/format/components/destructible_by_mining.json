@@ -1,0 +1,24 @@
+{
+  "$id": "blockception.minecraft.behavior.blocks.minecraft.destructible_by_mining",
+  "title": "Destructible By Mining",
+  "description": "Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.",
+  "oneOf": [
+    {
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "seconds_to_destroy": {
+          "title": "Seconds To Destroy",
+          "description": "Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.",
+          "type": "number",
+          "default": 0.0
+        }
+      }
+    }
+  ]
+}

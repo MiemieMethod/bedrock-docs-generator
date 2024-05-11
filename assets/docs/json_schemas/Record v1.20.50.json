@@ -4,11 +4,11 @@
     "type": "object",
     "properties": {
         "comparator_signal": {
-            "description": "Signal strength for comparator blocks to use, from 1 - 13.",
+            "description": "Specifies signal strength for comparator blocks to use, from 1 - 13.",
             "type": "integer"
         },
         "duration": {
-            "description": "Duration of sound event in seconds, float value.",
+            "description": "Specifies duration of sound event in seconds, float value.",
             "type": "number"
         },
         "sound_event": {
@@ -409,11 +409,14 @@
                 "record.blocks",
                 "record.cat",
                 "record.chirp",
+                "record.creator",
+                "record.creator_music_box",
                 "record.far",
                 "record.mall",
                 "record.mellohi",
                 "record.otherside",
                 "record.pigstep",
+                "record.precipice",
                 "record.relic",
                 "record.stal",
                 "record.strad",

@@ -1,0 +1,33 @@
+{
+  "$id": "blockception.minecraft.behavior.entities.minecraft.behavior.defend_village_target",
+  "additionalProperties": false,
+  "type": "object",
+  "title": "Defend Village Target",
+  "description": "Allows the entity to stay in a village and defend the village from aggressors. If a player is in bad standing with the village this goal will cause the entity to attack the player regardless of filter conditions.",
+  "properties": {
+    "priority": { "$ref": "./types/priority.json" },
+    "entity_types": {
+      "title": "Entity Types",
+      "$ref": "../types/entity_types.json",
+      "description": "List of entity types this mob considers a threat to the village.",
+      "$comment": "UNDOCUMENTED"
+    },
+    "must_reach": {
+      "title": "Must Reach",
+      "description": "The entity must be able to reach attacker.",
+      "type": "boolean"
+    },
+    "attack_chance": {
+      "title": "Attack Chance",
+      "description": "The percentage chance that the entity has to attack aggressors of its village, where 1.0 = 100%.",
+      "type": "number",
+      "default": 0.05
+    }
+  },
+  "examples": [
+    {
+      "must_reach": true,
+      "attack_chance": 0.0
+    }
+  ]
+}
