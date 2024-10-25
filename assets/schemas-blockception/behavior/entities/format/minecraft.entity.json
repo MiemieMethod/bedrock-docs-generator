@@ -155,8 +155,7 @@
         "runtime_identifier": {
           "type": "string",
           "title": "Runtime Identifier",
-          "description": "Sets the name for the Vanilla Minecraft identifier this entity will use to build itself from.",
-          "examples": ["minecraft:"]
+          "description": "Sets the name for the Vanilla Minecraft identifier this entity will use to build itself from."
         },
         "scripts": {
           "type": "object",
@@ -178,7 +177,6 @@
                     "type": "object",
                     "title": "Conditional Animation",
                     "description": "A conditional statement to run the animation under a specified condition.",
-                    "$comment": "UNDOCUMENTED",
                     "additionalProperties": { "type": "string", "title": "Animation" }
                   }
                 ]

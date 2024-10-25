@@ -14,7 +14,7 @@ class SchemaBuilder(MarkdownWriter):
         self.isComponent = False
 
     def preRender(self):
-        version = '1.21.0.24'
+        version = '1.21.50.25'
         title = self.entry.get('title', '未命名')
         self.addHeading(title, 1)
         self.addBlockquote('文档版本：{}'.format(version))

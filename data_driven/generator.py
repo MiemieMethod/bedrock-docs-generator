@@ -56,9 +56,6 @@ class BlockceptionSchemaGenerator(object):
         self.schemas['trading'] = {}
         with open(r'assets/schemas-blockception/behavior/trading/trading.json', 'r', encoding="utf-8") as f:
             self.schemas['trading']['definition'] = (json5.load(f), r'assets/schemas-blockception/behavior/trading')
-        self.schemas['volume'] = {}
-        with open(r'assets/schemas-blockception/behavior/volumes/volumes.json', 'r', encoding="utf-8") as f:
-            self.schemas['volume']['definition'] = (json5.load(f), r'assets/schemas-blockception/behavior/volumes')
         self.schemas['dialogue'] = {}
         with open(r'assets/schemas-blockception/behavior/dialogue/dialogue.json', 'r', encoding="utf-8") as f:
             self.schemas['dialogue']['definition'] = (json5.load(f), r'assets/schemas-blockception/behavior/dialogue')

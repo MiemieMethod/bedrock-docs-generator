@@ -1,373 +1,376 @@
 {
    "data_items" : [
       {
-         "name" : "agent"
+         "name" : "minecraft:agent"
       },
       {
-         "name" : "allay"
+         "name" : "minecraft:allay"
       },
       {
-         "name" : "area_effect_cloud"
+         "name" : "minecraft:area_effect_cloud"
       },
       {
-         "name" : "armadillo"
+         "name" : "minecraft:armadillo"
       },
       {
-         "name" : "armor_stand"
+         "name" : "minecraft:armor_stand"
       },
       {
-         "name" : "arrow"
+         "name" : "minecraft:arrow"
       },
       {
-         "name" : "axolotl"
+         "name" : "minecraft:axolotl"
       },
       {
-         "name" : "balloon"
+         "name" : "minecraft:balloon"
       },
       {
-         "name" : "bat"
+         "name" : "minecraft:bat"
       },
       {
-         "name" : "bee"
+         "name" : "minecraft:bee"
       },
       {
-         "name" : "blaze"
+         "name" : "minecraft:blaze"
       },
       {
-         "name" : "boat"
+         "name" : "minecraft:boat"
       },
       {
-         "name" : "bogged"
+         "name" : "minecraft:bogged"
       },
       {
-         "name" : "breeze"
+         "name" : "minecraft:breeze"
       },
       {
-         "name" : "breeze_wind_charge_projectile"
+         "name" : "minecraft:breeze_wind_charge_projectile"
       },
       {
-         "name" : "camel"
+         "name" : "minecraft:camel"
       },
       {
-         "name" : "cat"
+         "name" : "minecraft:cat"
       },
       {
-         "name" : "cave_spider"
+         "name" : "minecraft:cave_spider"
       },
       {
-         "name" : "chest_boat"
+         "name" : "minecraft:chest_boat"
       },
       {
-         "name" : "chest_minecart"
+         "name" : "minecraft:chest_minecart"
       },
       {
-         "name" : "chicken"
+         "name" : "minecraft:chicken"
       },
       {
-         "name" : "cod"
+         "name" : "minecraft:cod"
       },
       {
-         "name" : "command_block_minecart"
+         "name" : "minecraft:command_block_minecart"
       },
       {
-         "name" : "cow"
+         "name" : "minecraft:cow"
       },
       {
-         "name" : "creeper"
+         "name" : "minecraft:creaking"
       },
       {
-         "name" : "dolphin"
+         "name" : "minecraft:creeper"
       },
       {
-         "name" : "donkey"
+         "name" : "minecraft:dolphin"
       },
       {
-         "name" : "dragon_fireball"
+         "name" : "minecraft:donkey"
       },
       {
-         "name" : "drowned"
+         "name" : "minecraft:dragon_fireball"
       },
       {
-         "name" : "egg"
+         "name" : "minecraft:drowned"
       },
       {
-         "name" : "elder_guardian"
+         "name" : "minecraft:egg"
       },
       {
-         "name" : "ender_crystal"
+         "name" : "minecraft:elder_guardian"
       },
       {
-         "name" : "ender_dragon"
+         "name" : "minecraft:ender_crystal"
       },
       {
-         "name" : "ender_pearl"
+         "name" : "minecraft:ender_dragon"
       },
       {
-         "name" : "enderman"
+         "name" : "minecraft:ender_pearl"
       },
       {
-         "name" : "endermite"
+         "name" : "minecraft:enderman"
       },
       {
-         "name" : "evocation_illager"
+         "name" : "minecraft:endermite"
       },
       {
-         "name" : "eye_of_ender_signal"
+         "name" : "minecraft:evocation_illager"
       },
       {
-         "name" : "fireball"
+         "name" : "minecraft:eye_of_ender_signal"
       },
       {
-         "name" : "fireworks_rocket"
+         "name" : "minecraft:fireball"
       },
       {
-         "name" : "fishing_hook"
+         "name" : "minecraft:fireworks_rocket"
       },
       {
-         "name" : "fox"
+         "name" : "minecraft:fishing_hook"
       },
       {
-         "name" : "frog"
+         "name" : "minecraft:fox"
       },
       {
-         "name" : "ghast"
+         "name" : "minecraft:frog"
       },
       {
-         "name" : "glow_squid"
+         "name" : "minecraft:ghast"
       },
       {
-         "name" : "goat"
+         "name" : "minecraft:glow_squid"
       },
       {
-         "name" : "guardian"
+         "name" : "minecraft:goat"
       },
       {
-         "name" : "hoglin"
+         "name" : "minecraft:guardian"
       },
       {
-         "name" : "hopper_minecart"
+         "name" : "minecraft:hoglin"
       },
       {
-         "name" : "horse"
+         "name" : "minecraft:hopper_minecart"
       },
       {
-         "name" : "husk"
+         "name" : "minecraft:horse"
       },
       {
-         "name" : "ice_bomb"
+         "name" : "minecraft:husk"
       },
       {
-         "name" : "iron_golem"
+         "name" : "minecraft:ice_bomb"
       },
       {
-         "name" : "lightning_bolt"
+         "name" : "minecraft:iron_golem"
       },
       {
-         "name" : "lingering_potion"
+         "name" : "minecraft:lightning_bolt"
       },
       {
-         "name" : "llama"
+         "name" : "minecraft:lingering_potion"
       },
       {
-         "name" : "llama_spit"
+         "name" : "minecraft:llama"
       },
       {
-         "name" : "magma_cube"
+         "name" : "minecraft:llama_spit"
       },
       {
-         "name" : "minecart"
+         "name" : "minecraft:magma_cube"
       },
       {
-         "name" : "mooshroom"
+         "name" : "minecraft:minecart"
       },
       {
-         "name" : "mule"
+         "name" : "minecraft:mooshroom"
       },
       {
-         "name" : "npc"
+         "name" : "minecraft:mule"
       },
       {
-         "name" : "ocelot"
+         "name" : "minecraft:npc"
       },
       {
-         "name" : "ominous_item_spawner"
+         "name" : "minecraft:ocelot"
       },
       {
-         "name" : "panda"
+         "name" : "minecraft:ominous_item_spawner"
       },
       {
-         "name" : "parrot"
+         "name" : "minecraft:panda"
       },
       {
-         "name" : "phantom"
+         "name" : "minecraft:parrot"
       },
       {
-         "name" : "pig"
+         "name" : "minecraft:phantom"
       },
       {
-         "name" : "piglin"
+         "name" : "minecraft:pig"
       },
       {
-         "name" : "piglin_brute"
+         "name" : "minecraft:piglin"
       },
       {
-         "name" : "pillager"
+         "name" : "minecraft:piglin_brute"
       },
       {
-         "name" : "player"
+         "name" : "minecraft:pillager"
       },
       {
-         "name" : "polar_bear"
+         "name" : "minecraft:player"
       },
       {
-         "name" : "pufferfish"
+         "name" : "minecraft:polar_bear"
       },
       {
-         "name" : "rabbit"
+         "name" : "minecraft:pufferfish"
       },
       {
-         "name" : "ravager"
+         "name" : "minecraft:rabbit"
       },
       {
-         "name" : "salmon"
+         "name" : "minecraft:ravager"
       },
       {
-         "name" : "sheep"
+         "name" : "minecraft:salmon"
       },
       {
-         "name" : "shulker"
+         "name" : "minecraft:sheep"
       },
       {
-         "name" : "shulker_bullet"
+         "name" : "minecraft:shulker"
       },
       {
-         "name" : "silverfish"
+         "name" : "minecraft:shulker_bullet"
       },
       {
-         "name" : "skeleton"
+         "name" : "minecraft:silverfish"
       },
       {
-         "name" : "skeleton_horse"
+         "name" : "minecraft:skeleton"
       },
       {
-         "name" : "slime"
+         "name" : "minecraft:skeleton_horse"
       },
       {
-         "name" : "small_fireball"
+         "name" : "minecraft:slime"
       },
       {
-         "name" : "sniffer"
+         "name" : "minecraft:small_fireball"
       },
       {
-         "name" : "snow_golem"
+         "name" : "minecraft:sniffer"
       },
       {
-         "name" : "snowball"
+         "name" : "minecraft:snow_golem"
       },
       {
-         "name" : "spider"
+         "name" : "minecraft:snowball"
       },
       {
-         "name" : "splash_potion"
+         "name" : "minecraft:spider"
       },
       {
-         "name" : "squid"
+         "name" : "minecraft:splash_potion"
       },
       {
-         "name" : "stray"
+         "name" : "minecraft:squid"
       },
       {
-         "name" : "strider"
+         "name" : "minecraft:stray"
       },
       {
-         "name" : "tadpole"
+         "name" : "minecraft:strider"
       },
       {
-         "name" : "thrown_trident"
+         "name" : "minecraft:tadpole"
       },
       {
-         "name" : "tnt"
+         "name" : "minecraft:thrown_trident"
       },
       {
-         "name" : "tnt_minecart"
+         "name" : "minecraft:tnt"
       },
       {
-         "name" : "trader_llama"
+         "name" : "minecraft:tnt_minecart"
       },
       {
-         "name" : "tripod_camera"
+         "name" : "minecraft:trader_llama"
       },
       {
-         "name" : "tropicalfish"
+         "name" : "minecraft:tripod_camera"
       },
       {
-         "name" : "turtle"
+         "name" : "minecraft:tropicalfish"
       },
       {
-         "name" : "vex"
+         "name" : "minecraft:turtle"
       },
       {
-         "name" : "villager"
+         "name" : "minecraft:vex"
       },
       {
-         "name" : "villager_v2"
+         "name" : "minecraft:villager"
       },
       {
-         "name" : "vindicator"
+         "name" : "minecraft:villager_v2"
       },
       {
-         "name" : "wandering_trader"
+         "name" : "minecraft:vindicator"
       },
       {
-         "name" : "warden"
+         "name" : "minecraft:wandering_trader"
       },
       {
-         "name" : "wind_charge_projectile"
+         "name" : "minecraft:warden"
       },
       {
-         "name" : "witch"
+         "name" : "minecraft:wind_charge_projectile"
       },
       {
-         "name" : "wither"
+         "name" : "minecraft:witch"
       },
       {
-         "name" : "wither_skeleton"
+         "name" : "minecraft:wither"
       },
       {
-         "name" : "wither_skull"
+         "name" : "minecraft:wither_skeleton"
       },
       {
-         "name" : "wither_skull_dangerous"
+         "name" : "minecraft:wither_skull"
       },
       {
-         "name" : "wolf"
+         "name" : "minecraft:wither_skull_dangerous"
       },
       {
-         "name" : "xp_bottle"
+         "name" : "minecraft:wolf"
       },
       {
-         "name" : "xp_orb"
+         "name" : "minecraft:xp_bottle"
       },
       {
-         "name" : "zoglin"
+         "name" : "minecraft:xp_orb"
       },
       {
-         "name" : "zombie"
+         "name" : "minecraft:zoglin"
       },
       {
-         "name" : "zombie_horse"
+         "name" : "minecraft:zombie"
       },
       {
-         "name" : "zombie_pigman"
+         "name" : "minecraft:zombie_horse"
       },
       {
-         "name" : "zombie_villager"
+         "name" : "minecraft:zombie_pigman"
       },
       {
-         "name" : "zombie_villager_v2"
+         "name" : "minecraft:zombie_villager"
+      },
+      {
+         "name" : "minecraft:zombie_villager_v2"
       }
    ],
-   "minecraft_version" : "1.21.0-beta.24",
+   "minecraft_version" : "1.21.50-beta.25",
    "module_type" : "vanilla_data",
    "name" : "mojang-entity",
    "vanilla_data_type" : "entity"

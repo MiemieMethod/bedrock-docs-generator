@@ -1,6 +1,20 @@
 {
    "command_enums" : [
       {
+         "name" : "EncryptionCommandCipher",
+         "values" : [
+            {
+               "value" : "cfb8"
+            },
+            {
+               "value" : "cfb128"
+            },
+            {
+               "value" : "cfb"
+            }
+         ]
+      },
+      {
          "name" : "Status",
          "values" : [
             {
@@ -28,6 +42,18 @@
       {
          "name": "CommandName",
          "values": [
+            {
+               "value" : "geteduserverinfo"
+            },
+            {
+               "value" : "dedicatedwsserver"
+            },
+            {
+               "value" : "closewebsocket"
+            },
+            {
+               "value" : "enableencryption"
+            },
             {
                "value": "closechat"
             },
@@ -59,8 +85,94 @@
       },
       {
          "aliases" : [],
+         "description" : "Closes websocket connection if there is one.",
+         "name" : "closewebsocket",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : []
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [
+            {
+               "name" : "connect"
+            }
+         ],
+         "description" : "Attempts to connect to the websocket server on the provided URL.",
+         "name" : "dedicatedwsserver",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "serverUri",
+                     "type" : {
+                        "name" : "MESSAGE_ROOT"
+                     }
+                  }
+               ]
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
+         "description" : "commands.enableencryption.description",
+         "name" : "enableencryption",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "publicKey",
+                     "type" : {
+                        "name" : "ID"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "salt",
+                     "type" : {
+                        "name" : "ID"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "ciper_mode",
+                     "type" : {
+                        "name" : "ENCRYPTIONCOMMANDCIPHER"
+                     }
+                  }
+               ]
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
          "description" : "commands.geteduclientinfo.description",
          "name" : "geteduclientinfo",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : []
+            }
+         ],
+         "permission_level" : 0,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
+         "description" : "commands.geteduserverinfo.description",
+         "name" : "geteduserverinfo",
          "overloads" : [
             {
                "name" : "1",
@@ -174,7 +286,7 @@
                      "is_optional" : false,
                      "name" : "command",
                      "type" : {
-                        "name" : "SLASHCOMMAND"
+                        "name" : "CODEBUILDERARGS"
                      }
                   }
                ],
@@ -229,7 +341,7 @@
                      "is_optional" : false,
                      "name" : "command",
                      "type" : {
-                        "name" : "SLASHCOMMAND"
+                        "name" : "CODEBUILDERARGS"
                      }
                   }
                ],

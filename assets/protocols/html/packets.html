@@ -64,9 +64,6 @@
 </tr><tr><td>22</td>
 <td><a href = "AddPaintingPacket.html">Add Painting</a></td>
 <td>Sends the information for a new painting actor from server to client.</td>
-</tr><tr><td>23</td>
-<td><a href = "TickSyncPacket.html">Tick Sync Packet</a></td>
-<td>Helps ensure client and server ticks are in sync.This packet is used to maintain a synchronized, server-authoritative tick between the client and the server</td>
 </tr><tr><td>24</td>
 <td><a href = "LevelSoundEventPacketV1.html">LevelSoundEventPacketV1</a></td>
 <td></td>
@@ -240,7 +237,7 @@
 <td></td>
 </tr><tr><td>85</td>
 <td><a href = "TransferPacket.html">Transfer Player</a></td>
-<td>Used to kick off transferring the client between online games</td>
+<td>Used to kick off transferring the client between online games, or it can be used to cause players to quit the world and rejoin.</td>
 </tr><tr><td>86</td>
 <td><a href = "PlaySoundPacket.html">Play Sound</a></td>
 <td>This packet is only used via command or script event. This is for 3rd party content. </td>
@@ -583,4 +580,28 @@
 </tr><tr><td>308</td>
 <td><a href = "SetHudPacket.html">SetHudPacket</a></td>
 <td>This packet is only used via the set hud command. This is for 3rd party content.</td>
+</tr><tr><td>309</td>
+<td><a href = "AwardAchievementPacket.html">AwardAchievementPacket</a></td>
+<td></td>
+</tr><tr><td>310</td>
+<td><a href = "ClientboundCloseFormPacket.html">ClientboundCloseFormPacket</a></td>
+<td>Sent from the server to client to force close all server forms on the stack and return to the HUD screen.</td>
+</tr><tr><td>312</td>
+<td><a href = "ServerboundLoadingScreenPacket.html">ServerboundLoadingScreenPacket</a></td>
+<td>Sent from the client to the server to message to the server about the state of the loading screen.</td>
+</tr><tr><td>313</td>
+<td><a href = "JigsawStructureDataPacket.html">Jigsaw Structure data used by client jigsaw structure worldgen</a></td>
+<td>This packet contains a copy of the behavior pack jigsaw structure rulesSends the serialized jigsaw rule JSON to the client as it's needed on both the client and server.</td>
+</tr><tr><td>314</td>
+<td><a href = "CurrentStructureFeaturePacket.html">Informs the client of which Structure Feature they are currently occupying.</a></td>
+<td>If the player is not in a structure, this packet contains an empty string.Sends the name of the Structure Feature the player is currently occupying to the client.</td>
+</tr><tr><td>315</td>
+<td><a href = "ServerboundDiagnosticsPacket.html">ServerboundDiagnosticsPacket</a></td>
+<td>Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for</td>
+</tr><tr><td>316</td>
+<td><a href = "CameraAimAssistPacket.html">CameraAimAssistPacket</a></td>
+<td>CameraAimAssist</td>
+</tr><tr><td>317</td>
+<td><a href = "ContainerRegistryCleanupPacket.html">Cleanup of Dynamic Container Registry</a></td>
+<td>This is used to trigger a clientside cleanup of the dynamic container registry. Whenever the serverside</td>
 </tr></table></body> </html>

@@ -18,6 +18,8 @@ class ScriptAPIGenerator(object):
             for file in files:
                 with open(os.path.join(root, file), 'r') as f:
                     name, version = re.match(r'(.*)_(.*).json', file).groups()
+                    if re.match(r'.*?-alpha', version):
+                        version = 'alpha'
                     if re.match(r'.*?-beta', version):
                         version = 'beta'
                     if re.match(r'.*?-internal', version):
@@ -27,7 +29,13 @@ class ScriptAPIGenerator(object):
                     self.module[name][version] = json.loads(f.read())
         for name in self.module:
             keys = list(self.module[name].keys())
-            keys.sort(key=lambda x: (x == 'internal', x == 'beta', x.split('.')))
+            keys.sort(key=lambda x: (
+                3 if x == 'alpha' else
+                2 if x == 'internal' else
+                1 if x == 'beta' else
+                0,
+                tuple(int(part) for part in x.split('.')) if x not in ['alpha', 'internal', 'beta'] else ()
+            ))
             self.module[name] = {k: self.module[name][k] for k in keys}
 
     def generate(self):

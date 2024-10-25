@@ -17,7 +17,7 @@ class CommandBuilder(MarkdownWriter):
         self.enumsMap = enumsMap
 
     def preRender(self):
-        version = '1.21.0.24'
+        version = '1.21.50.25'
         permissionLevel = [
             'any',
             'gamedirectors',

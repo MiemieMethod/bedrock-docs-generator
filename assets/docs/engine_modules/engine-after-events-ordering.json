@@ -885,13 +885,523 @@
                "name" : "GameRuleChangeAfterEvent"
             },
             {
-               "name" : "MessageReceiveAfterEvent"
+               "name" : "WeatherChangeAfterEvent"
+            },
+            {
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 1.12.0",
+         "version" : "1.12.0"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldInitializeAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
             },
             {
                "name" : "WeatherChangeAfterEvent"
             },
             {
-               "name" : "ChatSendAfterEvent"
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 1.13.0",
+         "version" : "1.13.0"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldInitializeAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
+            },
+            {
+               "name" : "WeatherChangeAfterEvent"
+            },
+            {
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 1.14.0",
+         "version" : "1.14.0"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldInitializeAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
+            },
+            {
+               "name" : "WeatherChangeAfterEvent"
             },
             {
                "name" : "ButtonPushAfterEvent"
@@ -1009,15 +1519,60 @@
             },
             {
                "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
             }
          ],
-         "name" : "@minecraft/server 1.12.0-beta",
-         "version" : "1.12.0-beta"
+         "name" : "@minecraft/server 1.15.0",
+         "version" : "1.15.0"
       },
       {
          "event_order" : [
             {
                "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
             },
             {
                "name" : "WorldInitializeAfterEvent"
@@ -1036,6 +1591,9 @@
             },
             {
                "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
             },
             {
                "name" : "ExplosionAfterEvent"
@@ -1119,6 +1677,15 @@
                "name" : "PlayerDimensionChangeAfterEvent"
             },
             {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithEntityAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithBlockAfterEvent"
+            },
+            {
                "name" : "PistonActivateAfterEvent"
             },
             {
@@ -1132,10 +1699,616 @@
             },
             {
                "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
             }
          ],
-         "name" : "@minecraft/server 1.12.0-internal",
-         "version" : "1.12.0-internal"
+         "name" : "@minecraft/server 1.16.0",
+         "version" : "1.16.0"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldLoadAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
+            },
+            {
+               "name" : "WeatherChangeAfterEvent"
+            },
+            {
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithEntityAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithBlockAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 2.0.0-alpha",
+         "version" : "2.0.0-alpha"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldInitializeAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
+            },
+            {
+               "name" : "MessageReceiveAfterEvent"
+            },
+            {
+               "name" : "WeatherChangeAfterEvent"
+            },
+            {
+               "name" : "ChatSendAfterEvent"
+            },
+            {
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithEntityAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithBlockAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
+            },
+            {
+               "name" : "PlayerButtonInputAfterEvent"
+            },
+            {
+               "name" : "PlayerButtonInputAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 1.17.0-beta",
+         "version" : "1.17.0-beta"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ScriptEventCommandMessageAfterEvent"
+            },
+            {
+               "name" : "BlockComponentStepOnEvent"
+            },
+            {
+               "name" : "BlockComponentRandomTickEvent"
+            },
+            {
+               "name" : "BlockComponentStepOffEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerInteractEvent"
+            },
+            {
+               "name" : "BlockComponentTickEvent"
+            },
+            {
+               "name" : "BlockComponentEntityFallOnEvent"
+            },
+            {
+               "name" : "BlockComponentPlayerDestroyEvent"
+            },
+            {
+               "name" : "BlockComponentOnPlaceEvent"
+            },
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            },
+            {
+               "name" : "WorldInitializeAfterEvent"
+            },
+            {
+               "name" : "GameRuleChangeAfterEvent"
+            },
+            {
+               "name" : "WeatherChangeAfterEvent"
+            },
+            {
+               "name" : "ButtonPushAfterEvent"
+            },
+            {
+               "name" : "LeverActionAfterEvent"
+            },
+            {
+               "name" : "PlayerPlaceBlockAfterEvent"
+            },
+            {
+               "name" : "BlockExplodeAfterEvent"
+            },
+            {
+               "name" : "ExplosionAfterEvent"
+            },
+            {
+               "name" : "PlayerBreakBlockAfterEvent"
+            },
+            {
+               "name" : "EntityLoadAfterEvent"
+            },
+            {
+               "name" : "EntitySpawnAfterEvent"
+            },
+            {
+               "name" : "DataDrivenEntityTriggerAfterEvent"
+            },
+            {
+               "name" : "EffectAddAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitEntityAfterEvent"
+            },
+            {
+               "name" : "ProjectileHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHitEntityAfterEvent"
+            },
+            {
+               "name" : "EntityHitBlockAfterEvent"
+            },
+            {
+               "name" : "EntityHurtAfterEvent"
+            },
+            {
+               "name" : "EntityHealthChangedAfterEvent"
+            },
+            {
+               "name" : "EntityDieAfterEvent"
+            },
+            {
+               "name" : "EntityRemoveAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseOnAfterEvent"
+            },
+            {
+               "name" : "ItemStartUseAfterEvent"
+            },
+            {
+               "name" : "ItemCompleteUseAfterEvent"
+            },
+            {
+               "name" : "ItemReleaseUseAfterEvent"
+            },
+            {
+               "name" : "ItemStopUseAfterEvent"
+            },
+            {
+               "name" : "PlayerJoinAfterEvent"
+            },
+            {
+               "name" : "PlayerSpawnAfterEvent"
+            },
+            {
+               "name" : "PlayerLeaveAfterEvent"
+            },
+            {
+               "name" : "PlayerGameModeChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerDimensionChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInputPermissionCategoryChangeAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithEntityAfterEvent"
+            },
+            {
+               "name" : "PlayerInteractWithBlockAfterEvent"
+            },
+            {
+               "name" : "PistonActivateAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePushAfterEvent"
+            },
+            {
+               "name" : "PressurePlatePopAfterEvent"
+            },
+            {
+               "name" : "TargetBlockHitAfterEvent"
+            },
+            {
+               "name" : "TripWireTripAfterEvent"
+            },
+            {
+               "name" : "PlayerEmoteAfterEvent"
+            }
+         ],
+         "name" : "@minecraft/server 1.17.0-internal",
+         "version" : "1.17.0-internal"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            }
+         ],
+         "name" : "@minecraft/server-gametest 2.0.0-alpha",
+         "version" : "2.0.0-alpha"
+      },
+      {
+         "event_order" : [
+            {
+               "name" : "ItemComponentHitEntityEvent"
+            },
+            {
+               "name" : "ItemComponentUseEvent"
+            },
+            {
+               "name" : "ItemComponentUseOnEvent"
+            },
+            {
+               "name" : "ItemComponentCompleteUseEvent"
+            },
+            {
+               "name" : "ItemComponentConsumeEvent"
+            },
+            {
+               "name" : "ItemComponentMineBlockEvent"
+            }
+         ],
+         "name" : "@minecraft/server-ui 2.0.0-alpha",
+         "version" : "2.0.0-alpha"
       },
       {
          "event_order" : [
@@ -1149,14 +2322,26 @@
                "name" : "CursorPropertiesChangeAfterEvent"
             },
             {
+               "name" : "CursorAttachmentPropertiesChangeAfterEvent"
+            },
+            {
                "name" : "SelectionEventAfterEvent"
+            },
+            {
+               "name" : "ClipboardChangeAfterEvent"
+            },
+            {
+               "name" : "CurrentThemeChangeAfterEvent"
+            },
+            {
+               "name" : "CurrentThemeColorChangeAfterEvent"
             }
          ],
          "name" : "@minecraft/server-editor-bindings 0.1.0-beta",
          "version" : "0.1.0-beta"
       }
    ],
-   "minecraft_version" : "1.21.0-beta.24",
+   "minecraft_version" : "1.21.50-beta.25",
    "module_type" : "after_events_ordering",
    "name" : "engine-after_events_ordering"
 }

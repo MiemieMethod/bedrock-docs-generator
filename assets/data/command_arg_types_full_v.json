@@ -424,15 +424,35 @@
         "index": "85",
         "value": "1048661"
     },
-    "COMMAND": {
+    "CODEBUILDERARG": {
         "description": "unknown",
         "index": "86",
         "value": "1048662"
     },
-    "SLASHCOMMAND": {
+    "CODEBUILDERARGS": {
         "description": "command",
         "index": "87",
         "value": "1048663"
+    },
+    "CODEBUILDERSELECTPARAM": {
+        "description": "unknown",
+        "index": "88",
+        "value": "1048664"
+    },
+    "CODEBUILDERSELECTOR": {
+        "description": "unknown",
+        "index": "89",
+        "value": "1048665"
+    },
+    "COMMAND": {
+        "description": "unknown",
+        "index": "90",
+        "value": "1048666"
+    },
+    "SLASHCOMMAND": {
+        "description": "unknown",
+        "index": "91",
+        "value": "1048667"
     },
     "GAMEMODE": {
         "description": "GameMode",
@@ -1359,285 +1379,180 @@
         "index": "184",
         "value": "3145912"
     },
-    "ABILITY": {
-        "description": "Ability",
+    "AGENTTELEPORTFACING": {
+        "description": "AgentTeleportFacing",
         "index": "185",
         "value": "3145913"
     },
-    "CODEBUILDERNAVIGATEACTION": {
-        "description": "CodeBuilderNavigateAction",
+    "AGENTDIRECTION": {
+        "description": "AgentDirection",
         "index": "186",
         "value": "3145914"
     },
-    "CODEBUILDERRESETACTION": {
-        "description": "CodeBuilderResetAction",
+    "AGENTTURNDIRECTION": {
+        "description": "AgentTurnDirection",
         "index": "187",
         "value": "3145915"
     },
-    "CODEBUILDERSUBSCRIBEACTION": {
-        "description": "CodeBuilderSubscribeAction",
+    "AGENTDIRECTIONCOMMAND": {
+        "description": "AgentDirectionCommand",
         "index": "188",
         "value": "3145916"
     },
-    "CODEBUILDERUNSUBSCRIBEACTION": {
-        "description": "CodeBuilderUnsubscribeAction",
+    "AGENTTURNCOMMAND": {
+        "description": "AgentTurnCommand",
         "index": "189",
         "value": "3145917"
     },
-    "CODEBUILDEREVENTTYPESCOREBOARD": {
-        "description": "CodeBuilderEventTypeScoreboard",
+    "AGENTITEMCOMMAND": {
+        "description": "AgentItemCommand",
         "index": "190",
         "value": "3145918"
     },
-    "CODEBUILDERCHECKACTION": {
-        "description": "CodeBuilderCheckAction",
+    "AGENTCOMMAND": {
+        "description": "AgentCommand",
         "index": "191",
         "value": "3145919"
     },
-    "CODEBUILDERCODESTATECATEGORY": {
-        "description": "CodeBuilderCodeStateCategory",
+    "AGENTTPCOMMAND": {
+        "description": "AgentTPCommand",
         "index": "192",
         "value": "3145920"
     },
-    "CODEBUILDERCODESTATUSPROPERTY": {
-        "description": "CodeBuilderCodeStatusProperty",
+    "AGENTTRANSFERCOMMAND": {
+        "description": "AgentTransferCommand",
         "index": "193",
         "value": "3145921"
     },
-    "CODEBUILDERCODESTATUS": {
-        "description": "CodeBuilderCodeStatus",
+    "AGENTDROPCOMMAND": {
+        "description": "AgentDropCommand",
         "index": "194",
         "value": "3145922"
     },
-    "CODEBUILDERRUNTIMEACTION": {
-        "description": "CodeBuilderRuntimeAction",
+    "AGENTPLACECOMMAND": {
+        "description": "AgentPlaceCommand",
         "index": "195",
         "value": "3145923"
     },
-    "CODEBUILDERRUNTIME": {
-        "description": "CodeBuilderRuntime",
+    "AGENTCOLLECTCOMMAND": {
+        "description": "AgentCollectCommand",
         "index": "196",
         "value": "3145924"
     },
-    "LESSONTYPE": {
-        "description": "LessonType",
+    "AGENTCOLLECTALLITEMS": {
+        "description": "AgentCollectAllItems",
         "index": "197",
         "value": "3145925"
     },
-    "LESSONACTIVITYTYPE": {
-        "description": "LessonActivityType",
+    "AGENTSETITEMCOMMAND": {
+        "description": "AgentSetItemCommand",
         "index": "198",
         "value": "3145926"
     },
-    "LESSONACTION": {
-        "description": "LessonAction",
+    "AGENT_DESTROY": {
+        "description": "AGENT_DESTROY",
         "index": "199",
         "value": "3145927"
     },
-    "RESOURCEACTIONCLEAR": {
-        "description": "ResourceActionClear",
+    "AGENT_INSPECT": {
+        "description": "AGENT_INSPECT",
         "index": "200",
         "value": "3145928"
     },
-    "RESOURCEACTIONDEFAULT": {
-        "description": "ResourceActionDefault",
+    "AGENT_INTERACT": {
+        "description": "AGENT_INTERACT",
         "index": "201",
         "value": "3145929"
     },
-    "RESOURCEACTIONNAMED": {
-        "description": "ResourceActionNamed",
+    "CODEBUILDERACTIONINVENTORY": {
+        "description": "CodeBuilderActionInventory",
         "index": "202",
         "value": "3145930"
     },
-    "WORLDBUILDERCOMMANDALIASES": {
-        "description": "worldbuilderCommandAliases",
+    "SAVEMODE": {
+        "description": "SaveMode",
         "index": "203",
         "value": "3145931"
     },
-    "AGENTTELEPORTFACING": {
-        "description": "AgentTeleportFacing",
+    "ALLOWLISTACTION": {
+        "description": "AllowListAction",
         "index": "204",
         "value": "3145932"
     },
-    "AGENTDIRECTION": {
-        "description": "AgentDirection",
+    "ALLOWLISTCOMMANDALIASES": {
+        "description": "allowlistCommandAliases",
         "index": "205",
         "value": "3145933"
     },
-    "AGENTTURNDIRECTION": {
-        "description": "AgentTurnDirection",
+    "BOOLSETTINGNAME": {
+        "description": "BoolSettingName",
         "index": "206",
         "value": "3145934"
     },
-    "AGENTDIRECTIONCOMMAND": {
-        "description": "AgentDirectionCommand",
+    "DIFFICULTYSETTINGNAME": {
+        "description": "DifficultySettingName",
         "index": "207",
         "value": "3145935"
     },
-    "AGENTTURNCOMMAND": {
-        "description": "AgentTurnCommand",
+    "REDIRECTLOCATION": {
+        "description": "RedirectLocation",
         "index": "208",
         "value": "3145936"
     },
-    "AGENTITEMCOMMAND": {
-        "description": "AgentItemCommand",
+    "3PSERVEROFFERLIST": {
+        "description": "3PServerOfferList",
         "index": "209",
         "value": "3145937"
     },
-    "AGENTCOMMAND": {
-        "description": "AgentCommand",
+    "SCRIPTDEBUGMODEPROFILER": {
+        "description": "ScriptDebugModeProfiler",
         "index": "210",
         "value": "3145938"
     },
-    "AGENTTPCOMMAND": {
-        "description": "AgentTPCommand",
+    "SCRIPTPROFILERSTART": {
+        "description": "ScriptProfilerStart",
         "index": "211",
         "value": "3145939"
     },
-    "AGENTTRANSFERCOMMAND": {
-        "description": "AgentTransferCommand",
+    "SCRIPTPROFILERSTOP": {
+        "description": "ScriptProfilerStop",
         "index": "212",
         "value": "3145940"
     },
-    "AGENTDROPCOMMAND": {
-        "description": "AgentDropCommand",
+    "SCRIPTDEBUGMODEWATCHDOG": {
+        "description": "ScriptDebugModeWatchdog",
         "index": "213",
         "value": "3145941"
     },
-    "AGENTPLACECOMMAND": {
-        "description": "AgentPlaceCommand",
+    "SCRIPTWATCHDOGDUMPMEMORY": {
+        "description": "ScriptWatchdogDumpMemory",
         "index": "214",
         "value": "3145942"
     },
-    "AGENTCOLLECTCOMMAND": {
-        "description": "AgentCollectCommand",
+    "LEVILAMINACOMMANDALIASES": {
+        "description": "levilaminaCommandAliases",
         "index": "215",
         "value": "3145943"
     },
-    "AGENTCOLLECTALLITEMS": {
-        "description": "AgentCollectAllItems",
+    "LL_TEXT_ENUM_NAME_LOAD": {
+        "description": "ll_text_enum_name_load",
         "index": "216",
         "value": "3145944"
     },
-    "AGENTSETITEMCOMMAND": {
-        "description": "AgentSetItemCommand",
+    "LL::COMMAND::LEVICOMMANDOPERATION": {
+        "description": "ll::command::LeviCommandOperation",
         "index": "217",
         "value": "3145945"
     },
-    "AGENT_DESTROY": {
-        "description": "AGENT_DESTROY",
+    "LL::COMMAND::LEVICOMMANDOPERATION2": {
+        "description": "ll::command::LeviCommandOperation2",
         "index": "218",
         "value": "3145946"
     },
-    "AGENT_INSPECT": {
-        "description": "AGENT_INSPECT",
-        "index": "219",
-        "value": "3145947"
-    },
-    "AGENT_INTERACT": {
-        "description": "AGENT_INTERACT",
-        "index": "220",
-        "value": "3145948"
-    },
-    "CODEBUILDERACTIONINVENTORY": {
-        "description": "CodeBuilderActionInventory",
-        "index": "221",
-        "value": "3145949"
-    },
-    "SAVEMODE": {
-        "description": "SaveMode",
-        "index": "222",
-        "value": "3145950"
-    },
-    "ALLOWLISTACTION": {
-        "description": "AllowListAction",
-        "index": "223",
-        "value": "3145951"
-    },
-    "ALLOWLISTCOMMANDALIASES": {
-        "description": "allowlistCommandAliases",
-        "index": "224",
-        "value": "3145952"
-    },
-    "BOOLSETTINGNAME": {
-        "description": "BoolSettingName",
-        "index": "225",
-        "value": "3145953"
-    },
-    "DIFFICULTYSETTINGNAME": {
-        "description": "DifficultySettingName",
-        "index": "226",
-        "value": "3145954"
-    },
-    "REDIRECTLOCATION": {
-        "description": "RedirectLocation",
-        "index": "227",
-        "value": "3145955"
-    },
-    "3PSERVEROFFERLIST": {
-        "description": "3PServerOfferList",
-        "index": "228",
-        "value": "3145956"
-    },
-    "DEDICATEDWSSERVERCOMMANDALIASES": {
-        "description": "dedicatedwsserverCommandAliases",
-        "index": "229",
-        "value": "3145957"
-    },
-    "ENCRYPTIONCOMMANDCIPHER": {
-        "description": "EncryptionCommandCipher",
-        "index": "230",
-        "value": "3145958"
-    },
-    "SCRIPTDEBUGMODEPROFILER": {
-        "description": "ScriptDebugModeProfiler",
-        "index": "231",
-        "value": "3145959"
-    },
-    "SCRIPTPROFILERSTART": {
-        "description": "ScriptProfilerStart",
-        "index": "232",
-        "value": "3145960"
-    },
-    "SCRIPTPROFILERSTOP": {
-        "description": "ScriptProfilerStop",
-        "index": "233",
-        "value": "3145961"
-    },
-    "SCRIPTDEBUGMODEWATCHDOG": {
-        "description": "ScriptDebugModeWatchdog",
-        "index": "234",
-        "value": "3145962"
-    },
-    "SCRIPTWATCHDOGDUMPMEMORY": {
-        "description": "ScriptWatchdogDumpMemory",
-        "index": "235",
-        "value": "3145963"
-    },
-    "LEVILAMINACOMMANDALIASES": {
-        "description": "levilaminaCommandAliases",
-        "index": "236",
-        "value": "3145964"
-    },
-    "LL_TEXT_ENUM_NAME_LOAD": {
-        "description": "ll_text_enum_name_load",
-        "index": "237",
-        "value": "3145965"
-    },
-    "LL::COMMAND::LEVICOMMANDOPERATION": {
-        "description": "ll::command::LeviCommandOperation",
-        "index": "238",
-        "value": "3145966"
-    },
-    "LL::COMMAND::LEVICOMMANDOPERATION2": {
-        "description": "ll::command::LeviCommandOperation2",
-        "index": "239",
-        "value": "3145967"
-    },
     "LL_TEXT_ENUM_NAME_LIST": {
         "description": "ll_text_enum_name_list",
-        "index": "240",
-        "value": "3145968"
+        "index": "219",
+        "value": "3145947"
     },
     "OPTIONAL_CAMERASHAKETYPE": {
         "description": "unknown",
@@ -1933,16 +1848,6 @@
         "description": "unknown",
         "index": "58",
         "value": "5242938"
-    },
-    "OPTIONAL_RAWTEXT": {
-        "description": "unknown",
-        "index": "59",
-        "value": "5242939"
-    },
-    "OPTIONAL_ENCRYPTIONCOMMANDCIPHER": {
-        "description": "unknown",
-        "index": "60",
-        "value": "5242940"
     },
     "TRANSFER_F0": {
         "description": "unknown",
@@ -2639,164 +2544,89 @@
         "index": "138",
         "value": "9437322"
     },
-    "ABILITY_F0": {
+    "AGENT_F0": {
         "description": "unknown",
         "index": "139",
         "value": "9437323"
     },
-    "ABILITY_F1": {
+    "AGENT_F1": {
         "description": "unknown",
         "index": "140",
         "value": "9437324"
     },
-    "ABILITY_F2": {
+    "AGENT_F2": {
         "description": "unknown",
         "index": "141",
         "value": "9437325"
     },
-    "CODEBUILDER_F0": {
+    "AGENT_F3": {
         "description": "unknown",
         "index": "142",
         "value": "9437326"
     },
-    "GETCHUNKDATA_F0": {
+    "CODEBUILDER_ACTORINFO_F0": {
         "description": "unknown",
         "index": "143",
         "value": "9437327"
     },
-    "GETCHUNKS_F0": {
+    "ENCHANT_F0": {
         "description": "unknown",
         "index": "144",
         "value": "9437328"
     },
-    "GETSPAWNPOINT_F0": {
+    "ENCHANT_F1": {
         "description": "unknown",
         "index": "145",
         "value": "9437329"
     },
-    "GLOBALPAUSE_F0": {
+    "SAVE_F0": {
         "description": "unknown",
         "index": "146",
         "value": "9437330"
     },
-    "IMMUTABLEWORLD_F0": {
+    "ALLOWLIST_F0": {
         "description": "unknown",
         "index": "147",
         "value": "9437331"
     },
-    "LESSON_F0": {
+    "CHANGESETTING_F0": {
         "description": "unknown",
         "index": "148",
         "value": "9437332"
     },
-    "LESSON_F1": {
+    "CHANGESETTING_F1": {
         "description": "unknown",
         "index": "149",
         "value": "9437333"
     },
-    "TAKEPICTURE_F0": {
+    "SENDSHOWSTOREOFFER_F0": {
         "description": "unknown",
         "index": "150",
         "value": "9437334"
     },
-    "TAKEPICTURE_F1": {
+    "SENDSHOWSTOREOFFER_F1": {
         "description": "unknown",
         "index": "151",
         "value": "9437335"
     },
-    "RESOURCEURI_F0": {
+    "SCRIPT_F0": {
         "description": "unknown",
         "index": "152",
         "value": "9437336"
     },
-    "AGENT_F0": {
+    "SCRIPT_F1": {
         "description": "unknown",
         "index": "153",
         "value": "9437337"
     },
-    "AGENT_F1": {
+    "CRASH_F0": {
         "description": "unknown",
         "index": "154",
         "value": "9437338"
     },
-    "AGENT_F2": {
+    "LEVILAMINA_F0": {
         "description": "unknown",
         "index": "155",
         "value": "9437339"
-    },
-    "AGENT_F3": {
-        "description": "unknown",
-        "index": "156",
-        "value": "9437340"
-    },
-    "CODEBUILDER_ACTORINFO_F0": {
-        "description": "unknown",
-        "index": "157",
-        "value": "9437341"
-    },
-    "ENCHANT_F0": {
-        "description": "unknown",
-        "index": "158",
-        "value": "9437342"
-    },
-    "ENCHANT_F1": {
-        "description": "unknown",
-        "index": "159",
-        "value": "9437343"
-    },
-    "SAVE_F0": {
-        "description": "unknown",
-        "index": "160",
-        "value": "9437344"
-    },
-    "ALLOWLIST_F0": {
-        "description": "unknown",
-        "index": "161",
-        "value": "9437345"
-    },
-    "CHANGESETTING_F0": {
-        "description": "unknown",
-        "index": "162",
-        "value": "9437346"
-    },
-    "CHANGESETTING_F1": {
-        "description": "unknown",
-        "index": "163",
-        "value": "9437347"
-    },
-    "SENDSHOWSTOREOFFER_F0": {
-        "description": "unknown",
-        "index": "164",
-        "value": "9437348"
-    },
-    "SENDSHOWSTOREOFFER_F1": {
-        "description": "unknown",
-        "index": "165",
-        "value": "9437349"
-    },
-    "DEDICATEDWSSERVER_F0": {
-        "description": "unknown",
-        "index": "166",
-        "value": "9437350"
-    },
-    "ENABLEENCRYPTION_F0": {
-        "description": "unknown",
-        "index": "167",
-        "value": "9437351"
-    },
-    "SCRIPT_F0": {
-        "description": "unknown",
-        "index": "168",
-        "value": "9437352"
-    },
-    "SCRIPT_F1": {
-        "description": "unknown",
-        "index": "169",
-        "value": "9437353"
-    },
-    "LEVILAMINA_F0": {
-        "description": "unknown",
-        "index": "170",
-        "value": "9437354"
     }
 }

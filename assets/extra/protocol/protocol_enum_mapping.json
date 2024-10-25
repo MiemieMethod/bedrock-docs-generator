@@ -25,6 +25,10 @@
         "bosseventpacket": {
             "event_type": "BossEventUpdateType"
         },
+        "cameraaimassistpacket": {
+            "target_mode": "CameraAimAssistPacket::TargetMode",
+            "action": "CameraAimAssistPacket::Action"
+        },
         "camerashakepacket": {
             "shake_type": "CameraShakeType",
             "shake_action": "CameraShakeAction"
@@ -37,7 +41,8 @@
         },
         "codebuildersourcepacket": {
             "operation": "CodeBuilderStorageQueryOptions::Operation",
-            "category": "CodeBuilderStorageQueryOptions::Category"
+            "category": "CodeBuilderStorageQueryOptions::Category",
+            "codestatus": "CodeBuilderExecutionState::CodeStatus"
         },
         "commandblockupdatepacket": {
             "dependency_on_is_block.if_1.command_block_mode": "CommandBlockMode"
@@ -186,6 +191,9 @@
         },
         "respawnpacket": {
             "state": "PlayerRespawnState"
+        },
+        "serverboundloadingscreenpacket": {
+            "loading_screen_packet_type": "ServerboundLoadingScreenPacketType"
         },
         "setdefaultgametypepacket": {
             "default_game_type": "GameType"
@@ -336,10 +344,15 @@
         },
         "packeditemuselegacyinventorytransaction": {
             "dependency_on_valid_id.if_1.container_slots.example_element.container_enum_name": "ContainerEnumName",
-            "action_type": "ItemUseInventoryTransaction::ActionType"
+            "action_type": "ItemUseInventoryTransaction::ActionType",
+            "client_interact_prediction": "ItemUseInventoryTransaction::PredictedResult",
+            "trigger_type": "ItemUseInventoryTransaction::TriggerType"
         },
         "recipeingredient": {
             "internaltype": "ItemDescriptor::InternalType"
+        },
+        "recipeunlockingrequirement": {
+            "unlocking_context": "RecipeUnlockingRequirement::UnlockingContext"
         },
         "serializedabilitiesdata": {
             "mplayerpermissions": "PlayerPermissionLevel",
