@@ -115,7 +115,7 @@ class ClassBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentClassName = self.class_["name"]
             self.addHeading(f'`{self.class_["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -177,7 +177,7 @@ class InterfaceBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentClassName = self.interface["name"]
             self.addHeading(f'`{self.interface["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -202,7 +202,7 @@ class EnumBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentClassName = self.enum["name"]
             self.addHeading(f'`{self.enum["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -228,7 +228,7 @@ class TypeAliasBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentClassName = self.typeAlias["name"]
             self.addHeading(f'`{self.typeAlias["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -256,7 +256,7 @@ class ErrorBuilder(MarkdownWriter):
             self.fromRoot = fromRoot
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentClassName = self.error["name"]
             self.addHeading(f'`{self.error["name"]}`', 1)
             self.addBlockquote('文档版本：{}'.format(version))
@@ -283,9 +283,11 @@ class ModuleBuilder(MarkdownWriter):
             self.module = module
 
         def preRender(self):
-            version = '1.21.50.25'
+            version = '1.21.60.21'
             ModuleBuilder.currentModuleName = self.module["name"]
             ModuleBuilder.currentModuleVersion = self.module["version"]
+            if re.match(r'.*?-alpha', ModuleBuilder.currentModuleVersion):
+                ModuleBuilder.currentModuleVersion = 'alpha'
             if re.match(r'.*?-beta', ModuleBuilder.currentModuleVersion):
                 ModuleBuilder.currentModuleVersion = 'beta'
             if re.match(r'.*?-internal', ModuleBuilder.currentModuleVersion):
@@ -446,6 +448,8 @@ def parseFromModule(obj):
     else:
         name = re.sub(r"@minecraft/(.*)", r"\1", name)
     version = obj["version"]
+    if re.findall('alpha', version):
+        version = 'alpha'
     if re.findall('beta', version):
         version = 'beta'
     elif re.findall('internal', version):

@@ -36,6 +36,7 @@ class ScriptAPIGenerator(object):
                 0,
                 tuple(int(part) for part in x.split('.')) if x not in ['alpha', 'internal', 'beta'] else ()
             ))
+            keys.reverse()
             self.module[name] = {k: self.module[name][k] for k in keys}
 
     def generate(self):

@@ -13,7 +13,7 @@ class CommandGenerator(object):
         self.extraCommands = {}
         with open(r'assets/docs/command_modules/mojang-commands-internal.json', 'r') as f:
             self.commands = json.load(f)
-        with open(r'assets/data/command_arg_types_full_v.json', 'r') as f:
+        with open(r'assets/data/allay/command_arg_types_full_v.json', 'r') as f:
             self.enumMaps = json.load(f)
         for enum in self.commands['command_enums']:
             self.enums[enum['name'].upper()] = enum

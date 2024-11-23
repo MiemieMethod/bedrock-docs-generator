@@ -9,10 +9,10 @@ from table.builder.itemTag import ItemTagBuilder
 class TableGenerator(object):
     def __init__(self):
         self.blockTags = {}
-        with open(r'assets/data/block_tags.json', 'r') as f:
+        with open(r'assets/data/allay/block_tags.json', 'r') as f:
             self.blockTags = json.load(f)
         self.itemTags = {}
-        with open(r'assets/data/item_tags.json', 'r') as f:
+        with open(r'assets/data/allay/item_tags.json', 'r') as f:
             self.itemTags = json.load(f)
 
 

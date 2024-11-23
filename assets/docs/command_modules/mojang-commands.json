@@ -17928,6 +17928,12 @@
                "value" : "escaped_event"
             },
             {
+               "value" : "fed_open_eyeblossom"
+            },
+            {
+               "value" : "fed_wither_rose"
+            },
+            {
                "value" : "find_flower_timeout"
             },
             {
@@ -18018,6 +18024,9 @@
                "value" : "minecraft:ate_bluet"
             },
             {
+               "value" : "minecraft:ate_closed_eyeblossom"
+            },
+            {
                "value" : "minecraft:ate_cornflower"
             },
             {
@@ -18028,6 +18037,9 @@
             },
             {
                "value" : "minecraft:ate_lily"
+            },
+            {
+               "value" : "minecraft:ate_open_eyeblossom"
             },
             {
                "value" : "minecraft:ate_orchid"
@@ -18043,12 +18055,6 @@
             },
             {
                "value" : "minecraft:ate_tulip"
-            },
-            {
-               "value" : "minecraft:attacked_by_mob"
-            },
-            {
-               "value" : "minecraft:attacked_by_player"
             },
             {
                "value" : "minecraft:baby_on_calm"
@@ -18243,7 +18249,16 @@
                "value" : "minecraft:crumble"
             },
             {
+               "value" : "minecraft:crumble_and_notify_creaking_heart"
+            },
+            {
                "value" : "minecraft:crystal_explode"
+            },
+            {
+               "value" : "minecraft:damaged_by_entity"
+            },
+            {
+               "value" : "minecraft:damaged_by_player"
             },
             {
                "value" : "minecraft:defend_wandering_trader"
@@ -18355,6 +18370,9 @@
             },
             {
                "value" : "minecraft:increase_max_health"
+            },
+            {
+               "value" : "minecraft:increment_swaying_ticks"
             },
             {
                "value" : "minecraft:join_caravan"
@@ -18508,6 +18526,9 @@
             },
             {
                "value" : "minecraft:remove_raid_trigger"
+            },
+            {
+               "value" : "minecraft:reset_swaying_ticks"
             },
             {
                "value" : "minecraft:resupply_trades"
@@ -18705,9 +18726,6 @@
                "value" : "minecraft:start_sitting"
             },
             {
-               "value" : "minecraft:start_swaying"
-            },
-            {
                "value" : "minecraft:start_transforming"
             },
             {
@@ -18736,9 +18754,6 @@
             },
             {
                "value" : "minecraft:stop_sitting"
-            },
-            {
-               "value" : "minecraft:stop_swaying"
             },
             {
                "value" : "minecraft:stop_transforming"
@@ -18849,6 +18864,9 @@
                "value" : "on_not_riding_parent"
             },
             {
+               "value" : "on_poison_effect_added"
+            },
+            {
                "value" : "on_pregnant"
             },
             {
@@ -18859,6 +18877,9 @@
             },
             {
                "value" : "on_search_and_digging_success"
+            },
+            {
+               "value" : "on_wither_effect_added"
             },
             {
                "value" : "perish_event"
@@ -19506,6 +19527,9 @@
                "value" : "give"
             },
             {
+               "value" : "globalpause"
+            },
+            {
                "value" : "help"
             },
             {
@@ -19561,6 +19585,9 @@
             },
             {
                "value" : "ops"
+            },
+            {
+               "value" : "place"
             },
             {
                "value" : "playanimation"
@@ -19681,9 +19708,6 @@
             },
             {
                "value" : "getspawnpoint"
-            },
-            {
-               "value" : "globalpause"
             },
             {
                "value" : "immutableworld"
@@ -25763,6 +25787,33 @@
             },
             {
                "value" : "reload"
+            }
+         ]
+      },
+      {
+         "name" : "PlaceStructureAction",
+         "values" : [
+            {
+               "value" : "structure"
+            }
+         ]
+      },
+      {
+         "name" : "JigsawStructure",
+         "values" : [
+            {
+               "value" : "minecraft:trail_ruins"
+            },
+            {
+               "value" : "minecraft:trial_chambers"
+            }
+         ]
+      },
+      {
+         "name" : "PlaceJigsawAction",
+         "values" : [
+            {
+               "value" : "jigsaw"
             }
          ]
       },
@@ -39663,6 +39714,102 @@
       },
       {
          "aliases" : [],
+         "description" : "Places a jigsaw structure in the world.",
+         "name" : "place",
+         "overloads" : [
+            {
+               "name" : "1",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "action",
+                     "type" : {
+                        "name" : "PLACESTRUCTUREACTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "structure",
+                     "type" : {
+                        "name" : "JIGSAWSTRUCTURE"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "pos",
+                     "type" : {
+                        "name" : "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "ignoreStartHeight",
+                     "type" : {
+                        "name" : "BOOLEAN"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "keepJigsaws",
+                     "type" : {
+                        "name" : "BOOLEAN"
+                     }
+                  }
+               ]
+            },
+            {
+               "name" : "2",
+               "params" : [
+                  {
+                     "is_optional" : false,
+                     "name" : "action",
+                     "type" : {
+                        "name" : "PLACEJIGSAWACTION"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "pool",
+                     "type" : {
+                        "name" : "PATHCOMMAND"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "jigsawTarget",
+                     "type" : {
+                        "name" : "ID"
+                     }
+                  },
+                  {
+                     "is_optional" : false,
+                     "name" : "maxDepth",
+                     "type" : {
+                        "name" : "INT"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "pos",
+                     "type" : {
+                        "name" : "POSITION"
+                     }
+                  },
+                  {
+                     "is_optional" : true,
+                     "name" : "keepJigsaws",
+                     "type" : {
+                        "name" : "BOOLEAN"
+                     }
+                  }
+               ]
+            }
+         ],
+         "permission_level" : 2,
+         "requires_cheats" : true
+      },
+      {
+         "aliases" : [],
          "description" : "Makes one or more entities play a one-off animation. Assumes all variables are setup correctly.",
          "name" : "playanimation",
          "overloads" : [
@@ -43487,7 +43634,7 @@
          "requires_cheats" : true
       }
    ],
-   "minecraft_version" : "1.21.50-beta.25",
+   "minecraft_version" : "1.21.60-beta.21",
    "module_type" : "commands",
    "name" : "mojang-commands"
 }

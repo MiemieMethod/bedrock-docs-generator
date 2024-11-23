@@ -30,14 +30,11 @@
             ],
             "$metaProperties": {}
         },
-        "3178719147": {
-            "title": "struct SharedTypes::Legacy::ExpressionNode",
+        "2267778531": {
+            "title": "struct SharedTypes::Legacy::ExpressionNode::StringRepresentation",
             "oneOf": [
                 {
                     "type": "string"
-                },
-                {
-                    "type": "number"
                 },
                 {
                     "type": "object",
@@ -59,6 +56,18 @@
             ],
             "$metaProperties": {}
         },
+        "3178719147": {
+            "title": "struct SharedTypes::Legacy::ExpressionNode",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/2267778531"
+                },
+                {
+                    "type": "number"
+                }
+            ],
+            "$metaProperties": {}
+        },
         "4150871210": {
             "title": "Coordinate Range",
             "oneOf": [
@@ -72,12 +81,12 @@
                             "title": "Random Distribution Type",
                             "type": "string",
                             "enum": [
-                                "fixed_grid",
+                                "uniform",
                                 "gaussian",
                                 "inverse_gaussian",
-                                "jittered_grid",
                                 "triangle",
-                                "uniform"
+                                "fixed_grid",
+                                "jittered_grid"
                             ],
                             "$metaProperties": {}
                         },
