@@ -1,0 +1,61 @@
+{
+  "children": [
+    [
+      "enum", "format_version", {
+        "enum": [
+          "1.8.0",
+          "1.10.0"
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "animations", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "float", "animation_length", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "loop", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "timeline", {
+                    "children": [
+                      [
+                        "array", "<any object property>", {
+                          "children": [],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "anim_time_update", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "anim_time_update", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

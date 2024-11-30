@@ -1,0 +1,141 @@
+{
+  "children": [
+    [
+      "int", "num_mip_levels", {
+        "required": false
+      }
+    ],
+    [
+      "int", "padding", {
+        "required": false
+      }
+    ],
+    [
+      "string", "resource_pack_name", {
+        "required": false
+      }
+    ],
+    [
+      "object", "texture_data", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "string", "textures", {
+                    "pattern": "^textures/.+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "textures", {
+                    "children": [
+                      [
+                        "string", "path", {
+                          "pattern": "^textures/.+$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "tint_color", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "variations", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "path", {
+                                      "pattern": "^textures/.+$",
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "int", "weight", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "textures", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^textures/.+$"
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "path", {
+                                "pattern": "^textures/.+$",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "tint_color", {
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "variations", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "path", {
+                                            "pattern": "^textures/.+$",
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "weight", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "string", "texture_name", {
+        "required": false
+      }
+    ]
+  ]
+}

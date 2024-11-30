@@ -1,0 +1,2845 @@
+{
+  "children": [
+    [
+      "string", "namespace", {
+        "pattern": "^[a-zA-Z0-9_-]+$",
+        "required": false
+      }
+    ],
+    [
+      "object", "<any object property>", {
+        "children": [
+          [
+            "array", "controls", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "recursive", "<any object property>", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "controls", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "controls", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "modifications", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "control_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "array_name", {
+                          "enum": [
+                            "bindings",
+                            "controls"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "operation", {
+                          "enum": [
+                            "insert_back",
+                            "insert_front",
+                            "insert_after",
+                            "insert_before",
+                            "move_back",
+                            "move_front",
+                            "move_after",
+                            "move_before",
+                            "swap",
+                            "remove",
+                            "replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "where", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "where", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "where", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_condition", {
+                                      "enum": [
+                                        "once",
+                                        "always",
+                                        "always_when_visible",
+                                        "visible"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_type", {
+                                      "enum": [
+                                        "collection",
+                                        "global",
+                                        "collection_details",
+                                        "none",
+                                        "view"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\$[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^#[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\(.*\\)$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "ignored", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "resolve_sibling_scope", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "target", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_condition", {
+                                      "enum": [
+                                        "once",
+                                        "always",
+                                        "always_when_visible",
+                                        "visible"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_type", {
+                                      "enum": [
+                                        "collection",
+                                        "global",
+                                        "collection_details",
+                                        "none",
+                                        "view"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\$[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^#[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\(.*\\)$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "ignored", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "resolve_sibling_scope", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target_control", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "value", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_collection_prefix", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_condition", {
+                                      "enum": [
+                                        "once",
+                                        "always",
+                                        "always_when_visible",
+                                        "visible"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_condition", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_name_override", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "binding_type", {
+                                      "enum": [
+                                        "collection",
+                                        "global",
+                                        "collection_details",
+                                        "none",
+                                        "view"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\$[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^#[a-zA-Z0-9_]+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "binding_type", {
+                                      "pattern": "^\\(.*\\)$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "ignored", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "ignored", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "resolve_sibling_scope", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "resolve_sibling_scope", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_control_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "source_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "target_property_name", {
+                                      "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "value", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "recursive", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "alpha", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "alpha", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "alpha", {
+              "minimum": 0,
+              "maximum": 1,
+              "required": false
+            }
+          ],
+          [
+            "enum", "anchor_from", {
+              "enum": [
+                "bottom",
+                "bottom_left",
+                "bottom_right",
+                "bottom_middle",
+                "center",
+                "left",
+                "left_middle",
+                "right",
+                "right_middle",
+                "top",
+                "top_left",
+                "top_right",
+                "top_middle"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_from", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_from", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_from", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "anchor_to", {
+              "enum": [
+                "bottom",
+                "bottom_left",
+                "bottom_right",
+                "bottom_middle",
+                "center",
+                "left",
+                "left_middle",
+                "right",
+                "right_middle",
+                "top",
+                "top_left",
+                "top_right",
+                "top_middle"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_to", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_to", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anchor_to", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anims", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "anims", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "anims", {
+              "children": [
+                [
+                  "string", "<any array element>", {
+                    "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$"
+                  }
+                ],
+                [
+                  "string", "<any array element>", {
+                    "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$"
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "backup_font_type", {
+              "enum": [
+                "UIFont"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "backup_font_type", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "backup_font_type", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "bindings", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "bindings", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "bindings", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "binding_collection_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_collection_name", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_collection_name", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_collection_prefix", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_collection_prefix", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_collection_prefix", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "binding_condition", {
+                          "enum": [
+                            "once",
+                            "always",
+                            "always_when_visible",
+                            "visible"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_condition", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_condition", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name_override", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name_override", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_name_override", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "binding_type", {
+                          "enum": [
+                            "collection",
+                            "global",
+                            "collection_details",
+                            "none",
+                            "view"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_type", {
+                          "pattern": "^\\$[a-zA-Z0-9_]+$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_type", {
+                          "pattern": "^#[a-zA-Z0-9_]+$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "binding_type", {
+                          "pattern": "^\\(.*\\)$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "ignored", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "ignored", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "ignored", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "resolve_sibling_scope", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "resolve_sibling_scope", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "resolve_sibling_scope", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_control_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_control_name", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_control_name", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_property_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_property_name", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "source_property_name", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target_property_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target_property_name", {
+                          "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "target_property_name", {
+                          "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "button_mappings", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "button_mappings", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "button_mappings", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": []
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "checked_control", {
+              "enum": [
+                "checked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "checked_hover_control", {
+              "enum": [
+                "checked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_hover_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_hover_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "checked_locked_control", {
+              "enum": [
+                "checked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_locked_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_locked_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "checked_locked_hover_control", {
+              "enum": [
+                "checked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_locked_hover_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "checked_locked_hover_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "clip_direction", {
+              "enum": [
+                "left",
+                "right",
+                "top",
+                "bottom"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "clip_direction", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "clip_direction", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "object", "factory", {
+              "children": [
+                [
+                  "string", "control_ids", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "control_ids", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "control_name", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "control_name", {
+                    "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "control_name", {
+                    "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "factory_variables", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "factory_variables", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "name", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "factory", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "factory", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_change_down", {
+              "enum": [
+                "FOCUS_OVERRIDE_STOP"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_down", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_down", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_change_left", {
+              "enum": [
+                "FOCUS_OVERRIDE_STOP"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_left", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_left", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_change_right", {
+              "enum": [
+                "FOCUS_OVERRIDE_STOP"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_right", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_right", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_change_up", {
+              "enum": [
+                "FOCUS_OVERRIDE_STOP"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_up", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_change_up", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_navigation_mode_down", {
+              "enum": [
+                "contained",
+                "stop"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_down", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_down", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_navigation_mode_left", {
+              "enum": [
+                "contained",
+                "stop"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_left", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_left", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_navigation_mode_right", {
+              "enum": [
+                "contained",
+                "stop"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_right", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_right", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "focus_navigation_mode_up", {
+              "enum": [
+                "contained",
+                "stop"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_up", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "focus_navigation_mode_up", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "font_size", {
+              "enum": [
+                "normal"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "font_size", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "font_size", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "font_type", {
+              "enum": [
+                "smooth",
+                "MinecraftTen",
+                "MinecraftTenEmoticon"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "font_type", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "font_type", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "font_type", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "grid_rescaling_type", {
+              "enum": [
+                "horizontal"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "grid_rescaling_type", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "grid_rescaling_type", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_alpha", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_alpha", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "hover_alpha", {
+              "minimum": 0,
+              "maximum": 1,
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_color", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_color", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "hover_color", {
+              "children": [
+                [
+                  "float", "0..0", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "1..1", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "2..2", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "hover_control", {
+              "enum": [
+                "hover"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "hover_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "images", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "images", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "images", {
+              "children": [
+                [
+                  "string", "<any array element>", {
+                    "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$"
+                  }
+                ],
+                [
+                  "string", "<any array element>", {
+                    "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$"
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "indent_control", {
+              "enum": [
+                "indent"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "indent_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "indent_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_alpha", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_alpha", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "locked_alpha", {
+              "minimum": 0,
+              "maximum": 1,
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_color", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_color", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "locked_color", {
+              "children": [
+                [
+                  "float", "0..0", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "1..1", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "2..2", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "locked_control", {
+              "enum": [
+                "locked",
+                ""
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "locked_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "orientation", {
+              "enum": [
+                "horizontal",
+                "vertical"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "orientation", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "orientation", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_alpha", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_alpha", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "pressed_alpha", {
+              "minimum": 0,
+              "maximum": 1,
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_color", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_color", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "pressed_color", {
+              "children": [
+                [
+                  "float", "0..0", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "1..1", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "2..2", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "pressed_control", {
+              "enum": [
+                "hover",
+                "pressed"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "pressed_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "primary_color", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "primary_color", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "primary_color", {
+              "children": [
+                [
+                  "float", "0..0", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "1..1", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ],
+                [
+                  "float", "2..2", {
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "property_bag", {
+              "children": [],
+              "required": false
+            }
+          ],
+          [
+            "string", "property_bag", {
+              "required": false
+            }
+          ],
+          [
+            "string", "property_bag", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "property_bag", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "renderer", {
+              "enum": [
+                "ui_holo_cursor"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "renderer", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "renderer", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "scrollbar_box", {
+              "enum": [
+                "box"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "scrollbar_box", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "scrollbar_box", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "scrollbar_track", {
+              "enum": [
+                "track"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "scrollbar_track", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "scrollbar_track", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "slider_box_control", {
+              "enum": [
+                "slider_box"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "slider_box_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "slider_box_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "sound_volume", {
+              "minimum": 0,
+              "maximum": 1,
+              "required": false
+            }
+          ],
+          [
+            "string", "sound_volume", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "sound_volume", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "text_alignment", {
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "text_alignment", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "text_alignment", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "text_alignment", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "array", "text_labels", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "text_labels", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "text_labels", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "text_type", {
+              "enum": [
+                "ExtendedASCII"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "text_type", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "text_type", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "text_type", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "texture_file_system", {
+              "enum": [
+                "RawPath"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "texture_file_system", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture_file_system", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture_file_system", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture", {
+              "pattern": "^textures/[a-zA-Z0-9/_-]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "texture", {
+              "required": false
+            }
+          ],
+          [
+            "boolean", "tiled", {
+              "required": false
+            }
+          ],
+          [
+            "enum", "tiled", {
+              "enum": [
+                "x",
+                "y"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "tiled", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "tiled", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "toggle_default_state", {
+              "enum": [
+                "checked",
+                "unchecked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "toggle_default_state", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "toggle_default_state", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "touch_mode", {
+              "enum": [
+                "touch",
+                "mouse"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "touch_mode", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "touch_mode", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "type", {
+              "enum": [
+                "always_rotate",
+                "button",
+                "carousel_label",
+                "custom",
+                "dropdown",
+                "edit_box",
+                "grid",
+                "image_cycler",
+                "image",
+                "input_panel",
+                "label_cycler",
+                "label",
+                "panel",
+                "screen",
+                "scroll_track",
+                "scroll_view",
+                "scrollbar_box",
+                "slider_box",
+                "slider",
+                "stack_panel",
+                "toggle"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "unchecked_control", {
+              "enum": [
+                "unchecked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "unchecked_hover_control", {
+              "enum": [
+                "unchecked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_hover_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_hover_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "unchecked_locked_control", {
+              "enum": [
+                "unchecked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_locked_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_locked_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "unchecked_locked_hover_control", {
+              "enum": [
+                "unchecked"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_locked_hover_control", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "unchecked_locked_hover_control", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "variables", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "variables", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "variables", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": []
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "variables", {
+              "children": [],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "<any object property>", {
+        "children": [
+          [
+            "enum", "anim_type", {
+              "enum": [
+                "wait",
+                "offset",
+                "alpha",
+                "flip_book",
+                "aseprite_flip_book",
+                "clip",
+                "color",
+                "size",
+                "uv"
+              ],
+              "required": true
+            }
+          ],
+          [
+            "string", "anim_type", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": true
+            }
+          ],
+          [
+            "string", "anim_type", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": true
+            }
+          ],
+          [
+            "enum", "destroy_at_end", {
+              "enum": [
+                "popup",
+                "details_bubble_control",
+                "bundle_mode_popup_control",
+                "selected_item_details"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "destroy_at_end", {
+              "pattern": "^\\$[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "destroy_at_end", {
+              "pattern": "^#[a-zA-Z0-9_]+$",
+              "required": false
+            }
+          ],
+          [
+            "string", "destroy_at_end", {
+              "pattern": "^\\(.*\\)$",
+              "required": false
+            }
+          ],
+          [
+            "boolean", "disable_anim_fast_forward", {
+              "required": false
+            }
+          ],
+          [
+            "string", "disable_anim_fast_forward", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "disable_anim_fast_forward", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "enum", "easing", {
+              "enum": [
+                "linear",
+                "spring",
+                "in_quad",
+                "out_quad",
+                "in_out_quad",
+                "in_cubic",
+                "out_cubic",
+                "in_out_cubic",
+                "in_quart",
+                "out_quart",
+                "in_out_quart",
+                "in_quint",
+                "out_quint",
+                "in_out_quint",
+                "in_sine",
+                "out_sine",
+                "in_out_sine",
+                "in_expo",
+                "out_expo",
+                "in_out_expo",
+                "in_circ",
+                "out_circ",
+                "in_out_circ",
+                "in_bounce",
+                "out_bounce",
+                "in_out_bounce",
+                "in_back",
+                "out_back",
+                "in_out_back",
+                "in_elastic",
+                "out_elastic",
+                "in_out_elastic"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "easing", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "easing", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "from", {
+              "required": false
+            }
+          ],
+          [
+            "string", "from", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "from", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "from", {
+              "children": [
+                [
+                  "enum", "0..0", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "0..0", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "0..0", {
+                    "minimum": 0
+                  }
+                ],
+                [
+                  "enum", "1..1", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "1..1", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "1..1", {
+                    "minimum": 0
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "boolean", "propagate_alpha", {
+              "required": false
+            }
+          ],
+          [
+            "string", "propagate_alpha", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "propagate_alpha", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "float", "to", {
+              "required": false
+            }
+          ],
+          [
+            "string", "to", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "to", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "to", {
+              "children": [
+                [
+                  "enum", "0..0", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "0..0", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "0..0", {
+                    "minimum": 0
+                  }
+                ],
+                [
+                  "enum", "1..1", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "1..1", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "1..1", {
+                    "minimum": 0
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "uv", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "uv", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "uv", {
+              "children": [
+                [
+                  "enum", "0..0", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "0..0", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "0..0", {
+                    "minimum": 0
+                  }
+                ],
+                [
+                  "enum", "1..1", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "1..1", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "1..1", {
+                    "minimum": 0
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "uv_size", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "uv_size", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "array", "uv_size", {
+              "children": [
+                [
+                  "enum", "0..0", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "0..0", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "0..0", {
+                    "minimum": 0
+                  }
+                ],
+                [
+                  "enum", "1..1", {
+                    "enum": [
+                      "default",
+                      "fill"
+                    ]
+                  }
+                ],
+                [
+                  "string", "1..1", {
+                    "pattern": "^[0-9]+(px|%)$"
+                  }
+                ],
+                [
+                  "int", "1..1", {
+                    "minimum": 0
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "<any object property>", {
+        "children": [
+          [
+            "enum", "type", {
+              "enum": [
+                "factory"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "control_ids", {
+              "required": false
+            }
+          ],
+          [
+            "object", "control_ids", {
+              "children": [
+                [
+                  "string", "<any object property>", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "control_name", {
+              "required": false
+            }
+          ],
+          [
+            "string", "control_name", {
+              "pattern": "^[a-zA-Z0-9_]*@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ],
+          [
+            "string", "control_name", {
+              "pattern": "[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)?$",
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

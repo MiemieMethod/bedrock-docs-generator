@@ -1,0 +1,1881 @@
+{
+  "children": [
+    [
+      "array", "pools", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "int", "rolls", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "rolls", {
+                    "children": [
+                      [
+                        "float", "min", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "max", {
+                          "minimum": 1,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "type", {
+                    "enum": [
+                      "loot_table",
+                      "item",
+                      "empty"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "conditions", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "entity_properties",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "entity", {
+                                "default": "this",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "properties", {
+                                "children": [
+                                  [
+                                    "boolean", "on_fire", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "on_ground", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "default": {},
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "has_mark_variant",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "value", {
+                                "default": "0",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "killed_by_player",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "killed_by_player_or_pets",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "killed_by_entity",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "entity_type", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "random_chance",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "random_chance_with_looting",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "looting_multiplier", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "random_difficulty_chance",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "default_chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "easy", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "hard", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "normal", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "peaceful", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "const": "random_regional_difficulty_chance",
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "condition", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "default_chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_chance", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "easy", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "hard", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "normal", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "peaceful", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "entries", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "enum", "type", {
+                                "enum": [
+                                  "item",
+                                  "empty",
+                                  "loot_table"
+                                ],
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "count", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "name", {
+                                "pattern": "^([\\w]+:|loot_tables/)",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "weight", {
+                                "minimum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "functions", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*enchant_random_gear$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "enchant_random_gear",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "chance", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*enchant_book_for_trading$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "enchant_book_for_trading",
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "base_cost", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "base_random_cost", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "per_level_random_cost", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "per_level_cost", {
+                                            "required": true
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*enchant_randomly$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "enchant_randomly",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "boolean", "treasure", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*enchant_with_levels$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "enchant_with_levels",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "levels", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "levels", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": true
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": true
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "boolean", "treasure", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*exploration_map$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "exploration_map",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "destination", {
+                                            "enum": [
+                                              "endcity",
+                                              "fortress",
+                                              "mineshaft",
+                                              "monument",
+                                              "ruins",
+                                              "stronghold",
+                                              "temple",
+                                              "village",
+                                              "mansion",
+                                              "shipwreck",
+                                              "buriedtreasure",
+                                              "pillageroutpost"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*fill_container$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "fill_container",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "loot_table", {
+                                            "pattern": "^loot_tables/.*\\.json$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*furnace_smelt$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "furnace_smelt",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "conditions", {
+                                            "children": [
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "entity_properties",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "string", "entity", {
+                                                        "default": "this",
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "object", "properties", {
+                                                        "children": [
+                                                          [
+                                                            "boolean", "on_fire", {
+                                                              "required": false
+                                                            }
+                                                          ],
+                                                          [
+                                                            "boolean", "on_ground", {
+                                                              "required": false
+                                                            }
+                                                          ]
+                                                        ],
+                                                        "default": {},
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "has_mark_variant",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "int", "value", {
+                                                        "default": "0",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "killed_by_player",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "killed_by_player_or_pets",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "killed_by_entity",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "string", "entity_type", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "random_chance",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "chance", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "max_chance", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "random_chance_with_looting",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "chance", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "looting_multiplier", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "random_difficulty_chance",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "default_chance", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "easy", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "hard", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "normal", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "peaceful", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "const": "random_regional_difficulty_chance",
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "condition", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "default_chance", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "max_chance", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "easy", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "hard", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "normal", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "float", "peaceful", {
+                                                        "default": 0,
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*looting_enchant$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "looting_enchant",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "count", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*random_aux_value$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "random_aux_value",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "values", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*random_block_state$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "random_block_state",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "block_state", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "values", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_actor_id$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_actor_id",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "id", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_banner_details$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_banner_details",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "type", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_book_contents$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_book_contents",
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "author", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "title", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "array", "pages", {
+                                            "children": [
+                                              [
+                                                "string", "<any array element>", {}
+                                              ]
+                                            ],
+                                            "required": true
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_count$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "boolean", "add", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "function", {
+                                            "const": "set_count",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "count", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "count", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_damage$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "boolean", "add", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "function", {
+                                            "const": "set_damage",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "damage", {
+                                            "minimum": 0,
+                                            "maximum": 1,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "damage", {
+                                            "children": [
+                                              [
+                                                "float", "min", {
+                                                  "minimum": 0,
+                                                  "maximum": 1,
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "float", "max", {
+                                                  "minimum": 0,
+                                                  "maximum": 1,
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_data$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_data",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "data", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "data", {
+                                            "children": [
+                                              [
+                                                "int", "min", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "max", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_data_from_color_index$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_data_from_color_index",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*trader_material_type$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "trader_material_type",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*random_dye$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "random_dye",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_lore$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_lore",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "lore", {
+                                            "children": [
+                                              [
+                                                "string", "<any array element>", {}
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_name$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_name",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "name", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*set_potion$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "set_lore",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "id", {
+                                            "enum": [
+                                              "water",
+                                              "mundane",
+                                              "long_mundane",
+                                              "thick",
+                                              "awkward",
+                                              "nightvision",
+                                              "long_nightvision",
+                                              "invisibility",
+                                              "long_invisibility",
+                                              "leaping",
+                                              "long_leaping",
+                                              "strong_leaping",
+                                              "fire_resistance",
+                                              "long_fire_resistance",
+                                              "swiftness",
+                                              "long_swiftness",
+                                              "strong_swiftness",
+                                              "slowness",
+                                              "long_slowness",
+                                              "strong_slowness",
+                                              "water_breathing",
+                                              "long_water_breathing",
+                                              "healing",
+                                              "strong_healing",
+                                              "harming",
+                                              "strong_harming",
+                                              "poison",
+                                              "long_poison",
+                                              "strong_poison",
+                                              "regeneration",
+                                              "long_regeneration",
+                                              "strong_regeneration",
+                                              "strength",
+                                              "long_strength",
+                                              "strong_strength",
+                                              "weakness",
+                                              "long_weakness",
+                                              "wither",
+                                              "turtle_master",
+                                              "long_turtle_master",
+                                              "strong_turtle_master",
+                                              "slow_falling",
+                                              "long_slow_falling",
+                                              "wind_charged",
+                                              "weaving",
+                                              "oozing",
+                                              "infested"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "pattern": "^(minecraft:)*specific_enchants$",
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "function", {
+                                            "const": "specific_enchants",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "enchants", {
+                                            "enum": [
+                                              "aqua_affinity",
+                                              "bane_of_arthropods",
+                                              "blast_protection",
+                                              "channeling",
+                                              "binding",
+                                              "curse_of_vanishing",
+                                              "depth_strider",
+                                              "efficiency",
+                                              "feather_falling",
+                                              "fire_aspect",
+                                              "fire_protection",
+                                              "flame",
+                                              "fortune",
+                                              "frost_walker",
+                                              "impaling",
+                                              "infinity",
+                                              "knockback",
+                                              "looting",
+                                              "loyalty",
+                                              "luck_of_the_sea",
+                                              "lure",
+                                              "mending",
+                                              "multishot",
+                                              "piercing",
+                                              "projectile_protection",
+                                              "protection",
+                                              "power",
+                                              "punch",
+                                              "quick_charge",
+                                              "respiration",
+                                              "riptide",
+                                              "sharpness",
+                                              "silk_touch",
+                                              "smite",
+                                              "soul_speed",
+                                              "thorns",
+                                              "unbreaking"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "enchants", {
+                                            "children": [
+                                              [
+                                                "enum", "id", {
+                                                  "enum": [
+                                                    "aqua_affinity",
+                                                    "bane_of_arthropods",
+                                                    "blast_protection",
+                                                    "channeling",
+                                                    "binding",
+                                                    "curse_of_vanishing",
+                                                    "depth_strider",
+                                                    "efficiency",
+                                                    "feather_falling",
+                                                    "fire_aspect",
+                                                    "fire_protection",
+                                                    "flame",
+                                                    "fortune",
+                                                    "frost_walker",
+                                                    "impaling",
+                                                    "infinity",
+                                                    "knockback",
+                                                    "looting",
+                                                    "loyalty",
+                                                    "luck_of_the_sea",
+                                                    "lure",
+                                                    "mending",
+                                                    "multishot",
+                                                    "piercing",
+                                                    "projectile_protection",
+                                                    "protection",
+                                                    "power",
+                                                    "punch",
+                                                    "quick_charge",
+                                                    "respiration",
+                                                    "riptide",
+                                                    "sharpness",
+                                                    "silk_touch",
+                                                    "smite",
+                                                    "soul_speed",
+                                                    "thorns",
+                                                    "unbreaking"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "level", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "array", "level", {
+                                                  "children": [
+                                                    [
+                                                      "int", "0..0", {}
+                                                    ],
+                                                    [
+                                                      "int", "1..1", {}
+                                                    ]
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "enchants", {
+                                            "children": [
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "enum", "id", {
+                                                        "enum": [
+                                                          "aqua_affinity",
+                                                          "bane_of_arthropods",
+                                                          "blast_protection",
+                                                          "channeling",
+                                                          "binding",
+                                                          "curse_of_vanishing",
+                                                          "depth_strider",
+                                                          "efficiency",
+                                                          "feather_falling",
+                                                          "fire_aspect",
+                                                          "fire_protection",
+                                                          "flame",
+                                                          "fortune",
+                                                          "frost_walker",
+                                                          "impaling",
+                                                          "infinity",
+                                                          "knockback",
+                                                          "looting",
+                                                          "loyalty",
+                                                          "luck_of_the_sea",
+                                                          "lure",
+                                                          "mending",
+                                                          "multishot",
+                                                          "piercing",
+                                                          "projectile_protection",
+                                                          "protection",
+                                                          "power",
+                                                          "punch",
+                                                          "quick_charge",
+                                                          "respiration",
+                                                          "riptide",
+                                                          "sharpness",
+                                                          "silk_touch",
+                                                          "smite",
+                                                          "soul_speed",
+                                                          "thorns",
+                                                          "unbreaking"
+                                                        ],
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "int", "level", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "array", "level", {
+                                                        "children": [
+                                                          [
+                                                            "int", "0..0", {}
+                                                          ],
+                                                          [
+                                                            "int", "1..1", {}
+                                                          ]
+                                                        ],
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "recursive", "pools", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "quality", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "tiers", {
+                    "children": [
+                      [
+                        "float", "bonus_chance", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "bonus_rolls", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "initial_range", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "bonus_rolls", {
+                    "minimum": 0,
+                    "default": 0,
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "enum", "type", {
+        "enum": [
+          "minecraft:chest"
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

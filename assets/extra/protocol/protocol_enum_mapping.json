@@ -126,6 +126,9 @@
         "mobequipmentpacket": {
             "container_id": "ContainerID"
         },
+        "movementeffectpacket": {
+            "effect_id": "MovementEffectType"
+        },
         "moveplayerpacket": {
             "position_mode": "PlayerPositionModeComponent::PositionMode"
         },
@@ -210,6 +213,9 @@
         },
         "setlasthurtbypacket": {
             "last_hurt_by": "ActorType"
+        },
+        "setmovementauthoritypacket": {
+            "newauthmovementmode": "ServerAuthMovementMode"
         },
         "setplayergametypepacket": {
             "player_game_type": "GameType"

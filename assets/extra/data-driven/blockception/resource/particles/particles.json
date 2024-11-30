@@ -1,0 +1,1787 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": false
+      }
+    ],
+    [
+      "object", "particle_effect", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "basic_render_parameters", {
+                    "children": [
+                      [
+                        "string", "material", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "texture", {
+                          "pattern": "^.+$",
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "curves", {
+              "children": [
+                [
+                  "object", "<any object property>", {
+                    "children": [
+                      [
+                        "string", "input", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "input", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "nodes", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "nodes", {
+                          "children": [
+                            [
+                              "object", "<any object property>", {
+                                "children": [],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "type", {
+                          "enum": [
+                            "linear",
+                            "bezier",
+                            "bezier_chain",
+                            "catmull_rom"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "horizontal_range", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "horizontal_range", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "object", "minecraft:emitter_initialization", {
+                    "children": [
+                      [
+                        "string", "creation_expression", {
+                          "format": "molang",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "per_update_expression", {
+                          "format": "molang",
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_lifetime_events", {
+                    "children": [
+                      [
+                        "array", "creation_event", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "creation_event", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "expiration_event", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "expiration_event", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "timeline", {
+                          "children": [
+                            [
+                              "array", "<any object property>", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {}
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "looping_travel_distance_events", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "float", "distance", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "effects", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "effects", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_lifetime_expression", {
+                    "children": [
+                      [
+                        "string", "activation_expression", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "activation_expression", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "expiration_expression", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "expiration_expression", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_lifetime_looping", {
+                    "children": [
+                      [
+                        "string", "active_time", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "active_time", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "sleep_time", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "sleep_time", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_lifetime_once", {
+                    "children": [
+                      [
+                        "string", "active_time", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "active_time", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_local_space", {
+                    "children": [
+                      [
+                        "boolean", "position", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "rotation", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "velocity", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_rate_instant", {
+                    "children": [
+                      [
+                        "string", "num_particles", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "num_particles", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_rate_manual", {
+                    "children": [
+                      [
+                        "string", "max_particles", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_particles", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_rate_steady", {
+                    "children": [
+                      [
+                        "string", "max_particles", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_particles", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "spawn_rate", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "spawn_rate", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_box", {
+                    "children": [
+                      [
+                        "enum", "direction", {
+                          "enum": [
+                            "inwards",
+                            "outwards"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "radius", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "radius", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "half_dimensions", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "surface_only", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_custom", {
+                    "children": [
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_disc", {
+                    "children": [
+                      [
+                        "enum", "direction", {
+                          "enum": [
+                            "inwards",
+                            "outwards"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "radius", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "radius", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "plane_normal", {
+                          "enum": [
+                            "x",
+                            "y",
+                            "z"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "plane_normal", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "surface_only", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_entity_aabb", {
+                    "children": [
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_point", {
+                    "children": [
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:emitter_shape_sphere", {
+                    "children": [
+                      [
+                        "enum", "direction", {
+                          "enum": [
+                            "inwards",
+                            "outwards"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "0..0", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "0..0", {}
+                            ],
+                            [
+                              "string", "1..1", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {}
+                            ],
+                            [
+                              "string", "2..2", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "radius", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "radius", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "surface_only", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_appearance_billboard", {
+                    "children": [
+                      [
+                        "array", "size", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "facing_camera_mode", {
+                          "enum": [
+                            "rotate_xyz",
+                            "rotate_y",
+                            "lookat_xyz",
+                            "lookat_y",
+                            "lookat_direction",
+                            "direction_x",
+                            "direction_y",
+                            "direction_z",
+                            "emitter_transform_xy",
+                            "emitter_transform_xz",
+                            "emitter_transform_yz"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "direction", {
+                          "children": [
+                            [
+                              "enum", "mode", {
+                                "enum": [
+                                  "custom",
+                                  "derive_from_velocity"
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "custom_direction", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any array element>", {}
+                                  ]
+                                ],
+                                "minItems": 3,
+                                "maxItems": 3,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_speed_threshold", {
+                                "default": 0.01,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "uv", {
+                          "children": [
+                            [
+                              "int", "texture_width", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "texture_height", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "flipbook", {
+                                "children": [
+                                  [
+                                    "array", "base_UV", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "minItems": 2,
+                                      "maxItems": 2,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "size_UV", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "minItems": 2,
+                                      "maxItems": 2,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "step_UV", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "minItems": 2,
+                                      "maxItems": 2,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "frames_per_second", {
+                                      "minLength": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "frames_per_second", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "max_frame", {
+                                      "minLength": 0,
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "float", "max_frame", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "stretch_to_lifetime", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "loop", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "uv", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any array element>", {}
+                                  ]
+                                ],
+                                "minItems": 2,
+                                "maxItems": 2,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "uv_size", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any array element>", {}
+                                  ]
+                                ],
+                                "minItems": 2,
+                                "maxItems": 2,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_appearance_lighting", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_appearance_tinting", {
+                    "children": [
+                      [
+                        "array", "color", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "color", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "color", {
+                          "children": [
+                            [
+                              "array", "gradient", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "format": "color-hex"
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "gradient", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "gradient", {
+                                "children": [
+                                  [
+                                    "array", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "float", "<any array element>", {
+                                            "minimum": 0,
+                                            "maximum": 1
+                                          }
+                                        ],
+                                        [
+                                          "string", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "minItems": 3
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "interpolant", {
+                                "minLength": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "interpolant", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:particle_expire_if_in_blocks", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:particle_expire_if_not_in_blocks", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:particle_initial_speed", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "minecraft:particle_initial_speed", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:particle_initial_speed", {
+                    "children": [
+                      [
+                        "string", "0..0", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "0..0", {}
+                      ],
+                      [
+                        "string", "1..1", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "1..1", {}
+                      ],
+                      [
+                        "string", "2..2", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "2..2", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_initial_spin", {
+                    "children": [
+                      [
+                        "string", "rotation", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "rotation", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "rotation_rate", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "rotation_rate", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_initialization", {
+                    "children": [
+                      [
+                        "string", "per_update_expression", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "per_update_expression", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "per_render_expression", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "per_render_expression", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:particle_kill_plane", {
+                    "children": [
+                      [
+                        "string", "0..0", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "0..0", {}
+                      ],
+                      [
+                        "string", "1..1", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "1..1", {}
+                      ],
+                      [
+                        "string", "2..2", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "2..2", {}
+                      ],
+                      [
+                        "string", "3..3", {
+                          "minLength": 0
+                        }
+                      ],
+                      [
+                        "float", "3..3", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_lifetime_events", {
+                    "children": [
+                      [
+                        "array", "creation_event", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "creation_event", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "expiration_event", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "expiration_event", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_lifetime_expression", {
+                    "children": [
+                      [
+                        "string", "expiration_expression", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "expiration_expression", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "max_lifetime", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_lifetime", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_motion_collision", {
+                    "children": [
+                      [
+                        "float", "collision_drag", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "coefficient_of_restitution", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "collision_radius", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "enabled", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "enabled", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "expire_on_contact", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "events", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "null", "additionalProperties", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "event", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "min_speed", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_motion_dynamic", {
+                    "children": [
+                      [
+                        "array", "linear_acceleration", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "minItems": 3,
+                          "maxItems": 3,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "linear_drag_coefficient", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "linear_drag_coefficient", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "rotation_acceleration", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "rotation_acceleration", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "rotation_drag_coefficient", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "rotation_drag_coefficient", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:particle_motion_parametric", {
+                    "children": [
+                      [
+                        "array", "relative_position", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 3,
+                          "maxItems": 3,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "rotation", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "rotation", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "direction", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 3,
+                          "maxItems": 3,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "events", {
+              "children": [
+                [
+                  "object", "<any object property>", {
+                    "children": [
+                      [
+                        "array", "sequence", {
+                          "children": [
+                            [
+                              "recursive", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "randomize", {
+                          "children": [
+                            [
+                              "recursive", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "particle_effect", {
+                          "children": [
+                            [
+                              "string", "effect", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "type", {
+                                "enum": [
+                                  "emitter",
+                                  "emitter_bound",
+                                  "particle",
+                                  "particle_with_velocity"
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "pre_effect_expression", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "sound_effect", {
+                          "children": [
+                            [
+                              "string", "event_name", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "expression", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "log", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "weight", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

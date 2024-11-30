@@ -1,0 +1,69 @@
+{
+  "children": [
+    [
+      "boolean", "allow_nested_storage_items", {
+        "required": false
+      }
+    ],
+    [
+      "array", "allowed_items", {
+        "children": [
+          [
+            "string", "<any array element>", {}
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "<any object property>", {
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "array", "banned_items", {
+        "children": [
+          [
+            "string", "<any array element>", {}
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "<any object property>", {
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "int", "max_slots", {
+        "maximum": 64.0,
+        "required": false
+      }
+    ],
+    [
+      "int", "max_weight_limit", {
+        "maximum": 64.0,
+        "required": false
+      }
+    ],
+    [
+      "int", "weight_in_storage_item", {
+        "minimum": 0.0,
+        "required": false
+      }
+    ]
+  ]
+}

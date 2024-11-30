@@ -1,0 +1,1082 @@
+{
+  "children": [
+    [
+      "object", "materials", {
+        "children": [
+          [
+            "string", "version", {
+              "const": "1.0.0",
+              "required": true
+            }
+          ],
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "enum", "alphaDst", {
+                    "enum": [
+                      "DestColor",
+                      "OneMinusSrcAlpha"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "backFace", {
+                    "children": [
+                      [
+                        "enum", "stencilDepthFailOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilFailOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilFunc", {
+                          "enum": [
+                            "Always",
+                            "Equal",
+                            "NotEqual"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilPass", {
+                          "enum": [
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilPassOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "blendDst", {
+                    "enum": [
+                      "SourceAlpha",
+                      "OneMinusSrcAlpha",
+                      "OneMinusSrcColor",
+                      "SourceColor",
+                      "Zero",
+                      "One"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "blendSrc", {
+                    "enum": [
+                      "DestColor",
+                      "One",
+                      "OneMinusDestColor",
+                      "SourceAlpha",
+                      "SourceColor"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "defines", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "ALLOW_FADE",
+                            "ALPHA_TEST",
+                            "ALWAYS_LIT",
+                            "ARRAY_TEXTURE_0",
+                            "AS_ENTITY_RENDERER",
+                            "ATLAS_TEXTURE",
+                            "BLEND",
+                            "BLUR_STEPS 1",
+                            "BLUR_STEPS 10",
+                            "BLUR_STEPS 11",
+                            "BLUR_STEPS 12",
+                            "BLUR_STEPS 2",
+                            "BLUR_STEPS 3",
+                            "BLUR_STEPS 4",
+                            "BLUR_STEPS 5",
+                            "BLUR_STEPS 6",
+                            "BLUR_STEPS 7",
+                            "BLUR_STEPS 8",
+                            "BLUR_STEPS 9",
+                            "Blending",
+                            "COLOR_BASED",
+                            "COLOR_FROMTEX",
+                            "COLOR_MULTIPLIER",
+                            "COLOR_SECOND_TEXTURE",
+                            "COMFORT_MODE",
+                            "DISABLE_TINTING",
+                            "DisableCulling",
+                            "EFFECTS_OFFSET",
+                            "ENABLE_CURRENT_ALPHA_MULTIPLY",
+                            "ENABLE_FOG",
+                            "ENABLE_LIGHT",
+                            "ENABLE_VERTEX_TINT_MASK",
+                            "END_PORTAL",
+                            "FANCY",
+                            "FLIP_OCCLUSION",
+                            "FOG",
+                            "FORCE_DEPTH_ZERO",
+                            "GLINT",
+                            "GRADIENT_2PT",
+                            "GRADIENT_3PTSYMM",
+                            "GRADIENT_FROMTEX",
+                            "GRADIENT_LINEAR",
+                            "GRADIENT_RADIAL",
+                            "HAS_MASK",
+                            "IGNORE_CURRENTCOLOR",
+                            "INVENTORY",
+                            "ITEM_IN_HAND",
+                            "LINE_STRIP",
+                            "LOW_PRECISION",
+                            "MASKED_MULTITEXTURE",
+                            "MSDF",
+                            "MULTIPLICATIVE_TINT",
+                            "MULTIPLICATIVE_TINT_COLOR",
+                            "MULTI_COLOR_TINT",
+                            "NO_OCCLUSION",
+                            "NO_TEXTURE",
+                            "NO_VARIETY",
+                            "SEASONS",
+                            "SEASONS_FAR",
+                            "SMOOTH",
+                            "SNOW",
+                            "STEREO_LEFT_EYE_ONLY",
+                            "TEXEL_AA",
+                            "TINTED",
+                            "TINTED_ALPHA_TEST",
+                            "UI_ENTITY",
+                            "USE_COLOR_BLEND",
+                            "USE_COLOR_MASK",
+                            "USE_EMISSIVE",
+                            "USE_LIGHTING",
+                            "USE_MASK",
+                            "USE_MULTITEXTURE",
+                            "USE_ONLY_EMISSIVE",
+                            "USE_OVERLAY",
+                            "USE_SKINNING",
+                            "USE_STEREO_TEXTURE_ARRAY",
+                            "USE_UV_ANIM",
+                            "WINDOWSMR_MAGICALPHA"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "+defines", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "ALLOW_FADE",
+                            "ALPHA_TEST",
+                            "ALWAYS_LIT",
+                            "ARRAY_TEXTURE_0",
+                            "AS_ENTITY_RENDERER",
+                            "ATLAS_TEXTURE",
+                            "BLEND",
+                            "BLUR_STEPS 1",
+                            "BLUR_STEPS 10",
+                            "BLUR_STEPS 11",
+                            "BLUR_STEPS 12",
+                            "BLUR_STEPS 2",
+                            "BLUR_STEPS 3",
+                            "BLUR_STEPS 4",
+                            "BLUR_STEPS 5",
+                            "BLUR_STEPS 6",
+                            "BLUR_STEPS 7",
+                            "BLUR_STEPS 8",
+                            "BLUR_STEPS 9",
+                            "Blending",
+                            "COLOR_BASED",
+                            "COLOR_FROMTEX",
+                            "COLOR_MULTIPLIER",
+                            "COLOR_SECOND_TEXTURE",
+                            "COMFORT_MODE",
+                            "DISABLE_TINTING",
+                            "DisableCulling",
+                            "EFFECTS_OFFSET",
+                            "ENABLE_CURRENT_ALPHA_MULTIPLY",
+                            "ENABLE_FOG",
+                            "ENABLE_LIGHT",
+                            "ENABLE_VERTEX_TINT_MASK",
+                            "END_PORTAL",
+                            "FANCY",
+                            "FLIP_OCCLUSION",
+                            "FOG",
+                            "FORCE_DEPTH_ZERO",
+                            "GLINT",
+                            "GRADIENT_2PT",
+                            "GRADIENT_3PTSYMM",
+                            "GRADIENT_FROMTEX",
+                            "GRADIENT_LINEAR",
+                            "GRADIENT_RADIAL",
+                            "HAS_MASK",
+                            "IGNORE_CURRENTCOLOR",
+                            "INVENTORY",
+                            "ITEM_IN_HAND",
+                            "LINE_STRIP",
+                            "LOW_PRECISION",
+                            "MASKED_MULTITEXTURE",
+                            "MSDF",
+                            "MULTIPLICATIVE_TINT",
+                            "MULTIPLICATIVE_TINT_COLOR",
+                            "MULTI_COLOR_TINT",
+                            "NO_OCCLUSION",
+                            "NO_TEXTURE",
+                            "NO_VARIETY",
+                            "SEASONS",
+                            "SEASONS_FAR",
+                            "SMOOTH",
+                            "SNOW",
+                            "STEREO_LEFT_EYE_ONLY",
+                            "TEXEL_AA",
+                            "TINTED",
+                            "TINTED_ALPHA_TEST",
+                            "UI_ENTITY",
+                            "USE_COLOR_BLEND",
+                            "USE_COLOR_MASK",
+                            "USE_EMISSIVE",
+                            "USE_LIGHTING",
+                            "USE_MASK",
+                            "USE_MULTITEXTURE",
+                            "USE_ONLY_EMISSIVE",
+                            "USE_OVERLAY",
+                            "USE_SKINNING",
+                            "USE_STEREO_TEXTURE_ARRAY",
+                            "USE_UV_ANIM",
+                            "WINDOWSMR_MAGICALPHA"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "-defines", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "ALLOW_FADE",
+                            "ALPHA_TEST",
+                            "ALWAYS_LIT",
+                            "ARRAY_TEXTURE_0",
+                            "AS_ENTITY_RENDERER",
+                            "ATLAS_TEXTURE",
+                            "BLEND",
+                            "BLUR_STEPS 1",
+                            "BLUR_STEPS 10",
+                            "BLUR_STEPS 11",
+                            "BLUR_STEPS 12",
+                            "BLUR_STEPS 2",
+                            "BLUR_STEPS 3",
+                            "BLUR_STEPS 4",
+                            "BLUR_STEPS 5",
+                            "BLUR_STEPS 6",
+                            "BLUR_STEPS 7",
+                            "BLUR_STEPS 8",
+                            "BLUR_STEPS 9",
+                            "Blending",
+                            "COLOR_BASED",
+                            "COLOR_FROMTEX",
+                            "COLOR_MULTIPLIER",
+                            "COLOR_SECOND_TEXTURE",
+                            "COMFORT_MODE",
+                            "DISABLE_TINTING",
+                            "DisableCulling",
+                            "EFFECTS_OFFSET",
+                            "ENABLE_CURRENT_ALPHA_MULTIPLY",
+                            "ENABLE_FOG",
+                            "ENABLE_LIGHT",
+                            "ENABLE_VERTEX_TINT_MASK",
+                            "END_PORTAL",
+                            "FANCY",
+                            "FLIP_OCCLUSION",
+                            "FOG",
+                            "FORCE_DEPTH_ZERO",
+                            "GLINT",
+                            "GRADIENT_2PT",
+                            "GRADIENT_3PTSYMM",
+                            "GRADIENT_FROMTEX",
+                            "GRADIENT_LINEAR",
+                            "GRADIENT_RADIAL",
+                            "HAS_MASK",
+                            "IGNORE_CURRENTCOLOR",
+                            "INVENTORY",
+                            "ITEM_IN_HAND",
+                            "LINE_STRIP",
+                            "LOW_PRECISION",
+                            "MASKED_MULTITEXTURE",
+                            "MSDF",
+                            "MULTIPLICATIVE_TINT",
+                            "MULTIPLICATIVE_TINT_COLOR",
+                            "MULTI_COLOR_TINT",
+                            "NO_OCCLUSION",
+                            "NO_TEXTURE",
+                            "NO_VARIETY",
+                            "SEASONS",
+                            "SEASONS_FAR",
+                            "SMOOTH",
+                            "SNOW",
+                            "STEREO_LEFT_EYE_ONLY",
+                            "TEXEL_AA",
+                            "TINTED",
+                            "TINTED_ALPHA_TEST",
+                            "UI_ENTITY",
+                            "USE_COLOR_BLEND",
+                            "USE_COLOR_MASK",
+                            "USE_EMISSIVE",
+                            "USE_LIGHTING",
+                            "USE_MASK",
+                            "USE_MULTITEXTURE",
+                            "USE_ONLY_EMISSIVE",
+                            "USE_OVERLAY",
+                            "USE_SKINNING",
+                            "USE_STEREO_TEXTURE_ARRAY",
+                            "USE_UV_ANIM",
+                            "WINDOWSMR_MAGICALPHA"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "depthBias", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "depthBiasOGL", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "depthFunc", {
+                    "enum": [
+                      "LessEqual",
+                      "Always",
+                      "Equal"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "fragmentShader", {
+                    "pattern": "^shaders/.*\\.fragment$",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "frontFace", {
+                    "children": [
+                      [
+                        "enum", "stencilDepthFailOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilFailOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilFunc", {
+                          "enum": [
+                            "Always",
+                            "Equal",
+                            "NotEqual"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilPass", {
+                          "enum": [
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "stencilPassOp", {
+                          "enum": [
+                            "Keep",
+                            "Replace"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "isAnimatedTexture", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "msaaSupport", {
+                    "enum": [
+                      "Both",
+                      "MSAA"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "primitiveMode", {
+                    "enum": [
+                      "Line"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "samplerStates", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "int", "samplerIndex", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "textureFilter", {
+                                "enum": [
+                                  "Point",
+                                  "Bilinear",
+                                  "TexelAA"
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "textureWrap", {
+                                "enum": [
+                                  "Repeat",
+                                  "Clamp"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "+samplerStates", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "int", "samplerIndex", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "textureFilter", {
+                                "enum": [
+                                  "Point",
+                                  "Bilinear",
+                                  "TexelAA"
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "textureWrap", {
+                                "enum": [
+                                  "Repeat",
+                                  "Clamp"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "slopeScaledDepthBias", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "slopeScaledDepthBiasOGL", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "states", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "Blending",
+                            "DisableAlphaWrite",
+                            "DisableColorWrite",
+                            "DisableCulling",
+                            "DisableDepthTest",
+                            "DisableDepthWrite",
+                            "EnableAlphaToCoverage",
+                            "EnableStencilTest",
+                            "InvertCulling",
+                            "StencilWrite"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "+states", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "Blending",
+                            "DisableAlphaWrite",
+                            "DisableColorWrite",
+                            "DisableCulling",
+                            "DisableDepthTest",
+                            "DisableDepthWrite",
+                            "EnableAlphaToCoverage",
+                            "EnableStencilTest",
+                            "InvertCulling",
+                            "StencilWrite"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "-states", {
+                    "children": [
+                      [
+                        "enum", "<any array element>", {
+                          "enum": [
+                            "Blending",
+                            "DisableAlphaWrite",
+                            "DisableColorWrite",
+                            "DisableCulling",
+                            "DisableDepthTest",
+                            "DisableDepthWrite",
+                            "EnableAlphaToCoverage",
+                            "EnableStencilTest",
+                            "InvertCulling",
+                            "StencilWrite"
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "stencilRef", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "stencilRefOverride", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "stencilReadMask", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "stencilWriteMask", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "variants", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "object", "<any object property>", {
+                                "children": [
+                                  [
+                                    "array", "+defines", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "ALLOW_FADE",
+                                              "ALPHA_TEST",
+                                              "ALWAYS_LIT",
+                                              "ARRAY_TEXTURE_0",
+                                              "AS_ENTITY_RENDERER",
+                                              "ATLAS_TEXTURE",
+                                              "BLEND",
+                                              "BLUR_STEPS 1",
+                                              "BLUR_STEPS 10",
+                                              "BLUR_STEPS 11",
+                                              "BLUR_STEPS 12",
+                                              "BLUR_STEPS 2",
+                                              "BLUR_STEPS 3",
+                                              "BLUR_STEPS 4",
+                                              "BLUR_STEPS 5",
+                                              "BLUR_STEPS 6",
+                                              "BLUR_STEPS 7",
+                                              "BLUR_STEPS 8",
+                                              "BLUR_STEPS 9",
+                                              "Blending",
+                                              "COLOR_BASED",
+                                              "COLOR_FROMTEX",
+                                              "COLOR_MULTIPLIER",
+                                              "COLOR_SECOND_TEXTURE",
+                                              "COMFORT_MODE",
+                                              "DISABLE_TINTING",
+                                              "DisableCulling",
+                                              "EFFECTS_OFFSET",
+                                              "ENABLE_CURRENT_ALPHA_MULTIPLY",
+                                              "ENABLE_FOG",
+                                              "ENABLE_LIGHT",
+                                              "ENABLE_VERTEX_TINT_MASK",
+                                              "END_PORTAL",
+                                              "FANCY",
+                                              "FLIP_OCCLUSION",
+                                              "FOG",
+                                              "FORCE_DEPTH_ZERO",
+                                              "GLINT",
+                                              "GRADIENT_2PT",
+                                              "GRADIENT_3PTSYMM",
+                                              "GRADIENT_FROMTEX",
+                                              "GRADIENT_LINEAR",
+                                              "GRADIENT_RADIAL",
+                                              "HAS_MASK",
+                                              "IGNORE_CURRENTCOLOR",
+                                              "INVENTORY",
+                                              "ITEM_IN_HAND",
+                                              "LINE_STRIP",
+                                              "LOW_PRECISION",
+                                              "MASKED_MULTITEXTURE",
+                                              "MSDF",
+                                              "MULTIPLICATIVE_TINT",
+                                              "MULTIPLICATIVE_TINT_COLOR",
+                                              "MULTI_COLOR_TINT",
+                                              "NO_OCCLUSION",
+                                              "NO_TEXTURE",
+                                              "NO_VARIETY",
+                                              "SEASONS",
+                                              "SEASONS_FAR",
+                                              "SMOOTH",
+                                              "SNOW",
+                                              "STEREO_LEFT_EYE_ONLY",
+                                              "TEXEL_AA",
+                                              "TINTED",
+                                              "TINTED_ALPHA_TEST",
+                                              "UI_ENTITY",
+                                              "USE_COLOR_BLEND",
+                                              "USE_COLOR_MASK",
+                                              "USE_EMISSIVE",
+                                              "USE_LIGHTING",
+                                              "USE_MASK",
+                                              "USE_MULTITEXTURE",
+                                              "USE_ONLY_EMISSIVE",
+                                              "USE_OVERLAY",
+                                              "USE_SKINNING",
+                                              "USE_STEREO_TEXTURE_ARRAY",
+                                              "USE_UV_ANIM",
+                                              "WINDOWSMR_MAGICALPHA"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "vertexFields", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "field", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "+states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "-states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "+variants", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "object", "<any object property>", {
+                                "children": [
+                                  [
+                                    "array", "+defines", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "ALLOW_FADE",
+                                              "ALPHA_TEST",
+                                              "ALWAYS_LIT",
+                                              "ARRAY_TEXTURE_0",
+                                              "AS_ENTITY_RENDERER",
+                                              "ATLAS_TEXTURE",
+                                              "BLEND",
+                                              "BLUR_STEPS 1",
+                                              "BLUR_STEPS 10",
+                                              "BLUR_STEPS 11",
+                                              "BLUR_STEPS 12",
+                                              "BLUR_STEPS 2",
+                                              "BLUR_STEPS 3",
+                                              "BLUR_STEPS 4",
+                                              "BLUR_STEPS 5",
+                                              "BLUR_STEPS 6",
+                                              "BLUR_STEPS 7",
+                                              "BLUR_STEPS 8",
+                                              "BLUR_STEPS 9",
+                                              "Blending",
+                                              "COLOR_BASED",
+                                              "COLOR_FROMTEX",
+                                              "COLOR_MULTIPLIER",
+                                              "COLOR_SECOND_TEXTURE",
+                                              "COMFORT_MODE",
+                                              "DISABLE_TINTING",
+                                              "DisableCulling",
+                                              "EFFECTS_OFFSET",
+                                              "ENABLE_CURRENT_ALPHA_MULTIPLY",
+                                              "ENABLE_FOG",
+                                              "ENABLE_LIGHT",
+                                              "ENABLE_VERTEX_TINT_MASK",
+                                              "END_PORTAL",
+                                              "FANCY",
+                                              "FLIP_OCCLUSION",
+                                              "FOG",
+                                              "FORCE_DEPTH_ZERO",
+                                              "GLINT",
+                                              "GRADIENT_2PT",
+                                              "GRADIENT_3PTSYMM",
+                                              "GRADIENT_FROMTEX",
+                                              "GRADIENT_LINEAR",
+                                              "GRADIENT_RADIAL",
+                                              "HAS_MASK",
+                                              "IGNORE_CURRENTCOLOR",
+                                              "INVENTORY",
+                                              "ITEM_IN_HAND",
+                                              "LINE_STRIP",
+                                              "LOW_PRECISION",
+                                              "MASKED_MULTITEXTURE",
+                                              "MSDF",
+                                              "MULTIPLICATIVE_TINT",
+                                              "MULTIPLICATIVE_TINT_COLOR",
+                                              "MULTI_COLOR_TINT",
+                                              "NO_OCCLUSION",
+                                              "NO_TEXTURE",
+                                              "NO_VARIETY",
+                                              "SEASONS",
+                                              "SEASONS_FAR",
+                                              "SMOOTH",
+                                              "SNOW",
+                                              "STEREO_LEFT_EYE_ONLY",
+                                              "TEXEL_AA",
+                                              "TINTED",
+                                              "TINTED_ALPHA_TEST",
+                                              "UI_ENTITY",
+                                              "USE_COLOR_BLEND",
+                                              "USE_COLOR_MASK",
+                                              "USE_EMISSIVE",
+                                              "USE_LIGHTING",
+                                              "USE_MASK",
+                                              "USE_MULTITEXTURE",
+                                              "USE_ONLY_EMISSIVE",
+                                              "USE_OVERLAY",
+                                              "USE_SKINNING",
+                                              "USE_STEREO_TEXTURE_ARRAY",
+                                              "USE_UV_ANIM",
+                                              "WINDOWSMR_MAGICALPHA"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "vertexFields", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "field", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "+states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "-states", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "Blending",
+                                              "DisableAlphaWrite",
+                                              "DisableColorWrite",
+                                              "DisableCulling",
+                                              "DisableDepthTest",
+                                              "DisableDepthWrite",
+                                              "EnableAlphaToCoverage",
+                                              "EnableStencilTest",
+                                              "InvertCulling",
+                                              "StencilWrite"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "vertexFields", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "field", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "vertexShader", {
+                    "pattern": "^shaders/.*\\.vertex$",
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "vrGeometryShader", {
+                    "pattern": "^shaders/.*\\.geometry$",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

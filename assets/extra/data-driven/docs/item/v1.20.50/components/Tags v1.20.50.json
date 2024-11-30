@@ -1,0 +1,14 @@
+{
+  "children": [
+    [
+      "array", "tags", {
+        "children": [
+          [
+            "string", "<any array element>", {}
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

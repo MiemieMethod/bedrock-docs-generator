@@ -1,0 +1,14 @@
+{
+  "children": [
+    [
+      "string", "category", {
+        "required": true
+      }
+    ],
+    [
+      "float", "duration", {
+        "required": true
+      }
+    ]
+  ]
+}

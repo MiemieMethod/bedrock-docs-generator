@@ -1,0 +1,68 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:aim_assist_preset", {
+        "children": [
+          [
+            "string", "categories", {
+              "required": true
+            }
+          ],
+          [
+            "string", "default_item_settings", {
+              "required": false
+            }
+          ],
+          [
+            "array", "exclusion_list", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "hand_settings", {
+              "required": false
+            }
+          ],
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ],
+          [
+            "object", "item_settings", {
+              "children": [
+                [
+                  "string", "<any object property>", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "liquid_targeting_list", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

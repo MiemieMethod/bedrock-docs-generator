@@ -1,0 +1,27 @@
+{
+  "children": [
+    [
+      "object", "damage_chance", {
+        "children": [
+          [
+            "int", "max", {
+              "required": false
+            }
+          ],
+          [
+            "int", "min", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "int", "max_durability", {
+        "minimum": 0.0,
+        "required": true
+      }
+    ]
+  ]
+}

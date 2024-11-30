@@ -1,0 +1,449 @@
+{
+  "children": [
+    [
+      "enum", "format_version", {
+        "enum": [
+          "1.8.0",
+          "1.10.0"
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "render_controllers", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "object", "arrays", {
+                    "children": [
+                      [
+                        "object", "geometries", {
+                          "children": [
+                            [
+                              "array", "<any object property>", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "pattern": "^[Gg]eometry\\..+"
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "minProperties": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "materials", {
+                          "children": [
+                            [
+                              "array", "<any object property>", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "pattern": "^[Mm]aterial\\..+"
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "minProperties": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "textures", {
+                          "children": [
+                            [
+                              "array", "<any object property>", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "pattern": "^[Tt]exture\\..+",
+                                      "default": "texture."
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "minProperties": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "color", {
+                    "children": [
+                      [
+                        "float", "r", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "r", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "g", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "g", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "b", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "b", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "a", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "a", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "filter_lighting", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "geometry", {
+                    "format": "molang",
+                    "required": true
+                  }
+                ],
+                [
+                  "boolean", "ignore_lighting", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "is_hurt_color", {
+                    "children": [
+                      [
+                        "float", "r", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "r", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "g", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "g", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "b", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "b", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "a", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "a", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "light_color_multiplier", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "light_color_multiplier", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "materials", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "on_fire_color", {
+                    "children": [
+                      [
+                        "float", "r", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "r", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "g", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "g", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "b", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "b", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "a", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "a", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "overlay_color", {
+                    "children": [
+                      [
+                        "float", "r", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "r", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "g", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "g", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "b", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "b", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "a", {
+                          "minimum": 0,
+                          "maximum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "a", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "part_visibility", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "<any object property>", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "rebuild_animation_matrices", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "textures", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "format": "molang"
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "uv_anim", {
+                    "children": [
+                      [
+                        "array", "offset", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "array", "scale", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 0
+                              }
+                            ],
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

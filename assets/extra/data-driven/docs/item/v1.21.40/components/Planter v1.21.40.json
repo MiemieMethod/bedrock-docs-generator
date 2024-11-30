@@ -1,0 +1,64 @@
+{
+  "children": [
+    [
+      "string", "block", {
+        "required": true
+      }
+    ],
+    [
+      "boolean", "replace_block_item", {
+        "required": false
+      }
+    ],
+    [
+      "array", "use_on", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "name", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "states", {
+                    "children": [
+                      [
+                        "int", "<any object property>", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "<any object property>", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "<any object property>", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "tags", {
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "string", "<any array element>", {
+              "minLength": 1
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "children": [
+    [
+      "enum", "format_version", {
+        "enum": [
+          "1.8.0",
+          "1.10.0",
+          "1.12.0"
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:spawn_rules", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": true
+                  }
+                ],
+                [
+                  "enum", "population_control", {
+                    "enum": [
+                      "ambient",
+                      "animal",
+                      "water_animal",
+                      "monster",
+                      "cat",
+                      "pillager"
+                    ],
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "conditions", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "array", "minecraft:biome_filter", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "minecraft:biome_filter", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:brightness_filter", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "minimum": 0,
+                                "maximum": 15,
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "minimum": 0,
+                                "maximum": 15,
+                                "default": 15,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "adjust_for_weather", {
+                                "default": true,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:delay_filter", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "identifier", {
+                                "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "spawn_chance", {
+                                "minimum": 0,
+                                "maximum": 100,
+                                "default": 100,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:density_limit", {
+                          "children": [
+                            [
+                              "int", "surface", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "underground", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:difficulty_filter", {
+                          "children": [
+                            [
+                              "enum", "min", {
+                                "enum": [
+                                  "easy",
+                                  "normal",
+                                  "hard",
+                                  "peaceful"
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "max", {
+                                "enum": [
+                                  "easy",
+                                  "normal",
+                                  "hard",
+                                  "peaceful"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:disallow_spawns_in_bubble", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:distance_filter", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "minimum": 24,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "default": 128,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:height_filter", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:herd", {
+                          "children": [
+                            [
+                              "string", "initial_event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "initial_event_count", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "min_size", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max_size", {
+                                "maximum": 8,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "event_skip_count", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "minecraft:herd", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "initial_event", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "initial_event_count", {
+                                      "default": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "min_size", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "max_size", {
+                                      "maximum": 8,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "event", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "event_skip_count", {
+                                      "default": 0,
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:mob_event_filter", {
+                          "children": [
+                            [
+                              "enum", "event", {
+                                "enum": [
+                                  "minecraft:pillager_patrols_event",
+                                  "minecraft:wandering_trader_event",
+                                  "minecraft:ender_dragon_event"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:permute_type", {
+                          "children": [
+                            [
+                              "int", "weight", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "entity_type", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "guaranteed_count", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "minecraft:permute_type", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "int", "weight", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "entity_type", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "guaranteed_count", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:player_in_village_filter", {
+                          "children": [
+                            [
+                              "int", "distance", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "village_border_tolerance", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawn_event", {
+                          "children": [
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawns_above_block_filter", {
+                          "children": [
+                            [
+                              "string", "blocks", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "blocks", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {}
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "distance", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawns_lava", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "minecraft:spawns_on_block_filter", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "minecraft:spawns_on_block_filter", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "minecraft:spawns_on_block_prevented_filter", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "minecraft:spawns_on_block_prevented_filter", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawns_on_surface", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawns_underground", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:spawns_underwater", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:weight", {
+                          "children": [
+                            [
+                              "int", "default", {
+                                "maximum": 100,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "rarity", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:world_age_filter", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

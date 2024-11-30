@@ -1,0 +1,72 @@
+{
+  "children": [
+    [
+      "array", "destroy_speeds", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "object", "block", {
+                    "children": [
+                      [
+                        "string", "name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "states", {
+                          "children": [
+                            [
+                              "int", "<any object property>", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "tags", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "block", {
+                    "minLength": 1,
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "speed", {
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "boolean", "use_efficiency", {
+        "required": false
+      }
+    ]
+  ]
+}

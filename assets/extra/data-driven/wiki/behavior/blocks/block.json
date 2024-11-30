@@ -1,0 +1,1806 @@
+{
+  "children": [
+    [
+      "float", "format_version", {
+        "multipleOf": 0.1,
+        "required": true
+      }
+    ],
+    [
+      "array", "format_version", {
+        "children": [
+          [
+            "int", "<any array element>", {}
+          ]
+        ],
+        "minItems": 3,
+        "maxItems": 3,
+        "required": true
+      }
+    ],
+    [
+      "string", "format_version", {
+        "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(?:-((?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0)(?:\\.(?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0))*))?(?:\\+([0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?)?)?$",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:block", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "category", {
+                    "enum": [
+                      "construction",
+                      "nature",
+                      "equipment",
+                      "items",
+                      "commands",
+                      "none"
+                    ],
+                    "version": [
+                      {
+                        "value": "1.10"
+                      },
+                      {
+                        "value": "1.16.100"
+                      },
+                      {
+                        "min": "1.17.0",
+                        "max": "1.20.20",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "menu_category", {
+                    "children": [
+                      [
+                        "enum", "category", {
+                          "enum": [
+                            "construction",
+                            "nature",
+                            "equipment",
+                            "items",
+                            "none"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "group", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "is_hidden_in_commands", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "version": [
+                      {
+                        "min": "1.20.20",
+                        "max": "*",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "enum", "minecraft:breathability", {
+                    "enum": [
+                      "solid",
+                      "air"
+                    ],
+                    "default": "solid",
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:collision_box", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:collision_box", {
+                    "children": [
+                      [
+                        "array", "origin", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            -8.0,
+                            0.0,
+                            -8.0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "size", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            16.0,
+                            16.0,
+                            16.0
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:crafting_table", {
+                    "children": [
+                      [
+                        "array", "crafting_tags", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "table_name", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:destructible_by_explosion", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:destructible_by_explosion", {
+                    "children": [
+                      [
+                        "float", "explosion_resistance", {
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:destructible_by_mining", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:destructible_by_mining", {
+                    "children": [
+                      [
+                        "array", "item_specific_speeds", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "item", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "item", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "destroy_speed", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "seconds_to_destroy", {
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:display_name", {
+                    "default": null,
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:flammable", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:flammable", {
+                    "children": [
+                      [
+                        "int", "catch_chance_modifier", {
+                          "default": 5,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "destroy_chance_modifier", {
+                          "default": 20,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "minecraft:friction", {
+                    "default": 0.4,
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "minecraft:geometry", {
+                    "enum": [
+                      "minecraft:geometry.cross",
+                      "minecraft:geometry.full_block"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:geometry", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:geometry", {
+                    "children": [
+                      [
+                        "string", "identifier", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "bone_visibility", {
+                          "children": [
+                            [
+                              "boolean", "^[a-zA-Z0-9]*$", {
+                                "default": true,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "minecraft:light_dampening", {
+                    "minimum": 0,
+                    "maximum": 15,
+                    "default": 15,
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "minecraft:light_emission", {
+                    "minimum": 0,
+                    "maximum": 15,
+                    "default": 0,
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:loot", {
+                    "pattern": "^loot_tables/(?!.*//)[a-zA-Z0-9_/]+\\.json$",
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:map_color", {
+                    "pattern": "^#(?:[0-9A-Fa-f]{6})$",
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:material_instances", {
+                    "children": [
+                      [
+                        "object", "^(?:\\*[a-zA-Z0-9_]*|[a-zA-Z0-9_]*\\*|\\*|[a-zA-Z0-9_]+)$", {
+                          "children": [
+                            [
+                              "string", "textures", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "ambient_occlusion", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "face_dimming", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "render_method", {
+                                "enum": [
+                                  "opaque",
+                                  "alpha_test",
+                                  "double_sided",
+                                  "blend"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "^(?:\\*[a-zA-Z0-9_]*|[a-zA-Z0-9_]*\\*|\\*|[a-zA-Z0-9_]+)$", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:placement_filter", {
+                    "children": [
+                      [
+                        "array", "conditions", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "enum", "allowed_faces", {
+                                      "enum": [
+                                        "up",
+                                        "down",
+                                        "north",
+                                        "east",
+                                        "south",
+                                        "west",
+                                        "side",
+                                        "all"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "block_filter", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "name", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "object", "states", {
+                                                  "children": [
+                                                    [
+                                                      "string", "<any object property>", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "int", "<any object property>", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "tags", {
+                                                  "format": "molang",
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ],
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 1
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "enum", "allowed_faces", {
+                                      "enum": [
+                                        "up",
+                                        "down",
+                                        "north",
+                                        "east",
+                                        "south",
+                                        "west",
+                                        "side",
+                                        "all"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "block_filter", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:selection_box", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:selection_box", {
+                    "children": [
+                      [
+                        "array", "origin", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minLength": 3,
+                                "maxLength": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            -8.0,
+                            0.0,
+                            -8.0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "size", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            16.0,
+                            16.0,
+                            16.0
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:transformation", {
+                    "children": [
+                      [
+                        "array", "translation", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "scale", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            1,
+                            1,
+                            1
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "scale_pivot", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "rotation", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "rotation_pivot", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "minItems": 3,
+                                "maxItems": 3
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:aabb", {
+                    "children": [
+                      [
+                        "object", "collision", {
+                          "children": [
+                            [
+                              "array", "min", {
+                                "children": [
+                                  [
+                                    "float", "<any array element>", {
+                                      "minItems": 3,
+                                      "maxItems": 3
+                                    }
+                                  ]
+                                ],
+                                "default": [
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "max", {
+                                "children": [
+                                  [
+                                    "float", "<any array element>", {
+                                      "minItems": 3,
+                                      "maxItems": 3
+                                    }
+                                  ]
+                                ],
+                                "default": [
+                                  1,
+                                  1,
+                                  1
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "collision", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "enable", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "enable", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "enable", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "min", {
+                                      "children": [
+                                        [
+                                          "float", "<any array element>", {
+                                            "minItems": 3,
+                                            "maxItems": 3
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "max", {
+                                      "children": [
+                                        [
+                                          "float", "<any array element>", {
+                                            "minItems": 3,
+                                            "maxItems": 3
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        1,
+                                        1,
+                                        1
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "clip", {
+                          "children": [
+                            [
+                              "array", "min", {
+                                "children": [
+                                  [
+                                    "float", "<any array element>", {
+                                      "minItems": 3,
+                                      "maxItems": 3
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "max", {
+                                "children": [
+                                  [
+                                    "float", "<any array element>", {
+                                      "minItems": 3,
+                                      "maxItems": 3
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "clip", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "enable", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "enable", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "enable", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "min", {
+                                      "children": [
+                                        [
+                                          "float", "<any array element>", {
+                                            "minItems": 3,
+                                            "maxItems": 3
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "max", {
+                                      "children": [
+                                        [
+                                          "float", "<any array element>", {
+                                            "minItems": 3,
+                                            "maxItems": 3
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        1,
+                                        1,
+                                        1
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:block_chest", {
+                    "children": [
+                      [
+                        "string", "custom_description", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "chest_capacity", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "boolean", "can_pair", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "is_shulker_box", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "mute", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "can_be_blocked", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:block_entity", {
+                    "children": [
+                      [
+                        "boolean", "tick", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "client_tick", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "movable", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:block_properties", {
+                    "children": [
+                      [
+                        "array", "properties", {
+                          "children": [
+                            [
+                              "enum", "<any array element>", {
+                                "enum": [
+                                  "piston_block_grabber",
+                                  "slime",
+                                  "breaks_when_fallen_on_by_heavy"
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:block_random_offset", {
+                    "children": [
+                      [
+                        "array", "x_scope", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "default": [
+                                  0,
+                                  0
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "z_scope", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "default": [
+                                  0,
+                                  0
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:custom_tips", {
+                    "children": [
+                      [
+                        "string", "value", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:face_directional", {
+                    "children": [
+                      [
+                        "enum", "type", {
+                          "enum": [
+                            "direction",
+                            "facing_direction"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:fire_resistant", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:fuel", {
+                    "children": [
+                      [
+                        "float", "duration", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:listen_block_remove", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:may_place_on", {
+                    "children": [
+                      [
+                        "array", "block", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "block_state", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": []
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "spawn_resources", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:neighborchanged_sendto_script", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:no_crop_face_block", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_after_fall_on", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_before_fall_on", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_entity_inside", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_stand_on", {
+                    "children": [
+                      [
+                        "boolean", "send_python_event", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_step_off", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:on_step_on", {
+                    "children": [],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:pathable", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:random_tick", {
+                    "children": [
+                      [
+                        "boolean", "enable", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "tick_to_script", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:redstone", {
+                    "children": [
+                      [
+                        "enum", "type", {
+                          "enum": [
+                            "producer",
+                            "consumer"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "strength", {
+                          "minimum": 0,
+                          "maximum": 15,
+                          "default": 15,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:redstone_property", {
+                    "children": [
+                      [
+                        "enum", "value", {
+                          "enum": [
+                            "break_on_push"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:render_layer", {
+                    "children": [
+                      [
+                        "enum", "value", {
+                          "enum": [
+                            "opaque",
+                            "alpha",
+                            "blend",
+                            "optionalAlpha"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:solid", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:tier", {
+                    "children": [
+                      [
+                        "enum", "digger", {
+                          "enum": [
+                            "shovel",
+                            "pickaxe",
+                            "hatchet"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "boolean", "destroy_special", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "level", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "version": [
+                      {
+                        "min": "1.10",
+                        "max": "1.16.100",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      },
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "tag:", {
+                    "children": [],
+                    "pattern": "^tag:([a-zA-Z_]+):([a-zA-Z_]+)$",
+                    "version": [
+                      {
+                        "min": "1.16.100",
+                        "max": "*",
+                        "min_exclusivity": true,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "events", {
+              "children": [],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

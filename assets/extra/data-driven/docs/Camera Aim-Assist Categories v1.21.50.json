@@ -1,0 +1,88 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:aim_assist_categories", {
+        "children": [
+          [
+            "array", "categories", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "name", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "priorities", {
+                          "children": [
+                            [
+                              "int", "block_default", {
+                                "minimum": 0.0,
+                                "maximum": 100.0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "blocks", {
+                                "children": [
+                                  [
+                                    "int", "<any object property>", {
+                                      "minimum": 0.0,
+                                      "maximum": 100.0,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "entities", {
+                                "children": [
+                                  [
+                                    "int", "<any object property>", {
+                                      "minimum": 0.0,
+                                      "maximum": 100.0,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "entity_default", {
+                                "minimum": 0.0,
+                                "maximum": 100.0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

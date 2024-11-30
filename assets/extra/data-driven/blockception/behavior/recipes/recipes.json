@@ -1,0 +1,1073 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:recipe_furnace", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "input", {
+              "required": false
+            }
+          ],
+          [
+            "string", "output", {
+              "required": false
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:recipe_brewing_container", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "input", {
+              "required": false
+            }
+          ],
+          [
+            "string", "output", {
+              "required": false
+            }
+          ],
+          [
+            "string", "reagent", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:recipe_brewing_mix", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "input", {
+              "required": false
+            }
+          ],
+          [
+            "string", "output", {
+              "required": false
+            }
+          ],
+          [
+            "string", "reagent", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:recipe_shaped", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "key", {
+              "children": [
+                [
+                  "string", "<any object property>", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "<any object property>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "<any object property>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 1,
+              "required": false
+            }
+          ],
+          [
+            "string", "group", {
+              "required": false
+            }
+          ],
+          [
+            "array", "pattern", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "minItems": 1,
+              "maxItems": 3,
+              "required": false
+            }
+          ],
+          [
+            "int", "priority", {
+              "required": false
+            }
+          ],
+          [
+            "string", "result", {
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "data", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "count", {
+                    "minimum": 1,
+                    "default": 1,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "tag", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "result", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "boolean", "assume_symmetry", {
+              "default": true,
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:recipe_shapeless", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "ingredients", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "group", {
+              "required": false
+            }
+          ],
+          [
+            "int", "priority", {
+              "required": false
+            }
+          ],
+          [
+            "string", "result", {
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "data", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "count", {
+                    "minimum": 1,
+                    "default": 1,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "tag", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "result", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:recipe_smithing_transform", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "[a-z0-9_:\\-]+",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "tags", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "unlock", {
+              "children": [
+                [
+                  "string", "context", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "unlock", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "base", {
+              "required": false
+            }
+          ],
+          [
+            "object", "base", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "data", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "count", {
+                    "minimum": 1,
+                    "default": 1,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "base", {
+              "children": [
+                [
+                  "string", "tag", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "base", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "addition", {
+              "required": false
+            }
+          ],
+          [
+            "object", "addition", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "data", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "count", {
+                    "minimum": 1,
+                    "default": 1,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "addition", {
+              "children": [
+                [
+                  "string", "tag", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "addition", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "result", {
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "data", {
+                    "minimum": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "count", {
+                    "minimum": 1,
+                    "default": 1,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "result", {
+              "children": [
+                [
+                  "string", "tag", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "result", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "item", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "data", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "count", {
+                          "minimum": 1,
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "tag", {
+                          "required": true
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

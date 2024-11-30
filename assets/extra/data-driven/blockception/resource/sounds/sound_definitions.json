@@ -1,0 +1,110 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": false
+      }
+    ],
+    [
+      "object", "sound_definitions", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "boolean", "__use_legacy_max_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "category", {
+                    "enum": [
+                      "ambient",
+                      "block",
+                      "music",
+                      "weather",
+                      "ui",
+                      "bucket",
+                      "neutral",
+                      "player",
+                      "hostile",
+                      "record",
+                      "bottle"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "sounds", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "(^sounds/.*$|^$)"
+                        }
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "boolean", "is3D", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "pitch", {
+                                "minimum": 0,
+                                "maximum": 2,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "volume", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "stream", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "name", {
+                                "pattern": "(^sounds/.*$|^$)",
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "weight", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "enum", "__use_legacy_max_distance", {
+        "enum": [
+          "true",
+          "false"
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

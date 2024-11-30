@@ -1,0 +1,26 @@
+{
+  "children": [
+    [
+      "object", "<any object property>", {
+        "children": [
+          [
+            "string", "event_name", {
+              "required": true
+            }
+          ],
+          [
+            "int", "min_delay", {
+              "required": false
+            }
+          ],
+          [
+            "int", "max_delay", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

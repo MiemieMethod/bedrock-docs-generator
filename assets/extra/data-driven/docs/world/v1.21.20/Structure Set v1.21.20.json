@@ -1,0 +1,82 @@
+{
+  "children": [
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "placement", {
+        "children": [
+          [
+            "int", "salt", {
+              "required": true
+            }
+          ],
+          [
+            "int", "separation", {
+              "minimum": 0.0,
+              "required": true
+            }
+          ],
+          [
+            "int", "spacing", {
+              "minimum": 1.0,
+              "required": true
+            }
+          ],
+          [
+            "enum", "spread_type", {
+              "enum": [
+                "linear",
+                "triangular"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "enum", "type", {
+              "enum": [
+                "minecraft:random_spread"
+              ],
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "array", "structures", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "structure", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "weight", {
+                    "minimum": 1.0,
+                    "maximum": 200.0,
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

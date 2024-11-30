@@ -1,0 +1,14 @@
+{
+  "children": [
+    [
+      "array", "ui_defs", {
+        "children": [
+          [
+            "string", "<any array element>", {}
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

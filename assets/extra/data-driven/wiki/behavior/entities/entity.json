@@ -1,0 +1,3770 @@
+{
+  "children": [
+    [
+      "array", "format_version", {
+        "children": [
+          [
+            "int", "<any array element>", {}
+          ]
+        ],
+        "minItems": 3,
+        "maxItems": 3,
+        "required": true
+      }
+    ],
+    [
+      "string", "format_version", {
+        "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(?:-((?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0)(?:\\.(?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0))*))?(?:\\+([0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?)?)?$",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:entity", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "is_spawnable", {
+                    "default": false,
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "is_summonable", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "is_experimental", {
+                    "default": false,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "object", "minecraft:addrider", {
+                    "children": [
+                      [
+                        "string", "entity_type", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "spawn_event", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:admire_item", {
+                    "children": [
+                      [
+                        "int", "cooldown_after_being_attacked", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "duration", {
+                          "default": 10,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "version": [
+                      {
+                        "min": "1.16.0",
+                        "max": "*",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:ageable", {
+                    "children": [
+                      [
+                        "array", "drop_items", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "feed_items", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "item", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "growth", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "duration", {
+                          "default": 1200.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "transform_to_item", {
+                          "version": [
+                            {
+                              "min": "1.17.0",
+                              "max": "*",
+                              "min_exclusivity": false,
+                              "max_exclusivity": true
+                            }
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "interact_filters", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "version": [
+                            {
+                              "min": "1.20.60",
+                              "max": "*",
+                              "min_exclusivity": false,
+                              "max_exclusivity": true
+                            }
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "grow_up", {
+                          "children": [
+                            [
+                              "string", "target", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:anger_level", {
+                    "children": [
+                      [
+                        "float", "anger_decrement_interval", {
+                          "default": 1.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "angry_boost", {
+                          "minimum": 0,
+                          "default": 20,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "angry_threshold", {
+                          "minimum": 0,
+                          "default": 80,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "default_annoyingness", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "default_projectile_annoyingness", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "max_anger", {
+                          "minimum": 0,
+                          "default": 100,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "nuisance_filter", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "on_increase_sounds", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "condition", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "condition", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "condition", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "sound", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "remove_targets_below_angry_threshold", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:angry", {
+                    "children": [
+                      [
+                        "string", "angry_sound", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "broadcast_anger", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "broadcast_anger_on_attack", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "broadcast_anger_on_being_attacked", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "broadcast_filters", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "broadcast_range", {
+                          "default": 20,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "broadcast_targets", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "calm_event", {
+                          "children": [
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "target", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "duration", {
+                          "default": 25,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "duration_delta", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "filters", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "sound_interval", {
+                          "children": [
+                            [
+                              "int", "<any array element>", {
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:annotation.break_door", {
+                    "children": [
+                      [
+                        "float", "break_time", {
+                          "default": 12.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "min_difficulty", {
+                          "enum": [
+                            "peaceful",
+                            "easy",
+                            "normal",
+                            "hard"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:annotation.open_door", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:area_attack", {
+                    "children": [
+                      [
+                        "string", "cause", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "damage_cooldown", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "damage_per_tick", {
+                          "default": 2,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "damage_range", {
+                          "default": 0.2,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "entity_filter", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "play_attack_sound", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:attack", {
+                    "children": [
+                      [
+                        "int", "damage", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "damage", {
+                          "children": [
+                            [
+                              "int", "<any array element>", {
+                                "minItems": 2,
+                                "maxItems": 2
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "effect_duration", {
+                          "minimum": 0.0,
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "effect_name", {
+                          "enum": [
+                            "absorption",
+                            "bad_omen",
+                            "blindness",
+                            "conduit_power",
+                            "fatal_poison",
+                            "fire_resistance",
+                            "haste",
+                            "health_boost",
+                            "village_hero",
+                            "hunger",
+                            "instant_damage",
+                            "instant_health",
+                            "invisibility",
+                            "jump_boost",
+                            "levitation",
+                            "nausea",
+                            "night_vision",
+                            "poison",
+                            "regeneration",
+                            "resistance",
+                            "saturation",
+                            "slow_falling",
+                            "slowness",
+                            "speed",
+                            "strength",
+                            "water_breathing",
+                            "weakness",
+                            "wither"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:attack_cooldown", {
+                    "children": [
+                      [
+                        "string", "attack_cooldown_complete_event", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "attack_cooldown_complete_event", {
+                          "children": [
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "target", {
+                                "enum": [
+                                  "self",
+                                  "other",
+                                  "player",
+                                  "target",
+                                  "parent",
+                                  "baby",
+                                  "block",
+                                  "damager",
+                                  "holder",
+                                  "item"
+                                ],
+                                "default": "self",
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "attack_cooldown_time", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "default": [
+                                  0.0,
+                                  1.0
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:barter", {
+                    "children": [
+                      [
+                        "string", "barter_table", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "cooldown_after_being_attacked", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:block_climber", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:block_sensor", {
+                    "children": [
+                      [
+                        "array", "on_break", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "array", "block_list", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "name", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "object", "states", {
+                                                  "children": [
+                                                    [
+                                                      "string", "<any object property>", {
+                                                        "required": false
+                                                      }
+                                                    ],
+                                                    [
+                                                      "int", "<any object property>", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "tags", {
+                                                  "format": "molang",
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ],
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 1
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "on_block_broken", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "sensor_radius", {
+                          "default": 16.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "sources", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "object", "any_of", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "any_of", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "test", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "subject", {
+                                                  "enum": [
+                                                    "block",
+                                                    "damager",
+                                                    "other",
+                                                    "parent",
+                                                    "player",
+                                                    "self",
+                                                    "target"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "operator", {
+                                                  "enum": [
+                                                    "!=",
+                                                    "<",
+                                                    "<=",
+                                                    "<>",
+                                                    "=",
+                                                    "==",
+                                                    ">",
+                                                    ">=",
+                                                    "equals",
+                                                    "not"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "value", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "all_of", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "all_of", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "test", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "subject", {
+                                                  "enum": [
+                                                    "block",
+                                                    "damager",
+                                                    "other",
+                                                    "parent",
+                                                    "player",
+                                                    "self",
+                                                    "target"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "operator", {
+                                                  "enum": [
+                                                    "!=",
+                                                    "<",
+                                                    "<=",
+                                                    "<>",
+                                                    "=",
+                                                    "==",
+                                                    ">",
+                                                    ">=",
+                                                    "equals",
+                                                    "not"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "value", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "none_of", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "none_of", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "test", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "subject", {
+                                                  "enum": [
+                                                    "block",
+                                                    "damager",
+                                                    "other",
+                                                    "parent",
+                                                    "player",
+                                                    "self",
+                                                    "target"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "enum", "operator", {
+                                                  "enum": [
+                                                    "!=",
+                                                    "<",
+                                                    "<=",
+                                                    "<>",
+                                                    "=",
+                                                    "==",
+                                                    ">",
+                                                    ">=",
+                                                    "equals",
+                                                    "not"
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "value", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:boostable", {
+                    "children": [
+                      [
+                        "array", "boost_items", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "int", "damage", {
+                                      "default": 1,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "item", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "replace_item", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "duration", {
+                          "default": 3.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "speed_multiplier", {
+                          "default": 1.35,
+                          "version": [
+                            {
+                              "min": "1.20.0",
+                              "max": "*",
+                              "min_exclusivity": false,
+                              "max_exclusivity": true
+                            }
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:boss", {
+                    "children": [
+                      [
+                        "int", "hud_range", {
+                          "default": 55,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "should_darken_sky", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:break_blocks", {
+                    "children": [
+                      [
+                        "array", "breakable_blocks", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "states", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "tags", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 1
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:breathable", {
+                    "children": [
+                      [
+                        "array", "breathe_blocks", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "states", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "tags", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 1
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "breathes_air", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "breathes_lava", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "breathes_solids", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "breathes_water", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "generates_bubbles", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "inhale_time", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "non_breathe_blocks", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "states", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "tags", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 1
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "suffocate_time", {
+                          "default": -20,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "total_supply", {
+                          "default": 15,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:breedable", {
+                    "children": [
+                      [
+                        "boolean", "allow_sitting", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "blend_attributes", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "blend_cooldown", {
+                          "default": 60,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "breeds_with", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "baby_type", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "breed_event", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "breed_event", {
+                                      "children": [
+                                        [
+                                          "string", "event", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "target", {
+                                            "enum": [
+                                              "self",
+                                              "other",
+                                              "player",
+                                              "target",
+                                              "parent",
+                                              "baby",
+                                              "block",
+                                              "damager",
+                                              "holder",
+                                              "item"
+                                            ],
+                                            "default": "self",
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "mate_type", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "causes_pregnancy", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "deny_parents_variant", {
+                          "children": [
+                            [
+                              "float", "chance", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max_variant", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "min_variant", {
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "environment_requirements", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "object", "blocks", {
+                                      "children": [
+                                        [
+                                          "string", "name", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "object", "states", {
+                                            "children": [
+                                              [
+                                                "string", "<any object property>", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "<any object property>", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "tags", {
+                                            "format": "molang",
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "blocks", {
+                                      "minLength": 1,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "count", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "radius", {
+                                      "minimum": 0,
+                                      "maximum": 16,
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "extra_baby_chance", {
+                          "minimum": 0.0,
+                          "maximum": 1.0,
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "inherit_tamed", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "love_filters", {
+                          "children": [
+                            [
+                              "object", "any_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "any_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "all_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "all_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "none_of", {
+                                "children": [
+                                  [
+                                    "string", "test", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "subject", {
+                                      "enum": [
+                                        "block",
+                                        "damager",
+                                        "other",
+                                        "parent",
+                                        "player",
+                                        "self",
+                                        "target"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "operator", {
+                                      "enum": [
+                                        "!=",
+                                        "<",
+                                        "<=",
+                                        "<>",
+                                        "=",
+                                        "==",
+                                        ">",
+                                        ">=",
+                                        "equals",
+                                        "not"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "value", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "none_of", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "test", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "subject", {
+                                            "enum": [
+                                              "block",
+                                              "damager",
+                                              "other",
+                                              "parent",
+                                              "player",
+                                              "self",
+                                              "target"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "operator", {
+                                            "enum": [
+                                              "!=",
+                                              "<",
+                                              "<=",
+                                              "<>",
+                                              "=",
+                                              "==",
+                                              ">",
+                                              ">=",
+                                              "equals",
+                                              "not"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "value", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "mutation_factor", {
+                          "children": [
+                            [
+                              "float", "color", {
+                                "minimum": 0.0,
+                                "maximum": 1.0,
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "extra_variant", {
+                                "minimum": 0.0,
+                                "maximum": 1.0,
+                                "default": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "variant", {
+                                "minimum": 0.0,
+                                "maximum": 1.0,
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "mutation_strategy", {
+                          "enum": [
+                            "random",
+                            "none"
+                          ],
+                          "default": "none",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "parent_centric_attribute_blending", {
+                          "children": [
+                            [
+                              "enum", "<any array element>", {
+                                "enum": [
+                                  "minecraft:health",
+                                  "minecraft:movement",
+                                  "minecraft:horse.jump_strength"
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "random_extra_variant_mutation_interval", {
+                          "children": [
+                            [
+                              "int", "<any array element>", {
+                                "minimum": 0,
+                                "default": 0,
+                                "minItems": 2,
+                                "maxItems": 2
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "random_variant_mutation_interval", {
+                          "children": [
+                            [
+                              "int", "<any array element>", {
+                                "minimum": 0,
+                                "default": 0,
+                                "minItems": 2,
+                                "maxItems": 2
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "require_full_health", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "require_tame", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "transform_to_item", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "transform_to_item", {
+                          "children": [
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:bribeable", {
+                    "children": [
+                      [
+                        "float", "bribe_cooldown", {
+                          "default": 2.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "bribe_items", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ],
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:buoyant", {
+                    "children": [
+                      [
+                        "boolean", "apply_gravity", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "base_buoyancy", {
+                          "default": 1.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "big_wave_probability", {
+                          "default": 0.03,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "big_wave_speed", {
+                          "default": 10.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "drag_down_on_buoyancy_removed", {
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "liquid_blocks", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ],
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "simulate_waves", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:burns_in_daylight", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:can_join_raid", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:spell_effects", {
+                    "children": [
+                      [
+                        "array", "add_effects", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "enum", "effect", {
+                                      "enum": [
+                                        "absorption",
+                                        "bad_omen",
+                                        "blindness",
+                                        "conduit_power",
+                                        "fatal_poison",
+                                        "fire_resistance",
+                                        "haste",
+                                        "health_boost",
+                                        "village_hero",
+                                        "hunger",
+                                        "instant_damage",
+                                        "instant_health",
+                                        "invisibility",
+                                        "jump_boost",
+                                        "levitation",
+                                        "nausea",
+                                        "night_vision",
+                                        "poison",
+                                        "regeneration",
+                                        "resistance",
+                                        "saturation",
+                                        "slow_falling",
+                                        "slowness",
+                                        "speed",
+                                        "strength",
+                                        "water_breathing",
+                                        "weakness",
+                                        "wither"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "duration", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "amplifier", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "ambient", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "visible", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "display_on_screen_animation", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "remove_effects", {
+                          "enum": [
+                            "absorption",
+                            "bad_omen",
+                            "blindness",
+                            "conduit_power",
+                            "fatal_poison",
+                            "fire_resistance",
+                            "haste",
+                            "health_boost",
+                            "village_hero",
+                            "hunger",
+                            "instant_damage",
+                            "instant_health",
+                            "invisibility",
+                            "jump_boost",
+                            "levitation",
+                            "nausea",
+                            "night_vision",
+                            "poison",
+                            "regeneration",
+                            "resistance",
+                            "saturation",
+                            "slow_falling",
+                            "slowness",
+                            "speed",
+                            "strength",
+                            "water_breathing",
+                            "weakness",
+                            "wither"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:strength", {
+                    "children": [
+                      [
+                        "int", "max", {
+                          "default": 5,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "value", {
+                          "default": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "^minecraft:behavior\\.python_custom:[a-zA-Z0-9_]*$", {
+                    "children": [
+                      [
+                        "int", "priority", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "module_path", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "class_name", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "arg_dict", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "control_flags", {
+                          "children": [
+                            [
+                              "enum", "<any array element>", {
+                                "enum": [
+                                  "move",
+                                  "look",
+                                  "jump"
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "events", {
+              "children": [
+                [
+                  "object", "minecraft:entity_born", {
+                    "children": [],
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "minecraft:entity_spawned", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "minecraft:entity_transformed", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "minecraft:on_prime", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "<any object property>", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

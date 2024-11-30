@@ -1,0 +1,103 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "const": "1.10.0",
+        "required": true
+      }
+    ],
+    [
+      "object", "animation_controllers", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "object", "states", {
+                    "children": [
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "array", "animations", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {}
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "format": "molang",
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "minProperties": 1,
+                                      "maxProperties": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "on_entry", {
+                                "children": [],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "on_exit", {
+                                "children": [],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "transitions", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "<any object property>", {
+                                            "format": "molang",
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "minProperties": 1,
+                                      "maxProperties": 1
+                                    }
+                                  ]
+                                ],
+                                "minProperties": 1,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "minProperties": 1,
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "initial_state", {
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 1,
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

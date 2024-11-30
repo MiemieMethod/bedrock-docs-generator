@@ -1,0 +1,34 @@
+{
+  "children": [
+    [
+      "boolean", "do_swing_animation", {
+        "required": false
+      }
+    ],
+    [
+      "float", "launch_power_scale", {
+        "required": false
+      }
+    ],
+    [
+      "float", "max_draw_duration", {
+        "required": false
+      }
+    ],
+    [
+      "float", "max_launch_power", {
+        "required": false
+      }
+    ],
+    [
+      "float", "min_draw_duration", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "scale_power_by_draw_duration", {
+        "required": false
+      }
+    ]
+  ]
+}

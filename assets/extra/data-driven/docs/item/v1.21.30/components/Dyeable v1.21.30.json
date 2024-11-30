@@ -1,0 +1,22 @@
+{
+  "children": [
+    [
+      "string", "default_color", {
+        "pattern": "^#[a-fA-F0-9]{6}$",
+        "required": false
+      }
+    ],
+    [
+      "array", "default_color", {
+        "children": [
+          [
+            "int", "<any array element>", {}
+          ]
+        ],
+        "minItems": 3,
+        "maxItems": 3,
+        "required": false
+      }
+    ]
+  ]
+}

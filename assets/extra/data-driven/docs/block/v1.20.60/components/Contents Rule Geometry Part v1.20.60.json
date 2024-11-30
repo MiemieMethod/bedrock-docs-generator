@@ -1,0 +1,28 @@
+{
+  "children": [
+    [
+      "string", "bone", {
+        "required": true
+      }
+    ],
+    [
+      "int", "cube", {
+        "minimum": 0.0,
+        "required": false
+      }
+    ],
+    [
+      "enum", "face", {
+        "enum": [
+          "down",
+          "up",
+          "north",
+          "south",
+          "west",
+          "east"
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

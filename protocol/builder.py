@@ -23,8 +23,8 @@ class ProtocolBuilder(MarkdownWriter):
         self.enums = enums
 
     def preRender(self):
-        version = 'r/21_u3'
-        protocolVersion = 729
+        version = 'r/21_u4'
+        protocolVersion = 748
         protocolName = MarkdownSymbol('samp', specialTypeReplace(self.protocol.name).replace('<', '&lt;').replace('>', '&gt;')).render()
         self.addHeading(protocolName, 1)
         self.addBlockquote('文档版本：{}<br/>协议版本：{}'.format(version, protocolVersion))

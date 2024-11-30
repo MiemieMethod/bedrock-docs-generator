@@ -1,0 +1,1185 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:item", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\-\\.]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "is_experimental", {
+                    "default": false,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "menu_category", {
+                    "children": [
+                      [
+                        "enum", "group", {
+                          "enum": [
+                            "itemGroup.name.anvil",
+                            "itemGroup.name.arrow",
+                            "itemGroup.name.axe",
+                            "itemGroup.name.banner",
+                            "itemGroup.name.banner_pattern",
+                            "itemGroup.name.bed",
+                            "itemGroup.name.boat",
+                            "itemGroup.name.boots",
+                            "itemGroup.name.buttons",
+                            "itemGroup.name.candles",
+                            "itemGroup.name.chalkboard",
+                            "itemGroup.name.chest",
+                            "itemGroup.name.chestboat",
+                            "itemGroup.name.chestplate",
+                            "itemGroup.name.concrete",
+                            "itemGroup.name.concretePowder",
+                            "itemGroup.name.cookedFood",
+                            "itemGroup.name.copper",
+                            "itemGroup.name.coral",
+                            "itemGroup.name.coral_decorations",
+                            "itemGroup.name.crop",
+                            "itemGroup.name.door",
+                            "itemGroup.name.dye",
+                            "itemGroup.name.enchantedBook",
+                            "itemGroup.name.fence",
+                            "itemGroup.name.fenceGate",
+                            "itemGroup.name.firework",
+                            "itemGroup.name.fireworkStars",
+                            "itemGroup.name.flower",
+                            "itemGroup.name.glass",
+                            "itemGroup.name.glassPane",
+                            "itemGroup.name.glazedTerracotta",
+                            "itemGroup.name.goatHorn",
+                            "itemGroup.name.grass",
+                            "itemGroup.name.hanging_sign",
+                            "itemGroup.name.helmet",
+                            "itemGroup.name.hoe",
+                            "itemGroup.name.horseArmor",
+                            "itemGroup.name.leaves",
+                            "itemGroup.name.leggings",
+                            "itemGroup.name.lingeringPotion",
+                            "itemGroup.name.log",
+                            "itemGroup.name.minecart",
+                            "itemGroup.name.miscFood",
+                            "itemGroup.name.mobEgg",
+                            "itemGroup.name.monsterStoneEgg",
+                            "itemGroup.name.mushroom",
+                            "itemGroup.name.netherWartBlock",
+                            "itemGroup.name.ore",
+                            "itemGroup.name.permission",
+                            "itemGroup.name.pickaxe",
+                            "itemGroup.name.planks",
+                            "itemGroup.name.potion",
+                            "itemGroup.name.potterySherds",
+                            "itemGroup.name.pressurePlate",
+                            "itemGroup.name.rail",
+                            "itemGroup.name.rawFood",
+                            "itemGroup.name.record",
+                            "itemGroup.name.sandstone",
+                            "itemGroup.name.sapling",
+                            "itemGroup.name.sculk",
+                            "itemGroup.name.seed",
+                            "itemGroup.name.shovel",
+                            "itemGroup.name.shulkerBox",
+                            "itemGroup.name.sign",
+                            "itemGroup.name.skull",
+                            "itemGroup.name.slab",
+                            "itemGroup.name.smithing_templates",
+                            "itemGroup.name.splashPotion",
+                            "itemGroup.name.stainedClay",
+                            "itemGroup.name.stairs",
+                            "itemGroup.name.stone",
+                            "itemGroup.name.stoneBrick",
+                            "itemGroup.name.sword",
+                            "itemGroup.name.trapdoor",
+                            "itemGroup.name.walls",
+                            "itemGroup.name.wood",
+                            "itemGroup.name.wool",
+                            "itemGroup.name.woolCarpet"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "category", {
+                          "enum": [
+                            "construction",
+                            "equipment",
+                            "items",
+                            "nature",
+                            "none"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "is_hidden_in_commands", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "boolean", "minecraft:allow_off_hand", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:allow_off_hand", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:block_placer", {
+                    "children": [
+                      [
+                        "string", "block", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "array", "use_on", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "tags", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "replace_block_item", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:bundle_interaction", {
+                    "children": [
+                      [
+                        "int", "num_viewable_slots", {
+                          "minimum": 1.0,
+                          "maximum": 64.0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:can_destroy_in_creative", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:can_destroy_in_creative", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": true,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:cooldown", {
+                    "children": [
+                      [
+                        "string", "category", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "duration", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:custom_components", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "minecraft:damage", {
+                    "minimum": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:damage", {
+                    "children": [
+                      [
+                        "float", "value", {
+                          "minimum": 1,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:damage_absorption", {
+                    "children": [
+                      [
+                        "array", "absorbable_causes", {
+                          "children": [
+                            [
+                              "enum", "<any array element>", {
+                                "enum": [
+                                  "all",
+                                  "anvil",
+                                  "block_explosion",
+                                  "campfire",
+                                  "charging",
+                                  "contact",
+                                  "drowning",
+                                  "entity_attack",
+                                  "entity_explosion",
+                                  "fall",
+                                  "falling_block",
+                                  "fire",
+                                  "fire_tick",
+                                  "fireworks",
+                                  "fly_into_wall",
+                                  "freezing",
+                                  "lava",
+                                  "lightning",
+                                  "magic",
+                                  "magma",
+                                  "none",
+                                  "override",
+                                  "piston",
+                                  "projectile",
+                                  "ram_attack",
+                                  "self_destruct",
+                                  "sonic_boom",
+                                  "soul_campfire",
+                                  "stalactite",
+                                  "stalagmite",
+                                  "starve",
+                                  "suffocation",
+                                  "temperature",
+                                  "thorns",
+                                  "void",
+                                  "wither"
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 1,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:digger", {
+                    "children": [
+                      [
+                        "boolean", "use_efficiency", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "destroy_speeds", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "float", "speed", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "block", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "block", {
+                                      "children": [
+                                        [
+                                          "string", "tags", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:display_name", {
+                    "children": [
+                      [
+                        "string", "value", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:durability", {
+                    "children": [
+                      [
+                        "object", "damage_chance", {
+                          "children": [
+                            [
+                              "int", "min", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "required": true
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "max_durability", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:durability_sensor", {
+                    "children": [
+                      [
+                        "int", "durability", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "particle_type", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "sound_event", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:dyeable", {
+                    "children": [
+                      [
+                        "string", "default_color", {
+                          "format": "colox-hex",
+                          "default": "#FFFFFF",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "default_color", {
+                          "children": [
+                            [
+                              "int", "0..0", {
+                                "minimum": 0,
+                                "maximum": 255,
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "int", "1..1", {
+                                "minimum": 0,
+                                "maximum": 255,
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "int", "2..2", {
+                                "minimum": 0,
+                                "maximum": 255,
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:enchantable", {
+                    "children": [
+                      [
+                        "enum", "slot", {
+                          "enum": [
+                            "axe",
+                            "bow",
+                            "armor_feet",
+                            "armor_torso",
+                            "armor_head",
+                            "armor_legs",
+                            "hoe",
+                            "pickaxe",
+                            "shovel",
+                            "elytra",
+                            "fishing_rod",
+                            "flintsteel",
+                            "sword",
+                            "shears",
+                            "cosmetic_head"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "value", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:entity_placer", {
+                    "children": [
+                      [
+                        "string", "entity", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "array", "dispense_on", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "use_on", {
+                          "children": [],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:food", {
+                    "children": [
+                      [
+                        "boolean", "can_always_eat", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "nutrition", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "saturation_modifier", {
+                          "default": 0.6,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "using_converts_to", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:fuel", {
+                    "children": [
+                      [
+                        "float", "duration", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:glint", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:glint", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:hand_equipped", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:hand_equipped", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:icon", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:icon", {
+                    "children": [
+                      [
+                        "object", "textures", {
+                          "children": [
+                            [
+                              "string", "default", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:liquid_clipped", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:liquid_clipped", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "minecraft:max_stack_size", {
+                    "minimum": 1,
+                    "maximum": 64,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:max_stack_size", {
+                    "children": [
+                      [
+                        "float", "value", {
+                          "minimum": 1,
+                          "maximum": 64,
+                          "default": 64,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:projectile", {
+                    "children": [
+                      [
+                        "float", "minimum_critical_power", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "projectile_entity", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "minecraft:rarity", {
+                    "enum": [
+                      "common",
+                      "uncommon",
+                      "rare",
+                      "epic"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:rarity", {
+                    "children": [
+                      [
+                        "enum", "value", {
+                          "enum": [
+                            "common",
+                            "uncommon",
+                            "rare",
+                            "epic"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:record", {
+                    "children": [
+                      [
+                        "float", "comparator_signal", {
+                          "minimum": 1,
+                          "maximum": 13,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "duration", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "sound_event", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:repairable", {
+                    "children": [
+                      [
+                        "array", "repair_items", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "array", "items", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {}
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "repair_amount", {
+                                      "minLength": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "repair_amount", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:shooter", {
+                    "children": [
+                      [
+                        "array", "ammunition", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "item", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "use_offhand", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "search_inventory", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "use_in_creative", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "charge_on_draw", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_draw_duration", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "scale_power_by_draw_duration", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:should_despawn", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:should_despawn", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": true,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:stacked_by_data", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:stacked_by_data", {
+                    "children": [
+                      [
+                        "boolean", "value", {
+                          "default": false,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:storage_item", {
+                    "children": [
+                      [
+                        "boolean", "allow_nested_storage_items", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "allowed_items", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "banned_items", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "max_slots", {
+                          "maximum": 64.0,
+                          "default": 64,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "max_weight_limit", {
+                          "maximum": 64.0,
+                          "default": 64,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "weight_in_storage_item", {
+                          "minimum": 0.0,
+                          "default": 4,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:tags", {
+                    "children": [
+                      [
+                        "array", "tags", {
+                          "children": [
+                            [
+                              "enum", "<any array element>", {
+                                "enum": [
+                                  "minecraft:arrow",
+                                  "minecraft:banner",
+                                  "minecraft:boat",
+                                  "minecraft:boats",
+                                  "minecraft:bookshelf_books",
+                                  "minecraft:chainmail_tier",
+                                  "minecraft:coals",
+                                  "minecraft:crimson_stems",
+                                  "minecraft:decorated_pot_sherds",
+                                  "minecraft:diamond_tier",
+                                  "minecraft:digger",
+                                  "minecraft:door",
+                                  "minecraft:golden_tier",
+                                  "minecraft:hanging_actor",
+                                  "minecraft:hanging_sign",
+                                  "minecraft:horse_armor",
+                                  "minecraft:iron_tier",
+                                  "minecraft:is_armor",
+                                  "minecraft:is_axe",
+                                  "minecraft:is_cooked",
+                                  "minecraft:is_fish",
+                                  "minecraft:is_food",
+                                  "minecraft:is_hoe",
+                                  "minecraft:is_meat",
+                                  "minecraft:is_minecart",
+                                  "minecraft:is_pickaxe",
+                                  "minecraft:is_shovel",
+                                  "minecraft:is_sword",
+                                  "minecraft:is_tool",
+                                  "minecraft:is_trident",
+                                  "minecraft:leather_tier",
+                                  "minecraft:lectern_books",
+                                  "minecraft:logs",
+                                  "minecraft:logs_that_burn",
+                                  "minecraft:mangrove_logs",
+                                  "minecraft:music_disc",
+                                  "minecraft:netherite_tier",
+                                  "minecraft:planks",
+                                  "minecraft:sand",
+                                  "minecraft:sign",
+                                  "minecraft:soul_fire_base_blocks",
+                                  "minecraft:spawn_egg",
+                                  "minecraft:stone_bricks",
+                                  "minecraft:stone_crafting_materials",
+                                  "minecraft:stone_tier",
+                                  "minecraft:stone_tool_materials",
+                                  "minecraft:transform_materials",
+                                  "minecraft:transform_templates",
+                                  "minecraft:transformable_items",
+                                  "minecraft:trim_templates",
+                                  "minecraft:trimmable_armors",
+                                  "minecraft:vibration_damper",
+                                  "minecraft:warped_stems",
+                                  "minecraft:wooden_slabs",
+                                  "minecraft:wooden_tier",
+                                  "minecraft:wool"
+                                ]
+                              }
+                            ],
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:throwable", {
+                    "children": [
+                      [
+                        "boolean", "do_swing_animation", {
+                          "default": false,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "launch_power_scale", {
+                          "default": 1.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_draw_duration", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "min_draw_duration", {
+                          "default": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "max_launch_power", {
+                          "default": 1.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "scale_power_by_draw_duration", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "minecraft:use_animation", {
+                    "enum": [
+                      "bow",
+                      "brush",
+                      "camera",
+                      "crossbow",
+                      "drink",
+                      "eat",
+                      "none",
+                      "spear",
+                      "spyglass"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:use_animation", {
+                    "children": [
+                      [
+                        "enum", "value", {
+                          "enum": [
+                            "bow",
+                            "brush",
+                            "camera",
+                            "crossbow",
+                            "drink",
+                            "eat",
+                            "none",
+                            "spear",
+                            "spyglass"
+                          ],
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:use_modifiers", {
+                    "children": [
+                      [
+                        "float", "movement_modifier", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "use_duration", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:wearable", {
+                    "children": [
+                      [
+                        "int", "protection", {
+                          "minimum": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "dispensable", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "slot", {
+                          "enum": [
+                            "none",
+                            "slot.weapon.mainhand",
+                            "slot.weapon.offhand",
+                            "slot.armor.head",
+                            "slot.armor.chest",
+                            "slot.armor.legs",
+                            "slot.armor.feet",
+                            "slot.hotbar",
+                            "slot.inventory",
+                            "slot.enderchest",
+                            "slot.saddle",
+                            "slot.armor",
+                            "slot.chest",
+                            "slot.equippable"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

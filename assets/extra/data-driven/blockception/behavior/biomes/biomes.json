@@ -1,0 +1,575 @@
+{
+  "children": [
+    [
+      "object", "<any object property>", {
+        "children": [
+          [
+            "string", "format_version", {
+              "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+              "default": "1.20.81",
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:capped_surface", {
+              "children": [
+                [
+                  "array", "ceiling_materials", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": true
+                  }
+                ],
+                [
+                  "array", "floor_materials", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "sea_material", {
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "foundation_material", {
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "beach_material", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:climate", {
+              "children": [
+                [
+                  "float", "temperature", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "downfall", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "red_spores", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "blue_spores", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "ash", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "white_ash", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "snow_accumulation", {
+                    "children": [
+                      [
+                        "float", "0..0", {}
+                      ],
+                      [
+                        "float", "1..1", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 7,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:consolidated_features", {
+              "children": [],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:frozen_ocean_surface", {
+              "children": [
+                [
+                  "int", "sea_floor_depth", {
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 6,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:legacy_world_generation_rules", {
+              "children": [],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:mesa_surface", {
+              "children": [
+                [
+                  "int", "sea_floor_depth", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "clay_material", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "hard_clay_material", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "bryce_pillars", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "has_forest", {
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 10,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:mountain_parameters", {
+              "children": [
+                [
+                  "float", "peaks_factor", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "steep_material_adjustment", {
+                    "children": [
+                      [
+                        "string", "material", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "north_slopes", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "south_slopes", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "west_slopes", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "east_slopes", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "top_slide", {
+                    "children": [],
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 3,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:nether_generation_rules", {
+              "children": [
+                [
+                  "float", "target_temperature", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "target_humidity", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "target_altitude", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "target_weirdness", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "weight", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:nether_surface", {
+              "children": [],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:overworld_generation_rules", {
+              "children": [
+                [
+                  "string", "hills_transformation", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "hills_transformation", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "array", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "0..0", {}
+                            ],
+                            [
+                              "int", "1..1", {}
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "mutate_transformation", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "mutate_transformation", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "array", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "0..0", {}
+                            ],
+                            [
+                              "int", "1..1", {}
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "river_transformation", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "river_transformation", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "array", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "0..0", {}
+                            ],
+                            [
+                              "int", "1..1", {}
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "shore_transformation", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "shore_transformation", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "array", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "0..0", {}
+                            ],
+                            [
+                              "int", "1..1", {}
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "minItems": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "generate_for_climates", {
+                    "children": [
+                      [
+                        "array", "<any array element>", {
+                          "children": [
+                            [
+                              "enum", "0..0", {
+                                "enum": [
+                                  "medium",
+                                  "warm",
+                                  "lukewarm",
+                                  "cold",
+                                  "frozen"
+                                ]
+                              }
+                            ],
+                            [
+                              "int", "1..1", {}
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:overworld_height", {
+              "children": [
+                [
+                  "array", "noise_params", {
+                    "children": [
+                      [
+                        "float", "0..0", {}
+                      ],
+                      [
+                        "float", "1..1", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "noise_type", {
+                    "enum": [
+                      "stone_beach",
+                      "deep_ocean",
+                      "default",
+                      "default_mutated",
+                      "lowlands",
+                      "river",
+                      "ocean",
+                      "taiga",
+                      "mountains",
+                      "highlands",
+                      "mushroom",
+                      "less_extreme",
+                      "extreme",
+                      "beach",
+                      "swamp"
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 2,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:surface_material_adjustments", {
+              "children": [
+                [
+                  "array", "adjustments", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "array", "height_range", {
+                                "children": [
+                                  [
+                                    "string", "0..0", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "0..0", {}
+                                  ],
+                                  [
+                                    "string", "1..1", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {}
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "materials", {
+                                "children": [
+                                  [
+                                    "string", "top_material", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "mid_material", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "sea_floor_material", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "foundation_material", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "sea_material", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "noise_range", {
+                                "children": [],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:surface_parameters", {
+              "children": [
+                [
+                  "int", "sea_floor_depth", {
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 6,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:swamp_surface", {
+              "children": [
+                [
+                  "int", "sea_floor_depth", {
+                    "required": false
+                  }
+                ]
+              ],
+              "minProperties": 0,
+              "maxProperties": 6,
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:the_end_surface", {
+              "children": [],
+              "required": false
+            }
+          ],
+          [
+            "object", "<any object property>", {
+              "children": [],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "children": [
+    [
+      "array", "ammunition", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "item", {
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "item", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "boolean", "search_inventory", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "use_in_creative", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "use_offhand", {
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "boolean", "charge_on_draw", {
+        "required": false
+      }
+    ],
+    [
+      "float", "max_draw_duration", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "scale_power_by_draw_duration", {
+        "required": false
+      }
+    ]
+  ]
+}

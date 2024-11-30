@@ -1,0 +1,275 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": false
+      }
+    ],
+    [
+      "object", "directional_lights", {
+        "children": [
+          [
+            "object", "sun", {
+              "children": [
+                [
+                  "float", "illuminance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "color", {
+                    "format": "color-hex",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "color", {
+                    "children": [
+                      [
+                        "int", "0..0", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ],
+                      [
+                        "int", "1..1", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ],
+                      [
+                        "int", "2..2", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "moon", {
+              "children": [
+                [
+                  "float", "illuminance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "color", {
+                    "format": "color-hex",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "color", {
+                    "children": [
+                      [
+                        "int", "0..0", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ],
+                      [
+                        "int", "1..1", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ],
+                      [
+                        "int", "2..2", {
+                          "minimum": 0,
+                          "maximum": 255
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "float", "orbital_offset_degrees", {
+              "required": false
+            }
+          ],
+          [
+            "object", "point_lights", {
+              "children": [
+                [
+                  "object", "colors", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "int", "0..0", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "1..1", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "2..2", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "pbr", {
+              "children": [
+                [
+                  "object", "blocks", {
+                    "children": [
+                      [
+                        "string", "color", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "color", {
+                          "children": [
+                            [
+                              "int", "0..0", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "1..1", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "2..2", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "actors", {
+                    "children": [
+                      [
+                        "string", "color", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "color", {
+                          "children": [
+                            [
+                              "int", "0..0", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "1..1", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "2..2", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "particles", {
+                    "children": [
+                      [
+                        "string", "color", {
+                          "format": "color-hex",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "color", {
+                          "children": [
+                            [
+                              "int", "0..0", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "1..1", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ],
+                            [
+                              "int", "2..2", {
+                                "minimum": 0,
+                                "maximum": 255
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

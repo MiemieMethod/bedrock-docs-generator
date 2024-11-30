@@ -1,0 +1,297 @@
+{
+  "children": [
+    [
+      "array", "conditions", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "object", "biome_filter", {
+                    "children": [
+                      [
+                        "boolean", "domain", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "domain", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "domain", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "domain", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "operator", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "operator", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "operator", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "operator", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "subject", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "subject", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "subject", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "subject", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "test", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "boolean", "value", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "value", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "value", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "biome_filter", {
+                    "children": [
+                      [
+                        "recursive", "<any array element>", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "biome_filter", {
+                    "children": [
+                      [
+                        "recursive", "AND", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "NOT", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "OR", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "all", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "all_of", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "any", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "any_of", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "recursive", "none_of", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "herds", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "event_skip_count", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "initial_event", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "initial_event_count", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "max", {
+                                "minimum": 0.0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "min", {
+                                "minimum": 0.0,
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "mob_event_filter", {
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "permute_types", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "entity_type", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "min_guaranteed", {
+                                "minimum": 0.0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "weight", {
+                                "minimum": 0.0,
+                                "required": true
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "rarity", {
+                    "minimum": 0.0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "weight", {
+                    "minimum": 0.0,
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "placement", {
+        "children": [
+          [
+            "string", "heightmap", {
+              "required": false
+            }
+          ],
+          [
+            "string", "spawn_obstruction_predicate", {
+              "required": false
+            }
+          ],
+          [
+            "string", "spawn_predicate", {
+              "required": false
+            }
+          ],
+          [
+            "string", "type", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

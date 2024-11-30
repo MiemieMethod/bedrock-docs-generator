@@ -1,0 +1,73 @@
+{
+  "children": [
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "array", "rules", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "enum", "direction", {
+                    "enum": [
+                      "down",
+                      "up",
+                      "north",
+                      "south",
+                      "west",
+                      "east"
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "geometry_part", {
+                    "children": [
+                      [
+                        "string", "bone", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "cube", {
+                          "minimum": 0.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "face", {
+                          "enum": [
+                            "down",
+                            "up",
+                            "north",
+                            "south",
+                            "west",
+                            "east"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

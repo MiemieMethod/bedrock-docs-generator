@@ -1,0 +1,29 @@
+{
+  "children": [
+    [
+      "string", "icon", {
+        "pattern": "^(?:.)+:(?:.)+$",
+        "required": false
+      }
+    ],
+    [
+      "object", "icon", {
+        "children": [
+          [
+            "string", "name", {
+              "pattern": "^(?:.)+:(?:.)+$",
+              "required": true
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "string", "name", {
+        "pattern": "^(?:.)+:(?:.)+$",
+        "required": true
+      }
+    ]
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:feature_rules", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "places_feature", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "conditions", {
+              "children": [
+                [
+                  "enum", "placement_pass", {
+                    "enum": [
+                      "pregeneration_pass",
+                      "first_pass",
+                      "before_underground_pass",
+                      "underground_pass",
+                      "after_underground_pass",
+                      "before_surface_pass",
+                      "surface_pass",
+                      "after_surface_pass",
+                      "before_sky_pass",
+                      "sky_pass",
+                      "after_sky_pass",
+                      "final_pass"
+                    ],
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "distribution", {
+              "children": [
+                [
+                  "enum", "coordinate_eval_order", {
+                    "enum": [
+                      "xyz",
+                      "xzy",
+                      "yxz",
+                      "yzx",
+                      "zxy",
+                      "zyx"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "iterations", {
+                    "minLength": 0,
+                    "required": true
+                  }
+                ],
+                [
+                  "float", "iterations", {
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "scatter_chance", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "scatter_chance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "scatter_chance", {
+                    "children": [
+                      [
+                        "float", "numerator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "denominator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "x", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "x", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "x", {
+                    "children": [
+                      [
+                        "float", "numerator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "denominator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "x", {
+                    "children": [
+                      [
+                        "enum", "distribution", {
+                          "enum": [
+                            "uniform",
+                            "fixed_grid",
+                            "jittered_grid",
+                            "gaussian",
+                            "inverse_gaussian",
+                            "triangle"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "extent", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "z", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "z", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "z", {
+                    "children": [
+                      [
+                        "float", "numerator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "denominator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "z", {
+                    "children": [
+                      [
+                        "enum", "distribution", {
+                          "enum": [
+                            "uniform",
+                            "fixed_grid",
+                            "jittered_grid",
+                            "gaussian",
+                            "inverse_gaussian",
+                            "triangle"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "extent", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "y", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "y", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "y", {
+                    "children": [
+                      [
+                        "float", "numerator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "denominator", {
+                          "minimum": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "y", {
+                    "children": [
+                      [
+                        "enum", "distribution", {
+                          "enum": [
+                            "uniform",
+                            "fixed_grid",
+                            "jittered_grid",
+                            "gaussian",
+                            "inverse_gaussian",
+                            "triangle"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "extent", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {}
+                            ]
+                          ],
+                          "minItems": 2,
+                          "maxItems": 2,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

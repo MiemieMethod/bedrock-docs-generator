@@ -1,0 +1,15 @@
+{
+  "children": [
+    [
+      "string", "slot", {
+        "required": true
+      }
+    ],
+    [
+      "int", "value", {
+        "minimum": 0.0,
+        "required": true
+      }
+    ]
+  ]
+}

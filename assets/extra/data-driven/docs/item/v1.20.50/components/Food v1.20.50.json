@@ -1,0 +1,37 @@
+{
+  "children": [
+    [
+      "boolean", "can_always_eat", {
+        "required": false
+      }
+    ],
+    [
+      "int", "nutrition", {
+        "required": false
+      }
+    ],
+    [
+      "float", "saturation_modifier", {
+        "minimum": 0.0,
+        "required": false
+      }
+    ],
+    [
+      "string", "using_converts_to", {
+        "required": false
+      }
+    ],
+    [
+      "object", "using_converts_to", {
+        "children": [
+          [
+            "string", "<any object property>", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

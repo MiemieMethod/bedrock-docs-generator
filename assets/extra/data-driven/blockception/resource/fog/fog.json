@@ -1,0 +1,1016 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:fog_settings", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "distance", {
+              "children": [
+                [
+                  "object", "air", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "weather", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "water", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "lava", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "lava_resistance", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "powder_snow", {
+                    "children": [
+                      [
+                        "float", "fog_start", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "float", "fog_end", {
+                          "minimum": 0,
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "fog_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "render_distance_type", {
+                          "enum": [
+                            "fixed",
+                            "render"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "transition_fog", {
+                          "children": [
+                            [
+                              "object", "init_fog", {
+                                "children": [
+                                  [
+                                    "string", "fog_color", {
+                                      "format": "color-hex",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_start", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "fog_end", {
+                                      "minimum": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "render_distance_type", {
+                                      "enum": [
+                                        "fixed",
+                                        "render"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "min_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "mid_percent", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "max_seconds", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "volumetric", {
+              "children": [
+                [
+                  "object", "density", {
+                    "children": [
+                      [
+                        "object", "air", {
+                          "children": [
+                            [
+                              "float", "max_density", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "max_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "zero_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "uniform", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "water", {
+                          "children": [
+                            [
+                              "float", "max_density", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "max_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "zero_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "uniform", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "lava", {
+                          "children": [
+                            [
+                              "float", "max_density", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "max_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "zero_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "uniform", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "lava_resistance", {
+                          "children": [
+                            [
+                              "float", "max_density", {
+                                "minimum": 0,
+                                "maximum": 1,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "max_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "zero_density_height", {
+                                "minimum": 0,
+                                "maximum": 128,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "uniform", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "media_coefficients", {
+                    "children": [
+                      [
+                        "object", "air", {
+                          "children": [
+                            [
+                              "array", "absorption", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "absorption", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "scattering", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "scattering", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "water", {
+                          "children": [
+                            [
+                              "array", "absorption", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "absorption", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "scattering", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "scattering", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "cloud", {
+                          "children": [
+                            [
+                              "array", "absorption", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "absorption", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "scattering", {
+                                "children": [
+                                  [
+                                    "float", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 1
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "scattering", {
+                                "pattern": "^\\#[0-9a-fA-F]{6}$",
+                                "format": "color-hex",
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

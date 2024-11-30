@@ -1,0 +1,17 @@
+{
+  "children": [
+    [
+      "float", "movement_modifier", {
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "required": false
+      }
+    ],
+    [
+      "float", "use_duration", {
+        "minimum": 0.0,
+        "required": false
+      }
+    ]
+  ]
+}

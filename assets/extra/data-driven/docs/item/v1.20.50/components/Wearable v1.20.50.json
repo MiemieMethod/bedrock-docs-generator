@@ -1,0 +1,22 @@
+{
+  "children": [
+    [
+      "int", "protection", {
+        "minimum": 0.0,
+        "required": false
+      }
+    ],
+    [
+      "enum", "slot", {
+        "enum": [
+          "slot.weapon.offhand",
+          "slot.armor.head",
+          "slot.armor.chest",
+          "slot.armor.legs",
+          "slot.armor.feet"
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

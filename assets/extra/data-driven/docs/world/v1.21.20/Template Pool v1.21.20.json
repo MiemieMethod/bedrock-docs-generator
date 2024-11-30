@@ -1,0 +1,75 @@
+{
+  "children": [
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "array", "elements", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "object", "element", {
+                    "children": [
+                      [
+                        "enum", "element_type", {
+                          "enum": [
+                            "minecraft:single_pool_element"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "location", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "processors", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "enum", "projection", {
+                    "enum": [
+                      "rigid",
+                      "terrain_matching"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "weight", {
+                    "minimum": 1.0,
+                    "maximum": 200.0,
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "string", "fallback", {
+        "required": false
+      }
+    ]
+  ]
+}

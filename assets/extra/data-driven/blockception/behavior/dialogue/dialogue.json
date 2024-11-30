@@ -1,0 +1,224 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:npc_dialogue", {
+        "children": [
+          [
+            "array", "scenes", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "array", "buttons", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "name", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "name", {
+                                      "children": [
+                                        [
+                                          "array", "rawtext", {
+                                            "children": [
+                                              [
+                                                "string", "<any array element>", {}
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "translate", {
+                                                        "required": true
+                                                      }
+                                                    ],
+                                                    [
+                                                      "array", "with", {
+                                                        "children": [
+                                                          [
+                                                            "string", "<any array element>", {}
+                                                          ],
+                                                          [
+                                                            "object", "<any array element>", {
+                                                              "children": [
+                                                                [
+                                                                  "recursive", "rawtext", {
+                                                                    "required": false
+                                                                  }
+                                                                ]
+                                                              ]
+                                                            }
+                                                          ]
+                                                        ],
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "text", {
+                                                        "required": true
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "string", "selector", {
+                                                        "pattern": "^@.*$",
+                                                        "required": true
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ],
+                                              [
+                                                "object", "<any array element>", {
+                                                  "children": [
+                                                    [
+                                                      "object", "score", {
+                                                        "children": [
+                                                          [
+                                                            "string", "name", {
+                                                              "required": true
+                                                            }
+                                                          ],
+                                                          [
+                                                            "string", "objective", {
+                                                              "required": true
+                                                            }
+                                                          ]
+                                                        ],
+                                                        "required": true
+                                                      }
+                                                    ]
+                                                  ]
+                                                }
+                                              ]
+                                            ],
+                                            "default": [],
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "commands", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "pattern": "^/[a-z].*$"
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "maxItems": 6,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "npc_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "npc_name", {
+                          "children": [
+                            [
+                              "recursive", "rawtext", {
+                                "default": [],
+                                "required": true
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "on_close_commands", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "pattern": "^/[a-z].*$"
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "on_open_commands", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "pattern": "^/[a-z].*$"
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "scene_tag", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "string", "text", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "text", {
+                          "children": [
+                            [
+                              "recursive", "rawtext", {
+                                "default": [],
+                                "required": true
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "minItems": 1,
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

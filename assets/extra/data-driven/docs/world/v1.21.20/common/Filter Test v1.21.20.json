@@ -1,0 +1,89 @@
+{
+  "children": [
+    [
+      "boolean", "domain", {
+        "required": false
+      }
+    ],
+    [
+      "int", "domain", {
+        "required": false
+      }
+    ],
+    [
+      "float", "domain", {
+        "required": false
+      }
+    ],
+    [
+      "string", "domain", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "operator", {
+        "required": false
+      }
+    ],
+    [
+      "int", "operator", {
+        "required": false
+      }
+    ],
+    [
+      "float", "operator", {
+        "required": false
+      }
+    ],
+    [
+      "string", "operator", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "subject", {
+        "required": false
+      }
+    ],
+    [
+      "int", "subject", {
+        "required": false
+      }
+    ],
+    [
+      "float", "subject", {
+        "required": false
+      }
+    ],
+    [
+      "string", "subject", {
+        "required": false
+      }
+    ],
+    [
+      "string", "test", {
+        "required": true
+      }
+    ],
+    [
+      "boolean", "value", {
+        "required": false
+      }
+    ],
+    [
+      "int", "value", {
+        "required": false
+      }
+    ],
+    [
+      "float", "value", {
+        "required": false
+      }
+    ],
+    [
+      "string", "value", {
+        "required": false
+      }
+    ]
+  ]
+}

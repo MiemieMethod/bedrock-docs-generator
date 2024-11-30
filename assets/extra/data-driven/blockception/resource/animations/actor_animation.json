@@ -1,0 +1,763 @@
+{
+  "children": [
+    [
+      "enum", "format_version", {
+        "enum": [
+          "1.8.0",
+          "1.10.0"
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "animations", {
+        "children": [
+          [
+            "object", "<any object property>", {
+              "children": [
+                [
+                  "string", "anim_time_update", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "anim_time_update", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "animation_length", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "blend_weight", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "blend_weight", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "bones", {
+                    "children": [
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "array", "position", {
+                                "children": [
+                                  [
+                                    "string", "0..0", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "0..0", {}
+                                  ],
+                                  [
+                                    "string", "1..1", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {}
+                                  ],
+                                  [
+                                    "string", "2..2", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {}
+                                  ]
+                                ],
+                                "minItems": 3,
+                                "maxItems": 3,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "position", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "minLength": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "string", "0..0", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "0..0", {}
+                                        ],
+                                        [
+                                          "string", "1..1", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {}
+                                        ],
+                                        [
+                                          "string", "2..2", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {}
+                                        ]
+                                      ],
+                                      "minItems": 3,
+                                      "maxItems": 3,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "enum", "lerp_mode", {
+                                            "enum": [
+                                              "linear",
+                                              "catmullrom"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "pre", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "post", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "rotation", {
+                                "children": [
+                                  [
+                                    "string", "0..0", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "0..0", {}
+                                  ],
+                                  [
+                                    "string", "1..1", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {}
+                                  ],
+                                  [
+                                    "string", "2..2", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {}
+                                  ]
+                                ],
+                                "minItems": 3,
+                                "maxItems": 3,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "rotation", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "minLength": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "string", "0..0", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "0..0", {}
+                                        ],
+                                        [
+                                          "string", "1..1", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {}
+                                        ],
+                                        [
+                                          "string", "2..2", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {}
+                                        ]
+                                      ],
+                                      "minItems": 3,
+                                      "maxItems": 3,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "enum", "lerp_mode", {
+                                            "enum": [
+                                              "linear",
+                                              "catmullrom"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "pre", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "post", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "relative_to", {
+                                "children": [
+                                  [
+                                    "string", "rotation", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "scale", {
+                                "minLength": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "scale", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "scale", {
+                                "children": [
+                                  [
+                                    "string", "0..0", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "0..0", {}
+                                  ],
+                                  [
+                                    "string", "1..1", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "1..1", {}
+                                  ],
+                                  [
+                                    "string", "2..2", {
+                                      "minLength": 0
+                                    }
+                                  ],
+                                  [
+                                    "float", "2..2", {}
+                                  ]
+                                ],
+                                "minItems": 3,
+                                "maxItems": 3,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "scale", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "minLength": 0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "string", "0..0", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "0..0", {}
+                                        ],
+                                        [
+                                          "string", "1..1", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {}
+                                        ],
+                                        [
+                                          "string", "2..2", {
+                                            "minLength": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {}
+                                        ]
+                                      ],
+                                      "minItems": 3,
+                                      "maxItems": 3,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "enum", "lerp_mode", {
+                                            "enum": [
+                                              "linear",
+                                              "catmullrom"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "pre", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "array", "post", {
+                                            "children": [
+                                              [
+                                                "string", "0..0", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "0..0", {}
+                                              ],
+                                              [
+                                                "string", "1..1", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "1..1", {}
+                                              ],
+                                              [
+                                                "string", "2..2", {
+                                                  "minLength": 0
+                                                }
+                                              ],
+                                              [
+                                                "float", "2..2", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "minProperties": 1,
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "loop", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "loop", {
+                    "enum": [
+                      "hold_on_last_frame"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "loop_delay", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "loop_delay", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "override_previous_animation", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "particle_effects", {
+                    "children": [
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "string", "effect", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "string", "locator", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "pre_effect_script", {
+                                "format": "molang",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "bind_to_actor", {
+                                "const": false,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "effect", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "string", "locator", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "pre_effect_script", {
+                                      "format": "molang",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "bind_to_actor", {
+                                      "const": false,
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "start_delay", {
+                    "minLength": 0,
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "start_delay", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "sound_effects", {
+                    "children": [
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "string", "effect", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "effect", {
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "timeline", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "pattern": "^(v|variable)\\..*=.*;$",
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "pattern": "^(v|variable)\\..*=.*;$"
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

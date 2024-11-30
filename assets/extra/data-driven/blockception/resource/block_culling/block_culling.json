@@ -1,0 +1,89 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": false
+      }
+    ],
+    [
+      "object", "minecraft:block_culling_rules", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "rules", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "object", "geometry_part", {
+                          "children": [
+                            [
+                              "string", "bone", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "cube", {
+                                "minimum": 0,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "face", {
+                                "enum": [
+                                  "up",
+                                  "down",
+                                  "north",
+                                  "south",
+                                  "east",
+                                  "west"
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "enum", "direction", {
+                          "enum": [
+                            "up",
+                            "down",
+                            "north",
+                            "south",
+                            "east",
+                            "west"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "minItems": 1,
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

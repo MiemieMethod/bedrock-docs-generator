@@ -1,0 +1,75 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:client_biome", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "object", "minecraft:fog_appearance", {
+                    "children": [
+                      [
+                        "string", "fog_identifier", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:sky_color", {
+                    "children": [
+                      [
+                        "string", "sky_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:water_appearance", {
+                    "children": [
+                      [
+                        "string", "surface_color", {
+                          "format": "color-hex",
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

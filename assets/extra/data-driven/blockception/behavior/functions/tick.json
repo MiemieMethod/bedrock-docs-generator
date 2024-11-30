@@ -1,0 +1,16 @@
+{
+  "children": [
+    [
+      "array", "values", {
+        "children": [
+          [
+            "string", "<any array element>", {
+              "pattern": "[a-zA-Z_\\-\\/ ]+"
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

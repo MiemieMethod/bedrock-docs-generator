@@ -1,0 +1,85 @@
+{
+  "children": [
+    [
+      "array", "repair_items", {
+        "children": [
+          [
+            "array", "<any array element>", {
+              "children": [
+                [
+                  "string", "<any array element>", {}
+                ],
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "array", "items", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "<any object property>", {
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "repair_amount", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "repair_amount", {
+                    "children": [
+                      [
+                        "string", "expression", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "version", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "repair_amount", {
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

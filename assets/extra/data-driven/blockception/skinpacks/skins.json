@@ -1,0 +1,47 @@
+{
+  "children": [
+    [
+      "string", "serialize_name", {
+        "required": true
+      }
+    ],
+    [
+      "string", "localization_name", {
+        "required": true
+      }
+    ],
+    [
+      "array", "skins", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "string", "localization_name", {
+                    "required": true
+                  }
+                ],
+                [
+                  "string", "geometry", {
+                    "pattern": "^[Gg]eometry\\..+$",
+                    "required": true
+                  }
+                ],
+                [
+                  "enum", "type", {
+                    "enum": [
+                      "free",
+                      "paid"
+                    ],
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "children": [
+    [
+      "object", "horizon_blend_stops", {
+        "children": [
+          [
+            "float", "min", {
+              "required": false
+            }
+          ],
+          [
+            "float", "start", {
+              "required": false
+            }
+          ],
+          [
+            "float", "mie_start", {
+              "required": false
+            }
+          ],
+          [
+            "float", "max", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "float", "rayleigh_strength", {
+        "required": false
+      }
+    ],
+    [
+      "float", "sun_mie_strength", {
+        "required": false
+      }
+    ],
+    [
+      "float", "moon_mie_strength", {
+        "required": false
+      }
+    ],
+    [
+      "float", "sun_glare_shape", {
+        "required": false
+      }
+    ],
+    [
+      "string", "sky_zenith_color", {
+        "format": "color-hex",
+        "required": false
+      }
+    ],
+    [
+      "array", "sky_zenith_color", {
+        "children": [
+          [
+            "int", "0..0", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ],
+          [
+            "int", "1..1", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ],
+          [
+            "int", "2..2", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "string", "sky_horizon_color", {
+        "format": "color-hex",
+        "required": false
+      }
+    ],
+    [
+      "array", "sky_horizon_color", {
+        "children": [
+          [
+            "int", "0..0", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ],
+          [
+            "int", "1..1", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ],
+          [
+            "int", "2..2", {
+              "minimum": 0,
+              "maximum": 255
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

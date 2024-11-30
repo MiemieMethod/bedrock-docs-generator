@@ -1,0 +1,1671 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$",
+        "default": "1.20.81",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:block", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "menu_category", {
+                    "children": [
+                      [
+                        "enum", "category", {
+                          "enum": [
+                            "construction",
+                            "equipment",
+                            "items",
+                            "nature",
+                            "none"
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "group", {
+                          "enum": [
+                            "itemGroup.name.anvil",
+                            "itemGroup.name.arrow",
+                            "itemGroup.name.axe",
+                            "itemGroup.name.banner",
+                            "itemGroup.name.banner_pattern",
+                            "itemGroup.name.bed",
+                            "itemGroup.name.boat",
+                            "itemGroup.name.boots",
+                            "itemGroup.name.buttons",
+                            "itemGroup.name.candles",
+                            "itemGroup.name.chalkboard",
+                            "itemGroup.name.chest",
+                            "itemGroup.name.chestboat",
+                            "itemGroup.name.chestplate",
+                            "itemGroup.name.concrete",
+                            "itemGroup.name.concretePowder",
+                            "itemGroup.name.cookedFood",
+                            "itemGroup.name.copper",
+                            "itemGroup.name.coral",
+                            "itemGroup.name.coral_decorations",
+                            "itemGroup.name.crop",
+                            "itemGroup.name.door",
+                            "itemGroup.name.dye",
+                            "itemGroup.name.enchantedBook",
+                            "itemGroup.name.fence",
+                            "itemGroup.name.fenceGate",
+                            "itemGroup.name.firework",
+                            "itemGroup.name.fireworkStars",
+                            "itemGroup.name.flower",
+                            "itemGroup.name.glass",
+                            "itemGroup.name.glassPane",
+                            "itemGroup.name.glazedTerracotta",
+                            "itemGroup.name.goatHorn",
+                            "itemGroup.name.grass",
+                            "itemGroup.name.hanging_sign",
+                            "itemGroup.name.helmet",
+                            "itemGroup.name.hoe",
+                            "itemGroup.name.horseArmor",
+                            "itemGroup.name.leaves",
+                            "itemGroup.name.leggings",
+                            "itemGroup.name.lingeringPotion",
+                            "itemGroup.name.log",
+                            "itemGroup.name.minecart",
+                            "itemGroup.name.miscFood",
+                            "itemGroup.name.mobEgg",
+                            "itemGroup.name.monsterStoneEgg",
+                            "itemGroup.name.mushroom",
+                            "itemGroup.name.netherWartBlock",
+                            "itemGroup.name.ore",
+                            "itemGroup.name.permission",
+                            "itemGroup.name.pickaxe",
+                            "itemGroup.name.planks",
+                            "itemGroup.name.potion",
+                            "itemGroup.name.potterySherds",
+                            "itemGroup.name.pressurePlate",
+                            "itemGroup.name.rail",
+                            "itemGroup.name.rawFood",
+                            "itemGroup.name.record",
+                            "itemGroup.name.sandstone",
+                            "itemGroup.name.sapling",
+                            "itemGroup.name.sculk",
+                            "itemGroup.name.seed",
+                            "itemGroup.name.shovel",
+                            "itemGroup.name.shulkerBox",
+                            "itemGroup.name.sign",
+                            "itemGroup.name.skull",
+                            "itemGroup.name.slab",
+                            "itemGroup.name.smithing_templates",
+                            "itemGroup.name.splashPotion",
+                            "itemGroup.name.stainedClay",
+                            "itemGroup.name.stairs",
+                            "itemGroup.name.stone",
+                            "itemGroup.name.stoneBrick",
+                            "itemGroup.name.sword",
+                            "itemGroup.name.trapdoor",
+                            "itemGroup.name.walls",
+                            "itemGroup.name.wood",
+                            "itemGroup.name.wool",
+                            "itemGroup.name.woolCarpet"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "is_hidden_in_commands", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "states", {
+                    "children": [
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "boolean", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "int", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "<any object property>", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "object", "values", {
+                                "children": [
+                                  [
+                                    "int", "min", {
+                                      "default": 0,
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "int", "max", {
+                                      "default": 15,
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": true
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "traits", {
+                    "children": [
+                      [
+                        "object", "minecraft:placement_direction", {
+                          "children": [
+                            [
+                              "array", "enabled_states", {
+                                "children": [
+                                  [
+                                    "enum", "<any array element>", {
+                                      "enum": [
+                                        "minecraft:cardinal_direction",
+                                        "minecraft:facing_direction"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "float", "y_rotation_offset", {
+                                "multipleOf": 90,
+                                "default": 0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "minecraft:placement_position", {
+                          "children": [
+                            [
+                              "array", "enabled_states", {
+                                "children": [
+                                  [
+                                    "enum", "<any array element>", {
+                                      "enum": [
+                                        "minecraft:block_face",
+                                        "minecraft:vertical_half"
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "minItems": 1,
+                                "maxItems": 2,
+                                "required": true
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "boolean", "minecraft:collision_box", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:collision_box", {
+                    "children": [
+                      [
+                        "array", "origin", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "minimum": 0,
+                                "maximum": 16
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "size", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "minimum": 0,
+                                "maximum": 16
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:crafting_table", {
+                    "children": [
+                      [
+                        "array", "crafting_tags", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {
+                                "minLength": 1,
+                                "maxLength": 64
+                              }
+                            ]
+                          ],
+                          "maxItems": 64,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "table_name", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:custom_components", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:destructible_by_explosion", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:destructible_by_explosion", {
+                    "children": [
+                      [
+                        "float", "explosion_resistance", {
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:destructible_by_mining", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:destructible_by_mining", {
+                    "children": [
+                      [
+                        "float", "seconds_to_destroy", {
+                          "default": 0.0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "item_specific_speeds", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "string", "item", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "object", "item", {
+                                      "children": [
+                                        [
+                                          "string", "tags", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "float", "destroy_speed", {
+                                      "minimum": 0,
+                                      "required": true
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:display_name", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:entity_fall_on", {
+                    "children": [
+                      [
+                        "float", "min_fall_distance", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:flammable", {
+                    "default": true,
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:flammable", {
+                    "children": [
+                      [
+                        "float", "catch_chance_modifier", {
+                          "default": 5,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "destroy_chance_modifier", {
+                          "default": 20,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "minecraft:friction", {
+                    "minimum": 0,
+                    "maximum": 0.9,
+                    "default": 0.4,
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:geometry", {
+                    "pattern": "[a-zA-Z0-9_\\.:\\=]",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:geometry", {
+                    "children": [
+                      [
+                        "string", "identifier", {
+                          "pattern": "[a-zA-Z0-9_\\.:\\=]",
+                          "required": true
+                        }
+                      ],
+                      [
+                        "object", "bone_visibility", {
+                          "children": [],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "culling", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "minecraft:light_dampening", {
+                    "minimum": 0,
+                    "maximum": 15,
+                    "default": 15,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "minecraft:light_emission", {
+                    "minimum": 0,
+                    "maximum": 15,
+                    "default": 15,
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:loot", {
+                    "maxLength": 256,
+                    "pattern": "loot_tables/.*\\.json$",
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:map_color", {
+                    "format": "colox-hex",
+                    "default": "#FFFFFF",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "minecraft:map_color", {
+                    "children": [
+                      [
+                        "int", "0..0", {
+                          "minimum": 0,
+                          "maximum": 255,
+                          "default": 0
+                        }
+                      ],
+                      [
+                        "int", "1..1", {
+                          "minimum": 0,
+                          "maximum": 255,
+                          "default": 0
+                        }
+                      ],
+                      [
+                        "int", "2..2", {
+                          "minimum": 0,
+                          "maximum": 255,
+                          "default": 0
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:material_instances", {
+                    "children": [
+                      [
+                        "string", "<any object property>", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "<any object property>", {
+                          "children": [
+                            [
+                              "boolean", "ambient_occlusion", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "face_dimming", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "enum", "render_method", {
+                                "enum": [
+                                  "opaque",
+                                  "double_sided",
+                                  "blend",
+                                  "alpha_test",
+                                  "alpha_test_single_sided"
+                                ],
+                                "default": "opaque",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "texture", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:placement_filter", {
+                    "children": [
+                      [
+                        "array", "conditions", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "array", "allowed_faces", {
+                                      "children": [
+                                        [
+                                          "enum", "<any array element>", {
+                                            "enum": [
+                                              "up",
+                                              "down",
+                                              "north",
+                                              "south",
+                                              "east",
+                                              "west",
+                                              "side",
+                                              "all"
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "uniqueItems": true,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "block_filter", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                                          }
+                                        ],
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "name", {
+                                                  "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "object", "states", {
+                                                  "children": [],
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "tags", {
+                                                  "format": "molang",
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "minItems": 1,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:redstone_conductivity", {
+                    "children": [
+                      [
+                        "boolean", "allows_wire_to_step_down", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "redstone_conductor", {
+                          "default": false,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "minecraft:selection_box", {
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:selection_box", {
+                    "children": [
+                      [
+                        "array", "origin", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "minimum": 0,
+                                "maximum": 16
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "size", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "minimum": 0,
+                                "maximum": 16
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "minimum": -8.0,
+                                "maximum": 8
+                              }
+                            ]
+                          ],
+                          "default": [
+                            8.0,
+                            8.0,
+                            8.0
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:tick", {
+                    "children": [
+                      [
+                        "boolean", "looping", {
+                          "default": true,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "interval_range", {
+                          "children": [],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:transformation", {
+                    "children": [
+                      [
+                        "array", "rotation", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "scale", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "default": 1
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "default": 1
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "default": 1
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "translation", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "scale_pivot", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "rotation_pivot", {
+                          "children": [
+                            [
+                              "float", "0..0", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "1..1", {
+                                "default": 0
+                              }
+                            ],
+                            [
+                              "float", "2..2", {
+                                "default": 0
+                              }
+                            ]
+                          ],
+                          "default": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "tag:.+", {
+                    "children": [],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "array", "permutations", {
+              "children": [
+                [
+                  "object", "<any array element>", {
+                    "children": [
+                      [
+                        "string", "condition", {
+                          "minLength": 0,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "condition", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "components", {
+                          "children": [
+                            [
+                              "boolean", "minecraft:collision_box", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:collision_box", {
+                                "children": [
+                                  [
+                                    "array", "origin", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "minimum": 0,
+                                            "maximum": 16
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "size", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "minimum": 0,
+                                            "maximum": 16
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:crafting_table", {
+                                "children": [
+                                  [
+                                    "array", "crafting_tags", {
+                                      "children": [
+                                        [
+                                          "string", "<any array element>", {
+                                            "minLength": 1,
+                                            "maxLength": 64
+                                          }
+                                        ]
+                                      ],
+                                      "maxItems": 64,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "table_name", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "minecraft:custom_components", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {}
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "minecraft:destructible_by_explosion", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:destructible_by_explosion", {
+                                "children": [
+                                  [
+                                    "float", "explosion_resistance", {
+                                      "default": 0.0,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "minecraft:destructible_by_mining", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:destructible_by_mining", {
+                                "children": [
+                                  [
+                                    "float", "seconds_to_destroy", {
+                                      "default": 0.0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "item_specific_speeds", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "string", "item", {
+                                                  "required": true
+                                                }
+                                              ],
+                                              [
+                                                "object", "item", {
+                                                  "children": [
+                                                    [
+                                                      "string", "tags", {
+                                                        "required": false
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "required": true
+                                                }
+                                              ],
+                                              [
+                                                "float", "destroy_speed", {
+                                                  "minimum": 0,
+                                                  "required": true
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "minItems": 1,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "minecraft:display_name", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:entity_fall_on", {
+                                "children": [
+                                  [
+                                    "float", "min_fall_distance", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "minecraft:flammable", {
+                                "default": true,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:flammable", {
+                                "children": [
+                                  [
+                                    "float", "catch_chance_modifier", {
+                                      "default": 5,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "destroy_chance_modifier", {
+                                      "default": 20,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "float", "minecraft:friction", {
+                                "minimum": 0,
+                                "maximum": 0.9,
+                                "default": 0.4,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "minecraft:geometry", {
+                                "pattern": "[a-zA-Z0-9_\\.:\\=]",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:geometry", {
+                                "children": [
+                                  [
+                                    "string", "identifier", {
+                                      "pattern": "[a-zA-Z0-9_\\.:\\=]",
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "object", "bone_visibility", {
+                                      "children": [],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "culling", {
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "minecraft:light_dampening", {
+                                "minimum": 0,
+                                "maximum": 15,
+                                "default": 15,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "int", "minecraft:light_emission", {
+                                "minimum": 0,
+                                "maximum": 15,
+                                "default": 15,
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "minecraft:loot", {
+                                "maxLength": 256,
+                                "pattern": "loot_tables/.*\\.json$",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "minecraft:map_color", {
+                                "format": "colox-hex",
+                                "default": "#FFFFFF",
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "minecraft:map_color", {
+                                "children": [
+                                  [
+                                    "int", "0..0", {
+                                      "minimum": 0,
+                                      "maximum": 255,
+                                      "default": 0
+                                    }
+                                  ],
+                                  [
+                                    "int", "1..1", {
+                                      "minimum": 0,
+                                      "maximum": 255,
+                                      "default": 0
+                                    }
+                                  ],
+                                  [
+                                    "int", "2..2", {
+                                      "minimum": 0,
+                                      "maximum": 255,
+                                      "default": 0
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:material_instances", {
+                                "children": [
+                                  [
+                                    "string", "<any object property>", {
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any object property>", {
+                                      "children": [
+                                        [
+                                          "boolean", "ambient_occlusion", {
+                                            "default": true,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "boolean", "face_dimming", {
+                                            "default": true,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "render_method", {
+                                            "enum": [
+                                              "opaque",
+                                              "double_sided",
+                                              "blend",
+                                              "alpha_test",
+                                              "alpha_test_single_sided"
+                                            ],
+                                            "default": "opaque",
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "texture", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:placement_filter", {
+                                "children": [
+                                  [
+                                    "array", "conditions", {
+                                      "children": [
+                                        [
+                                          "object", "<any array element>", {
+                                            "children": [
+                                              [
+                                                "array", "allowed_faces", {
+                                                  "children": [
+                                                    [
+                                                      "enum", "<any array element>", {
+                                                        "enum": [
+                                                          "up",
+                                                          "down",
+                                                          "north",
+                                                          "south",
+                                                          "east",
+                                                          "west",
+                                                          "side",
+                                                          "all"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "uniqueItems": true,
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "array", "block_filter", {
+                                                  "children": [
+                                                    [
+                                                      "string", "<any array element>", {
+                                                        "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                                                      }
+                                                    ],
+                                                    [
+                                                      "object", "<any array element>", {
+                                                        "children": [
+                                                          [
+                                                            "string", "name", {
+                                                              "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                                                              "required": false
+                                                            }
+                                                          ],
+                                                          [
+                                                            "object", "states", {
+                                                              "children": [],
+                                                              "required": false
+                                                            }
+                                                          ],
+                                                          [
+                                                            "string", "tags", {
+                                                              "format": "molang",
+                                                              "required": false
+                                                            }
+                                                          ]
+                                                        ]
+                                                      }
+                                                    ]
+                                                  ],
+                                                  "required": false
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ],
+                                      "minItems": 1,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:redstone_conductivity", {
+                                "children": [
+                                  [
+                                    "boolean", "allows_wire_to_step_down", {
+                                      "default": true,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "boolean", "redstone_conductor", {
+                                      "default": false,
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "boolean", "minecraft:selection_box", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:selection_box", {
+                                "children": [
+                                  [
+                                    "array", "origin", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "minimum": 0,
+                                            "maximum": 16
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "size", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "minimum": 0,
+                                            "maximum": 16
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "minimum": -8.0,
+                                            "maximum": 8
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        8.0,
+                                        8.0,
+                                        8.0
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:tick", {
+                                "children": [
+                                  [
+                                    "boolean", "looping", {
+                                      "default": true,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "interval_range", {
+                                      "children": [],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "minecraft:transformation", {
+                                "children": [
+                                  [
+                                    "array", "rotation", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "default": 0
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "scale", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "default": 1
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "default": 1
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "default": 1
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "translation", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "default": 0
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "scale_pivot", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "default": 0
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "array", "rotation_pivot", {
+                                      "children": [
+                                        [
+                                          "float", "0..0", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "1..1", {
+                                            "default": 0
+                                          }
+                                        ],
+                                        [
+                                          "float", "2..2", {
+                                            "default": 0
+                                          }
+                                        ]
+                                      ],
+                                      "default": [
+                                        0,
+                                        0,
+                                        0
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "tag:.+", {
+                                "children": [],
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

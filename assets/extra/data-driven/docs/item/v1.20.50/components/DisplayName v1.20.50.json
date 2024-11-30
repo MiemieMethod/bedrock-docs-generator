@@ -1,0 +1,9 @@
+{
+  "children": [
+    [
+      "string", "value", {
+        "required": false
+      }
+    ]
+  ]
+}

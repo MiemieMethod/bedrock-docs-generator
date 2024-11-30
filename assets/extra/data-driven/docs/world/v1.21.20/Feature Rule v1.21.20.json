@@ -1,0 +1,545 @@
+{
+  "children": [
+    [
+      "object", "conditions", {
+        "children": [
+          [
+            "object", "minecraft:biome_filter", {
+              "children": [
+                [
+                  "boolean", "domain", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "domain", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "domain", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "domain", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "operator", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "operator", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "operator", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "operator", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "subject", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "subject", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "subject", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "subject", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "test", {
+                    "required": true
+                  }
+                ],
+                [
+                  "boolean", "value", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "value", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "value", {
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "value", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "array", "minecraft:biome_filter", {
+              "children": [
+                [
+                  "recursive", "<any array element>", {}
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "minecraft:biome_filter", {
+              "children": [
+                [
+                  "recursive", "AND", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "NOT", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "OR", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "all", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "all_of", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "any", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "any_of", {
+                    "required": false
+                  }
+                ],
+                [
+                  "recursive", "none_of", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "placement_pass", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ],
+          [
+            "string", "places_feature", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "object", "distribution", {
+        "children": [
+          [
+            "enum", "coordinate_eval_order", {
+              "enum": [
+                "xyz",
+                "xzy",
+                "yxz",
+                "yzx",
+                "zxy",
+                "zyx"
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "iterations", {
+              "required": true
+            }
+          ],
+          [
+            "object", "iterations", {
+              "children": [
+                [
+                  "string", "expression", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "version", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "float", "iterations", {
+              "required": true
+            }
+          ],
+          [
+            "string", "scatter_chance", {
+              "required": false
+            }
+          ],
+          [
+            "object", "scatter_chance", {
+              "children": [
+                [
+                  "string", "expression", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "version", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "float", "scatter_chance", {
+              "required": false
+            }
+          ],
+          [
+            "object", "scatter_chance", {
+              "children": [
+                [
+                  "int", "denominator", {
+                    "minimum": 1.0,
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "numerator", {
+                    "minimum": 1.0,
+                    "required": true
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "string", "x", {
+              "required": true
+            }
+          ],
+          [
+            "object", "x", {
+              "children": [
+                [
+                  "string", "expression", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "version", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "float", "x", {
+              "required": true
+            }
+          ],
+          [
+            "object", "x", {
+              "children": [
+                [
+                  "enum", "distribution", {
+                    "enum": [
+                      "uniform",
+                      "gaussian",
+                      "inverse_gaussian",
+                      "triangle",
+                      "fixed_grid",
+                      "jittered_grid"
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "array", "extent", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "expression", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "version", {
+                                "required": true
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "float", "<any array element>", {}
+                      ]
+                    ],
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "grid_offset", {
+                    "minimum": 0.0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "step_size", {
+                    "minimum": 1.0,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "string", "y", {
+              "required": true
+            }
+          ],
+          [
+            "object", "y", {
+              "children": [
+                [
+                  "string", "expression", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "version", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "float", "y", {
+              "required": true
+            }
+          ],
+          [
+            "object", "y", {
+              "children": [
+                [
+                  "enum", "distribution", {
+                    "enum": [
+                      "uniform",
+                      "gaussian",
+                      "inverse_gaussian",
+                      "triangle",
+                      "fixed_grid",
+                      "jittered_grid"
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "array", "extent", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "expression", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "version", {
+                                "required": true
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "float", "<any array element>", {}
+                      ]
+                    ],
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "grid_offset", {
+                    "minimum": 0.0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "step_size", {
+                    "minimum": 1.0,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "string", "z", {
+              "required": true
+            }
+          ],
+          [
+            "object", "z", {
+              "children": [
+                [
+                  "string", "expression", {
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "version", {
+                    "required": true
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "float", "z", {
+              "required": true
+            }
+          ],
+          [
+            "object", "z", {
+              "children": [
+                [
+                  "enum", "distribution", {
+                    "enum": [
+                      "uniform",
+                      "gaussian",
+                      "inverse_gaussian",
+                      "triangle",
+                      "fixed_grid",
+                      "jittered_grid"
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "array", "extent", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ],
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "string", "expression", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "int", "version", {
+                                "required": true
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        "float", "<any array element>", {}
+                      ]
+                    ],
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "grid_offset", {
+                    "minimum": 0.0,
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "step_size", {
+                    "minimum": 1.0,
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

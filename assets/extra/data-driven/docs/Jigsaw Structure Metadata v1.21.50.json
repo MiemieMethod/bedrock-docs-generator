@@ -1,0 +1,128 @@
+{
+  "children": [
+    [
+      "string", "format_version", {
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:jigsaw_structure_metadata", {
+        "children": [
+          [
+            "object", "metadata", {
+              "children": [
+                [
+                  "object", "<any object property>", {
+                    "children": [
+                      [
+                        "int", "key", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "object", "value", {
+                          "children": [
+                            [
+                              "array", "markers", {
+                                "children": [
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "final_block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "joint_type", {
+                                            "enum": [
+                                              "rollable",
+                                              "aligned"
+                                            ],
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "name", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "placement_priority", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "pool", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "array", "pos", {
+                                            "children": [
+                                              [
+                                                "int", "<any array element>", {}
+                                              ]
+                                            ],
+                                            "minItems": 3,
+                                            "maxItems": 3,
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "int", "selection_priority", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "string", "target", {
+                                            "required": true
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": true
+                              }
+                            ],
+                            [
+                              "array", "size", {
+                                "children": [
+                                  [
+                                    "int", "<any array element>", {}
+                                  ]
+                                ],
+                                "minItems": 3,
+                                "maxItems": 3,
+                                "required": true
+                              }
+                            ],
+                            [
+                              "boolean", "use_legacy_rotation", {
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

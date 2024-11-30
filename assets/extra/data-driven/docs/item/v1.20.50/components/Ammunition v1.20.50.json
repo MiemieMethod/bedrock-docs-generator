@@ -1,0 +1,36 @@
+{
+  "children": [
+    [
+      "string", "item", {
+        "required": true
+      }
+    ],
+    [
+      "object", "item", {
+        "children": [
+          [
+            "string", "<any object property>", {
+              "required": false
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "boolean", "search_inventory", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "use_in_creative", {
+        "required": false
+      }
+    ],
+    [
+      "boolean", "use_offhand", {
+        "required": false
+      }
+    ]
+  ]
+}

@@ -1,0 +1,3206 @@
+{
+  "children": [
+    [
+      "object", "biomes", {
+        "children": [
+          [
+            "object", "bamboo_jungle_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "bamboo_jungle", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "basalt_deltas", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "beach", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "birch_forest_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "birch_forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cherry_grove", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cold_beach", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cold_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cold_taiga_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cold_taiga_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "cold_taiga", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "crimson_forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "deep_cold_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "deep_frozen_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "deep_lukewarm_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "deep_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "deep_warm_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "default", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "desert_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "desert", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "extreme_hills_edge", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "extreme_hills_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "extreme_hills_plus_trees_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "extreme_hills_plus_trees", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "extreme_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "flower_forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "forest_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "frozen_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "frozen_river", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "hell", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "ice_mountains", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "ice_plains_spikes", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "ice_plains", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "jungle_edge", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "jungle_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "jungle_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "jungle", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "lukewarm_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mangrove_swamp", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mega_spruce_taiga_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mega_spruce_taiga", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mega_taiga_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mega_taiga_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mega_taiga", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mesa_bryce", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mesa_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mesa_plateau_stone", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mesa_plateau", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mesa", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mushroom_island_shore", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "mushroom_island", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "plains", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "river", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "roofed_forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "savanna_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "savanna_plateau", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "savanna", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "soulsand_valley", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "stone_beach", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "sunflower_plains", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "swampland_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "swampland", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "taiga_hills", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "taiga_mutated", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "taiga", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "the_end", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "warm_ocean", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ],
+          [
+            "object", "warped_forest", {
+              "children": [
+                [
+                  "string", "fog_identifier", {
+                    "pattern": "^[0-9a-zA-Z:_\\.\\-]+$",
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "fog_ids_to_merge", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {
+                          "pattern": "^[0-9a-zA-Z:_\\.\\-]+$"
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "inherit_from_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "boolean", "remove_all_prior_fog", {
+                    "required": false
+                  }
+                ],
+                [
+                  "int", "water_fog_distance", {
+                    "required": false
+                  }
+                ],
+                [
+                  "float", "water_surface_transparency", {
+                    "required": false
+                  }
+                ]
+              ],
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

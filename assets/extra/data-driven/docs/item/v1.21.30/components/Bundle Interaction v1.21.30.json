@@ -1,0 +1,11 @@
+{
+  "children": [
+    [
+      "int", "num_viewable_slots", {
+        "minimum": 1.0,
+        "maximum": 64.0,
+        "required": false
+      }
+    ]
+  ]
+}

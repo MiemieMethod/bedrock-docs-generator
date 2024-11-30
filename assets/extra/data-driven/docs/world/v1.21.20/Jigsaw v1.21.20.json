@@ -1,0 +1,221 @@
+{
+  "children": [
+    [
+      "object", "biome_filters", {
+        "children": [
+          [
+            "boolean", "domain", {
+              "required": false
+            }
+          ],
+          [
+            "int", "domain", {
+              "required": false
+            }
+          ],
+          [
+            "float", "domain", {
+              "required": false
+            }
+          ],
+          [
+            "string", "domain", {
+              "required": false
+            }
+          ],
+          [
+            "boolean", "operator", {
+              "required": false
+            }
+          ],
+          [
+            "int", "operator", {
+              "required": false
+            }
+          ],
+          [
+            "float", "operator", {
+              "required": false
+            }
+          ],
+          [
+            "string", "operator", {
+              "required": false
+            }
+          ],
+          [
+            "boolean", "subject", {
+              "required": false
+            }
+          ],
+          [
+            "int", "subject", {
+              "required": false
+            }
+          ],
+          [
+            "float", "subject", {
+              "required": false
+            }
+          ],
+          [
+            "string", "subject", {
+              "required": false
+            }
+          ],
+          [
+            "string", "test", {
+              "required": true
+            }
+          ],
+          [
+            "boolean", "value", {
+              "required": false
+            }
+          ],
+          [
+            "int", "value", {
+              "required": false
+            }
+          ],
+          [
+            "float", "value", {
+              "required": false
+            }
+          ],
+          [
+            "string", "value", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "array", "biome_filters", {
+        "children": [
+          [
+            "recursive", "<any array element>", {}
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "biome_filters", {
+        "children": [
+          [
+            "recursive", "AND", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "NOT", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "OR", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "all", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "all_of", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "any", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "any_of", {
+              "required": false
+            }
+          ],
+          [
+            "recursive", "none_of", {
+              "required": false
+            }
+          ]
+        ],
+        "required": false
+      }
+    ],
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "enum", "heightmap_projection", {
+        "enum": [
+          "world_surface",
+          "ocean_floor"
+        ],
+        "required": true
+      }
+    ],
+    [
+      "int", "max_depth", {
+        "minimum": 0.0,
+        "maximum": 20.0,
+        "required": true
+      }
+    ],
+    [
+      "int", "start_height", {
+        "required": true
+      }
+    ],
+    [
+      "string", "start_pool", {
+        "required": true
+      }
+    ],
+    [
+      "enum", "step", {
+        "enum": [
+          "raw_generation",
+          "lakes",
+          "local_modifications",
+          "underground_structures",
+          "surface_structures",
+          "strongholds",
+          "underground_ores",
+          "underground_decoration",
+          "fluid_springs",
+          "vegetal_decoration",
+          "top_layer_modification"
+        ],
+        "required": true
+      }
+    ],
+    [
+      "enum", "terrain_adaptation", {
+        "enum": [
+          "none",
+          "bury",
+          "beard_thin",
+          "beard_box",
+          "encapsulate"
+        ],
+        "required": false
+      }
+    ]
+  ]
+}

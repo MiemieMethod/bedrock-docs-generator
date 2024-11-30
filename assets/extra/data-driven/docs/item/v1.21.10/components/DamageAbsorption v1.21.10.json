@@ -1,0 +1,15 @@
+{
+  "children": [
+    [
+      "array", "absorbable_causes", {
+        "children": [
+          [
+            "string", "<any array element>", {}
+          ]
+        ],
+        "minItems": 1,
+        "required": true
+      }
+    ]
+  ]
+}

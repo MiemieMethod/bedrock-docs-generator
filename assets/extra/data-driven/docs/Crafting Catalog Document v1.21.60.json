@@ -1,0 +1,97 @@
+{
+  "children": [
+    [
+      "array", "categories", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "enum", "category_name", {
+                    "enum": [
+                      "construction",
+                      "nature",
+                      "equipment",
+                      "items"
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "array", "groups", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "object", "group_identifier", {
+                                "children": [
+                                  [
+                                    "string", "icon", {
+                                      "pattern": "^(?:.)+:(?:.)+$",
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "icon", {
+                                      "children": [
+                                        [
+                                          "string", "name", {
+                                            "pattern": "^(?:.)+:(?:.)+$",
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "name", {
+                                      "pattern": "^(?:.)+:(?:.)+$",
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "array", "items", {
+                                "children": [
+                                  [
+                                    "string", "<any array element>", {
+                                      "pattern": "^(?:.)+:(?:.)+$"
+                                    }
+                                  ],
+                                  [
+                                    "object", "<any array element>", {
+                                      "children": [
+                                        [
+                                          "string", "name", {
+                                            "pattern": "^(?:.)+:(?:.)+$",
+                                            "required": true
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ],
+                                "required": true
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

@@ -3,6 +3,7 @@ import json5, json
 import os
 
 from data_driven.builder import SchemaBuilder
+from data_driven.newbuilder import SchemaBuilder as DataDrivenBuilder
 
 
 class BlockceptionSchemaGenerator(object):
@@ -271,3 +272,24 @@ def secondFolderToName(folder, default):
     elif folder == 'global-variables':
         return '全局变量'
     return default
+
+
+class DataDrivenGenerator(object):
+    def __init__(self):
+        self.schemas = {}
+        self.schemas['item'] = {}
+        with open(r'assets/extra/data-driven/versioned/behavior/item.json', 'r', encoding="utf-8") as f:
+            self.schemas['item']['behavior'] = json5.load(f)
+
+    def generate(self):
+        if not os.path.exists(r'build'):
+            os.mkdir(r'build')
+        if not os.path.exists(r'build/data-driven'):
+            os.mkdir(r'build/data-driven')
+        if not os.path.exists(r'build/data-driven/versioned'):
+            os.mkdir(r'build/data-driven/versioned')
+        if not os.path.exists(r'build/data-driven/versioned/behavior'):
+            os.mkdir(r'build/data-driven/versioned/behavior')
+        with open(r'build/data-driven/versioned/behavior/item.md', 'w', encoding="utf-8") as f:
+            f.write(DataDrivenBuilder(self.schemas['item']['behavior'], r'build/data-driven/versioned/behavior/item.md', '物品服务端定义').render())
+        return ''

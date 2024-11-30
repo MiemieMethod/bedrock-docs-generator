@@ -1,0 +1,917 @@
+{
+  "children": [
+    [
+      "object", "description", {
+        "children": [
+          [
+            "string", "identifier", {
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ],
+    [
+      "array", "processors", {
+        "children": [
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "enum", "processor_type", {
+                    "enum": [
+                      "minecraft:block_ignore",
+                      "minecraft:rule",
+                      "minecraft:capped",
+                      "minecraft:protected_blocks"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "array", "rules", {
+                    "children": [
+                      [
+                        "object", "<any array element>", {
+                          "children": [
+                            [
+                              "object", "block_entity_modifier", {
+                                "children": [
+                                  [
+                                    "enum", "type", {
+                                      "enum": [
+                                        "minecraft:passthrough",
+                                        "minecraft:append_loot"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "block_entity_modifier", {
+                                "children": [
+                                  [
+                                    "string", "loot_table", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "enum", "type", {
+                                      "enum": [
+                                        "minecraft:passthrough",
+                                        "minecraft:append_loot"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "input_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "input_predicate", {
+                                "children": [
+                                  [
+                                    "string", "block", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "input_predicate", {
+                                "children": [
+                                  [
+                                    "string", "block", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "probability", {
+                                      "minimum": 0.0,
+                                      "exclusiveMaximum": 1.0,
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "input_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "tag", {
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "location_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "location_predicate", {
+                                "children": [
+                                  [
+                                    "string", "block", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "location_predicate", {
+                                "children": [
+                                  [
+                                    "string", "block", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "probability", {
+                                      "minimum": 0.0,
+                                      "exclusiveMaximum": 1.0,
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "location_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:block_match",
+                                        "minecraft:random_block_match",
+                                        "minecraft:tag_match"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "tag", {
+                                      "required": true
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "output_state", {
+                                "required": true
+                              }
+                            ],
+                            [
+                              "object", "output_state", {
+                                "children": [
+                                  [
+                                    "string", "name", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "object", "states", {
+                                      "children": [
+                                        [
+                                          "boolean", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "<any object property>", {
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": true
+                              }
+                            ],
+                            [
+                              "object", "position_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:axis_aligned_linear_pos"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ],
+                            [
+                              "object", "position_predicate", {
+                                "children": [
+                                  [
+                                    "enum", "axis", {
+                                      "enum": [
+                                        "x",
+                                        "y",
+                                        "z"
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "max_chance", {
+                                      "minimum": 0.0,
+                                      "exclusiveMaximum": 1.0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "max_dist", {
+                                      "minimum": 0.0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "float", "min_chance", {
+                                      "minimum": 0.0,
+                                      "exclusiveMaximum": 1.0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "int", "min_dist", {
+                                      "minimum": 0.0,
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "enum", "predicate_type", {
+                                      "enum": [
+                                        "minecraft:always_true",
+                                        "minecraft:axis_aligned_linear_pos"
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ],
+                                "required": false
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "enum", "processor_type", {
+                    "enum": [
+                      "minecraft:block_ignore",
+                      "minecraft:rule",
+                      "minecraft:capped",
+                      "minecraft:protected_blocks"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "value", {
+                    "required": true
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "array", "blocks", {
+                    "children": [
+                      [
+                        "string", "<any array element>", {}
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "enum", "processor_type", {
+                    "enum": [
+                      "minecraft:block_ignore",
+                      "minecraft:rule",
+                      "minecraft:capped",
+                      "minecraft:protected_blocks"
+                    ],
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            "object", "<any array element>", {
+              "children": [
+                [
+                  "object", "delegate", {
+                    "children": [
+                      [
+                        "enum", "processor_type", {
+                          "enum": [
+                            "minecraft:block_ignore",
+                            "minecraft:rule",
+                            "minecraft:capped",
+                            "minecraft:protected_blocks"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "rules", {
+                          "children": [
+                            [
+                              "object", "<any array element>", {
+                                "children": [
+                                  [
+                                    "object", "block_entity_modifier", {
+                                      "children": [
+                                        [
+                                          "enum", "type", {
+                                            "enum": [
+                                              "minecraft:passthrough",
+                                              "minecraft:append_loot"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "block_entity_modifier", {
+                                      "children": [
+                                        [
+                                          "string", "loot_table", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "type", {
+                                            "enum": [
+                                              "minecraft:passthrough",
+                                              "minecraft:append_loot"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "input_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "input_predicate", {
+                                      "children": [
+                                        [
+                                          "string", "block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "input_predicate", {
+                                      "children": [
+                                        [
+                                          "string", "block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "probability", {
+                                            "minimum": 0.0,
+                                            "exclusiveMaximum": 1.0,
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "input_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "tag", {
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "location_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "location_predicate", {
+                                      "children": [
+                                        [
+                                          "string", "block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "location_predicate", {
+                                      "children": [
+                                        [
+                                          "string", "block", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "probability", {
+                                            "minimum": 0.0,
+                                            "exclusiveMaximum": 1.0,
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "location_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:block_match",
+                                              "minecraft:random_block_match",
+                                              "minecraft:tag_match"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "string", "tag", {
+                                            "required": true
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "string", "output_state", {
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "object", "output_state", {
+                                      "children": [
+                                        [
+                                          "string", "name", {
+                                            "required": true
+                                          }
+                                        ],
+                                        [
+                                          "object", "states", {
+                                            "children": [
+                                              [
+                                                "boolean", "<any object property>", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "int", "<any object property>", {
+                                                  "required": false
+                                                }
+                                              ],
+                                              [
+                                                "string", "<any object property>", {
+                                                  "required": false
+                                                }
+                                              ]
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": true
+                                    }
+                                  ],
+                                  [
+                                    "object", "position_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:axis_aligned_linear_pos"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ],
+                                  [
+                                    "object", "position_predicate", {
+                                      "children": [
+                                        [
+                                          "enum", "axis", {
+                                            "enum": [
+                                              "x",
+                                              "y",
+                                              "z"
+                                            ],
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "max_chance", {
+                                            "minimum": 0.0,
+                                            "exclusiveMaximum": 1.0,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "max_dist", {
+                                            "minimum": 0.0,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "float", "min_chance", {
+                                            "minimum": 0.0,
+                                            "exclusiveMaximum": 1.0,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "int", "min_dist", {
+                                            "minimum": 0.0,
+                                            "required": false
+                                          }
+                                        ],
+                                        [
+                                          "enum", "predicate_type", {
+                                            "enum": [
+                                              "minecraft:always_true",
+                                              "minecraft:axis_aligned_linear_pos"
+                                            ],
+                                            "required": false
+                                          }
+                                        ]
+                                      ],
+                                      "required": false
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ],
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "delegate", {
+                    "children": [
+                      [
+                        "array", "blocks", {
+                          "children": [
+                            [
+                              "string", "<any array element>", {}
+                            ]
+                          ],
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "processor_type", {
+                          "enum": [
+                            "minecraft:block_ignore",
+                            "minecraft:rule",
+                            "minecraft:capped",
+                            "minecraft:protected_blocks"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "delegate", {
+                    "children": [
+                      [
+                        "enum", "processor_type", {
+                          "enum": [
+                            "minecraft:block_ignore",
+                            "minecraft:rule",
+                            "minecraft:capped",
+                            "minecraft:protected_blocks"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "value", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "int", "limit", {
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "limit", {
+                    "children": [
+                      [
+                        "enum", "type", {
+                          "enum": [
+                            "constant",
+                            "uniform"
+                          ],
+                          "required": false
+                        }
+                      ],
+                      [
+                        "int", "value", {
+                          "required": true
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "object", "limit", {
+                    "children": [
+                      [
+                        "int", "max_inclusive", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "int", "min_inclusive", {
+                          "required": true
+                        }
+                      ],
+                      [
+                        "enum", "type", {
+                          "enum": [
+                            "constant",
+                            "uniform"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": true
+                  }
+                ],
+                [
+                  "enum", "processor_type", {
+                    "enum": [
+                      "minecraft:block_ignore",
+                      "minecraft:rule",
+                      "minecraft:capped",
+                      "minecraft:protected_blocks"
+                    ],
+                    "required": false
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ]
+}

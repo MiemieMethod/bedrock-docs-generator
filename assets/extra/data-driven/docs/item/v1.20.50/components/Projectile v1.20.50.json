@@ -1,0 +1,16 @@
+{
+  "children": [
+    [
+      "float", "minimum_critical_power", {
+        "required": false
+      }
+    ],
+    [
+      "string", "projectile_entity", {
+        "minLength": 0,
+        "pattern": "^(?:\\w+(?:\\.\\w+)*:(?=\\w))?(?:\\w+(?:\\.\\w+)*)(?:<((?:\\w+(?:\\.\\w+)*:(?=\\w))?\\w+(?:\\.\\w+)*)*>)?$",
+        "required": true
+      }
+    ]
+  ]
+}
