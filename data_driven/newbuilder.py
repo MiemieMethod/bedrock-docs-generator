@@ -136,6 +136,8 @@ class SchemaBuilder(MarkdownWriter):
             desc = ''
             if formatVer in newexp:
                 desc += '<!-- md:flag experimental -->'
+            if formatVer in newdep:
+                desc += '<!-- md:flag deprecated -->'
             data.append([type, key, desc, lvl, child[2].get('required', False)])
             if type == 'object' or type == 'array':
                 self.parseChildren(child[2], data, newver, newdep, newexp, formatVer, lvl + 1)

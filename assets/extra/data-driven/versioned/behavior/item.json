@@ -445,14 +445,6 @@
                       },
                       {
                         "min": "1.17.0",
-                        "max": "1.20.10",
-                        "min_exclusivity": false,
-                        "max_exclusivity": true
-                      }
-                    ],
-                    "deprecated": [
-                      {
-                        "min": "1.20.10",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -595,7 +587,7 @@
                         "max_exclusivity": true
                       },
                       {
-                        "min": "1.21.30",
+                        "min": "1.21.50",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -612,7 +604,7 @@
                         "max_exclusivity": true
                       },
                       {
-                        "min": "1.21.30",
+                        "min": "1.21.50",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -754,21 +746,13 @@
                 ],
                 [
                   "int", "minecraft:damage", {
-                    "minimum": 0.0,
+                    "minimum": 0,
                     "version": [
                       {
                         "value": "1.16.100"
                       },
                       {
                         "min": "1.17.0",
-                        "max": "1.20.20",
-                        "min_exclusivity": false,
-                        "max_exclusivity": true
-                      }
-                    ],
-                    "deprecated": [
-                      {
-                        "min": "1.20.20",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -782,7 +766,7 @@
                     "children": [
                       [
                         "int", "value", {
-                          "minimum": 0.0,
+                          "minimum": 0,
                           "required": false
                         }
                       ]
@@ -1171,6 +1155,7 @@
                       [
                         "string", "default_color", {
                           "pattern": "^#[a-fA-F0-9]{6}$",
+                          "default": "#FFFFFF",
                           "required": true
                         }
                       ],
@@ -1178,7 +1163,11 @@
                         "array", "default_color", {
                           "children": [
                             [
-                              "int", "<any array element>", {}
+                              "int", "<any array element>", {
+                                "minimum": 0,
+                                "maximum": 255,
+                                "default": 0
+                              }
                             ]
                           ],
                           "minItems": 3,
@@ -2051,11 +2040,13 @@
                     "children": [
                       [
                         "boolean", "can_always_eat", {
+                          "default": false,
                           "required": false
                         }
                       ],
                       [
                         "int", "nutrition", {
+                          "default": 0,
                           "required": false
                         }
                       ],
@@ -2395,13 +2386,24 @@
                 ],
                 [
                   "boolean", "minecraft:glint", {
-                    "deprecated": [
+                    "version": [
                       {
                         "value": "1.16.100"
                       },
                       {
                         "min": "1.17.0",
                         "max": "*",
+                        "min_exclusivity": false,
+                        "max_exclusivity": true
+                      }
+                    ],
+                    "experiment": [
+                      {
+                        "value": "1.16.100"
+                      },
+                      {
+                        "min": "1.17.0",
+                        "max": "1.20.20",
                         "min_exclusivity": false,
                         "max_exclusivity": true
                       }
@@ -2449,14 +2451,6 @@
                     "version": [
                       {
                         "min": "1.10.0",
-                        "max": "1.20.20",
-                        "min_exclusivity": false,
-                        "max_exclusivity": true
-                      }
-                    ],
-                    "deprecated": [
-                      {
-                        "min": "1.20.20",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -2631,19 +2625,22 @@
                         "object", "textures", {
                           "children": [
                             [
-                              "object", "textures", {
-                                "children": [
-                                  [
-                                    "string", "default", {
-                                      "required": false
-                                    }
-                                  ],
-                                  [
-                                    "string", "<any object property>", {
-                                      "required": false
-                                    }
-                                  ]
-                                ],
+                              "string", "default", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "trim", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "dyed", {
+                                "required": false
+                              }
+                            ],
+                            [
+                              "string", "<any object property>", {
                                 "required": false
                               }
                             ]
@@ -2811,14 +2808,6 @@
                     "version": [
                       {
                         "min": "1.10.0",
-                        "max": "1.20.10",
-                        "min_exclusivity": false,
-                        "max_exclusivity": true
-                      }
-                    ],
-                    "deprecated": [
-                      {
-                        "min": "1.20.10",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -3087,7 +3076,13 @@
                   }
                 ],
                 [
-                  "string", "minecraft:rarity", {
+                  "enum", "minecraft:rarity", {
+                    "enum": [
+                      "common",
+                      "uncommon",
+                      "rare",
+                      "epic"
+                    ],
                     "version": [
                       {
                         "min": "1.20.20",
@@ -3686,6 +3681,8 @@
                 ],
                 [
                   "string", "minecraft:render_offsets", {
+                    "version": [
+                    ],
                     "deprecated": [
                       {
                         "value": "1.16.100"
@@ -4539,14 +4536,6 @@
                       },
                       {
                         "min": "1.17.0",
-                        "max": "1.20.20",
-                        "min_exclusivity": false,
-                        "max_exclusivity": true
-                      }
-                    ],
-                    "deprecated": [
-                      {
-                        "min": "1.20.20",
                         "max": "*",
                         "min_exclusivity": false,
                         "max_exclusivity": true
@@ -5107,24 +5096,6 @@
                 ]
               ],
               "required": true
-            }
-          ],
-          [
-            "object", "events", {
-              "children": [
-                [
-                  "object", "on_tool_used", {
-                    "children": [],
-                    "required": false
-                  }
-                ],
-                [
-                  "recursive", "<any object property>", {
-                    "required": false
-                  }
-                ]
-              ],
-              "required": false
             }
           ]
         ],

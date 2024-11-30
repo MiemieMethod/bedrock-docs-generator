@@ -18,4 +18,4 @@ if __name__ == '__main__':
     # print(BlockceptionSchemaGenerator().generate())
     # print(BEDWSchemaGenerator().generate())
     print(DataDrivenGenerator().generate())
-    SchemaDataConvertor().generate()
+    # SchemaDataConvertor().generate()
