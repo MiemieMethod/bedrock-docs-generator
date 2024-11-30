@@ -1,0 +1,248 @@
+{
+  "children": [
+    [
+      "array", "format_version", {
+        "children": [
+          [
+            "int", "<any array element>", {}
+          ]
+        ],
+        "minItems": 3,
+        "maxItems": 3,
+        "required": true
+      }
+    ],
+    [
+      "string", "format_version", {
+        "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)(?:-((?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0)(?:\\.(?:(?:(?:(?:0[0-9]*[A-Za-z-])|[1-9A-Za-z-])[0-9A-Za-z-]*)|0))*))?(?:\\+([0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*))?)?)?$",
+        "required": true
+      }
+    ],
+    [
+      "object", "minecraft:item", {
+        "children": [
+          [
+            "object", "description", {
+              "children": [
+                [
+                  "string", "identifier", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "category", {
+                    "enum": [
+                      "construction",
+                      "nature",
+                      "equipment",
+                      "items",
+                      "commands",
+                      "none"
+                    ],
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ],
+          [
+            "object", "components", {
+              "children": [
+                [
+                  "enum", "minecraft:hover_text_color", {
+                    "enum": [
+                      "escape",
+                      "black",
+                      "dark_blue",
+                      "dark_green",
+                      "dark_aqua",
+                      "dark_purple",
+                      "gold",
+                      "gray",
+                      "dark_gray",
+                      "blue",
+                      "green",
+                      "aqua",
+                      "red",
+                      "light_purple",
+                      "yellow",
+                      "white",
+                      "minecoin_gold",
+                      "material_quartz",
+                      "material_iron",
+                      "material_netherite",
+                      "material_redstone",
+                      "material_copper",
+                      "material_gold",
+                      "material_emerald",
+                      "material_diamond",
+                      "material_lapis",
+                      "material_amethyst",
+                      "obfuscated",
+                      "bold",
+                      "italic",
+                      "reset"
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:icon", {
+                    "edition": "china",
+                    "required": false
+                  }
+                ],
+                [
+                  "string", "minecraft:icon_atlas", {
+                    "required": false
+                  }
+                ],
+                [
+                  "enum", "minecraft:icon_variant", {
+                    "enum": [
+                      "wood",
+                      "stone",
+                      "iron",
+                      "gold",
+                      "diamond"
+                    ],
+                    "edition": "china",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "minecraft:use_animation", {
+                    "children": [
+                      [
+                        "enum", "value", {
+                          "enum": [
+                            "none",
+                            "eat",
+                            "drink",
+                            "block",
+                            "bow",
+                            "camera",
+                            "crossbow",
+                            "spear",
+                            "spyglass",
+                            "brush"
+                          ],
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:frame_animation", {
+                    "children": [
+                      [
+                        "int", "frame_count", {
+                          "default": 1,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "texture_name", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "boolean", "animate_in_toolbar", {
+                          "default": true,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:frame_anim_in_scene", {
+                    "children": [
+                      [
+                        "int", "ticks_per_frame", {
+                          "required": false
+                        }
+                      ],
+                      [
+                        "string", "texture_path", {
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "required": false
+                  }
+                ],
+                [
+                  "object", "netease:render_offsets", {
+                    "children": [
+                      [
+                        "array", "controller_position_adjust", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "default": 0.0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "minItems": 3,
+                          "maxItems": 3,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "array", "controller_rotation_adjust", {
+                          "children": [
+                            [
+                              "float", "<any array element>", {
+                                "default": 0.0,
+                                "required": false
+                              }
+                            ]
+                          ],
+                          "minItems": 3,
+                          "maxItems": 3,
+                          "required": false
+                        }
+                      ],
+                      [
+                        "float", "controller_scale", {
+                          "default": 1.0,
+                          "required": false
+                        }
+                      ]
+                    ],
+                    "edition": "china",
+                    "required": false
+                  }
+                ]
+              ],
+              "required": true
+            }
+          ]
+        ],
+        "required": true
+      }
+    ]
+  ],
+  "version": [
+    {
+      "min": "1.10.0",
+      "max": "1.16.100",
+      "min_exclusivity": false,
+      "max_exclusivity": true
+    },
+    {
+      "min": "1.16.100",
+      "max": "1.17.0",
+      "min_exclusivity": true,
+      "max_exclusivity": true
+    }
+  ]
+}
