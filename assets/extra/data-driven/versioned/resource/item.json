@@ -112,25 +112,18 @@
                   }
                 ],
                 [
-                  "object", "minecraft:use_animation", {
-                    "children": [
-                      [
-                        "enum", "value", {
-                          "enum": [
-                            "none",
-                            "eat",
-                            "drink",
-                            "block",
-                            "bow",
-                            "camera",
-                            "crossbow",
-                            "spear",
-                            "spyglass",
-                            "brush"
-                          ],
-                          "required": false
-                        }
-                      ]
+                  "enum", "minecraft:use_animation", {
+                    "enum": [
+                      "none",
+                      "eat",
+                      "drink",
+                      "block",
+                      "bow",
+                      "camera",
+                      "crossbow",
+                      "spear",
+                      "spyglass",
+                      "brush"
                     ],
                     "required": false
                   }

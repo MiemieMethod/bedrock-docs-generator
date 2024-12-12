@@ -280,6 +280,9 @@ class DataDrivenGenerator(object):
         self.schemas['item'] = {}
         with open(r'assets/extra/data-driven/versioned/behavior/item.json', 'r', encoding="utf-8") as f:
             self.schemas['item']['behavior'] = json5.load(f)
+        with open(r'assets/extra/data-driven/versioned/resource/item.json', 'r', encoding="utf-8") as f:
+            self.schemas['item']['resource'] = json5.load(f)
+
 
     def generate(self):
         if not os.path.exists(r'build'):
@@ -292,4 +295,8 @@ class DataDrivenGenerator(object):
             os.mkdir(r'build/data-driven/versioned/behavior')
         with open(r'build/data-driven/versioned/behavior/item.md', 'w', encoding="utf-8") as f:
             f.write(DataDrivenBuilder(self.schemas['item']['behavior'], r'build/data-driven/versioned/behavior/item.md', '物品服务端定义').render())
+        if not os.path.exists(r'build/data-driven/versioned/resource'):
+            os.mkdir(r'build/data-driven/versioned/resource')
+        with open(r'build/data-driven/versioned/resource/item.md', 'w', encoding="utf-8") as f:
+            f.write(DataDrivenBuilder(self.schemas['item']['resource'], r'build/data-driven/versioned/resource/item.md', '物品客户端定义').render())
         return ''

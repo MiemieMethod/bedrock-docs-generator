@@ -91,6 +91,7 @@ class SchemaBuilder(MarkdownWriter):
         rootVersionRange = VersionRange(node.get('version', [{'min': '0.0.0', 'max': '*'}]))
         rootDeprecatedRange = VersionRange(node.get('deprecated', [{'value': '0.0.0'}]))
         rootExperimentRange = VersionRange(node.get('experiment', [{'value': '0.0.0'}]))
+        rootEdition = node.get('edition', 'bedrock')
         writer = MarkdownWriter()
         cache = ''
         for version in self.validFormatVersions:
@@ -98,29 +99,34 @@ class SchemaBuilder(MarkdownWriter):
                 continue
             if version not in rootVersionRange:
                 if version in rootDeprecatedRange:
-                    text = MarkdownWriter().addAdmonition('已弃用', '当前对象已在此版本中弃用，即使能正常解析也无法正常发挥功能。', 'warning', level + 1).render()
-                    text += self.buildTreeData(node, key, rootVersionRange, rootDeprecatedRange, rootExperimentRange, version, level)
+                    w = MarkdownWriter()
+                    w.addAdmonition('已弃用', '当前对象已在此版本中弃用，即使能正常解析也无法正常发挥功能。', 'warning', False,  level + 1)
+                    text = w.render()
+                    text += self.buildTreeData(node, key, rootVersionRange, rootDeprecatedRange, rootExperimentRange, rootEdition, version, level)
                 else:
-                    text = MarkdownWriter().addAdmonition('已移除', '当前对象已在此版本中移除，无法正常解析。', 'danger', level + 1).render()
+                    w = MarkdownWriter()
+                    w.addAdmonition('未实现', '当前对象未在此版本中实现，无法正常解析。', 'info', False, level + 1)
+                    text = w.render()
             else:
-                text = self.buildTreeData(node, key, rootVersionRange, rootDeprecatedRange, rootExperimentRange, version, level)
+                text = self.buildTreeData(node, key, rootVersionRange, rootDeprecatedRange, rootExperimentRange, rootEdition, version, level)
             if text != cache:
                 writer.addTab(version.version, text, level)
                 cache = text
         return writer.render()
 
-    def buildTreeData(self, node, key, ver, dep, exp, formatVer, level=0):
+    def buildTreeData(self, node, key, ver, dep, exp, ed, formatVer, level=0):
         treeData = [['object', key, '根对象。', 0, True]]
-        self.parseChildren(node, treeData, ver, dep, exp, formatVer, 1)
+        self.parseChildren(node, treeData, ver, dep, exp, ed, formatVer, 1)
         text = self.createTreeView(treeData, level + 1)
         return text
 
-    def parseChildren(self, node, data, ver, dep, exp, formatVer, lvl=0):
+    def parseChildren(self, node, data, ver, dep, exp, ed, formatVer, lvl=0):
         children = node['children']
         for child in children:
             newver = VersionRange(child[2]['version']) if 'version' in child[2] else ver
             newdep = VersionRange(child[2]['deprecated']) if 'deprecated' in child[2] else dep
             newexp = VersionRange(child[2]['experiment']) if 'experiment' in child[2] else exp
+            newed = child[2].get('edition', ed)
             if formatVer not in newver and formatVer not in newdep:
                 continue
             type = child[0]
@@ -138,9 +144,11 @@ class SchemaBuilder(MarkdownWriter):
                 desc += '<!-- md:flag experimental -->'
             if formatVer in newdep:
                 desc += '<!-- md:flag deprecated -->'
+            if newed == 'china':
+                desc += '<!-- md:flag china -->'
             data.append([type, key, desc, lvl, child[2].get('required', False)])
             if type == 'object' or type == 'array':
-                self.parseChildren(child[2], data, newver, newdep, newexp, formatVer, lvl + 1)
+                self.parseChildren(child[2], data, newver, newdep, newexp, newed, formatVer, lvl + 1)
 
 
     def createTreeView(self, data: list[list], level=3):
